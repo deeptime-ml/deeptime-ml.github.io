@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.expectation\_sensitivity
+=======================================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: expectation_sensitivity

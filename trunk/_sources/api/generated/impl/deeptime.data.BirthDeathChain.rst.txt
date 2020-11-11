@@ -1,0 +1,36 @@
+﻿
+
+*class* BirthDeathChain
+=======================
+
+.. currentmodule:: deeptime.data
+
+.. autoclass:: BirthDeathChain
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BirthDeathChain.msm
+      ~BirthDeathChain.stationary_distribution
+      ~BirthDeathChain.transition_matrix
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BirthDeathChain.committor_backward
+      ~BirthDeathChain.committor_forward
+      ~BirthDeathChain.flux
+      ~BirthDeathChain.netflux
+      ~BirthDeathChain.rate
+      ~BirthDeathChain.totalflux
+   
+   

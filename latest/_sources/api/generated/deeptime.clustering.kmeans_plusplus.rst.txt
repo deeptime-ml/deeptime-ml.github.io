@@ -1,0 +1,17 @@
+﻿
+
+*function* kmeans\_plusplus
+===========================
+
+.. currentmodule:: deeptime.clustering
+
+.. autofunction:: kmeans_plusplus
+
+   
+   
+   
+
+   
+
+   
+   

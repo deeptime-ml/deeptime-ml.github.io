@@ -1,0 +1,17 @@
+﻿
+
+*function* vampnet\_loss
+========================
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autofunction:: vampnet_loss
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function metastable_from_data &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="function metastable_from_msm" href="deeptime.markov.hmm.init.discrete.metastable_from_msm.html" />
+    <link rel="prev" title="function random_guess" href="deeptime.markov.hmm.init.discrete.random_guess.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#estimators">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#output-models">Output models</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_markov_hmm.html#initial-guess">Initial guess</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.hmm.init.discrete.random_guess.html"><em>function</em> random_guess</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>function</em> metastable_from_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.hmm.init.discrete.metastable_from_msm.html"><em>function</em> metastable_from_msm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.hmm.init.gaussian.from_data.html"><em>function</em> from_data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_markov_hmm.html">deeptime.markov.hmm</a><ul>
+      <li>Previous: <a href="deeptime.markov.hmm.init.discrete.random_guess.html" title="previous chapter"><em>function</em> random_guess</a></li>
+      <li>Next: <a href="deeptime.markov.hmm.init.discrete.metastable_from_msm.html" title="next chapter"><em>function</em> metastable_from_msm</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="function-metastable-from-data">
+<h1><em>function</em> metastable_from_data<a class="headerlink" href="#function-metastable-from-data" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="deeptime.markov.hmm.init.discrete.metastable_from_data">
+<code class="sig-prename descclassname"><span class="pre">deeptime.markov.hmm.init.discrete.</span></code><code class="sig-name descname"><span class="pre">metastable_from_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_hidden_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lagtime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stride</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'largest-regularized'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reversible</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stationary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate_symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regularize</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.init.discrete.metastable_from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimates an initial guess <a class="reference internal" href="deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">HMM</span></code></a> from given
+discrete trajectories.</p>
+<p>Following the procedure described in <a class="footnote-reference brackets" href="#noe2013projected" id="id1">1</a>: First
+a <a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MSM</span></code></a> is estimated, which is then subsequently
+coarse-grained with PCCA+ <a class="footnote-reference brackets" href="#roblitz2013fuzzy" id="id2">2</a>. After estimation of the MSM, this
+method calls <a class="reference internal" href="deeptime.markov.hmm.init.discrete.metastable_from_msm.html#deeptime.markov.hmm.init.discrete.metastable_from_msm" title="deeptime.markov.hmm.init.discrete.metastable_from_msm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">metastable_from_msm()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dtrajs</strong> (<em>array_like</em><em> or </em><em>list of array_like</em>) – A discrete trajectory or a list of discrete trajectories.</p></li>
+<li><p><strong>n_hidden_states</strong> (<em>int</em>) – Number of hidden states.</p></li>
+<li><p><strong>lagtime</strong> (<em>int</em>) – The lagtime at which transitions are counted.</p></li>
+<li><p><strong>stride</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>optional</em><em>, </em><em>default=1</em>) – <p>stride between two lagged trajectories extracted from the input trajectories. Given trajectory <code class="code docutils literal notranslate"><span class="pre">s[t]</span></code>,
+stride and lag will result in trajectories</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">s[0],</span> <span class="pre">s[lag],</span> <span class="pre">s[2</span> <span class="pre">lag],</span> <span class="pre">...</span></code></p>
+<p><code class="code docutils literal notranslate"><span class="pre">s[stride],</span> <span class="pre">s[stride</span> <span class="pre">+</span> <span class="pre">lag],</span> <span class="pre">s[stride</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">lag],</span> <span class="pre">...</span></code></p>
+</div></blockquote>
+<p>Setting stride = 1 will result in using all data (useful for maximum likelihood estimator), while a Bayesian
+estimator requires a longer stride in order to have statistically uncorrelated trajectories. Setting
+<code class="code docutils literal notranslate"><span class="pre">stride='effective'</span></code> uses the largest neglected timescale as an estimate for the correlation time
+and sets the stride accordingly.</p>
+</p></li>
+<li><p><strong>mode</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default='largest-regularized'</em>) – <p>The mode at which the markov state model is estimated. Since the process is assumed to be reversible and
+finite statistics might lead to unconnected regions in state space, a subselection can automatically be made
+and the count matrix can be regularized. The following options are available:</p>
+<ul>
+<li><p>’all’: all available states are taken into account</p></li>
+<li><p>’largest’: the largest connected state set is selected, see
+<a class="reference internal" href="deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel.submodel_largest" title="deeptime.markov.TransitionCountModel.submodel_largest"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TransitionCountModel.submodel_largest</span></code></a>.</p></li>
+<li><p>populus: the connected set with the largest population in the data, see
+<a class="reference internal" href="deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel.submodel_largest" title="deeptime.markov.TransitionCountModel.submodel_largest"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TransitionCountModel.submodel_largest</span></code></a>.</p></li>
+</ul>
+<p>For regularization, each of the options can be suffixed by a ‘-regularized’, e.g., ‘largest-regularized’.
+This means that the count matrix has no zero entries and everything is reversibly connected. In particular,
+a prior of the form</p>
+<div class="math">
+\[b_{ij}=\left \{ \begin{array}{rl}
+\alpha & \text{, if }c_{ij}+c_{ji}>0, \\
+0      & \text{, otherwise,}
+\end{array} \right .
+
+\]</div>
+<p>with <span class="math">\(\alpha=10^{-3}\)</span> is added and all non-reversibly connected components are artifically connected
+by adding backward paths.</p>
+</p></li>
+<li><p><strong>reversible</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – Whether the HMM transition matrix is estimated so that it is reversibe.</p></li>
+<li><p><strong>stationary</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – If True, the initial distribution of hidden states is self-consistently computed as the stationary
+distribution of the transition matrix. If False, it will be estimated from the starting states.
+Only set this to true if you’re sure that the observation trajectories are initiated from a global
+equilibrium distribution.</p></li>
+<li><p><strong>separate_symbols</strong> (<em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Force the given set of observed states to stay in a separate hidden state.
+The remaining nstates-1 states will be assigned by a metastable decomposition.</p></li>
+<li><p><strong>states</strong> (<em>(</em><em>dtype=int</em><em>) </em><em>ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Artifically restrict count model to selection of states, even before regularization.</p></li>
+<li><p><strong>regularize</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – If set to True, makes sure that the hidden initial distribution and transition matrix have nonzero probabilities
+by setting them to eps and then renormalizing. Avoids zeros that would cause estimation algorithms to crash or
+get stuck in suboptimal states.</p></li>
+<li><p><strong>connectivity_threshold</strong> (<em>float</em><em> or </em><em>'1/n'</em><em>, </em><em>optional</em><em>, </em><em>default=0.</em>) – Connectivity threshold. counts that are below the specified value are disregarded when finding connected
+sets. In case of ‘1/n’, the threshold gets resolved to <span class="math">\(1 / \mathrm{n\_states\_full}\)</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>hmm_init</strong> – An initial guess for the HMM</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel">HiddenMarkovModel</a></p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">DiscreteOutputModel</span></code></dt><dd><p>The type of output model this heuristic uses.</p>
+</dd>
+<dt><a class="reference internal" href="deeptime.markov.hmm.init.discrete.metastable_from_msm.html#deeptime.markov.hmm.init.discrete.metastable_from_msm" title="deeptime.markov.hmm.init.discrete.metastable_from_msm"><code class="xref py py-func docutils literal notranslate"><span class="pre">metastable_from_msm()</span></code></a></dt><dd><p>Initial guess from an already existing <a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MSM</span></code></a>.</p>
+</dd>
+<dt><a class="reference internal" href="deeptime.markov.hmm.init.gaussian.from_data.html#deeptime.markov.hmm.init.gaussian.from_data" title="deeptime.markov.hmm.init.gaussian.from_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">deeptime.markov.hmm.init.gaussian.from_data()</span></code></a></dt><dd><p>Initial guess with <a class="reference internal" href="deeptime.markov.hmm.GaussianOutputModel.html#deeptime.markov.hmm.GaussianOutputModel" title="deeptime.markov.hmm.GaussianOutputModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gaussian</span> <span class="pre">output</span> <span class="pre">model</span></code></a>.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">References</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="noe2013projected"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Frank Noé, Hao Wu, Jan-Hendrik Prinz, and Nuria Plattner. Projected and hidden markov models for calculating kinetics and metastable states of complex molecules. <em>The Journal of chemical physics</em>, 139(18):11B609_1, 2013.</p>
+</dd>
+<dt class="label" id="roblitz2013fuzzy"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Susanna Röblitz and Marcus Weber. Fuzzy spectral clustering by pcca+: application to markov state models and data classification. <em>Advances in Data Analysis and Classification</em>, 7(2):147–179, 2013.</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

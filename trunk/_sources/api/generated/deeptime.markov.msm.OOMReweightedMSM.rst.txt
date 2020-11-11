@@ -1,0 +1,35 @@
+﻿
+
+*class* OOMReweightedMSM
+========================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: OOMReweightedMSM
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~OOMReweightedMSM.has_model
+      ~OOMReweightedMSM.model
+      ~OOMReweightedMSM.reversible
+      ~OOMReweightedMSM.sparse
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~OOMReweightedMSM.fetch_model
+      ~OOMReweightedMSM.fit
+      ~OOMReweightedMSM.get_params
+      ~OOMReweightedMSM.set_params
+   
+   

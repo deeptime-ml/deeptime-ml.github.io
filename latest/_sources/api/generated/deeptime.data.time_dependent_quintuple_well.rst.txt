@@ -1,0 +1,17 @@
+﻿
+
+*function* time\_dependent\_quintuple\_well
+===========================================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: time_dependent_quintuple_well
+
+   
+   
+   
+
+   
+
+   
+   

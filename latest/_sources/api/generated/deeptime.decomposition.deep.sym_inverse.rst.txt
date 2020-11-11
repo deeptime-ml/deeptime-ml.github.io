@@ -1,0 +1,17 @@
+﻿
+
+*function* sym\_inverse
+=======================
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autofunction:: sym_inverse
+
+   
+   
+   
+
+   
+
+   
+   

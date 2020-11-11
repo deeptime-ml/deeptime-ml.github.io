@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.pcca\_memberships
+================================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: pcca_memberships

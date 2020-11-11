@@ -1,0 +1,17 @@
+﻿
+
+*function* random\_guess
+========================
+
+.. currentmodule:: deeptime.markov.hmm.init.discrete
+
+.. autofunction:: random_guess
+
+   
+   
+   
+
+   
+
+   
+   

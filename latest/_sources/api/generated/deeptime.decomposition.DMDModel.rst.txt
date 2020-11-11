@@ -1,0 +1,26 @@
+﻿
+
+*class* DMDModel
+================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: DMDModel
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DMDModel.copy
+      ~DMDModel.get_params
+      ~DMDModel.set_params
+      ~DMDModel.transform
+   
+   

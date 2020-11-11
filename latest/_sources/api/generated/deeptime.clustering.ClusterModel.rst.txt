@@ -1,0 +1,36 @@
+﻿
+
+*class* ClusterModel
+====================
+
+.. currentmodule:: deeptime.clustering
+
+.. autoclass:: ClusterModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ClusterModel.cluster_centers
+      ~ClusterModel.converged
+      ~ClusterModel.dim
+      ~ClusterModel.metric
+      ~ClusterModel.n_clusters
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ClusterModel.copy
+      ~ClusterModel.get_params
+      ~ClusterModel.set_params
+      ~ClusterModel.transform
+   
+   

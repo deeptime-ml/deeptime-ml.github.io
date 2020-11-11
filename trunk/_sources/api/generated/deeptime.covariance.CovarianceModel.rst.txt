@@ -1,0 +1,40 @@
+﻿
+
+*class* CovarianceModel
+=======================
+
+.. currentmodule:: deeptime.covariance
+
+.. autoclass:: CovarianceModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CovarianceModel.bessels_correction
+      ~CovarianceModel.cov_00
+      ~CovarianceModel.cov_0t
+      ~CovarianceModel.cov_tt
+      ~CovarianceModel.data_mean_removed
+      ~CovarianceModel.lagtime
+      ~CovarianceModel.mean_0
+      ~CovarianceModel.mean_t
+      ~CovarianceModel.symmetrized
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CovarianceModel.copy
+      ~CovarianceModel.get_params
+      ~CovarianceModel.set_params
+      ~CovarianceModel.whiten
+   
+   

@@ -1,0 +1,17 @@
+﻿
+
+*function* compute\_dtrajs\_effective
+=====================================
+
+.. currentmodule:: deeptime.markov
+
+.. autofunction:: compute_dtrajs_effective
+
+   
+   
+   
+
+   
+
+   
+   

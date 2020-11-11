@@ -1,0 +1,39 @@
+﻿
+
+*class* TransitionCountEstimator
+================================
+
+.. currentmodule:: deeptime.markov
+
+.. autoclass:: TransitionCountEstimator
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TransitionCountEstimator.count_mode
+      ~TransitionCountEstimator.has_model
+      ~TransitionCountEstimator.lagtime
+      ~TransitionCountEstimator.model
+      ~TransitionCountEstimator.n_states
+      ~TransitionCountEstimator.sparse
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TransitionCountEstimator.count
+      ~TransitionCountEstimator.fetch_model
+      ~TransitionCountEstimator.fit
+      ~TransitionCountEstimator.get_params
+      ~TransitionCountEstimator.set_params
+      ~TransitionCountEstimator.transform
+   
+   

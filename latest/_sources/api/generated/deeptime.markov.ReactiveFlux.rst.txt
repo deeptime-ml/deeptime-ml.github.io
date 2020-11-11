@@ -1,0 +1,45 @@
+﻿
+
+*class* ReactiveFlux
+====================
+
+.. currentmodule:: deeptime.markov
+
+.. autoclass:: ReactiveFlux
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ReactiveFlux.backward_committor
+      ~ReactiveFlux.forward_committor
+      ~ReactiveFlux.gross_flux
+      ~ReactiveFlux.intermediate_states
+      ~ReactiveFlux.mfpt
+      ~ReactiveFlux.n_states
+      ~ReactiveFlux.net_flux
+      ~ReactiveFlux.rate
+      ~ReactiveFlux.source_states
+      ~ReactiveFlux.stationary_distribution
+      ~ReactiveFlux.target_states
+      ~ReactiveFlux.total_flux
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ReactiveFlux.coarse_grain
+      ~ReactiveFlux.copy
+      ~ReactiveFlux.get_params
+      ~ReactiveFlux.major_flux
+      ~ReactiveFlux.pathways
+      ~ReactiveFlux.set_params
+   
+   

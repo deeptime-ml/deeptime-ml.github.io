@@ -1,0 +1,36 @@
+﻿
+
+*class* DrunkardsWalk
+=====================
+
+.. currentmodule:: deeptime.data
+
+.. autoclass:: DrunkardsWalk
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DrunkardsWalk.msm
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DrunkardsWalk.add_barrier
+      ~DrunkardsWalk.coordinate_to_state
+      ~DrunkardsWalk.is_valid_coordinate
+      ~DrunkardsWalk.plot_2d_map
+      ~DrunkardsWalk.plot_network
+      ~DrunkardsWalk.plot_path
+      ~DrunkardsWalk.state_to_coordinate
+      ~DrunkardsWalk.walk
+   
+   

@@ -1,0 +1,32 @@
+﻿
+
+*class* GaussianKernel
+======================
+
+.. currentmodule:: deeptime.kernels
+
+.. autoclass:: GaussianKernel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GaussianKernel.impl
+      ~GaussianKernel.sigma
+      ~GaussianKernel.valid_impls
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GaussianKernel.apply
+      ~GaussianKernel.gram
+   
+   

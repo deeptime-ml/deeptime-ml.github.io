@@ -1,0 +1,17 @@
+﻿
+
+*function* vamp\_score
+======================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autofunction:: vamp_score
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,17 @@
+﻿
+
+*function* spd\_inv\_split
+==========================
+
+.. currentmodule:: deeptime.numeric
+
+.. autofunction:: spd_inv_split
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,40 @@
+﻿
+
+*class* GaussianOutputModel
+===========================
+
+.. currentmodule:: deeptime.markov.hmm
+
+.. autoclass:: GaussianOutputModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GaussianOutputModel.ignore_outliers
+      ~GaussianOutputModel.means
+      ~GaussianOutputModel.n_hidden_states
+      ~GaussianOutputModel.n_observable_states
+      ~GaussianOutputModel.sigmas
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GaussianOutputModel.copy
+      ~GaussianOutputModel.fit
+      ~GaussianOutputModel.generate_observation_trajectory
+      ~GaussianOutputModel.get_params
+      ~GaussianOutputModel.sample
+      ~GaussianOutputModel.set_params
+      ~GaussianOutputModel.submodel
+      ~GaussianOutputModel.to_state_probability_trajectory
+   
+   

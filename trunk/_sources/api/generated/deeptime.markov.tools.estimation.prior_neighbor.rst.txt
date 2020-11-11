@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.prior\_neighbor
+================================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: prior_neighbor

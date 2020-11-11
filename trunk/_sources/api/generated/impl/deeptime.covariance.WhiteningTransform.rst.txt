@@ -1,0 +1,23 @@
+﻿
+
+*class* WhiteningTransform
+==========================
+
+.. currentmodule:: deeptime.covariance
+
+.. autoclass:: WhiteningTransform
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~WhiteningTransform.transform
+   
+   

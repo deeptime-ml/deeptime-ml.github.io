@@ -1,0 +1,45 @@
+﻿
+
+*class* MaximumLikelihoodHMM
+============================
+
+.. currentmodule:: deeptime.markov.hmm
+
+.. autoclass:: MaximumLikelihoodHMM
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MaximumLikelihoodHMM.accuracy
+      ~MaximumLikelihoodHMM.fixed_initial_distribution
+      ~MaximumLikelihoodHMM.fixed_stationary_distribution
+      ~MaximumLikelihoodHMM.has_model
+      ~MaximumLikelihoodHMM.initial_model
+      ~MaximumLikelihoodHMM.lagtime
+      ~MaximumLikelihoodHMM.maxit
+      ~MaximumLikelihoodHMM.maxit_reversible
+      ~MaximumLikelihoodHMM.model
+      ~MaximumLikelihoodHMM.n_hidden_states
+      ~MaximumLikelihoodHMM.reversible
+      ~MaximumLikelihoodHMM.stationary
+      ~MaximumLikelihoodHMM.stride
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MaximumLikelihoodHMM.chapman_kolmogorov_validator
+      ~MaximumLikelihoodHMM.fetch_model
+      ~MaximumLikelihoodHMM.fit
+      ~MaximumLikelihoodHMM.get_params
+      ~MaximumLikelihoodHMM.set_params
+   
+   

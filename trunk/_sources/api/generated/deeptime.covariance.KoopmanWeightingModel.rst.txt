@@ -1,0 +1,37 @@
+﻿
+
+*class* KoopmanWeightingModel
+=============================
+
+.. currentmodule:: deeptime.covariance
+
+.. autoclass:: KoopmanWeightingModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KoopmanWeightingModel.const_weight_input
+      ~KoopmanWeightingModel.covariances
+      ~KoopmanWeightingModel.koopman_operator
+      ~KoopmanWeightingModel.weights_input
+      ~KoopmanWeightingModel.whitening_transformation
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KoopmanWeightingModel.copy
+      ~KoopmanWeightingModel.get_params
+      ~KoopmanWeightingModel.set_params
+      ~KoopmanWeightingModel.transform
+      ~KoopmanWeightingModel.weights
+   
+   

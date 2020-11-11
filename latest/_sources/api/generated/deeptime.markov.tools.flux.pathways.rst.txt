@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.flux.pathways
+===================================
+
+.. currentmodule:: deeptime.markov.tools.flux
+
+.. autofunction:: pathways

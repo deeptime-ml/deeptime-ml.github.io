@@ -1,0 +1,17 @@
+﻿
+
+*function* is\_timelagged\_dataset
+==================================
+
+.. currentmodule:: deeptime.util.types
+
+.. autofunction:: is_timelagged_dataset
+
+   
+   
+   
+
+   
+
+   
+   

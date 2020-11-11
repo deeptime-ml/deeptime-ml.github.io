@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deeptime.markov.hmm &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../_static/d3.v5.min.js"></script>
+    <script src="../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class MaximumLikelihoodHMM" href="generated/deeptime.markov.hmm.MaximumLikelihoodHMM.html" />
+    <link rel="prev" title="class AugmentedMSM" href="generated/deeptime.markov.msm.AugmentedMSM.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../_static/favicon-16x16.png">
+<link rel="manifest" href="../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">deeptime.markov.hmm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#estimators">Estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.MaximumLikelihoodHMM.html"><em>class</em> MaximumLikelihoodHMM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.BayesianHMM.html"><em>class</em> BayesianHMM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#output-models">Output models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.OutputModel.html"><em>class</em> OutputModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.DiscreteOutputModel.html"><em>class</em> DiscreteOutputModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.GaussianOutputModel.html"><em>class</em> GaussianOutputModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#initial-guess">Initial guess</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.init.discrete.random_guess.html"><em>function</em> random_guess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.init.discrete.metastable_from_data.html"><em>function</em> metastable_from_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.init.discrete.metastable_from_msm.html"><em>function</em> metastable_from_msm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.init.gaussian.from_data.html"><em>function</em> from_data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.HiddenMarkovModel.html"><em>class</em> HiddenMarkovModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.markov.hmm.BayesianHMMPosterior.html"><em>class</em> BayesianHMMPosterior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../contents.html">Documentation overview</a><ul>
+      <li>Previous: <a href="generated/deeptime.markov.msm.AugmentedMSM.html" title="previous chapter"><em>class</em> AugmentedMSM</a></li>
+      <li>Next: <a href="generated/deeptime.markov.hmm.MaximumLikelihoodHMM.html" title="next chapter"><em>class</em> MaximumLikelihoodHMM</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="deeptime-markov-hmm">
+<h1>deeptime.markov.hmm<a class="headerlink" href="#deeptime-markov-hmm" title="Permalink to this headline">¶</a></h1>
+<p>Package containing tools for estimation and analysis of hidden Markov state models.</p>
+<p>They consist out of a hidden state <a class="reference internal" href="generated/deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MSM</span></code></a> which holds information
+on how hidden states can transition between one another and an
+<a class="reference internal" href="generated/deeptime.markov.hmm.OutputModel.html#deeptime.markov.hmm.OutputModel" title="deeptime.markov.hmm.OutputModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">OutputModel</span></code></a>, which maps hidden states to discrete observable states in
+case of an  <a class="reference internal" href="generated/deeptime.markov.hmm.DiscreteOutputModel.html#deeptime.markov.hmm.DiscreteOutputModel" title="deeptime.markov.hmm.DiscreteOutputModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">DiscreteOutputModel</span></code></a> or to continuous observables
+in case of an <a class="reference internal" href="generated/deeptime.markov.hmm.GaussianOutputModel.html#deeptime.markov.hmm.GaussianOutputModel" title="deeptime.markov.hmm.GaussianOutputModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">GaussianOutputModel</span></code></a>.</p>
+<div class="section" id="estimators">
+<h2>Estimators<a class="headerlink" href="#estimators" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.MaximumLikelihoodHMM.html#deeptime.markov.hmm.MaximumLikelihoodHMM" title="deeptime.markov.hmm.MaximumLikelihoodHMM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaximumLikelihoodHMM</span></code></a>(initial_model, stride, …)</p></td>
+<td><p>Maximum likelihood Hidden Markov model (HMM) estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.BayesianHMM.html#deeptime.markov.hmm.BayesianHMM" title="deeptime.markov.hmm.BayesianHMM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BayesianHMM</span></code></a>(initial_hmm, n_samples, …)</p></td>
+<td><p>Estimator for a Bayesian Hidden Markov state model.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="output-models">
+<h2>Output models<a class="headerlink" href="#output-models" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.OutputModel.html#deeptime.markov.hmm.OutputModel" title="deeptime.markov.hmm.OutputModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OutputModel</span></code></a>(n_hidden_states, …)</p></td>
+<td><p>Output model superclass.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.DiscreteOutputModel.html#deeptime.markov.hmm.DiscreteOutputModel" title="deeptime.markov.hmm.DiscreteOutputModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DiscreteOutputModel</span></code></a>(output_probabilities, …)</p></td>
+<td><p>HMM output probability model using discrete symbols.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.GaussianOutputModel.html#deeptime.markov.hmm.GaussianOutputModel" title="deeptime.markov.hmm.GaussianOutputModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GaussianOutputModel</span></code></a>(n_states[, means, sigmas])</p></td>
+<td><p>HMM output probability model using one-dimensional Gaussians.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="initial-guess">
+<h2>Initial guess<a class="headerlink" href="#initial-guess" title="Permalink to this headline">¶</a></h2>
+<p>Depending on the output model there are some methods that provide initial guesses for estimation.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.init.discrete.random_guess.html#deeptime.markov.hmm.init.discrete.random_guess" title="deeptime.markov.hmm.init.discrete.random_guess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init.discrete.random_guess</span></code></a>(…[, seed])</p></td>
+<td><p>Initializes a <a class="reference internal" href="generated/deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">HMM</span></code></a> with a set number of hidden and observable states by setting the transition matrix uniform and drawing a random row-stochastic matrix as output probabilities.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.init.discrete.metastable_from_data.html#deeptime.markov.hmm.init.discrete.metastable_from_data" title="deeptime.markov.hmm.init.discrete.metastable_from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init.discrete.metastable_from_data</span></code></a>(dtrajs, …)</p></td>
+<td><p>Estimates an initial guess <a class="reference internal" href="generated/deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">HMM</span></code></a> from given discrete trajectories.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.init.discrete.metastable_from_msm.html#deeptime.markov.hmm.init.discrete.metastable_from_msm" title="deeptime.markov.hmm.init.discrete.metastable_from_msm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init.discrete.metastable_from_msm</span></code></a>(msm, …)</p></td>
+<td><p>Makes an initial guess for an <a class="reference internal" href="generated/deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">HMM</span></code></a> with discrete output model from an already existing MSM over observable states.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.init.gaussian.from_data.html#deeptime.markov.hmm.init.gaussian.from_data" title="deeptime.markov.hmm.init.gaussian.from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init.gaussian.from_data</span></code></a>(dtrajs, …)</p></td>
+<td><p>Makes an initial guess <a class="reference internal" href="generated/deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">HMM</span></code></a> with Gaussian output model.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HiddenMarkovModel</span></code></a>(transition_model, …)</p></td>
+<td><p>Hidden Markov state model consisting of a transition model (<a class="reference internal" href="generated/deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MSM</span></code></a>) on the hidden states, an <a class="reference internal" href="generated/deeptime.markov.hmm.OutputModel.html#deeptime.markov.hmm.OutputModel" title="deeptime.markov.hmm.OutputModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">output</span> <span class="pre">model</span></code></a> which maps from the hidden states to a distribution of observable states, and optionally an initial distribution on the hidden states.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.hmm.BayesianHMMPosterior.html#deeptime.markov.hmm.BayesianHMMPosterior" title="deeptime.markov.hmm.BayesianHMMPosterior"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BayesianHMMPosterior</span></code></a>(prior, samples)</p></td>
+<td><p>Bayesian Hidden Markov model with samples of posterior and prior.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../_static/scrollbar.js"></script>
+
+  </body>
+</html>

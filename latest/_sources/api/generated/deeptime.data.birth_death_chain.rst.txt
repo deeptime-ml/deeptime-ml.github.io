@@ -1,0 +1,17 @@
+﻿
+
+*function* birth\_death\_chain
+==============================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: birth_death_chain
+
+   
+   
+   
+
+   
+
+   
+   

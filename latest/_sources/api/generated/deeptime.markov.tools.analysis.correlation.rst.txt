@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.correlation
+==========================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: correlation

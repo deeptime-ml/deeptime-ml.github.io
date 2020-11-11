@@ -1,0 +1,33 @@
+﻿
+
+*class* BoxDiscretization
+=========================
+
+.. currentmodule:: deeptime.clustering
+
+.. autoclass:: BoxDiscretization
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BoxDiscretization.has_model
+      ~BoxDiscretization.model
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BoxDiscretization.fetch_model
+      ~BoxDiscretization.fit
+      ~BoxDiscretization.get_params
+      ~BoxDiscretization.set_params
+   
+   

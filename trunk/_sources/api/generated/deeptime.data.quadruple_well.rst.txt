@@ -1,0 +1,17 @@
+﻿
+
+*function* quadruple\_well
+==========================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: quadruple_well
+
+   
+   
+   
+
+   
+
+   
+   

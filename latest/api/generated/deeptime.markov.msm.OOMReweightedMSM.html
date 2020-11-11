@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class OOMReweightedMSM &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class KoopmanReweightedMSM" href="deeptime.markov.msm.KoopmanReweightedMSM.html" />
+    <link rel="prev" title="class TransitionCountModel" href="deeptime.markov.TransitionCountModel.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_markov.html">deeptime.markov</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_markov.html#estimators">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov.html#models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov.html#analysis-tools">Analysis tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_markov.html#utilities-and-alternatives">Utilities and alternatives</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.number_of_states.html"><em>function</em> number_of_states</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.count_states.html"><em>function</em> count_states</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.compute_connected_sets.html"><em>function</em> compute_connected_sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.compute_dtrajs_effective.html"><em>function</em> compute_dtrajs_effective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.compute_effective_stride.html"><em>function</em> compute_effective_stride</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.indices_by_distribution.html"><em>function</em> indices_by_distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.compute_index_states.html"><em>function</em> compute_index_states</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.indices_by_sequence.html"><em>function</em> indices_by_sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.indices_by_state.html"><em>function</em> indices_by_state</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov.html#transition-counting">Transition counting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_markov.html#special-msm-estimators-and-models">Special MSM estimators and models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_markov.html">deeptime.markov</a><ul>
+      <li>Previous: <a href="deeptime.markov.TransitionCountModel.html" title="previous chapter"><em>class</em> TransitionCountModel</a></li>
+      <li>Next: <a href="deeptime.markov.msm.KoopmanReweightedMSM.html" title="next chapter"><em>class</em> KoopmanReweightedMSM</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="class-oomreweightedmsm">
+<h1><em>class</em> OOMReweightedMSM<a class="headerlink" href="#class-oomreweightedmsm" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="deeptime.markov.msm.OOMReweightedMSM">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.markov.msm.</span></code><code class="sig-name descname"><span class="pre">OOMReweightedMSM</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lagtime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reversible</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sliding'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sparse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1</span> <span class="pre">step'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bootstrap_counts'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol_rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1/n'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.OOMReweightedMSM" title="Permalink to this definition">¶</a></dt>
+<dd><p>OOM (observable operator model) MSM estimator for MSMs given discrete trajectory statistics.
+Here, each transition is re-weighted using OOM theory. Details can be found in <a class="footnote-reference brackets" href="#nuske2017markov" id="id1">1</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lagtime</strong> (<em>int</em>) – lag time at which transitions are counted and the transition matrix is
+estimated.</p></li>
+<li><p><strong>reversible</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default = True</em>) – If true compute reversible MSM, else non-reversible MSM</p></li>
+<li><p><strong>count_mode</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default='sliding'</em>) – <p>mode to obtain count matrices from discrete trajectories. Should be
+one of:</p>
+<ul>
+<li><p>’sliding’ : A trajectory of length T will have <span class="math">\(T-\tau\)</span> counts
+at time indexes</p>
+<div class="math">
+\[(0 \rightarrow \tau), (1 \rightarrow \tau+1), ..., (T-\tau-1 \rightarrow T-1)\]</div>
+</li>
+<li><p>’sample’ : A trajectory of length T will have <span class="math">\(T/\tau\)</span> counts
+at time indexes</p>
+<div class="math">
+\[(0 \rightarrow \tau), (\tau \rightarrow 2 \tau), ..., (((T/\tau)-1) \tau \rightarrow T)\]</div>
+</li>
+</ul>
+</p></li>
+<li><p><strong>sparse</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default = False</em>) – If true compute count matrix, transition matrix and all derived
+quantities using sparse matrix algebra. In this case python sparse
+matrices will be returned by the corresponding functions instead of
+numpy arrays. This behavior is suggested for very large numbers of
+states (e.g. &gt; 4000) because it is likely to be much more efficient.</p></li>
+<li><p><strong>time_unit</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default='1 step'</em>) – <p>Description of the physical time of the input trajectories. May be used
+by analysis algorithms such as plotting tools to pretty-print the axes.
+By default ‘1 step’, i.e. there is no physical time unit. Specify by a
+number, whitespace and unit. Permitted units are (* is an arbitrary
+string):</p>
+<div class="line-block">
+<div class="line">’fs’,  ‘femtosecond*’</div>
+<div class="line">’ps’,  ‘picosecond*’</div>
+<div class="line">’ns’,  ‘nanosecond*’</div>
+<div class="line">’us’,  ‘microsecond*’</div>
+<div class="line">’ms’,  ‘millisecond*’</div>
+<div class="line">’s’,   ‘second*’</div>
+</div>
+</p></li>
+<li><p><strong>nbs</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=10000</em>) – number of re-samplings for rank decision in OOM estimation.</p></li>
+<li><p><strong>rank_mode</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>Re-sampling method for model rank selection. Can be</p>
+<ul>
+<li><p>’bootstrap_counts’: Directly re-sample transitions based on effective count matrix.</p></li>
+<li><p>’bootstrap_trajs’: Re-draw complete trajectories with replacement.</p></li>
+</ul>
+</p></li>
+<li><p><strong>tol_rank</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default = 10.0</em>) – signal-to-noise threshold for rank decision.</p></li>
+<li><p><strong>connectivity_threshold</strong> (<em>float</em><em> or </em><em>'1/n'</em>) – minimum number of counts to consider a connection between two states.
+Counts lower than that will count zero in the connectivity check and
+may thus separate the resulting transition matrix. The default
+evaluates to 1/n_states.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="nuske2017markov"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Feliks Nüske, Hao Wu, Jan-Hendrik Prinz, Christoph Wehmeyer, Cecilia Clementi, and Frank Noé. Markov state models from short non-equilibrium simulations—analysis and correction of estimation bias. <em>The Journal of Chemical Physics</em>, 146(9):094104, 2017.</p>
+</dd>
+</dl>
+</p>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.has_model" title="deeptime.markov.msm.OOMReweightedMSM.has_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_model</span></code></a></p></td>
+<td><p>Property reporting whether this estimator contains an estimated model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.model" title="deeptime.markov.msm.OOMReweightedMSM.model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></a></p></td>
+<td><p>Shortcut to <a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.fetch_model" title="deeptime.markov.msm.OOMReweightedMSM.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.reversible" title="deeptime.markov.msm.OOMReweightedMSM.reversible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reversible</span></code></a></p></td>
+<td><p>If true compute reversible MarkovStateModel, else non-reversible MarkovStateModel</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.sparse" title="deeptime.markov.msm.OOMReweightedMSM.sparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse</span></code></a></p></td>
+<td><p>If true compute count matrix, transition matrix and all derived quantities using sparse matrix algebra.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.fetch_model" title="deeptime.markov.msm.OOMReweightedMSM.fetch_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_model</span></code></a>()</p></td>
+<td><p>Yields the estimated Koopman reweighted MSM.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.fit" title="deeptime.markov.msm.OOMReweightedMSM.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(dtrajs, **kw)</p></td>
+<td><p>Fits an MSM using Koopman reweighting.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.get_params" title="deeptime.markov.msm.OOMReweightedMSM.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
+<td><p>Get the parameters.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.set_params" title="deeptime.markov.msm.OOMReweightedMSM.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="deeptime.markov.msm.OOMReweightedMSM.fetch_model">
+<code class="sig-name descname"><span class="pre">fetch_model</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">deeptime.markov.msm._koopman_reweighted_msm.KoopmanReweightedMSM</span><a class="headerlink" href="#deeptime.markov.msm.OOMReweightedMSM.fetch_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the estimated Koopman reweighted MSM.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>model</strong> – The estimated Koopman reweighted MSM or None if fit was not called yet.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="deeptime.markov.msm.KoopmanReweightedMSM.html#deeptime.markov.msm.KoopmanReweightedMSM" title="deeptime.markov.msm.KoopmanReweightedMSM">KoopmanReweightedMSM</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.msm.OOMReweightedMSM.fit">
+<code class="sig-name descname"><span class="pre">fit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.OOMReweightedMSM.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits an MSM using Koopman reweighting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dtrajs</strong> (<em>array_like</em><em> or </em><em>list of array_like</em>) – Discrete trajectories.</p></li>
+<li><p><strong>**kw</strong> – API compatibility to sklearn, not actually used in algorithm.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.msm.OOMReweightedMSM.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.OOMReweightedMSM.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mapping of string to any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.msm.OOMReweightedMSM.set_params">
+<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.OOMReweightedMSM.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.msm.OOMReweightedMSM.has_model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">has_model</span></code><a class="headerlink" href="#deeptime.markov.msm.OOMReweightedMSM.has_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property reporting whether this estimator contains an estimated model. This assumes that the model
+is initialized with <cite>None</cite> otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.msm.OOMReweightedMSM.model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#deeptime.markov.msm.OOMReweightedMSM.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut to <a class="reference internal" href="#deeptime.markov.msm.OOMReweightedMSM.fetch_model" title="deeptime.markov.msm.OOMReweightedMSM.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.msm.OOMReweightedMSM.reversible">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">reversible</span></code><a class="headerlink" href="#deeptime.markov.msm.OOMReweightedMSM.reversible" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true compute reversible MarkovStateModel, else non-reversible MarkovStateModel</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.msm.OOMReweightedMSM.sparse">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">sparse</span></code><a class="headerlink" href="#deeptime.markov.msm.OOMReweightedMSM.sparse" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true compute count matrix, transition matrix and all derived quantities using sparse matrix algebra.
+In this case python sparse matrices will be returned by the corresponding functions instead of numpy arrays.
+This behavior is suggested for very large numbers of states (e.g. &gt; 4000) because it is likely
+to be much more efficient.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+﻿
+
+*class* BayesianMSM
+===================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: BayesianMSM
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BayesianMSM.has_model
+      ~BayesianMSM.model
+      ~BayesianMSM.reversible
+      ~BayesianMSM.sparse
+      ~BayesianMSM.stationary_distribution_constraint
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BayesianMSM.chapman_kolmogorov_validator
+      ~BayesianMSM.fetch_model
+      ~BayesianMSM.fit
+      ~BayesianMSM.fit_from_msm
+      ~BayesianMSM.get_params
+      ~BayesianMSM.sample
+      ~BayesianMSM.set_params
+   
+   

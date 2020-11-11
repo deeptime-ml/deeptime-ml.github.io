@@ -1,0 +1,17 @@
+﻿
+
+*function* koopman\_matrix
+==========================
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autofunction:: koopman_matrix
+
+   
+   
+   
+
+   
+
+   
+   

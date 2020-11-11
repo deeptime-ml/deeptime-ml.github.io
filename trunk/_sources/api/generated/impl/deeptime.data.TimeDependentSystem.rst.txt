@@ -1,0 +1,35 @@
+﻿
+
+*class* TimeDependentSystem
+===========================
+
+.. currentmodule:: deeptime.data
+
+.. autoclass:: TimeDependentSystem
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TimeDependentSystem.dimension
+      ~TimeDependentSystem.h
+      ~TimeDependentSystem.has_potential_function
+      ~TimeDependentSystem.integrator
+      ~TimeDependentSystem.n_steps
+      ~TimeDependentSystem.time_dependent
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TimeDependentSystem.potential
+      ~TimeDependentSystem.trajectory
+   
+   

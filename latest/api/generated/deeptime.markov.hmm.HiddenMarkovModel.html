@@ -1,0 +1,1235 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class HiddenMarkovModel &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class BayesianHMMPosterior" href="deeptime.markov.hmm.BayesianHMMPosterior.html" />
+    <link rel="prev" title="function from_data" href="deeptime.markov.hmm.init.gaussian.from_data.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#estimators">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#output-models">Output models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#initial-guess">Initial guess</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_markov_hmm.html#models">Models</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>class</em> HiddenMarkovModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.hmm.BayesianHMMPosterior.html"><em>class</em> BayesianHMMPosterior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_markov_hmm.html">deeptime.markov.hmm</a><ul>
+      <li>Previous: <a href="deeptime.markov.hmm.init.gaussian.from_data.html" title="previous chapter"><em>function</em> from_data</a></li>
+      <li>Next: <a href="deeptime.markov.hmm.BayesianHMMPosterior.html" title="next chapter"><em>class</em> BayesianHMMPosterior</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="class-hiddenmarkovmodel">
+<h1><em>class</em> HiddenMarkovModel<a class="headerlink" href="#class-hiddenmarkovmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.markov.hmm.</span></code><code class="sig-name descname"><span class="pre">HiddenMarkovModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transition_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">,</span> </span><span class="pre">deeptime.markov.hmm._output_model.OutputModel</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_distribution</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">likelihoods</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_probabilities</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_count</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_state_trajectories</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stride</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_symbols</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_symbols_full</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hidden Markov state model consisting of a transition model
+(<a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MSM</span></code></a>) on the hidden states, an
+<a class="reference internal" href="deeptime.markov.hmm.OutputModel.html#deeptime.markov.hmm.OutputModel" title="deeptime.markov.hmm.OutputModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">output</span> <span class="pre">model</span></code></a> which maps from the hidden states to a distribution of observable states,
+and optionally an initial distribution on the hidden states. Some properties require a crisp assignment to
+states in the observable space, in which case only a discrete output model can be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>transition_model</strong> (<em>(</em><em>m</em><em>,</em><em>m</em><em>) </em><em>ndarray</em><em> or </em><a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><em>MarkovStateModel</em></a>) – Transition matrix for hidden (macro) states</p></li>
+<li><p><strong>output_model</strong> (<em>(</em><em>m</em><em>,</em><em>n</em><em>) </em><em>ndarray</em><em> or </em><a class="reference internal" href="deeptime.markov.hmm.OutputModel.html#deeptime.markov.hmm.OutputModel" title="deeptime.markov.hmm.OutputModel"><em>OutputModel</em></a>) – observation probability matrix from hidden to observable (micro) states or OutputModel instance which yields
+the mapping from hidden to observable state.</p></li>
+<li><p><strong>initial_distribution</strong> (<em>(</em><em>m</em><em>,</em><em>) </em><em>ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Initial distribution of the hidden (macro) states. Default is uniform.</p></li>
+<li><p><strong>likelihoods</strong> (<em>(</em><em>k</em><em>,</em><em>) </em><em>ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Likelihood progression of the HMM as it was trained for k iterations with Baum-Welch.</p></li>
+<li><p><strong>state_probabilities</strong> (<em>list of ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – List of state probabilities for each trajectory that the model was trained on (gammas).</p></li>
+<li><p><strong>initial_count</strong> (<em>ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Initial counts of the hidden (macro) states, computed from the gamma output of the Baum-Welch algorithm</p></li>
+<li><p><strong>hidden_state_trajectories</strong> (<em>list of ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – When estimating the HMM the data’s most likely hidden state trajectory is determined and can be saved
+with the model by providing this argument.</p></li>
+<li><p><strong>stride</strong> (<em>int</em><em> or </em><em>str</em><em>(</em><em>'effective'</em><em>)</em><em>, </em><em>optional</em><em>, </em><em>default=1</em>) – Stride which was used to subsample discrete trajectories while estimating a HMM. Can either be an integer
+value which determines the offset or ‘effective’, which makes an estimate of a stride at which subsequent
+discrete trajectory elements are uncorrelated.</p></li>
+<li><p><strong>observation_symbols</strong> (<em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Sorted unique symbols in observations. If None, it is assumed that all possible observations are made
+and the state symbols are set to an iota range over the number of observation states.</p></li>
+<li><p><strong>observation_symbols_full</strong> (<em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Full set of symbols in observations. If None, it is assumed to coincide with observation_symbols.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p id="id1"><dl class="citation">
+<dt class="label" id="id25"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id1">2</a>,<a href="#id72">3</a>)</span></dt>
+<dd><p>Frank Noé, Hao Wu, Jan-Hendrik Prinz, and Nuria Plattner. Projected and hidden markov models for calculating kinetics and metastable states of complex molecules. <em>The Journal of chemical physics</em>, 139(18):11B609_1, 2013.</p>
+</dd>
+</dl>
+</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="deeptime.markov.hmm.init.discrete.metastable_from_data.html#deeptime.markov.hmm.init.discrete.metastable_from_data" title="deeptime.markov.hmm.init.discrete.metastable_from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init.discrete.metastable_from_data</span></code></a></dt><dd><p>initial guess from data with discrete output model</p>
+</dd>
+<dt><a class="reference internal" href="deeptime.markov.hmm.init.discrete.metastable_from_msm.html#deeptime.markov.hmm.init.discrete.metastable_from_msm" title="deeptime.markov.hmm.init.discrete.metastable_from_msm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init.discrete.metastable_from_msm</span></code></a></dt><dd><p>initial guess from MSM with discrete output model</p>
+</dd>
+<dt><a class="reference internal" href="deeptime.markov.hmm.init.gaussian.from_data.html#deeptime.markov.hmm.init.gaussian.from_data" title="deeptime.markov.hmm.init.gaussian.from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init.gaussian.from_data</span></code></a></dt><dd><p>initial guess from data with Gaussian output model</p>
+</dd>
+<dt><a class="reference internal" href="deeptime.markov.hmm.MaximumLikelihoodHMM.html#deeptime.markov.hmm.MaximumLikelihoodHMM" title="deeptime.markov.hmm.MaximumLikelihoodHMM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaximumLikelihoodHMM</span></code></a></dt><dd><p>maximum likelihood estimation of HMMs</p>
+</dd>
+<dt><a class="reference internal" href="deeptime.markov.hmm.BayesianHMM.html#deeptime.markov.hmm.BayesianHMM" title="deeptime.markov.hmm.BayesianHMM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BayesianHMM</span></code></a></dt><dd><p>Bayesian sampling of models for confidences.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.count_model" title="deeptime.markov.hmm.HiddenMarkovModel.count_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">count_model</span></code></a></p></td>
+<td><p>Yields the count model for the micro (hidden) states.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.eigenvectors_left_obs" title="deeptime.markov.hmm.HiddenMarkovModel.eigenvectors_left_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eigenvectors_left_obs</span></code></a></p></td>
+<td><p>Left eigenvectors in observation space.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.eigenvectors_right_obs" title="deeptime.markov.hmm.HiddenMarkovModel.eigenvectors_right_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eigenvectors_right_obs</span></code></a></p></td>
+<td><p>Right eigenvectors in observation space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.hidden_state_trajectories" title="deeptime.markov.hmm.HiddenMarkovModel.hidden_state_trajectories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hidden_state_trajectories</span></code></a></p></td>
+<td><p>Training trajectories mapped to hidden states after estimation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.initial_count" title="deeptime.markov.hmm.HiddenMarkovModel.initial_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initial_count</span></code></a></p></td>
+<td><p>The hidden initial counts, can be None.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.initial_distribution" title="deeptime.markov.hmm.HiddenMarkovModel.initial_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initial_distribution</span></code></a></p></td>
+<td><p>The initial distribution of this HMM over the hidden states.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.lagtime" title="deeptime.markov.hmm.HiddenMarkovModel.lagtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lagtime</span></code></a></p></td>
+<td><p>The lagtime this model was estimated at.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.lifetimes" title="deeptime.markov.hmm.HiddenMarkovModel.lifetimes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lifetimes</span></code></a></p></td>
+<td><p>Lifetimes of states of the hidden transition matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.likelihood" title="deeptime.markov.hmm.HiddenMarkovModel.likelihood"><code class="xref py py-obj docutils literal notranslate"><span class="pre">likelihood</span></code></a></p></td>
+<td><p>The estimated likelihood of this model based on the training data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.likelihoods" title="deeptime.markov.hmm.HiddenMarkovModel.likelihoods"><code class="xref py py-obj docutils literal notranslate"><span class="pre">likelihoods</span></code></a></p></td>
+<td><p>If the model comes from the MaximumLikelihoodHMM estimator, this property contains the sequence of likelihoods generated from the fitting iteration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.metastable_assignments" title="deeptime.markov.hmm.HiddenMarkovModel.metastable_assignments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metastable_assignments</span></code></a></p></td>
+<td><p>Computes the assignment to metastable sets for observable states</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.metastable_distributions" title="deeptime.markov.hmm.HiddenMarkovModel.metastable_distributions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metastable_distributions</span></code></a></p></td>
+<td><p>Returns the output probability distributions. Identical to</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.metastable_memberships" title="deeptime.markov.hmm.HiddenMarkovModel.metastable_memberships"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metastable_memberships</span></code></a></p></td>
+<td><p>Computes the memberships of observable states to metastable sets by Bayesian inversion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.metastable_sets" title="deeptime.markov.hmm.HiddenMarkovModel.metastable_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metastable_sets</span></code></a></p></td>
+<td><p>Computes the metastable sets of observable states within each</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.n_hidden_states" title="deeptime.markov.hmm.HiddenMarkovModel.n_hidden_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_hidden_states</span></code></a></p></td>
+<td><p>The number of hidden states.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.n_observation_states" title="deeptime.markov.hmm.HiddenMarkovModel.n_observation_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_observation_states</span></code></a></p></td>
+<td><p>Property determining the number of observed/macro states.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.observation_symbols" title="deeptime.markov.hmm.HiddenMarkovModel.observation_symbols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observation_symbols</span></code></a></p></td>
+<td><p>The symbols represented by this HMM in observation space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.observation_symbols_full" title="deeptime.markov.hmm.HiddenMarkovModel.observation_symbols_full"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observation_symbols_full</span></code></a></p></td>
+<td><p>All symbols that the original model contained (original before taking any submodel).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.output_model" title="deeptime.markov.hmm.HiddenMarkovModel.output_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_model</span></code></a></p></td>
+<td><p>The selected output model for this HMM.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.output_probabilities" title="deeptime.markov.hmm.HiddenMarkovModel.output_probabilities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_probabilities</span></code></a></p></td>
+<td><p>Returns the probabilities for each hidden state to map to a particular observation state.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.state_probabilities" title="deeptime.markov.hmm.HiddenMarkovModel.state_probabilities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_probabilities</span></code></a></p></td>
+<td><p>List of state probabilities for each trajectory that the model was trained on (gammas in the Baum-Welch algo).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.stationary_distribution_obs" title="deeptime.markov.hmm.HiddenMarkovModel.stationary_distribution_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stationary_distribution_obs</span></code></a></p></td>
+<td><p>The stationary distribution in observable space.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.stride" title="deeptime.markov.hmm.HiddenMarkovModel.stride"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stride</span></code></a></p></td>
+<td><p>The stride parameter which was used to subsample the discrete trajectories when estimating the hidden markov state model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.transition_counts" title="deeptime.markov.hmm.HiddenMarkovModel.transition_counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transition_counts</span></code></a></p></td>
+<td><p>The transition counts for the hidden states as estimated in the fitting procedure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.transition_model" title="deeptime.markov.hmm.HiddenMarkovModel.transition_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transition_model</span></code></a></p></td>
+<td><p>Yields the transition model for the hidden states.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.collect_observations_in_state" title="deeptime.markov.hmm.HiddenMarkovModel.collect_observations_in_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_observations_in_state</span></code></a>(observations, …)</p></td>
+<td><p>Collect a vector of all observations belonging to a specified hidden state.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.compute_observation_likelihood" title="deeptime.markov.hmm.HiddenMarkovModel.compute_observation_likelihood"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_observation_likelihood</span></code></a>(data)</p></td>
+<td><p>Computes the likelihood of observed data under this model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.compute_viterbi_paths" title="deeptime.markov.hmm.HiddenMarkovModel.compute_viterbi_paths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_viterbi_paths</span></code></a>(observations)</p></td>
+<td><p>Computes the Viterbi paths using the current HMM model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.copy" title="deeptime.markov.hmm.HiddenMarkovModel.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Makes a deep copy of this model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.correlation_obs" title="deeptime.markov.hmm.HiddenMarkovModel.correlation_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correlation_obs</span></code></a>(a[, b, maxtime, k, ncv])</p></td>
+<td><p>Time-correlation for equilibrium experiment based on observable state vectors a and b.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.expectation_obs" title="deeptime.markov.hmm.HiddenMarkovModel.expectation_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expectation_obs</span></code></a>(a)</p></td>
+<td><p>Equilibrium expectation value of a given observable state vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.fingerprint_correlation_obs" title="deeptime.markov.hmm.HiddenMarkovModel.fingerprint_correlation_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fingerprint_correlation_obs</span></code></a>(a[, b, k, ncv])</p></td>
+<td><p>Dynamical fingerprint for equilibrium time-correlation experiment based on observable state vectors a and b.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.fingerprint_relaxation_obs" title="deeptime.markov.hmm.HiddenMarkovModel.fingerprint_relaxation_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fingerprint_relaxation_obs</span></code></a>(p0, a[, k, ncv])</p></td>
+<td><p>Dynamical fingerprint for perturbation/relaxation experiment based on observable state vector and distribution.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.get_params" title="deeptime.markov.hmm.HiddenMarkovModel.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
+<td><p>Get the parameters.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.nonempty_obs" title="deeptime.markov.hmm.HiddenMarkovModel.nonempty_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonempty_obs</span></code></a>(dtrajs)</p></td>
+<td><p>Computes the set of visited observable states given a set of discrete trajectories.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.propagate" title="deeptime.markov.hmm.HiddenMarkovModel.propagate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">propagate</span></code></a>(p0, k)</p></td>
+<td><p>Propagates the initial distribution p0 defined on observable space k times.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.relaxation_obs" title="deeptime.markov.hmm.HiddenMarkovModel.relaxation_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">relaxation_obs</span></code></a>(p0, a[, maxtime, k, ncv])</p></td>
+<td><p>Simulates a perturbation-relaxation experiment based on observable state vector and distribution.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.sample_by_observation_probabilities" title="deeptime.markov.hmm.HiddenMarkovModel.sample_by_observation_probabilities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample_by_observation_probabilities</span></code></a>(dtrajs, …)</p></td>
+<td><p>Generates samples according to the current observation probability distribution</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.set_params" title="deeptime.markov.hmm.HiddenMarkovModel.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.simulate" title="deeptime.markov.hmm.HiddenMarkovModel.simulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simulate</span></code></a>(n_steps[, start, stop, dt])</p></td>
+<td><p>Generates a realization of the Hidden Markov Model</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.states_largest" title="deeptime.markov.hmm.HiddenMarkovModel.states_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">states_largest</span></code></a>([directed, …])</p></td>
+<td><p>Selects hidden states which represent the largest connected set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.states_populous" title="deeptime.markov.hmm.HiddenMarkovModel.states_populous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">states_populous</span></code></a>([strong, connectivity_threshold])</p></td>
+<td><p>Retrieves the hidden states which are most populated and connected.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.submodel" title="deeptime.markov.hmm.HiddenMarkovModel.submodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel</span></code></a>([states, obs])</p></td>
+<td><p>Returns a HMM with restricted state space</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.submodel_disconnect" title="deeptime.markov.hmm.HiddenMarkovModel.submodel_disconnect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel_disconnect</span></code></a>([connectivity_threshold])</p></td>
+<td><p>Disconnects sets of hidden states that are barely connected</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.submodel_largest" title="deeptime.markov.hmm.HiddenMarkovModel.submodel_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel_largest</span></code></a>([directed, …])</p></td>
+<td><p>Returns the largest connected sub-HMM.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.submodel_populous" title="deeptime.markov.hmm.HiddenMarkovModel.submodel_populous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel_populous</span></code></a>([directed, …])</p></td>
+<td><p>Returns the most populous connected sub-HMM.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.transform_discrete_trajectories_to_observed_symbols" title="deeptime.markov.hmm.HiddenMarkovModel.transform_discrete_trajectories_to_observed_symbols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_discrete_trajectories_to_observed_symbols</span></code></a>(dtrajs)</p></td>
+<td><p>A list of integer arrays with the discrete trajectories mapped to the currently used set of observation symbols.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.transition_matrix_obs" title="deeptime.markov.hmm.HiddenMarkovModel.transition_matrix_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transition_matrix_obs</span></code></a>([k])</p></td>
+<td><p>Computes the transition matrix between observed states</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.collect_observations_in_state">
+<code class="sig-name descname"><span class="pre">collect_observations_in_state</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observations</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.collect_observations_in_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect a vector of all observations belonging to a specified hidden state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>observations</strong> (<em>list of numpy.array</em>) – List of observed trajectories.</p></li>
+<li><p><strong>state_index</strong> (<em>int</em>) – The index of the hidden state for which corresponding observations are to be retrieved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>collected_observations</strong> – The collected vector of observations belonging to the specified hidden state.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.array with shape (nsamples,)</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – A RuntimeError is raised if the HMM model does not yet have a hidden state trajectory associated with it.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.compute_observation_likelihood">
+<code class="sig-name descname"><span class="pre">compute_observation_likelihood</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.compute_observation_likelihood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the likelihood of observed data under this model.</p>
+<p>Internally, the forward pass of the Baum-Welch algorithm is used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>array_like</em><em> or </em><em>list of array_like</em>) – The observations</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>likelihood</strong> – The computed likelihood.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.compute_viterbi_paths">
+<code class="sig-name descname"><span class="pre">compute_viterbi_paths</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observations</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.compute_viterbi_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the Viterbi paths using the current HMM model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>observations</strong> (<em>list of array_like</em><em> or </em><em>array_like</em>) – observations</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>paths</strong> – the computed viterbi paths</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.copy">
+<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">deeptime.base.Model</span></a><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a deep copy of this model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A new copy of this model.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.correlation_obs">
+<code class="sig-name descname"><span class="pre">correlation_obs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.correlation_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time-correlation for equilibrium experiment based on observable state vectors a and b.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel.correlation" title="deeptime.markov.msm.MarkovStateModel.correlation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deeptime.markov.msm.MarkovStateModel.correlation</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.expectation_obs">
+<code class="sig-name descname"><span class="pre">expectation_obs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.expectation_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Equilibrium expectation value of a given observable state vector.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel.expectation" title="deeptime.markov.msm.MarkovStateModel.expectation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deeptime.markov.msm.MarkovStateModel.expectation</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.fingerprint_correlation_obs">
+<code class="sig-name descname"><span class="pre">fingerprint_correlation_obs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.fingerprint_correlation_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dynamical fingerprint for equilibrium time-correlation experiment based on observable state vectors a
+and b.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel.fingerprint_correlation" title="deeptime.markov.msm.MarkovStateModel.fingerprint_correlation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deeptime.markov.msm.MarkovStateModel.fingerprint_correlation</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.fingerprint_relaxation_obs">
+<code class="sig-name descname"><span class="pre">fingerprint_relaxation_obs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.fingerprint_relaxation_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dynamical fingerprint for perturbation/relaxation experiment
+based on observable state vector and distribution.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel.fingerprint_relaxation" title="deeptime.markov.msm.MarkovStateModel.fingerprint_relaxation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deeptime.markov.msm.MarkovStateModel.fingerprint_relaxation</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mapping of string to any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.nonempty_obs">
+<code class="sig-name descname"><span class="pre">nonempty_obs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.nonempty_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the set of visited observable states given a set of discrete trajectories.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dtrajs</strong> (<em>array_like</em>) – observable trajectory</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>symbols</strong> – The observation symbols which are visited.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.propagate">
+<code class="sig-name descname"><span class="pre">propagate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.propagate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Propagates the initial distribution p0 defined on observable space k times.</p>
+<p>Therefore computes the product</p>
+<div class="math">
+\[p_k = p_0^T P^k\]</div>
+<p>If the lag time of transition matrix <span class="math">\(P\)</span> is <span class="math">\(\tau\)</span>, this
+will provide the probability distribution at time <span class="math">\(k \tau\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p0</strong> (<em>ndarray</em><em>(</em><em>n</em><em>)</em>) – Initial distribution. Vector of size of the active set.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – Number of time steps</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pk</strong> – Distribution after k steps</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ndarray(n)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.relaxation_obs">
+<code class="sig-name descname"><span class="pre">relaxation_obs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.relaxation_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulates a perturbation-relaxation experiment based on observable state vector and distribution.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel.relaxation" title="deeptime.markov.msm.MarkovStateModel.relaxation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deeptime.markov.msm.MarkovStateModel.relaxation</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.sample_by_observation_probabilities">
+<code class="sig-name descname"><span class="pre">sample_by_observation_probabilities</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsample</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.sample_by_observation_probabilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates samples according to the current observation probability distribution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dtrajs</strong> (<em>discrete trajectory</em>) – Input observation trajectory or list of trajectories</p></li>
+<li><p><strong>nsample</strong> (<em>int</em>) – Number of samples per distribution.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>indexes</strong> – List of the sampled indices by distribution.
+Each element is an index array with a number of rows equal to nsample, with rows consisting of a
+tuple (i, t), where i is the index of the trajectory and t is the time index within the trajectory.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>length m list of ndarray( (nsample, 2) )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.set_params">
+<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.simulate">
+<code class="sig-name descname"><span class="pre">simulate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.simulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a realization of the Hidden Markov Model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_steps</strong> (<em>int</em>) – trajectory length in steps of the lag time</p></li>
+<li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default = None</em>) – starting hidden state. If not given, will sample from the stationary
+distribution of the hidden transition matrix.</p></li>
+<li><p><strong>stop</strong> (<em>int</em><em> or </em><em>int-array-like</em><em>, </em><em>optional</em><em>, </em><em>default = None</em>) – stopping hidden set. If given, the trajectory will be stopped before
+N steps once a hidden state of the stop set is reached</p></li>
+<li><p><strong>dt</strong> (<em>int</em>) – trajectory will be saved every dt time steps.
+Internally, the dt’th power of P is taken to ensure a more efficient simulation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>htraj</strong> (<em>(N/dt, ) ndarray</em>) – The hidden state trajectory with length N/dt</p></li>
+<li><p><strong>otraj</strong> (<em>(N/dt, ) ndarray</em>) – The observable state discrete trajectory with length N/dt</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.states_largest">
+<code class="sig-name descname"><span class="pre">states_largest</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1/n'</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.states_largest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects hidden states which represent the largest connected set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directed</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – Whether the connectivity is strong (directed) or weak (undirected)</p></li>
+<li><p><strong>connectivity_threshold</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em><em>, </em><em>default='1/n'</em>) – A connectivity threshold which can be employed to only consider edges with a certain minimum weight.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The largest connected set of hidden states</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.states_populous">
+<code class="sig-name descname"><span class="pre">states_populous</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strong</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1/n'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.states_populous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the hidden states which are most populated and connected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strong</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – Whether the connectivity is evaluated based on a directed or on an undirected graph.</p></li>
+<li><p><strong>connectivity_threshold</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Minimum weight so that two states are considered connected.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>states</strong> – Most populated set of states</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.submodel">
+<code class="sig-name descname"><span class="pre">submodel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.submodel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a HMM with restricted state space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>states</strong> (<em>None</em><em> or </em><em>int-array</em>) – <p>Hidden states to restrict the model to. In addition to specifying
+the subset, possible options are:</p>
+<ul>
+<li><p>int-array: indices of states to restrict onto</p></li>
+<li><p>None : all states - don’t restrict</p></li>
+</ul>
+</p></li>
+<li><p><strong>obs</strong> (<em>None</em><em> or </em><em>int-array</em>) – <p>Observed states to restrict the model to. In addition to specifying
+an array with the state labels to be observed, possible options are:</p>
+<blockquote>
+<div><ul>
+<li><p>int-array: indices of states to restrict onto</p></li>
+<li><p>None : all states - don’t restrict</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>hmm</strong> – The restricted HMM.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel">HiddenMarkovModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.submodel_disconnect">
+<code class="sig-name descname"><span class="pre">submodel_disconnect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1/n'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.submodel_disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnects sets of hidden states that are barely connected</p>
+<p>Runs a connectivity check excluding all transition counts below
+connectivity_threshold. The transition matrix and stationary distribution
+will be re-estimated. Note that the resulting transition matrix
+may have both strongly and weakly connected subsets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>connectivity_threshold</strong> (<em>float</em><em> or </em><em>'1/n'</em>) – minimum number of counts to consider a connection between two states.
+Counts lower than that will count zero in the connectivity check and
+may thus separate the resulting transition matrix. The default
+evaluates to 1/n_states.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>hmm</strong> – The restricted HMM.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel">HiddenMarkovModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.submodel_largest">
+<code class="sig-name descname"><span class="pre">submodel_largest</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1/n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observe_nonempty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.submodel_largest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the largest connected sub-HMM. By default this means that the largest connected set of hidden states
+and the set of visited observable states is selected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directed</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – Whether the connectivity is based on a directed graph (strong connectiviy) or undirected (weak connectivity)</p></li>
+<li><p><strong>connectivity_threshold</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em><em>, </em><em>default='1/n'</em>) – The connectivity threshold required to consider two hidden states connected.</p></li>
+<li><p><strong>observe_nonempty</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – Whether the observable state set should be restricted to visited observable states. If True, dtrajs must
+be provided.</p></li>
+<li><p><strong>dtrajs</strong> (<em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Observable state trajectory or a list thereof to evaluate visited observable states.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sub_hmm</strong> – The restricted HMM.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel">HiddenMarkovModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.submodel_populous">
+<code class="sig-name descname"><span class="pre">submodel_populous</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1/n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observe_nonempty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.submodel_populous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most populous connected sub-HMM.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directed</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – Whether the connectivity is based on a directed graph (strong connectiviy) or undirected (weak connectivity)</p></li>
+<li><p><strong>connectivity_threshold</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em><em>, </em><em>default='1/n'</em>) – The connectivity threshold required to consider two hidden states connected.</p></li>
+<li><p><strong>observe_nonempty</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – Whether the observable state set should be restricted to visited observable states. If True, dtrajs must
+be provided.</p></li>
+<li><p><strong>dtrajs</strong> (<em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Observable state trajectory or a list thereof to evaluate visited observable states.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>hmm</strong> – The restricted HMM.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel">HiddenMarkovModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.transform_discrete_trajectories_to_observed_symbols">
+<code class="sig-name descname"><span class="pre">transform_discrete_trajectories_to_observed_symbols</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.transform_discrete_trajectories_to_observed_symbols" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of integer arrays with the discrete trajectories mapped to the currently used set of observation
+symbols. For example, if there has been a subselection of the model for connectivity=’largest’, the indices
+will be given within the connected set, frames that do not correspond to a considered symbol are set to -1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dtrajs</strong> (<em>array_like</em><em> or </em><em>list of array_like</em>) – discretized trajectories</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Curated discretized trajectories so that unconsidered symbols are mapped to -1.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like or list of array_like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.transition_matrix_obs">
+<code class="sig-name descname"><span class="pre">transition_matrix_obs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.transition_matrix_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the transition matrix between observed states</p>
+<p>Transition matrices for longer lag times than the one used to parametrize this HMM can be obtained by setting
+the k option. Note that a HMM is not Markovian, thus we cannot compute transition matrices at longer lag times
+using the Chapman-Kolmogorow equality. I.e.:</p>
+<div class="math">
+\[P (k \tau) \neq P^k (\tau)
+
+\]</div>
+<p>This function computes the correct transition matrix using the metastable (coarse)
+transition matrix <span class="math">\(P_c\)</span> as:</p>
+<div class="math">
+\[P (k \tau) = {\Pi}^{-1} \chi^{\top} ({\Pi}_c) P_c^k (\tau) \chi
+
+\]</div>
+<p>where <span class="math">\(\chi\)</span> is the output probability matrix, <span class="math">\(\Pi_c\)</span> is a diagonal matrix with the
+metastable-state (coarse) stationary distribution and <span class="math">\(\Pi\)</span> is a diagonal matrix with the
+observable-state stationary distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=1</em>) – Multiple of the lag time.
+By default (k=1), the transition matrix at the lag time used to
+construct this HMM will be returned. If a higher power is given,</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.count_model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">count_model</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.count_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the count model for the micro (hidden) states. The count matrix is estimated from Viterbi paths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>count_model</strong> – The count model for the micro states.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel" title="deeptime.markov.TransitionCountModel">deeptime.markov.TransitionCountModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.eigenvectors_left_obs">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">eigenvectors_left_obs</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.eigenvectors_left_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Left eigenvectors in observation space. Only available with a discrete output model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Left eigenvectors in observation space.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.eigenvectors_right_obs">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">eigenvectors_right_obs</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.eigenvectors_right_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Right eigenvectors in observation space. Only available with a discrete output model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Right eigenvectors in observation space.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.hidden_state_trajectories">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">hidden_state_trajectories</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.hidden_state_trajectories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Training trajectories mapped to hidden states after estimation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>hidden state trajectories, can be None if not provided in constructor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.initial_count">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">initial_count</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.initial_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hidden initial counts, can be None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Initial counts.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.initial_distribution">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">initial_distribution</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.initial_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>The initial distribution of this HMM over the hidden states.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The initial distribution.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.lagtime">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">lagtime</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.lagtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lagtime this model was estimated at.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>lagtime</strong> – The lagtime.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.lifetimes">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">lifetimes</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.lifetimes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lifetimes of states of the hidden transition matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>l</strong> – state lifetimes in units of the input trajectory time step,
+defined by <span class="math">\(-\tau / \ln \mid p_{ii} \mid, i = 1,...,n_\mathrm{states}\)</span>, where
+<span class="math">\(p_{ii}\)</span> are the diagonal entries of the hidden transition matrix.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ndarray(n_states)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.likelihood">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">likelihood</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.likelihood" title="Permalink to this definition">¶</a></dt>
+<dd><p>The estimated likelihood of this model based on the training data. Only available if the sequence of likelihoods
+is provided.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The estimated likelihood, otherwise None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.likelihoods">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">likelihoods</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.likelihoods" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the model comes from the MaximumLikelihoodHMM estimator, this property contains the sequence of likelihoods
+generated from the fitting iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Sequence of likelihoods, otherwise None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.metastable_assignments">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">metastable_assignments</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.metastable_assignments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the assignment to metastable sets for observable states</p>
+<p class="rubric">Notes</p>
+<p>This is only recommended for visualization purposes. You <em>cannot</em>
+compute any actual quantity of the coarse-grained kinetics without
+employing the fuzzy memberships!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>For each observable state, the metastable state it is located in.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ndarray((n) ,dtype=int)</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.output_probabilities" title="deeptime.markov.hmm.HiddenMarkovModel.output_probabilities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_probabilities</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.metastable_distributions">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">metastable_distributions</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.metastable_distributions" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Returns the output probability distributions. Identical to</dt><dd><p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.output_probabilities" title="deeptime.markov.hmm.HiddenMarkovModel.output_probabilities"><code class="xref py py-meth docutils literal notranslate"><span class="pre">output_probabilities()</span></code></a></p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>Pout</strong> – output probability matrix from hidden to observable discrete states</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ndarray (m,n)</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#deeptime.markov.hmm.HiddenMarkovModel.output_probabilities" title="deeptime.markov.hmm.HiddenMarkovModel.output_probabilities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_probabilities</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.metastable_memberships">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">metastable_memberships</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.metastable_memberships" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the memberships of observable states to metastable sets by Bayesian inversion.
+<span id="id72">[<a class="reference internal" href="#id25"><span>1</span></a>]</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>M</strong> – A matrix containing the probability or membership of each
+observable state to be assigned to each metastable or hidden state.
+The row sums of M are 1.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ndarray((n,m))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.metastable_sets">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">metastable_sets</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.metastable_sets" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Computes the metastable sets of observable states within each</dt><dd><p>metastable set</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This is only recommended for visualization purposes. You <em>cannot</em>
+compute any actual quantity of the coarse-grained kinetics without
+employing the fuzzy memberships!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>sets</strong> – A list of length equal to metastable states. Each element is an array
+with observable state indexes contained in it</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of int-arrays</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.n_hidden_states">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_hidden_states</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.n_hidden_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of hidden states. Can also be retrieved from the output model as well as from the transition model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Number of hidden states</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.n_observation_states">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_observation_states</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.n_observation_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property determining the number of observed/macro states. It coincides with the size of the second axis
+of the observation probabilities matrix in case of a discrete output model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Number of observed/macro states</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.observation_symbols">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">observation_symbols</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.observation_symbols" title="Permalink to this definition">¶</a></dt>
+<dd><p>The symbols represented by this HMM in observation space. Can be None in case the output model has no
+discrete observations it is None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The list of observation symbols or None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.observation_symbols_full">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">observation_symbols_full</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.observation_symbols_full" title="Permalink to this definition">¶</a></dt>
+<dd><p>All symbols that the original model contained (original before taking any submodel).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The list of observation symbols or None, if there are no discrete symbols or None was provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.output_model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">output_model</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.output_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>The selected output model for this HMM. The output model can map from the hidden states to observable states
+and can also be fitted to data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The output model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.output_probabilities">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">output_probabilities</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.output_probabilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the probabilities for each hidden state to map to a particular observation state. Only available
+if the underlying output model is a <cite>DiscreteOutputModel</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>probabilities</strong> – a (M,N) row-stochastic matrix mapping from each hidden to each observation state</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.state_probabilities">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">state_probabilities</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.state_probabilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of state probabilities for each trajectory that the model was trained on (gammas in the Baum-Welch algo).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List of state probabilities if initially provided in the constructor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.stationary_distribution_obs">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">stationary_distribution_obs</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.stationary_distribution_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The stationary distribution in observable space. Only available with a discrete output model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>stationary distribution in observation space if available</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.stride">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">stride</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.stride" title="Permalink to this definition">¶</a></dt>
+<dd><p>The stride parameter which was used to subsample the discrete trajectories when estimating the hidden
+markov state model. Can either be an integer value or ‘effective’, in which case a stride is estimated at
+which subsequent states are uncorrelated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>stride</strong> – The stride parameter.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int or str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.transition_counts">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">transition_counts</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.transition_counts" title="Permalink to this definition">¶</a></dt>
+<dd><p>The transition counts for the hidden states as estimated in the fitting procedure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The transition counts, can be None if the transition model has no count model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.HiddenMarkovModel.transition_model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">transition_model</span></code><a class="headerlink" href="#deeptime.markov.hmm.HiddenMarkovModel.transition_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the transition model for the hidden states.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>model</strong> – The transition model.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel">deeptime.markov.msm.MarkovStateModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

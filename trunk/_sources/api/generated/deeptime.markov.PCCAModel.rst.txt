@@ -1,0 +1,37 @@
+﻿
+
+*class* PCCAModel
+=================
+
+.. currentmodule:: deeptime.markov
+
+.. autoclass:: PCCAModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PCCAModel.assignments
+      ~PCCAModel.coarse_grained_stationary_probability
+      ~PCCAModel.coarse_grained_transition_matrix
+      ~PCCAModel.memberships
+      ~PCCAModel.metastable_distributions
+      ~PCCAModel.n_metastable
+      ~PCCAModel.sets
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PCCAModel.copy
+      ~PCCAModel.get_params
+      ~PCCAModel.set_params
+   
+   

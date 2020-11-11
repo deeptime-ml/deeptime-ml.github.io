@@ -1,0 +1,39 @@
+﻿
+
+*class* RegularSpace
+====================
+
+.. currentmodule:: deeptime.clustering
+
+.. autoclass:: RegularSpace
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RegularSpace.dmin
+      ~RegularSpace.has_model
+      ~RegularSpace.max_centers
+      ~RegularSpace.metric
+      ~RegularSpace.model
+      ~RegularSpace.n_clusters
+      ~RegularSpace.n_jobs
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RegularSpace.fetch_model
+      ~RegularSpace.fit
+      ~RegularSpace.get_params
+      ~RegularSpace.partial_fit
+      ~RegularSpace.set_params
+   
+   

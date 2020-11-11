@@ -1,0 +1,17 @@
+﻿
+
+*function* double\_well\_2d
+===========================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: double_well_2d
+
+   
+   
+   
+
+   
+
+   
+   

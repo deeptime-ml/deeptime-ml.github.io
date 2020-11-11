@@ -1,0 +1,75 @@
+﻿
+
+*class* KoopmanReweightedMSM
+============================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: KoopmanReweightedMSM
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KoopmanReweightedMSM.count_model
+      ~KoopmanReweightedMSM.empirical_koopman_model
+      ~KoopmanReweightedMSM.has_count_model
+      ~KoopmanReweightedMSM.koopman_model
+      ~KoopmanReweightedMSM.lagtime
+      ~KoopmanReweightedMSM.n_eigenvalues
+      ~KoopmanReweightedMSM.n_states
+      ~KoopmanReweightedMSM.ncv
+      ~KoopmanReweightedMSM.oom_components
+      ~KoopmanReweightedMSM.oom_eigenvalues
+      ~KoopmanReweightedMSM.oom_evaluator
+      ~KoopmanReweightedMSM.oom_information_state_vector
+      ~KoopmanReweightedMSM.oom_rank
+      ~KoopmanReweightedMSM.oom_timescales
+      ~KoopmanReweightedMSM.reversible
+      ~KoopmanReweightedMSM.sparse
+      ~KoopmanReweightedMSM.stationary
+      ~KoopmanReweightedMSM.stationary_distribution
+      ~KoopmanReweightedMSM.transition_matrix
+      ~KoopmanReweightedMSM.transition_matrix_tolerance
+      ~KoopmanReweightedMSM.twostep_count_matrices
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KoopmanReweightedMSM.committor_backward
+      ~KoopmanReweightedMSM.committor_forward
+      ~KoopmanReweightedMSM.compute_state_indices
+      ~KoopmanReweightedMSM.compute_trajectory_weights
+      ~KoopmanReweightedMSM.copy
+      ~KoopmanReweightedMSM.correlation
+      ~KoopmanReweightedMSM.eigenvalues
+      ~KoopmanReweightedMSM.eigenvectors_left
+      ~KoopmanReweightedMSM.eigenvectors_right
+      ~KoopmanReweightedMSM.expectation
+      ~KoopmanReweightedMSM.fingerprint_correlation
+      ~KoopmanReweightedMSM.fingerprint_relaxation
+      ~KoopmanReweightedMSM.get_params
+      ~KoopmanReweightedMSM.hmm
+      ~KoopmanReweightedMSM.mfpt
+      ~KoopmanReweightedMSM.pcca
+      ~KoopmanReweightedMSM.propagate
+      ~KoopmanReweightedMSM.reactive_flux
+      ~KoopmanReweightedMSM.relaxation
+      ~KoopmanReweightedMSM.score
+      ~KoopmanReweightedMSM.set_params
+      ~KoopmanReweightedMSM.simulate
+      ~KoopmanReweightedMSM.submodel
+      ~KoopmanReweightedMSM.timescales
+      ~KoopmanReweightedMSM.to_koopman_model
+      ~KoopmanReweightedMSM.update_stationary_distribution
+      ~KoopmanReweightedMSM.update_transition_matrix
+   
+   

@@ -1,0 +1,47 @@
+﻿
+
+*class* VAMPNet
+===============
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autoclass:: VAMPNet
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~VAMPNet.device
+      ~VAMPNet.dtype
+      ~VAMPNet.epsilon
+      ~VAMPNet.has_model
+      ~VAMPNet.learning_rate
+      ~VAMPNet.lobe
+      ~VAMPNet.lobe_timelagged
+      ~VAMPNet.model
+      ~VAMPNet.optimizer
+      ~VAMPNet.score_method
+      ~VAMPNet.train_scores
+      ~VAMPNet.validation_scores
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~VAMPNet.fetch_model
+      ~VAMPNet.fit
+      ~VAMPNet.get_params
+      ~VAMPNet.partial_fit
+      ~VAMPNet.set_params
+      ~VAMPNet.setup_optimizer
+      ~VAMPNet.transform
+      ~VAMPNet.validate
+   
+   

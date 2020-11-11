@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.flux.mfpt
+===============================
+
+.. currentmodule:: deeptime.markov.tools.flux
+
+.. autofunction:: mfpt

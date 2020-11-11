@@ -1,0 +1,24 @@
+﻿
+
+*class* PolynomialKernel
+========================
+
+.. currentmodule:: deeptime.kernels
+
+.. autoclass:: PolynomialKernel
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PolynomialKernel.apply
+      ~PolynomialKernel.gram
+   
+   

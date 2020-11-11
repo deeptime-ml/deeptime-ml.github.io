@@ -1,0 +1,17 @@
+﻿
+
+*function* drop\_nan\_rows
+==========================
+
+.. currentmodule:: deeptime.numeric
+
+.. autofunction:: drop_nan_rows
+
+   
+   
+   
+
+   
+
+   
+   

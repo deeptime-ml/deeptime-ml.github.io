@@ -1,0 +1,17 @@
+﻿
+
+*function* triple\_well\_1d
+===========================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: triple_well_1d
+
+   
+   
+   
+
+   
+
+   
+   

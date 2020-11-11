@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.fingerprint\_correlation
+=======================================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: fingerprint_correlation

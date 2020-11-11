@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.stationary\_distribution\_sensitivity
+====================================================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: stationary_distribution_sensitivity

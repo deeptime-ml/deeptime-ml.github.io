@@ -1,0 +1,17 @@
+﻿
+
+*function* swissroll\_model
+===========================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: swissroll_model
+
+   
+   
+   
+
+   
+
+   
+   

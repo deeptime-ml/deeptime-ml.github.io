@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.tmatrix\_cov
+=============================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: tmatrix_cov

@@ -1,0 +1,17 @@
+﻿
+
+*function* sort\_eigs
+=====================
+
+.. currentmodule:: deeptime.numeric
+
+.. autofunction:: sort_eigs
+
+   
+   
+   
+
+   
+
+   
+   

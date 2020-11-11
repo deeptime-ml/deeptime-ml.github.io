@@ -1,0 +1,17 @@
+﻿
+
+*function* plotting\_function
+=============================
+
+.. currentmodule:: deeptime.util.decorators
+
+.. autofunction:: plotting_function
+
+   
+   
+   
+
+   
+
+   
+   

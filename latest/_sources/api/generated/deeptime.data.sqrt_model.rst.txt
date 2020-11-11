@@ -1,0 +1,17 @@
+﻿
+
+*function* sqrt\_model
+======================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: sqrt_model
+
+   
+   
+   
+
+   
+
+   
+   

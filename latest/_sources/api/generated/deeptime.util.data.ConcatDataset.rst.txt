@@ -1,0 +1,29 @@
+﻿
+
+*class* ConcatDataset
+=====================
+
+.. currentmodule:: deeptime.util.data
+
+.. autoclass:: ConcatDataset
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ConcatDataset.subsets
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ConcatDataset.setflags
+   
+   

@@ -1,0 +1,31 @@
+﻿
+
+*class* TimeLaggedDataset
+=========================
+
+.. currentmodule:: deeptime.util.data
+
+.. autoclass:: TimeLaggedDataset
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TimeLaggedDataset.data
+      ~TimeLaggedDataset.data_lagged
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TimeLaggedDataset.astype
+      ~TimeLaggedDataset.setflags
+   
+   

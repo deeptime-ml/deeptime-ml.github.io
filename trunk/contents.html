@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Of Contents &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="_static/d3.v5.min.js"></script>
+    <script src="_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dimension reduction" href="index_dimreduction.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="_static/favicon-16x16.png">
+<link rel="manifest" href="_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="index_dimreduction.html" title="next chapter">Dimension reduction</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="table-of-contents">
+<h1>Table Of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_deepdimreduction.html">Deep dim reduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/vampnets.html">VAMPNets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/tae.html">Time-lagged autoencoders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/tae.html#Autoencoders">Autoencoders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/tae.html#Variational-autoencoders">Variational autoencoders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/sindy.html">SINDy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/sindy.html#Main-ideas">Main ideas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/sindy.html#Approximation-problem">Approximation problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/sindy.html#Deeptime-SINDy-objects">Deeptime SINDy objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/sindy.html#Example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index_msm.html">Markov state models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/transition-counting.html">Transition counting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/transition-counting.html#Selecting-a-submodel">Selecting a submodel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/mlmsm.html">Maximum-likelihood MSMs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/mlmsm.html#Bayesian-sampling">Bayesian sampling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/pcca.html">Coarse-graining with PCCA+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/tpt.html">Transition path theory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/tpt.html#The-committor">The committor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/tpt.html#Reactive-probability-flux">Reactive probability flux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/tpt.html#Coarse-graining-of-fluxes">Coarse-graining of fluxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/tpt.html#Pathway-decomposition">Pathway decomposition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/tpt.html#Example-from-trajectories">Example from trajectories</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hmm.html">Hidden Markov Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/hmm.html#Estimation">Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/hmm.html#Bayesian-sampling">Bayesian sampling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/clustering.html">Clustering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/clustering.html#K-means">K-means</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/clustering.html#uniform-initialization">uniform initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/clustering.html#k-means++-initialization">k-means++ initialization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/clustering.html#Mini-batch-k-means">Mini-batch k-means</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/clustering.html#Regular-space-clustering">Regular space clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/clustering.html#Box-discretization">Box discretization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/clustering.html#Defining-a-custom-metric-(advanced)">Defining a custom metric (advanced)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index_examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index_examples.html#general-examples">General examples</a><ul>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index_examples.html#notebook-examples">Notebook examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/examples/ala2-example.html">VAMPNets on Alanine Dipeptide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index.html">Datasets</a><ul>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index_dev.html">For developers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index_dev.html#writing-a-custom-estimator">Writing a custom estimator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_dev.html#adding-transformer-capabilities">Adding transformer capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_dev.html#depending-on-pytorch">Depending on PyTorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_dev.html#testing-your-code">Testing your code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_dev.html#documenting-the-code">Documenting the code</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index_base.html">deeptime.base</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.base.Model.html"><em>class</em> Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.base.Estimator.html"><em>class</em> Estimator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.base.Transformer.html"><em>class</em> Transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.base.Dataset.html"><em>class</em> Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_clustering.html">deeptime.clustering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_clustering.html#estimators">Estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.KMeans.html"><em>class</em> KMeans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.MiniBatchKMeans.html"><em>class</em> MiniBatchKMeans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.RegularSpace.html"><em>class</em> RegularSpace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.BoxDiscretization.html"><em>class</em> BoxDiscretization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_clustering.html#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.ClusterModel.html"><em>class</em> ClusterModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.KMeansModel.html"><em>class</em> KMeansModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.BoxDiscretizationModel.html"><em>class</em> BoxDiscretizationModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_clustering.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.kmeans_plusplus.html"><em>function</em> kmeans_plusplus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_clustering.html#adding-a-new-metric">Adding a new metric</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.Metric.html"><em>class</em> Metric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.metrics.html"><em>data</em> metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.clustering.MetricRegistry.html"><em>class</em> MetricRegistry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_sindy.html">deeptime.sindy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_sindy.html#estimators">Estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.sindy.SINDy.html"><em>class</em> SINDy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_sindy.html#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.sindy.SINDyModel.html"><em>class</em> SINDyModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_sindy.html#solvers">Solvers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.sindy.STLSQ.html"><em>class</em> STLSQ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_covariance.html">deeptime.covariance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_covariance.html#estimators">Estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.covariance.Covariance.html"><em>class</em> Covariance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.covariance.KoopmanWeightingEstimator.html"><em>class</em> KoopmanWeightingEstimator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_covariance.html#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.covariance.CovarianceModel.html"><em>class</em> CovarianceModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.covariance.KoopmanWeightingModel.html"><em>class</em> KoopmanWeightingModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_covariance.html#utilities">Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.covariance.WhiteningTransform.html"><em>class</em> WhiteningTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.covariance.covar.html"><em>function</em> covar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.covariance.covars.html"><em>function</em> covars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.covariance.moments_XX.html"><em>function</em> moments_XX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.covariance.moments_XXXY.html"><em>function</em> moments_XXXY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.covariance.moments_block.html"><em>function</em> moments_block</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_decomposition.html">deeptime.decomposition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_decomposition.html#estimators">Estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.VAMP.html"><em>class</em> VAMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.TICA.html"><em>class</em> TICA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.DMD.html"><em>class</em> DMD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.EDMD.html"><em>class</em> EDMD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.KernelEDMD.html"><em>class</em> KernelEDMD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.KernelCCA.html"><em>class</em> KernelCCA</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_decomposition.html#deep-estimators">Deep estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.VAMPNet.html"><em>class</em> VAMPNet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.TAE.html"><em>class</em> TAE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.TVAE.html"><em>class</em> TVAE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_decomposition.html#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.KoopmanModel.html"><em>class</em> KoopmanModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.CovarianceKoopmanModel.html"><em>class</em> CovarianceKoopmanModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.DMDModel.html"><em>class</em> DMDModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.EDMDModel.html"><em>class</em> EDMDModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.KernelEDMDModel.html"><em>class</em> KernelEDMDModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.KernelCCAModel.html"><em>class</em> KernelCCAModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.VAMPNetModel.html"><em>class</em> VAMPNetModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.TAEModel.html"><em>class</em> TAEModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.TVAEModel.html"><em>class</em> TVAEModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_decomposition.html#utils">Utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.vamp_score.html"><em>function</em> vamp_score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.vamp_score_data.html"><em>function</em> vamp_score_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.vamp_score_cv.html"><em>function</em> vamp_score_cv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.cvsplit_trajs.html"><em>function</em> cvsplit_trajs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.TVAEEncoder.html"><em>class</em> TVAEEncoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.koopman_matrix.html"><em>function</em> koopman_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.sym_inverse.html"><em>function</em> sym_inverse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.covariances.html"><em>function</em> covariances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.vamp_score.html"><em>function</em> vamp_score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.vampnet_loss.html"><em>function</em> vampnet_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.decomposition.deep.kvad_score.html"><em>function</em> kvad_score</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov.html">deeptime.markov</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov.html#estimators">Estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.msm.MaximumLikelihoodMSM.html"><em>class</em> MaximumLikelihoodMSM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.msm.BayesianMSM.html"><em>class</em> BayesianMSM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov.html#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.msm.MarkovStateModel.html"><em>class</em> MarkovStateModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.msm.MarkovStateModelCollection.html"><em>class</em> MarkovStateModelCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.msm.BayesianPosterior.html"><em>class</em> BayesianPosterior</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov.html#analysis-tools">Analysis tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.pcca.html"><em>function</em> pcca</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.reactive_flux.html"><em>function</em> reactive_flux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.MembershipsChapmanKolmogorovValidator.html"><em>class</em> MembershipsChapmanKolmogorovValidator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.PCCAModel.html"><em>class</em> PCCAModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.ReactiveFlux.html"><em>class</em> ReactiveFlux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov.html#utilities-and-alternatives">Utilities and alternatives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.number_of_states.html"><em>function</em> number_of_states</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.count_states.html"><em>function</em> count_states</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.compute_connected_sets.html"><em>function</em> compute_connected_sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.compute_dtrajs_effective.html"><em>function</em> compute_dtrajs_effective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.compute_effective_stride.html"><em>function</em> compute_effective_stride</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.sample.indices_by_distribution.html"><em>function</em> indices_by_distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.sample.compute_index_states.html"><em>function</em> compute_index_states</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.sample.indices_by_sequence.html"><em>function</em> indices_by_sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.sample.indices_by_state.html"><em>function</em> indices_by_state</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov.html#transition-counting">Transition counting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov.html#special-msm-estimators-and-models">Special MSM estimators and models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov_hmm.html">deeptime.markov.hmm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov_hmm.html#estimators">Estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.MaximumLikelihoodHMM.html"><em>class</em> MaximumLikelihoodHMM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.BayesianHMM.html"><em>class</em> BayesianHMM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov_hmm.html#output-models">Output models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.OutputModel.html"><em>class</em> OutputModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.DiscreteOutputModel.html"><em>class</em> DiscreteOutputModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.GaussianOutputModel.html"><em>class</em> GaussianOutputModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov_hmm.html#initial-guess">Initial guess</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.init.discrete.random_guess.html"><em>function</em> random_guess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.init.discrete.metastable_from_data.html"><em>function</em> metastable_from_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.init.discrete.metastable_from_msm.html"><em>function</em> metastable_from_msm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.init.gaussian.from_data.html"><em>function</em> from_data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov_hmm.html#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.HiddenMarkovModel.html"><em>class</em> HiddenMarkovModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.markov.hmm.BayesianHMMPosterior.html"><em>class</em> BayesianHMMPosterior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov_tools.html">deeptime.markov.tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov_tools.html#msm-estimation">MSM estimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#countmatrix">Countmatrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#connectivity">Connectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#estimation">Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#sampling">Sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#bootstrap">Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#priors">Priors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov_tools.html#msm-analysis">MSM analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#validation">Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#decomposition">Decomposition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#expected-counts">Expected counts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#passage-times">Passage times</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#committors-and-pcca">Committors and PCCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#fingerprints">Fingerprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#sensitivity-analysis">Sensitivity analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_markov_tools.html#transition-path-theory-tools">Transition path theory tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#reactive-flux">Reactive flux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#reaction-rates-and-fluxes">Reaction rates and fluxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index_markov_tools.html#pathway-decomposition">Pathway decomposition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_basis.html">deeptime.basis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.basis.Observable.html"><em>class</em> Observable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.basis.Concatenation.html"><em>class</em> Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.basis.Identity.html"><em>class</em> Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.basis.Monomials.html"><em>class</em> Monomials</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_kernels.html">deeptime.kernels</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.kernels.Kernel.html"><em>class</em> Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.kernels.GaussianKernel.html"><em>class</em> GaussianKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.kernels.GeneralizedGaussianKernel.html"><em>class</em> GeneralizedGaussianKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.kernels.LaplacianKernel.html"><em>class</em> LaplacianKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.kernels.PolynomialKernel.html"><em>class</em> PolynomialKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.kernels.TorchGaussianKernel.html"><em>class</em> TorchGaussianKernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/deeptime.kernels.is_torch_kernel.html"><em>function</em> is_torch_kernel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_data.html">deeptime.data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_data.html#api">API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.double_well_discrete.html"><em>function</em> double_well_discrete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.quadruple_well.html"><em>function</em> quadruple_well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.quadruple_well_asymmetric.html"><em>function</em> quadruple_well_asymmetric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.triple_well_2d.html"><em>function</em> triple_well_2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.triple_well_1d.html"><em>function</em> triple_well_1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.double_well_2d.html"><em>function</em> double_well_2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.time_dependent_quintuple_well.html"><em>function</em> time_dependent_quintuple_well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.abc_flow.html"><em>function</em> abc_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.ornstein_uhlenbeck.html"><em>function</em> ornstein_uhlenbeck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.prinz_potential.html"><em>function</em> prinz_potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.ellipsoids.html"><em>function</em> ellipsoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.sqrt_model.html"><em>function</em> sqrt_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.swissroll_model.html"><em>function</em> swissroll_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.position_based_fluids.html"><em>function</em> position_based_fluids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.drunkards_walk.html"><em>function</em> drunkards_walk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.bickley_jet.html"><em>function</em> bickley_jet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.birth_death_chain.html"><em>function</em> birth_death_chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.tmatrix_metropolis1d.html"><em>function</em> tmatrix_metropolis1d</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_data.html#custom-systems">Custom systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.custom_sde.html"><em>function</em> custom_sde</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.data.custom_ode.html"><em>function</em> custom_ode</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_data.html#implementations">Implementations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.data.DoubleWellDiscrete.html"><em>class</em> DoubleWellDiscrete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.data.Ellipsoids.html"><em>class</em> Ellipsoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.data.PBFSimulator.html"><em>class</em> PBFSimulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.data.DrunkardsWalk.html"><em>class</em> DrunkardsWalk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.data.BickleyJet.html"><em>class</em> BickleyJet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.data.BirthDeathChain.html"><em>class</em> BirthDeathChain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.data.TimeDependentSystem.html"><em>class</em> TimeDependentSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.data.TimeIndependentSystem.html"><em>class</em> TimeIndependentSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/impl/deeptime.data.CustomSystem.html"><em>class</em> CustomSystem</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_numeric.html">deeptime.numeric</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_numeric.html#general-numerical-tools">General numerical tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.drop_nan_rows.html"><em>function</em> drop_nan_rows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.is_diagonal_matrix.html"><em>function</em> is_diagonal_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.is_square_matrix.html"><em>function</em> is_square_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.schatten_norm.html"><em>function</em> schatten_norm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_numeric.html#numerical-tools-for-eigenvalue-problems">Numerical tools for eigenvalue problems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.eigs.html"><em>function</em> eigs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.eig_corr.html"><em>function</em> eig_corr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.sort_eigs.html"><em>function</em> sort_eigs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.spd_eig.html"><em>function</em> spd_eig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.spd_inv.html"><em>function</em> spd_inv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.spd_inv_split.html"><em>function</em> spd_inv_split</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.spd_inv_sqrt.html"><em>function</em> spd_inv_sqrt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.numeric.ZeroRankError.html"><em>exception</em> ZeroRankError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_util.html">deeptime.util</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index_util.html#data-utilities">Data utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.data.timeshifted_split.html"><em>function</em> timeshifted_split</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.data.TimeLaggedDataset.html"><em>class</em> TimeLaggedDataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.data.TimeLaggedConcatDataset.html"><em>class</em> TimeLaggedConcatDataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.data.TrajectoryDataset.html"><em>class</em> TrajectoryDataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.data.TrajectoriesDataset.html"><em>class</em> TrajectoriesDataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.data.ConcatDataset.html"><em>class</em> ConcatDataset</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_util.html#statistics-utilities">Statistics utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.QuantityStatistics.html"><em>class</em> QuantityStatistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.confidence_interval.html"><em>function</em> confidence_interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.LaggedModelValidator.html"><em>class</em> LaggedModelValidator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_util.html#type-utilities">Type utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.types.to_dataset.html"><em>function</em> to_dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.types.is_timelagged_dataset.html"><em>function</em> is_timelagged_dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.types.atleast_nd.html"><em>function</em> atleast_nd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index_util.html#other-utilities">Other utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.parallel.handle_n_jobs.html"><em>function</em> handle_n_jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.decorators.cached_property.html"><em>class</em> cached_property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/deeptime.util.decorators.plotting_function.html"><em>function</em> plotting_function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Software License</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="_static/scrollbar.js"></script>
+
+  </body>
+</html>

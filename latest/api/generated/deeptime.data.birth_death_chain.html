@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function birth_death_chain &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="function tmatrix_metropolis1d" href="deeptime.data.tmatrix_metropolis1d.html" />
+    <link rel="prev" title="function bickley_jet" href="deeptime.data.bickley_jet.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_data.html">deeptime.data</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index_data.html#api">API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.double_well_discrete.html"><em>function</em> double_well_discrete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.quadruple_well.html"><em>function</em> quadruple_well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.quadruple_well_asymmetric.html"><em>function</em> quadruple_well_asymmetric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.triple_well_2d.html"><em>function</em> triple_well_2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.triple_well_1d.html"><em>function</em> triple_well_1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.double_well_2d.html"><em>function</em> double_well_2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.time_dependent_quintuple_well.html"><em>function</em> time_dependent_quintuple_well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.abc_flow.html"><em>function</em> abc_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.ornstein_uhlenbeck.html"><em>function</em> ornstein_uhlenbeck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.prinz_potential.html"><em>function</em> prinz_potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.ellipsoids.html"><em>function</em> ellipsoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.sqrt_model.html"><em>function</em> sqrt_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.swissroll_model.html"><em>function</em> swissroll_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.position_based_fluids.html"><em>function</em> position_based_fluids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.drunkards_walk.html"><em>function</em> drunkards_walk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.bickley_jet.html"><em>function</em> bickley_jet</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>function</em> birth_death_chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.tmatrix_metropolis1d.html"><em>function</em> tmatrix_metropolis1d</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_data.html#custom-systems">Custom systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_data.html#implementations">Implementations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_data.html">deeptime.data</a><ul>
+      <li>Previous: <a href="deeptime.data.bickley_jet.html" title="previous chapter"><em>function</em> bickley_jet</a></li>
+      <li>Next: <a href="deeptime.data.tmatrix_metropolis1d.html" title="next chapter"><em>function</em> tmatrix_metropolis1d</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="function-birth-death-chain">
+<h1><em>function</em> birth_death_chain<a class="headerlink" href="#function-birth-death-chain" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="deeptime.data.birth_death_chain">
+<code class="sig-prename descclassname"><span class="pre">deeptime.data.</span></code><code class="sig-name descname"><span class="pre">birth_death_chain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sparse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.data.birth_death_chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a birth and death chain simulator from annihilation and creation probabilities <cite>q</cite> and <cite>p</cite>.</p>
+<p>A general birth and death chain on a d-dimensional state space has the transition matrix</p>
+<div class="math">
+\[p_{ij} = \begin{cases}
+    q_i &\text{, if } j=i-1 \text{ and } i>0,\\
+    r_i &\text{, if } j=i,\\
+    p_i &\text{, if } j=i+1 \text{ and } i < d-1
+\end{cases}\]</div>
+<p>The annihilation probability of state <span class="math">\(i=1\)</span> must not be zero, same for the creation probability
+of the last state <span class="math">\(i=n\)</span>. The sum of the probabilities must be bounded component-wise, i.e.,
+<span class="math">\(q_i + p_i \leq 1\;\forall i=1,\ldots ,n\)</span>.</p>
+<p>(<a class="reference external" href="../../datasets/plot_birth_death_chain.py">Source code</a>, <a class="reference external" href="../../datasets/plot_birth_death_chain.png">png</a>, <a class="reference external" href="../../datasets/plot_birth_death_chain.hires.png">hires.png</a>, <a class="reference external" href="../../datasets/plot_birth_death_chain.pdf">pdf</a>)</p>
+<div class="figure align-default">
+<img alt="../../_images/plot_birth_death_chain.png" src="../../_images/plot_birth_death_chain.png" />
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q</strong> (<em>array_like</em>) – Annihilation probabilities for transition from i to i-1.</p></li>
+<li><p><strong>p</strong> (<em>array_like</em>) – Creation probabilities for transition from i to i+1.</p></li>
+<li><p><strong>sparse</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – Whether to use sparse matrices.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>chain</strong> – The chain.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="impl/deeptime.data.BirthDeathChain.html#deeptime.data.BirthDeathChain" title="deeptime.data.BirthDeathChain">deeptime.data.BirthDeathChain</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

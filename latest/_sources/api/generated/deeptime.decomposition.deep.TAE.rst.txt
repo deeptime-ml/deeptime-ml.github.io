@@ -1,0 +1,42 @@
+﻿
+
+*class* TAE
+===========
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autoclass:: TAE
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TAE.device
+      ~TAE.dtype
+      ~TAE.has_model
+      ~TAE.learning_rate
+      ~TAE.model
+      ~TAE.optimizer
+      ~TAE.train_losses
+      ~TAE.validation_losses
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TAE.evaluate_loss
+      ~TAE.fetch_model
+      ~TAE.fit
+      ~TAE.get_params
+      ~TAE.set_params
+      ~TAE.setup_optimizer
+      ~TAE.transform
+   
+   

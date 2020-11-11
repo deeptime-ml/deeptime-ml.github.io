@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class OutputModel &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class DiscreteOutputModel" href="deeptime.markov.hmm.DiscreteOutputModel.html" />
+    <link rel="prev" title="class BayesianHMM" href="deeptime.markov.hmm.BayesianHMM.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#estimators">Estimators</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_markov_hmm.html#output-models">Output models</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>class</em> OutputModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.hmm.DiscreteOutputModel.html"><em>class</em> DiscreteOutputModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.hmm.GaussianOutputModel.html"><em>class</em> GaussianOutputModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#initial-guess">Initial guess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_markov_hmm.html">deeptime.markov.hmm</a><ul>
+      <li>Previous: <a href="deeptime.markov.hmm.BayesianHMM.html" title="previous chapter"><em>class</em> BayesianHMM</a></li>
+      <li>Next: <a href="deeptime.markov.hmm.DiscreteOutputModel.html" title="next chapter"><em>class</em> DiscreteOutputModel</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="class-outputmodel">
+<h1><em>class</em> OutputModel<a class="headerlink" href="#class-outputmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="deeptime.markov.hmm.OutputModel">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.markov.hmm.</span></code><code class="sig-name descname"><span class="pre">OutputModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_hidden_states</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_observable_states</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_outliers</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.OutputModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output model superclass. Contains basic functionality and interfaces which output models are supposed
+to implement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_hidden_states</strong> (<em>int</em>) – Number of hidden states.</p></li>
+<li><p><strong>n_observable_states</strong> (<em>int</em>) – Number of observable states if discrete state space, otherwise -1</p></li>
+<li><p><strong>ignore_outliers</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – By outliers observations that have zero probability given the
+current model are meant. <code class="code docutils literal notranslate"><span class="pre">ignore_outliers=True</span></code> means that outliers will be treated
+as if no observation was made, which is equivalent to making this
+observation with equal probability from any hidden state.
+<code class="code docutils literal notranslate"><span class="pre">ignore_outliers=False</span></code> means that an Exception or in the worst case an
+unhandled crash will occur if an outlier is observed.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="deeptime.markov.hmm.DiscreteOutputModel.html#deeptime.markov.hmm.DiscreteOutputModel" title="deeptime.markov.hmm.DiscreteOutputModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DiscreteOutputModel</span></code></a>, <a class="reference internal" href="deeptime.markov.hmm.GaussianOutputModel.html#deeptime.markov.hmm.GaussianOutputModel" title="deeptime.markov.hmm.GaussianOutputModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GaussianOutputModel</span></code></a></p>
+</div>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.ignore_outliers" title="deeptime.markov.hmm.OutputModel.ignore_outliers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_outliers</span></code></a></p></td>
+<td><p>By outliers observations that have zero probability given the current model are meant.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.n_hidden_states" title="deeptime.markov.hmm.OutputModel.n_hidden_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_hidden_states</span></code></a></p></td>
+<td><p>Number of hidden states.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.n_observable_states" title="deeptime.markov.hmm.OutputModel.n_observable_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_observable_states</span></code></a></p></td>
+<td><p>Number of observable states, can be -1 if not applicable (e.g., in a continous observable space).</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.copy" title="deeptime.markov.hmm.OutputModel.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Makes a deep copy of this model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.fit" title="deeptime.markov.hmm.OutputModel.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(observations, weights)</p></td>
+<td><p>Fits the output model given the observations and weights.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.generate_observation_trajectory" title="deeptime.markov.hmm.OutputModel.generate_observation_trajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_observation_trajectory</span></code></a>(…)</p></td>
+<td><p>Generates a synthetic trajectory in observation space given a trajectory in hidden state space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.get_params" title="deeptime.markov.hmm.OutputModel.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
+<td><p>Get the parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.sample" title="deeptime.markov.hmm.OutputModel.sample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code></a>(observations_per_state)</p></td>
+<td><p>Samples a new set of parameters for this output model given a list of observations for each hidden state.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.set_params" title="deeptime.markov.hmm.OutputModel.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.submodel" title="deeptime.markov.hmm.OutputModel.submodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel</span></code></a>([states, obs])</p></td>
+<td><p>Restricts this model to a set of hidden states and observable states (if applicable).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel.to_state_probability_trajectory" title="deeptime.markov.hmm.OutputModel.to_state_probability_trajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_state_probability_trajectory</span></code></a>(observations)</p></td>
+<td><p>Converts a list of observations to hidden state probabilities, i.e., for each observation <span class="math">\(o_t\)</span>, one obtains a vector <span class="math">\(p_t\in\mathbb{R}^{n_\mathrm{hidden}}\)</span> denoting how probable that particular observation is in one of the hidden states.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.copy">
+<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">deeptime.base.Model</span></a><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a deep copy of this model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A new copy of this model.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.fit">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">fit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observations</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits the output model given the observations and weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>observations</strong> (<em>list of ndarray</em>) – A list of K observation trajectories</p></li>
+<li><p><strong>weights</strong> (<em>list of ndarray</em>) – A list of K weight matrices, each having length T_k of their corresponding observation trajectory.
+Evaluating weights[k][t,n] should yield the weight assignment from observations[k][t] to state index n.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Reference to self.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel" title="deeptime.markov.hmm.OutputModel">OutputModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.generate_observation_trajectory">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">generate_observation_trajectory</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hidden_state_trajectory</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.generate_observation_trajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a synthetic trajectory in observation space given a trajectory in hidden state space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hidden_state_trajectory</strong> (<em>(</em><em>T</em><em>, </em><em>1</em><em>) </em><em>ndarray</em>) – Hidden state trajectory.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>observations</strong> – Observation timeseries <span class="math">\(\{o_t\}_t\)</span>, where <span class="math">\(o_t\)</span> is the observation
+associated to hidden state <span class="math">\(s_t\)</span>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, d) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mapping of string to any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.sample">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">sample</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observations_per_state</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Samples a new set of parameters for this output model given a list of observations for each hidden
+state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>observations_per_state</strong> (<em>list of ndarray</em>) – The observations per state, i.e., <code class="code docutils literal notranslate"><span class="pre">len(observations_per_state)</span></code> must evaluate to the value
+of <a class="reference internal" href="#deeptime.markov.hmm.OutputModel.n_hidden_states" title="deeptime.markov.hmm.OutputModel.n_hidden_states"><code class="xref py py-attr docutils literal notranslate"><span class="pre">n_hidden_states</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.set_params">
+<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.submodel">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">submodel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.submodel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restricts this model to a set of hidden states and observable states (if applicable).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>states</strong> (<em>ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – The hidden states to restrict to, per default no restriction.</p></li>
+<li><p><strong>obs</strong> (<em>ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – The observable states to restrict to (if applicable), per default no restriction.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>submodel</strong> – The restricted output model.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#deeptime.markov.hmm.OutputModel" title="deeptime.markov.hmm.OutputModel">OutputModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.to_state_probability_trajectory">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">to_state_probability_trajectory</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observations</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.to_state_probability_trajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a list of observations to hidden state probabilities, i.e., for each observation <span class="math">\(o_t\)</span>,
+one obtains a vector <span class="math">\(p_t\in\mathbb{R}^{n_\mathrm{hidden}}\)</span> denoting how probable that particular
+observation is in one of the hidden states.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>observations</strong> (<em>(</em><em>T</em><em>, </em><em>d</em><em>) </em><em>ndarray</em>) – Array of observations.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>state_probabilities</strong> – State probability trajectory.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, n_hidden) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.ignore_outliers">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">ignore_outliers</span></code><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.ignore_outliers" title="Permalink to this definition">¶</a></dt>
+<dd><p>By outliers observations that have zero probability given the
+current model are meant. <code class="code docutils literal notranslate"><span class="pre">ignore_outliers=True</span></code> means that outliers will be treated
+as if no observation was made, which is equivalent to making this
+observation with equal probability from any hidden state.
+<code class="code docutils literal notranslate"><span class="pre">ignore_outliers=False</span></code> means that an Exception or in the worst case an
+unhandled crash will occur if an outlier is observed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.n_hidden_states">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_hidden_states</span></code><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.n_hidden_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of hidden states.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.OutputModel.n_observable_states">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_observable_states</span></code><a class="headerlink" href="#deeptime.markov.hmm.OutputModel.n_observable_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of observable states, can be -1 if not applicable (e.g., in a continous observable space).</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

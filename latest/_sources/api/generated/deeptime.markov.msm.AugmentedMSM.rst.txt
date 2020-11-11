@@ -1,0 +1,69 @@
+﻿
+
+*class* AugmentedMSM
+====================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: AugmentedMSM
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~AugmentedMSM.count_model
+      ~AugmentedMSM.empirical_koopman_model
+      ~AugmentedMSM.has_count_model
+      ~AugmentedMSM.koopman_model
+      ~AugmentedMSM.lagtime
+      ~AugmentedMSM.n_eigenvalues
+      ~AugmentedMSM.n_states
+      ~AugmentedMSM.ncv
+      ~AugmentedMSM.optimizer_state
+      ~AugmentedMSM.reversible
+      ~AugmentedMSM.sparse
+      ~AugmentedMSM.stationary
+      ~AugmentedMSM.stationary_distribution
+      ~AugmentedMSM.transition_matrix
+      ~AugmentedMSM.transition_matrix_tolerance
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AugmentedMSM.committor_backward
+      ~AugmentedMSM.committor_forward
+      ~AugmentedMSM.compute_state_indices
+      ~AugmentedMSM.compute_trajectory_weights
+      ~AugmentedMSM.copy
+      ~AugmentedMSM.correlation
+      ~AugmentedMSM.eigenvalues
+      ~AugmentedMSM.eigenvectors_left
+      ~AugmentedMSM.eigenvectors_right
+      ~AugmentedMSM.expectation
+      ~AugmentedMSM.fingerprint_correlation
+      ~AugmentedMSM.fingerprint_relaxation
+      ~AugmentedMSM.get_params
+      ~AugmentedMSM.hmm
+      ~AugmentedMSM.mfpt
+      ~AugmentedMSM.pcca
+      ~AugmentedMSM.propagate
+      ~AugmentedMSM.reactive_flux
+      ~AugmentedMSM.relaxation
+      ~AugmentedMSM.score
+      ~AugmentedMSM.set_params
+      ~AugmentedMSM.simulate
+      ~AugmentedMSM.submodel
+      ~AugmentedMSM.timescales
+      ~AugmentedMSM.to_koopman_model
+      ~AugmentedMSM.update_stationary_distribution
+      ~AugmentedMSM.update_transition_matrix
+   
+   

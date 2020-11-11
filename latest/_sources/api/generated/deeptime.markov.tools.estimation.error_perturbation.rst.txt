@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.error\_perturbation
+====================================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: error_perturbation

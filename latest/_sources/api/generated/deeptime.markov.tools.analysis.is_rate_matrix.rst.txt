@@ -1,0 +1,17 @@
+﻿
+
+*function* is\_rate\_matrix
+===========================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: is_rate_matrix
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,17 @@
+﻿
+
+*function* stationary\_distribution
+===================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: stationary_distribution
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,68 @@
+﻿
+
+*class* MarkovStateModel
+========================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: MarkovStateModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MarkovStateModel.count_model
+      ~MarkovStateModel.empirical_koopman_model
+      ~MarkovStateModel.has_count_model
+      ~MarkovStateModel.koopman_model
+      ~MarkovStateModel.lagtime
+      ~MarkovStateModel.n_eigenvalues
+      ~MarkovStateModel.n_states
+      ~MarkovStateModel.ncv
+      ~MarkovStateModel.reversible
+      ~MarkovStateModel.sparse
+      ~MarkovStateModel.stationary
+      ~MarkovStateModel.stationary_distribution
+      ~MarkovStateModel.transition_matrix
+      ~MarkovStateModel.transition_matrix_tolerance
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MarkovStateModel.committor_backward
+      ~MarkovStateModel.committor_forward
+      ~MarkovStateModel.compute_state_indices
+      ~MarkovStateModel.compute_trajectory_weights
+      ~MarkovStateModel.copy
+      ~MarkovStateModel.correlation
+      ~MarkovStateModel.eigenvalues
+      ~MarkovStateModel.eigenvectors_left
+      ~MarkovStateModel.eigenvectors_right
+      ~MarkovStateModel.expectation
+      ~MarkovStateModel.fingerprint_correlation
+      ~MarkovStateModel.fingerprint_relaxation
+      ~MarkovStateModel.get_params
+      ~MarkovStateModel.hmm
+      ~MarkovStateModel.mfpt
+      ~MarkovStateModel.pcca
+      ~MarkovStateModel.propagate
+      ~MarkovStateModel.reactive_flux
+      ~MarkovStateModel.relaxation
+      ~MarkovStateModel.score
+      ~MarkovStateModel.set_params
+      ~MarkovStateModel.simulate
+      ~MarkovStateModel.submodel
+      ~MarkovStateModel.timescales
+      ~MarkovStateModel.to_koopman_model
+      ~MarkovStateModel.update_stationary_distribution
+      ~MarkovStateModel.update_transition_matrix
+   
+   

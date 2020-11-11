@@ -1,0 +1,17 @@
+﻿
+
+*function* pcca
+===============
+
+.. currentmodule:: deeptime.markov
+
+.. autofunction:: pcca
+
+   
+   
+   
+
+   
+
+   
+   

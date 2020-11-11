@@ -1,0 +1,36 @@
+﻿
+
+*class* Ellipsoids
+==================
+
+.. currentmodule:: deeptime.data
+
+.. autoclass:: Ellipsoids
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Ellipsoids.covariance_matrix
+      ~Ellipsoids.msm
+      ~Ellipsoids.random_state
+      ~Ellipsoids.seed
+      ~Ellipsoids.state_0_mean
+      ~Ellipsoids.state_1_mean
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Ellipsoids.discrete_trajectory
+      ~Ellipsoids.map_discrete_to_observations
+      ~Ellipsoids.observations
+   
+   

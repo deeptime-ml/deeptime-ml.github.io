@@ -1,0 +1,17 @@
+﻿
+
+*function* spd\_eig
+===================
+
+.. currentmodule:: deeptime.numeric
+
+.. autofunction:: spd_eig
+
+   
+   
+   
+
+   
+
+   
+   

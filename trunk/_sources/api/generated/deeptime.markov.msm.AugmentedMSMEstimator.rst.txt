@@ -1,0 +1,44 @@
+﻿
+
+*class* AugmentedMSMEstimator
+=============================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: AugmentedMSMEstimator
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~AugmentedMSMEstimator.convergence_criterion_lagrange
+      ~AugmentedMSMEstimator.expectations_by_state
+      ~AugmentedMSMEstimator.experimental_measurement_weights
+      ~AugmentedMSMEstimator.experimental_measurements
+      ~AugmentedMSMEstimator.has_model
+      ~AugmentedMSMEstimator.max_cache
+      ~AugmentedMSMEstimator.maxiter
+      ~AugmentedMSMEstimator.model
+      ~AugmentedMSMEstimator.reversible
+      ~AugmentedMSMEstimator.sparse
+      ~AugmentedMSMEstimator.support_confidence
+      ~AugmentedMSMEstimator.uncertainties
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AugmentedMSMEstimator.estimator_from_feature_trajectories
+      ~AugmentedMSMEstimator.fetch_model
+      ~AugmentedMSMEstimator.fit
+      ~AugmentedMSMEstimator.get_params
+      ~AugmentedMSMEstimator.set_params
+   
+   

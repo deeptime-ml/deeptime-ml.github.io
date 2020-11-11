@@ -1,0 +1,17 @@
+﻿
+
+*function* timeshifted\_split
+=============================
+
+.. currentmodule:: deeptime.util.data
+
+.. autofunction:: timeshifted_split
+
+   
+   
+   
+
+   
+
+   
+   

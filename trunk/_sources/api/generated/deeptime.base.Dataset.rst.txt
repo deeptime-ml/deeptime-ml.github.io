@@ -1,0 +1,23 @@
+﻿
+
+*class* Dataset
+===============
+
+.. currentmodule:: deeptime.base
+
+.. autoclass:: Dataset
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Dataset.setflags
+   
+   

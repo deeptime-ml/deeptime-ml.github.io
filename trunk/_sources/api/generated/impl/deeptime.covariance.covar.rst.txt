@@ -1,0 +1,17 @@
+﻿
+
+*function* covar
+================
+
+.. currentmodule:: deeptime.covariance
+
+.. autofunction:: covar
+
+   
+   
+   
+
+   
+
+   
+   

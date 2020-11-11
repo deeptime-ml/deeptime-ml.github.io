@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.tmatrix\_sampler
+=================================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: tmatrix_sampler

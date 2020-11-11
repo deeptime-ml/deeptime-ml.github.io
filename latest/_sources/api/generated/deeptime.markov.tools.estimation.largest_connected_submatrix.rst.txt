@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.largest\_connected\_submatrix
+==============================================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: largest_connected_submatrix

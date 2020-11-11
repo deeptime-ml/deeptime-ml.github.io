@@ -1,0 +1,40 @@
+﻿
+
+*class* MaximumLikelihoodMSM
+============================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: MaximumLikelihoodMSM
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MaximumLikelihoodMSM.allow_disconnected
+      ~MaximumLikelihoodMSM.has_model
+      ~MaximumLikelihoodMSM.model
+      ~MaximumLikelihoodMSM.reversible
+      ~MaximumLikelihoodMSM.sparse
+      ~MaximumLikelihoodMSM.stationary_distribution_constraint
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MaximumLikelihoodMSM.chapman_kolmogorov_validator
+      ~MaximumLikelihoodMSM.fetch_model
+      ~MaximumLikelihoodMSM.fit
+      ~MaximumLikelihoodMSM.fit_from_counts
+      ~MaximumLikelihoodMSM.fit_from_discrete_timeseries
+      ~MaximumLikelihoodMSM.get_params
+      ~MaximumLikelihoodMSM.set_params
+   
+   

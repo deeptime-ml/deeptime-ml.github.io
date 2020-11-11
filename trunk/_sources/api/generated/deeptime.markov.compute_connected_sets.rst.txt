@@ -1,0 +1,17 @@
+﻿
+
+*function* compute\_connected\_sets
+===================================
+
+.. currentmodule:: deeptime.markov
+
+.. autofunction:: compute_connected_sets
+
+   
+   
+   
+
+   
+
+   
+   

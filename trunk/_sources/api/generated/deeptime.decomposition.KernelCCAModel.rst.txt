@@ -1,0 +1,42 @@
+﻿
+
+*class* KernelCCAModel
+======================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: KernelCCAModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KernelCCAModel.eigenvalues
+      ~KernelCCAModel.eigenvectors
+      ~KernelCCAModel.instantaneous_obs
+      ~KernelCCAModel.kernel
+      ~KernelCCAModel.koopman_matrix
+      ~KernelCCAModel.operator
+      ~KernelCCAModel.operator_inverse
+      ~KernelCCAModel.output_dimension
+      ~KernelCCAModel.timelagged_obs
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KernelCCAModel.backward
+      ~KernelCCAModel.copy
+      ~KernelCCAModel.forward
+      ~KernelCCAModel.get_params
+      ~KernelCCAModel.set_params
+      ~KernelCCAModel.transform
+   
+   

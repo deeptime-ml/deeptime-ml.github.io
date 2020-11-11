@@ -1,0 +1,17 @@
+﻿
+
+*function* quadruple\_well\_asymmetric
+======================================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: quadruple_well_asymmetric
+
+   
+   
+   
+
+   
+
+   
+   

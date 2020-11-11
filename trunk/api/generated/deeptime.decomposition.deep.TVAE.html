@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class TVAE &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class KoopmanModel" href="deeptime.decomposition.KoopmanModel.html" />
+    <link rel="prev" title="class TAE" href="deeptime.decomposition.deep.TAE.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#estimators">Estimators</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_decomposition.html#deep-estimators">Deep estimators</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.VAMPNet.html"><em>class</em> VAMPNet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.TAE.html"><em>class</em> TAE</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>class</em> TVAE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#utils">Utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_decomposition.html">deeptime.decomposition</a><ul>
+      <li>Previous: <a href="deeptime.decomposition.deep.TAE.html" title="previous chapter"><em>class</em> TAE</a></li>
+      <li>Next: <a href="deeptime.decomposition.KoopmanModel.html" title="next chapter"><em>class</em> KoopmanModel</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="class-tvae">
+<h1><em>class</em> TVAE<a class="headerlink" href="#class-tvae" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="deeptime.decomposition.deep.TVAE">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.decomposition.deep.</span></code><code class="sig-name descname"><span class="pre">TVAE</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoder</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.nn.modules.module.Module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decoder</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.nn.modules.module.Module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Adam'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_rate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.0005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time-lagged variational autoencoder. For a description of the arguments please see <a class="reference internal" href="deeptime.decomposition.deep.TAE.html#deeptime.decomposition.deep.TAE" title="deeptime.decomposition.deep.TAE"><code class="xref py py-class docutils literal notranslate"><span class="pre">TAE</span></code></a>.
+The one additional argument is <cite>beta</cite>, which is the KLD-weight during optimization.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="deeptime.decomposition.deep.TAE.html#deeptime.decomposition.deep.TAE" title="deeptime.decomposition.deep.TAE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TAE</span></code></a>, <a class="reference internal" href="deeptime.decomposition.deep.TVAEModel.html#deeptime.decomposition.deep.TVAEModel" title="deeptime.decomposition.deep.TVAEModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TVAEModel</span></code></a></p>
+</div>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.device" title="deeptime.decomposition.deep.TVAE.device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device</span></code></a></p></td>
+<td><p>The device on which the estimator’s PyTorch module(s) are operating.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.dtype" title="deeptime.decomposition.deep.TVAE.dtype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dtype</span></code></a></p></td>
+<td><p>The data type under which the estimator operates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.has_model" title="deeptime.decomposition.deep.TVAE.has_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_model</span></code></a></p></td>
+<td><p>Property reporting whether this estimator contains an estimated model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.learning_rate" title="deeptime.decomposition.deep.TVAE.learning_rate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">learning_rate</span></code></a></p></td>
+<td><p>Sets or yields a learning rate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.model" title="deeptime.decomposition.deep.TVAE.model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></a></p></td>
+<td><p>Shortcut to <a class="reference internal" href="#deeptime.decomposition.deep.TVAE.fetch_model" title="deeptime.decomposition.deep.TVAE.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.optimizer" title="deeptime.decomposition.deep.TVAE.optimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optimizer</span></code></a></p></td>
+<td><p>The optimizer that is used.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.train_losses" title="deeptime.decomposition.deep.TVAE.train_losses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">train_losses</span></code></a></p></td>
+<td><p>The collected train scores.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.validation_losses" title="deeptime.decomposition.deep.TVAE.validation_losses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validation_losses</span></code></a></p></td>
+<td><p>The collected validation scores.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.evaluate_loss" title="deeptime.decomposition.deep.TVAE.evaluate_loss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluate_loss</span></code></a>(x, y)</p></td>
+<td><p>Evaluates the reconstruction loss and latent regularization loss, returns the sum.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.fetch_model" title="deeptime.decomposition.deep.TVAE.fetch_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_model</span></code></a>()</p></td>
+<td><p>Yields a new instance of <a class="reference internal" href="deeptime.decomposition.deep.TVAEModel.html#deeptime.decomposition.deep.TVAEModel" title="deeptime.decomposition.deep.TVAEModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TVAEModel</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.fit" title="deeptime.decomposition.deep.TVAE.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(data_loader[, n_epochs, validation_loader])</p></td>
+<td><p>Fits the encoder and decoder based on data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.get_params" title="deeptime.decomposition.deep.TVAE.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
+<td><p>Get the parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.set_params" title="deeptime.decomposition.deep.TVAE.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.setup_optimizer" title="deeptime.decomposition.deep.TVAE.setup_optimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_optimizer</span></code></a>(kind, parameters)</p></td>
+<td><p>Initializes a new optimizer on a list of parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAE.transform" title="deeptime.decomposition.deep.TVAE.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(data, **kwargs)</p></td>
+<td><p>Encodes input data.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.__call__">
+<code class="sig-name descname"><span class="pre">__call__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.evaluate_loss">
+<code class="sig-name descname"><span class="pre">evaluate_loss</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.evaluate_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the reconstruction loss and latent regularization loss, returns the sum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.nn.Tensor</em>) – Input tensor to be passed through the network.</p></li>
+<li><p><strong>y</strong> (<em>torch.nn.Tensor</em>) – Tensor which <cite>x</cite> is compared against.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>loss</strong> – The loss.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.nn.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.fetch_model">
+<code class="sig-name descname"><span class="pre">fetch_model</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">deeptime.decomposition.deep._tae.TVAEModel</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.fetch_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields a new instance of <a class="reference internal" href="deeptime.decomposition.deep.TVAEModel.html#deeptime.decomposition.deep.TVAEModel" title="deeptime.decomposition.deep.TVAEModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TVAEModel</span></code></a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The model can be subject to side-effects in case <a class="reference internal" href="#deeptime.decomposition.deep.TVAE.fit" title="deeptime.decomposition.deep.TVAE.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> is called multiple times, as no deep copy
+is performed of encoder and decoder networks.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>model</strong> – The model.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="deeptime.decomposition.deep.TVAEModel.html#deeptime.decomposition.deep.TVAEModel" title="deeptime.decomposition.deep.TVAEModel">TVAEModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.fit">
+<code class="sig-name descname"><span class="pre">fit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_loader</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.utils.data.dataloader.DataLoader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_epochs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_loader</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.utils.data.dataloader.DataLoader</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits the encoder and decoder based on data. Note that a call to fit does not reset the weights in the
+networks that are currently in <code class="xref py py-attr docutils literal notranslate"><span class="pre">encoder</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">decoder</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_loader</strong> (<em>DataLoader</em>) – Data loader which yields batches of instantaneous and time-lagged data.</p></li>
+<li><p><strong>n_epochs</strong> (<em>int</em><em>, </em><em>default=5</em>) – Number of epochs to train for.</p></li>
+<li><p><strong>validation_loader</strong> (<em>DataLoader</em><em>, </em><em>optional</em><em>, </em><em>default=MNone</em>) – Data loader which  yields batches of instantaneous and time-lagged data for validation purposes. Can be
+left None, in which case no validation is performed.</p></li>
+<li><p><strong>**kwargs</strong> – Ignored kw.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Reference to self.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="deeptime.decomposition.deep.TAE.html#deeptime.decomposition.deep.TAE" title="deeptime.decomposition.deep.TAE">TAE</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mapping of string to any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.set_params">
+<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.setup_optimizer">
+<code class="sig-name descname"><span class="pre">setup_optimizer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.setup_optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new optimizer on a list of parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> (<em>str</em><em> or </em><em>Callable</em>) – The optimizer.</p></li>
+<li><p><strong>parameters</strong> (<em>list of parameters</em>) – The parameters</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.transform">
+<code class="sig-name descname"><span class="pre">transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encodes input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>array_like</em><em> or </em><em>list of array_like</em>) – The input data</p></li>
+<li><p><strong>**kwargs</strong> – Ignored kw.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>transform</strong> – The transformed data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like or list of array_like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.device">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">device</span></code><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.device" title="Permalink to this definition">¶</a></dt>
+<dd><p>The device on which the estimator’s PyTorch module(s) are operating.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.dtype">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dtype</span></code><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.dtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data type under which the estimator operates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Gets the currently set data type.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets a new data type, must be one of np.float32, np.float64</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>numpy data type type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.has_model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">has_model</span></code><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.has_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property reporting whether this estimator contains an estimated model. This assumes that the model
+is initialized with <cite>None</cite> otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.learning_rate">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">learning_rate</span></code><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.learning_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets or yields a learning rate. Note that <a class="reference internal" href="#deeptime.decomposition.deep.TVAE.setup_optimizer" title="deeptime.decomposition.deep.TVAE.setup_optimizer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_optimizer()</span></code></a> should be called on update to propagate
+the changes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut to <a class="reference internal" href="#deeptime.decomposition.deep.TVAE.fetch_model" title="deeptime.decomposition.deep.TVAE.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.optimizer">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">optimizer</span></code><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The optimizer that is used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Gets the currently configured optimizer.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets a new optimizer based on optimizer name (string) or optimizer class (class reference).</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>torch.optim.Optimizer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.train_losses">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">train_losses</span></code><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.train_losses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The collected train scores. First dimension contains the step, second dimension the score. Initially empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>(T, 2) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.deep.TVAE.validation_losses">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">validation_losses</span></code><a class="headerlink" href="#deeptime.decomposition.deep.TVAE.validation_losses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The collected validation scores. First dimension contains the step, second dimension the score.
+Initially empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>(T, 2) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

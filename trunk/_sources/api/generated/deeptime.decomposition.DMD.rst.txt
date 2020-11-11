@@ -1,0 +1,37 @@
+﻿
+
+*class* DMD
+===========
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: DMD
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DMD.available_drivers
+      ~DMD.available_modes
+      ~DMD.has_model
+      ~DMD.mode
+      ~DMD.model
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DMD.fetch_model
+      ~DMD.fit
+      ~DMD.get_params
+      ~DMD.set_params
+      ~DMD.transform
+   
+   

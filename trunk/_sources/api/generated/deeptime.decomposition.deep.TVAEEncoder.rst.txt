@@ -1,0 +1,61 @@
+﻿
+
+*class* TVAEEncoder
+===================
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autoclass:: TVAEEncoder
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TVAEEncoder.T_destination
+      ~TVAEEncoder.dump_patches
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TVAEEncoder.add_module
+      ~TVAEEncoder.apply
+      ~TVAEEncoder.bfloat16
+      ~TVAEEncoder.buffers
+      ~TVAEEncoder.children
+      ~TVAEEncoder.cpu
+      ~TVAEEncoder.cuda
+      ~TVAEEncoder.double
+      ~TVAEEncoder.eval
+      ~TVAEEncoder.extra_repr
+      ~TVAEEncoder.float
+      ~TVAEEncoder.forward
+      ~TVAEEncoder.half
+      ~TVAEEncoder.load_state_dict
+      ~TVAEEncoder.modules
+      ~TVAEEncoder.named_buffers
+      ~TVAEEncoder.named_children
+      ~TVAEEncoder.named_modules
+      ~TVAEEncoder.named_parameters
+      ~TVAEEncoder.parameters
+      ~TVAEEncoder.register_backward_hook
+      ~TVAEEncoder.register_buffer
+      ~TVAEEncoder.register_forward_hook
+      ~TVAEEncoder.register_forward_pre_hook
+      ~TVAEEncoder.register_parameter
+      ~TVAEEncoder.requires_grad_
+      ~TVAEEncoder.share_memory
+      ~TVAEEncoder.state_dict
+      ~TVAEEncoder.to
+      ~TVAEEncoder.train
+      ~TVAEEncoder.type
+      ~TVAEEncoder.zero_grad
+   
+   

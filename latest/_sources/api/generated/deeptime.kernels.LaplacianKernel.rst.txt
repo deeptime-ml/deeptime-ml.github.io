@@ -1,0 +1,24 @@
+﻿
+
+*class* LaplacianKernel
+=======================
+
+.. currentmodule:: deeptime.kernels
+
+.. autoclass:: LaplacianKernel
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LaplacianKernel.apply
+      ~LaplacianKernel.gram
+   
+   

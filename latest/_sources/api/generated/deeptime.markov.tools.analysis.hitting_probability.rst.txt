@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.hitting\_probability
+===================================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: hitting_probability

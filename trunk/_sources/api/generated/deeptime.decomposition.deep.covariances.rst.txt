@@ -1,0 +1,17 @@
+﻿
+
+*function* covariances
+======================
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autofunction:: covariances
+
+   
+   
+   
+
+   
+
+   
+   

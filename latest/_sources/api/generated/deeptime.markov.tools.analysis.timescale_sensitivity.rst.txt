@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.timescale\_sensitivity
+=====================================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: timescale_sensitivity

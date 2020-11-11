@@ -1,0 +1,17 @@
+﻿
+
+*function* timescales
+=====================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: timescales
+
+   
+   
+   
+
+   
+
+   
+   

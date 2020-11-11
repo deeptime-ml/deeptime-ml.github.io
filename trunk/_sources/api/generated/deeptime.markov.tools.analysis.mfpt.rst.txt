@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.mfpt
+===================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: mfpt

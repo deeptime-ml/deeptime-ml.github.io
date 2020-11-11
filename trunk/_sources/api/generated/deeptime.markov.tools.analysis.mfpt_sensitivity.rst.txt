@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.mfpt\_sensitivity
+================================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: mfpt_sensitivity

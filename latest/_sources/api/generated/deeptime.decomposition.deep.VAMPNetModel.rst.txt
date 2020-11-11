@@ -1,0 +1,34 @@
+﻿
+
+*class* VAMPNetModel
+====================
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autoclass:: VAMPNetModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~VAMPNetModel.instantaneous
+      ~VAMPNetModel.lobe
+      ~VAMPNetModel.lobe_timelagged
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~VAMPNetModel.copy
+      ~VAMPNetModel.get_params
+      ~VAMPNetModel.set_params
+      ~VAMPNetModel.transform
+   
+   

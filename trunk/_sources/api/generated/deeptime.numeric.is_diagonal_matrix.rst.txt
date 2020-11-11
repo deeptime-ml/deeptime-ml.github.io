@@ -1,0 +1,17 @@
+﻿
+
+*function* is\_diagonal\_matrix
+===============================
+
+.. currentmodule:: deeptime.numeric
+
+.. autofunction:: is_diagonal_matrix
+
+   
+   
+   
+
+   
+
+   
+   

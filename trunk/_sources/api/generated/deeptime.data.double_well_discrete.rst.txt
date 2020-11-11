@@ -1,0 +1,17 @@
+﻿
+
+*function* double\_well\_discrete
+=================================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: double_well_discrete
+
+   
+   
+   
+
+   
+
+   
+   

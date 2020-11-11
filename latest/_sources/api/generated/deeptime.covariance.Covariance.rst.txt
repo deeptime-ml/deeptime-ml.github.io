@@ -1,0 +1,45 @@
+﻿
+
+*class* Covariance
+==================
+
+.. currentmodule:: deeptime.covariance
+
+.. autoclass:: Covariance
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Covariance.bessels_correction
+      ~Covariance.compute_c00
+      ~Covariance.compute_c0t
+      ~Covariance.compute_ctt
+      ~Covariance.diag_only
+      ~Covariance.has_model
+      ~Covariance.is_lagged
+      ~Covariance.lagtime
+      ~Covariance.model
+      ~Covariance.ncov
+      ~Covariance.remove_data_mean
+      ~Covariance.reversible
+      ~Covariance.sparse_mode
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Covariance.fetch_model
+      ~Covariance.fit
+      ~Covariance.get_params
+      ~Covariance.partial_fit
+      ~Covariance.set_params
+   
+   

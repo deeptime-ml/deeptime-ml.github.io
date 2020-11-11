@@ -1,0 +1,17 @@
+﻿
+
+*function* is\_transition\_matrix
+=================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: is_transition_matrix
+
+   
+   
+   
+
+   
+
+   
+   

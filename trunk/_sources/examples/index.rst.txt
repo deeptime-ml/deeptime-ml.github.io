@@ -1,0 +1,186 @@
+:orphan:
+
+
+
+.. _sphx_glr_examples:
+
+.. _method_examples:
+
+General examples
+----------------
+
+Short examples for some of the methods.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows a decomposition into metastable sets (see deeptime.markov.pcca) of states in...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_pcca_drunkard_thumb.png
+     :alt: PCCA+ on the Drunkard's walk example
+
+     :ref:`sphx_glr_examples_plot_pcca_drunkard.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_pcca_drunkard
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Projection of position based fluids simulation timeseries on dominant component. For more detai...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_vamp_pbf_projection_thumb.png
+     :alt: VAMP on Position Based Fluids
+
+     :ref:`sphx_glr_examples_plot_vamp_pbf_projection.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_vamp_pbf_projection
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows an application of deeptime.decomposition.KernelCCA on the bickley jet &lt;deept...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_kcca_bickley_thumb.png
+     :alt: Kernel CCA on the Bickley jet to find coherent sets
+
+     :ref:`sphx_glr_examples_plot_kcca_bickley.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_kcca_bickley
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to compute and visualize gross and net reactive flux (see deeptime.marko...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_tpt_gross_net_flux_thumb.png
+     :alt: Gross and net flux on the Drunkard's walk example
+
+     :ref:`sphx_glr_examples_plot_tpt_gross_net_flux.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_tpt_gross_net_flux
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use SINDy to discover the chaotic Rossler system from measurement dat...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_sindy_rossler_attractor_thumb.png
+     :alt: Identification of the Rossler system with SINDy
+
+     :ref:`sphx_glr_examples_plot_sindy_rossler_attractor.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_sindy_rossler_attractor
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the implemented clustering methods on one example dataset for a direc...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_clustering_comparison_thumb.png
+     :alt: Clustering methods comparison
+
+     :ref:`sphx_glr_examples_plot_clustering_comparison.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_clustering_comparison
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example directly reflects the example used in the `TICA documentation &lt;../notebooks/tica.i...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_vamp_vs_tica_vs_pca_thumb.png
+     :alt: VAMP vs. TICA vs. PCA
+
+     :ref:`sphx_glr_examples_plot_vamp_vs_tica_vs_pca.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_vamp_vs_tica_vs_pca
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows an application of deeptime.decomposition.KernelCCA on the sqrt model &lt;deepti...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_kcca_projection_thumb.png
+     :alt: Kernel CCA on the sqrt-Model to transform data
+
+     :ref:`sphx_glr_examples_plot_kcca_projection.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_kcca_projection
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+

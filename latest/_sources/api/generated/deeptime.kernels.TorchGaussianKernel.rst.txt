@@ -1,0 +1,34 @@
+﻿
+
+*class* TorchGaussianKernel
+===========================
+
+.. currentmodule:: deeptime.kernels
+
+.. autoclass:: TorchGaussianKernel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TorchGaussianKernel.impl
+      ~TorchGaussianKernel.sigma
+      ~TorchGaussianKernel.valid_impls
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TorchGaussianKernel.apply
+      ~TorchGaussianKernel.apply_torch
+      ~TorchGaussianKernel.cdist
+      ~TorchGaussianKernel.gram
+   
+   

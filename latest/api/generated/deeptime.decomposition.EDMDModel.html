@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class EDMDModel &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class KernelEDMDModel" href="deeptime.decomposition.KernelEDMDModel.html" />
+    <link rel="prev" title="class DMDModel" href="deeptime.decomposition.DMDModel.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#estimators">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#deep-estimators">Deep estimators</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_decomposition.html#models">Models</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.KoopmanModel.html"><em>class</em> KoopmanModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html"><em>class</em> CovarianceKoopmanModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.DMDModel.html"><em>class</em> DMDModel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>class</em> EDMDModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.KernelEDMDModel.html"><em>class</em> KernelEDMDModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.KernelCCAModel.html"><em>class</em> KernelCCAModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.VAMPNetModel.html"><em>class</em> VAMPNetModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.TAEModel.html"><em>class</em> TAEModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.TVAEModel.html"><em>class</em> TVAEModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#utils">Utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_decomposition.html">deeptime.decomposition</a><ul>
+      <li>Previous: <a href="deeptime.decomposition.DMDModel.html" title="previous chapter"><em>class</em> DMDModel</a></li>
+      <li>Next: <a href="deeptime.decomposition.KernelEDMDModel.html" title="next chapter"><em>class</em> KernelEDMDModel</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="class-edmdmodel">
+<h1><em>class</em> EDMDModel<a class="headerlink" href="#class-edmdmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="deeptime.decomposition.EDMDModel">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.decomposition.</span></code><code class="sig-name descname"><span class="pre">EDMDModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operator</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basis</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenvalues</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.EDMDModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The EDMD model which can be estimated from a <a class="reference internal" href="deeptime.decomposition.EDMD.html#deeptime.decomposition.EDMD" title="deeptime.decomposition.EDMD"><code class="xref py py-class docutils literal notranslate"><span class="pre">EDMD</span></code></a> estimator. It possesses the estimated operator
+as well as capabilities to project onto modes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>operator</strong> (<em>(</em><em>n</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – The estimated operator.</p></li>
+<li><p><strong>basis</strong> (<em>callable</em>) – The basis transform that was used.</p></li>
+<li><p><strong>eigenvalues</strong> (<em>(</em><em>n</em><em>, </em><em>) </em><em>ndarray</em>) – Eigenvalues for the modes.</p></li>
+<li><p><strong>modes</strong> (<em>(</em><em>k</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – The EDMD modes.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="deeptime.decomposition.EDMD.html#deeptime.decomposition.EDMD" title="deeptime.decomposition.EDMD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EDMD</span></code></a></p>
+</div>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.instantaneous_obs" title="deeptime.decomposition.EDMDModel.instantaneous_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instantaneous_obs</span></code></a></p></td>
+<td><p>Transforms the current state <span class="math">\(x_t\)</span> to <span class="math">\(f(x_t)\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.koopman_matrix" title="deeptime.decomposition.EDMDModel.koopman_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">koopman_matrix</span></code></a></p></td>
+<td><p>Same as <a class="reference internal" href="#deeptime.decomposition.EDMDModel.operator" title="deeptime.decomposition.EDMDModel.operator"><code class="xref py py-attr docutils literal notranslate"><span class="pre">operator</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.operator" title="deeptime.decomposition.EDMDModel.operator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">operator</span></code></a></p></td>
+<td><p>The operator <span class="math">\(K\)</span> so that <span class="math">\(\mathbb{E}[g(x_{t+\tau}] = K^\top \mathbb{E}[f(x_t)]\)</span> in transformed bases.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.operator_inverse" title="deeptime.decomposition.EDMDModel.operator_inverse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">operator_inverse</span></code></a></p></td>
+<td><p>Inverse of the operator <span class="math">\(K\)</span>, i.e., <span class="math">\(K^{-1}\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.output_dimension" title="deeptime.decomposition.EDMDModel.output_dimension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_dimension</span></code></a></p></td>
+<td><p>The dimension of data after propagation by <span class="math">\(K\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.timelagged_obs" title="deeptime.decomposition.EDMDModel.timelagged_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timelagged_obs</span></code></a></p></td>
+<td><p>Transforms the future state <span class="math">\(x_{t+\tau}\)</span> to <span class="math">\(g(x_{t+\tau})\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.backward" title="deeptime.decomposition.EDMDModel.backward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">backward</span></code></a>(data[, propagate])</p></td>
+<td><p>Maps data backward in time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.copy" title="deeptime.decomposition.EDMDModel.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Makes a deep copy of this model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.forward" title="deeptime.decomposition.EDMDModel.forward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forward</span></code></a>(data[, propagate])</p></td>
+<td><p>Maps data forward in time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.get_params" title="deeptime.decomposition.EDMDModel.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
+<td><p>Get the parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.set_params" title="deeptime.decomposition.EDMDModel.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.EDMDModel.transform" title="deeptime.decomposition.EDMDModel.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(data, **kw)</p></td>
+<td><p>Transforms the data by first applying the basis and then the estimated modes, i.e.,</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.__call__">
+<code class="sig-name descname"><span class="pre">__call__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.EDMDModel.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.backward">
+<code class="sig-name descname"><span class="pre">backward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.EDMDModel.backward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps data backward in time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>(</em><em>T</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – Input data</p></li>
+<li><p><strong>propagate</strong> (<em>bool</em><em>, </em><em>default=True</em>) – Whether to apply the Koopman operator to the featurized data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mapped_data</strong> – Mapped data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, m) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.copy">
+<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">deeptime.base.Model</span></a><a class="headerlink" href="#deeptime.decomposition.EDMDModel.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a deep copy of this model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A new copy of this model.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.forward">
+<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.EDMDModel.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps data forward in time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>(</em><em>T</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – Input data</p></li>
+<li><p><strong>propagate</strong> (<em>bool</em><em>, </em><em>default=True</em>) – Whether to apply the Koopman operator to the featurized data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mapped_data</strong> – Mapped data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, m) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.EDMDModel.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mapping of string to any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.set_params">
+<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.EDMDModel.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.transform">
+<code class="sig-name descname"><span class="pre">transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.EDMDModel.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the data by first applying the basis and then the estimated modes, i.e.,</p>
+<div class="math">
+\[X \mapsto \Psi(X)\varphi\]</div>
+<p>where <span class="math">\(X\)</span> is the input data, <span class="math">\(\Psi\)</span> the basis transform, and <span class="math">\(\varphi\)</span> the Koopman operator’s</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>(</em><em>T</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – Input data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>transformed</strong> – The forward transform of the input data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, n) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.instantaneous_obs">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">instantaneous_obs</span></code><a class="headerlink" href="#deeptime.decomposition.EDMDModel.instantaneous_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the current state <span class="math">\(x_t\)</span> to <span class="math">\(f(x_t)\)</span>. Defaults to <cite>f(x) = x</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.koopman_matrix">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">koopman_matrix</span></code><a class="headerlink" href="#deeptime.decomposition.EDMDModel.koopman_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#deeptime.decomposition.EDMDModel.operator" title="deeptime.decomposition.EDMDModel.operator"><code class="xref py py-attr docutils literal notranslate"><span class="pre">operator</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.operator">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">operator</span></code><a class="headerlink" href="#deeptime.decomposition.EDMDModel.operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operator <span class="math">\(K\)</span> so that <span class="math">\(\mathbb{E}[g(x_{t+\tau}] = K^\top \mathbb{E}[f(x_t)]\)</span> in transformed
+bases.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.operator_inverse">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">operator_inverse</span></code><a class="headerlink" href="#deeptime.decomposition.EDMDModel.operator_inverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse of the operator <span class="math">\(K\)</span>, i.e., <span class="math">\(K^{-1}\)</span>.
+Potentially pseudo-inverse instead of true inverse.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.output_dimension">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">output_dimension</span></code><a class="headerlink" href="#deeptime.decomposition.EDMDModel.output_dimension" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dimension of data after propagation by <span class="math">\(K\)</span>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.EDMDModel.timelagged_obs">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">timelagged_obs</span></code><a class="headerlink" href="#deeptime.decomposition.EDMDModel.timelagged_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the future state <span class="math">\(x_{t+\tau}\)</span> to <span class="math">\(g(x_{t+\tau})\)</span>. Defaults to <cite>f(x) = x</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,17 @@
+﻿
+
+*function* drunkards\_walk
+==========================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: drunkards_walk
+
+   
+   
+   
+
+   
+
+   
+   

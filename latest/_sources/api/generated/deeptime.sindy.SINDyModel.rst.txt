@@ -1,0 +1,38 @@
+﻿
+
+*class* SINDyModel
+==================
+
+.. currentmodule:: deeptime.sindy
+
+.. autoclass:: SINDyModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SINDyModel.coefficients
+      ~SINDyModel.intercept
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SINDyModel.copy
+      ~SINDyModel.equations
+      ~SINDyModel.get_params
+      ~SINDyModel.predict
+      ~SINDyModel.print
+      ~SINDyModel.score
+      ~SINDyModel.set_params
+      ~SINDyModel.simulate
+      ~SINDyModel.transform
+   
+   

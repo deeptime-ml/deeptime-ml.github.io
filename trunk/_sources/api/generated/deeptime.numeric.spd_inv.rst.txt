@@ -1,0 +1,17 @@
+﻿
+
+*function* spd\_inv
+===================
+
+.. currentmodule:: deeptime.numeric
+
+.. autofunction:: spd_inv
+
+   
+   
+   
+
+   
+
+   
+   

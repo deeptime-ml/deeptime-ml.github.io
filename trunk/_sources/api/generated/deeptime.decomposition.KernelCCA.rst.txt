@@ -1,0 +1,33 @@
+﻿
+
+*class* KernelCCA
+=================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: KernelCCA
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KernelCCA.has_model
+      ~KernelCCA.model
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KernelCCA.fetch_model
+      ~KernelCCA.fit
+      ~KernelCCA.get_params
+      ~KernelCCA.set_params
+   
+   

@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.prior\_const
+=============================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: prior_const

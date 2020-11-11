@@ -1,0 +1,25 @@
+﻿
+
+*class* Model
+=============
+
+.. currentmodule:: deeptime.base
+
+.. autoclass:: Model
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Model.copy
+      ~Model.get_params
+      ~Model.set_params
+   
+   

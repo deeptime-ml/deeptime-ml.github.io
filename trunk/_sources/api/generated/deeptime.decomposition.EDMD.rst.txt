@@ -1,0 +1,34 @@
+﻿
+
+*class* EDMD
+============
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: EDMD
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EDMD.available_operators
+      ~EDMD.has_model
+      ~EDMD.model
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~EDMD.fetch_model
+      ~EDMD.fit
+      ~EDMD.get_params
+      ~EDMD.set_params
+   
+   

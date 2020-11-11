@@ -1,0 +1,29 @@
+﻿
+
+*class* MetricRegistry
+======================
+
+.. currentmodule:: deeptime.clustering
+
+.. autoclass:: MetricRegistry
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MetricRegistry.available
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MetricRegistry.register
+   
+   

@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dimension reduction &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="_static/d3.v5.min.js"></script>
+    <script src="_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="TICA" href="notebooks/tica.html" />
+    <link rel="prev" title="Table Of Contents" href="contents.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="_static/favicon-16x16.png">
+<link rel="manifest" href="_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dimension reduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/tica.html">TICA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/vamp.html">VAMP / time-lagged CCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/kcca.html">Kernel VAMP / kernel CCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/dmd.html">DMD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/edmd.html">EDMD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/kedmd.html">Kernel EDMD</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="contents.html">Documentation overview</a><ul>
+      <li>Previous: <a href="contents.html" title="previous chapter">Table Of Contents</a></li>
+      <li>Next: <a href="notebooks/tica.html" title="next chapter">TICA</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dimension-reduction">
+<h1>Dimension reduction<a class="headerlink" href="#dimension-reduction" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Here we introduce the dimension reduction / decomposition techniques implemented in the package.</p>
+<p class="rubric">Koopman operator methods</p>
+<p>All methods contained in this sub-package relate to the Koopman operator <span class="math">\(\mathcal{K}_\tau\)</span> defined as</p>
+<div class="math">
+\[[\mathcal{K}_\tau g](x) = \mathbb{E}[g(x_{t+\tau}) \mid x_t = x]
+
+\]</div>
+<p>for a process <span class="math">\(\{x_t\}_{t\geq 0}\)</span> with transition density <span class="math">\(p_\tau(x, y)\)</span>. When projecting
+<span class="math">\(\mathcal{K}_\tau\)</span> into a finite basis, one seeks</p>
+<div class="math">
+\[\mathbb{E}[g(x_{t+\tau})] = K^{\top}\mathbb{E}[f(x_t)],
+
+\]</div>
+<p>where <span class="math">\(K\in\mathbb{R}^{n\times m}\)</span> is a finite-dimensional Koopman matrix which propagates the observable
+<span class="math">\(f\)</span> of the system’s state <span class="math">\(x_t\)</span> to the observable <span class="math">\(g\)</span> at state <span class="math">\(x_{t+\tau}\)</span>.</p>
+<p class="rubric">When to use which method</p>
+<p>All methods assume (approximate) Markovianity of the time series under lag-time <span class="math">\(\tau\)</span>.</p>
+<div id="koopman_algos_container" width="100%"></div><script type="text/javascript">
+
+const width = 600;
+const height = 400;
+const linkDistance = 300;
+const nodeRadius = 8;
+const nodeRadiusExpanded = 16;
+const linkLength = 200;
+
+const data = {
+
+    nodes: [
+        {id: 0, name: "TICA", full_name: "time-lagged independent component analysis", group: 0, url: "notebooks/tica.html", ix: [0, 0]},
+        // {id: 1, name: "VAC", full_name: "variational approach of conformational dynamics", group: 0, url: "notebooks/vamp.html"},
+        {id: 2, name: "VAMP / TCCA", full_name: "variational approach for Markov processes / time-lagged canonical correlation analysis", group: 0, url: "notebooks/vamp.html", ix: [1.3, 0]},
+        {id: 3, name: "kVAMP / kCCA", full_name: "kernel VAMP / kernel canonical correlation analysis", group: 0, url: "notebooks/kcca.html", ix: [2, 0]},
+
+        {id: 4, name: "MSM", full_name: "Markov state model", group: 1, url: "index_msm.html", ix: [0.5, 1]},
+
+        {id: 5, name: "DMD", full_name: "dynamic mode decomposition", group: 2, url: "notebooks/dmd.html", ix: [0, 2]},
+        {id: 6, name: "EDMD", full_name: "extended dynamic mode decomposition", group: 2, url: "notebooks/edmd.html", ix: [1.3, 2]},
+        {id: 7, name: "kEDMD", full_name: "kernel extended dynamic mode decomposition", group: 2, url: "notebooks/kedmd.html", ix: [2, 2]},
+        // {id: 8, name: "KVAD", full_name: "kernel embedding-based variational approach for dynamical systems", group: 0},
+        {id: 9, name: "SINDy", full_name: "Sparse Identification of Nonlinear Dynamics", group: 2, url: "notebooks/sindy.html", ix: [3, 2]},
+    ],
+    edges: [
+        {source: 2, target: 0, value: 1, label: "reversible + identity observable"},  // VAC -> TICA
+        // {source: 1, target: 2, value: 1, label: "generalize to nonreversible"},  // VAC -> VAMP
+        {source: 7, target: 3, value: 1, label: "generalize to nonreversible"},  // kEDMD -> kCCA
+        {source: 2, target: 3, value: 1, label: "kernelize"},  // VAMP -> kCCA
+        // {source: 1, target: 4, value: 1, label: "for indicator observable"},  // VAC -> MSM
+        {source: 2, target: 4, value: 1, label: "for indicator observable"},  // VAMP -> MSM
+        {source: 6, target: 4, value: 1, label: "for indicator observable"},  // EDMD -> MSM
+        // {source: 2, target: 8, value: 1},  // VAMP -> KVAD
+        {source: 0, target: 5, value: 2, label: "dual"},  // TICA <-> DMD
+        {source: 5, target: 0, value: 2, label: ""},  // TICA <-> DMD
+        {source: 2, target: 6, value: 2, label: "equivalent under VAMP-1 score"},  // VAC <-> EDMD
+        {source: 6, target: 2, value: 2, label: ""},  // VAC <-> EDMD
+        {source: 6, target: 5, value: 1, label: "for identity observable"},  // EDMD -> DMD
+        {source: 6, target: 7, value: 1, label: "kernelize"},  // EDMD -> kEDMD
+        {source: 7, target: 9, value: 1, label: "via generator kEDMD"},  // kEDMD -> SINDy
+    ]
+};
+
+const scale = d3.scaleOrdinal(d3.schemeCategory10);
+
+const links = data.edges.map(d => Object.create(d));
+const nodes = data.nodes.map(d => Object.create(d));
+
+const midpoints_w = Array.from(new Array(3), (val, ix) => ix * width / 3 + width / 4)
+const midpoints_h = Array.from(new Array(4), (val, ix) => ix * height / 4 + height / 8)
+const lerp = (x, y, a) => x * (1 - a) + y * a;
+
+// Define the div for the tooltip
+const tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+
+const svg = d3.select("div#koopman_algos_container")
+   .append("div")
+   // Container class to make it responsive.
+   .classed("svg-container", true)
+   .append("svg")
+   // Responsive SVG needs these 2 attributes and no width and height attr.
+   .attr("preserveAspectRatio", "xMinYMin meet")
+   .attr("viewBox", "0 0 " + width + " " + height)
+   // Class to make it responsive.
+   .classed("svg-content-responsive", true)
+
+svg.append("svg:defs").selectAll("marker")
+    .data(["arrowhead", "arrowhead_fade"])      // Different link/path types can be defined here
+    .enter().append("svg:marker")    // This section adds in the arrows
+    .attr("id", String)
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 15)
+    .attr("refY", 0.5)
+    .attr("markerWidth", 5)
+    .attr("markerHeight", 5)
+    .attr("orient", "auto")
+    .attr("opacity", function (d, i) {return i === 0? .5 : 0;})
+  .append("svg:path")
+    .attr("d", "M0,-5L10,0L0,5");
+
+const forceX = d3.forceX().x(function(d) {
+    const ix = d.ix[1];
+    if (Number.isInteger(ix)) {
+        return midpoints_w[ix];
+    } else {
+        const lower = Math.floor(ix);
+        const upper = Math.ceil(ix);
+        return lerp(midpoints_w[lower], midpoints_w[upper], ix - lower);
+    }
+}).strength(0.1);
+
+const forceY = d3.forceY().y(function(d) {
+    const ix = d.ix[0];
+    if (Number.isInteger(ix)) {
+        return midpoints_h[ix];
+    } else {
+        const lower = Math.floor(ix);
+        const upper = Math.ceil(ix);
+        return lerp(midpoints_h[lower], midpoints_h[upper], ix - lower);
+    }
+}).strength(.1);
+
+const simulation = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id).distance(d => linkLength).strength(0.00001))
+    //.force("charge", d3.forceManyBody().strength(-200))
+    //.force("center", d3.forceCenter(width / 2, height / 2))
+    .force('x', forceX)
+    .force('y',  forceY);
+
+var x = d3.scaleBand()
+    .rangeRound([0, width])
+    .padding(0.1);
+
+function getTargetNodeCircumferencePoint(d){
+        var t_radius = nodeRadius; // nodeWidth is just a custom attribute I calculate during the creation of the nodes depending on the node width
+        var dx = d.target.x - d.source.x;
+        var dy = d.target.y - d.source.y;
+        var gamma = Math.atan2(dy,dx); // Math.atan2 returns the angle in the correct quadrant as opposed to Math.atan
+        var tx = d.target.x - (Math.cos(gamma) * t_radius);
+        var ty = d.target.y - (Math.sin(gamma) * t_radius);
+
+        return [tx,ty];
+}
+
+const linkGroup = svg.append("g")
+    .attr("class", "links-group")
+    .selectAll("g")
+    .data(links)
+    .join("g")
+    .attr("class", "link-group");
+
+const linkNode = svg.selectAll(".link-group")
+    .append("line")
+    .data(links)
+    .attr("stroke", "#999")
+    .attr("stroke-opacity", 0.6)
+    .attr("stroke-width", 1.5)
+    .attr('marker-begin','url(#arrowhead)')
+    .attr('marker-end','url(#arrowhead)');
+
+var linkPaths = svg.selectAll(".link-group")
+    .append('path')
+    .attr('d', function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;})
+    .attr('class', 'edgepath')
+    .attr('fill-opacity', 0)
+    .attr('stroke-opacity', 0)
+    .attr('fill', 'blue')
+    .attr('stroke', 'red')
+    .attr('id', function(d,i) {return 'edgepath'+i})
+    .style("pointer-events", "none");
+
+var linkText = svg.selectAll(".link-group")
+    .append("text")
+    .data(links)
+    .attr("dy", -5)
+    .attr("dx", function(d) {
+        return 0.5 * Math.sqrt((d.source.x - d.target.x)**2 + (d.source.y - d.target.y)**2);
+    })
+    .attr("font-size", 9)
+    .attr("fill", "#000")
+    .attr("text-anchor", "middle")
+    .call(getBB);
+
+linkText.append('textPath')
+    .attr('xlink:href',function(d,i) {return '#edgepath'+i})
+    .style("pointer-events", "none")
+    .text(function(d) { return d.label; });
+
+var rects =  svg.selectAll(".link-group").insert("rect", "text")
+    .attr("x", function(d){return d.bbox.x})
+    .attr("y", function(d){return d.bbox.y})
+    .attr("width", function(d){return d.bbox.width})
+    .attr("height", function(d){return d.bbox.height})
+    .style("fill", "#FFE6F0");
+
+function getBB(selection) {
+    selection.each(function(d){d.bbox = this.getBBox();});
+    return selection;
+}
+
+var node = svg.selectAll("g.node")
+    .data(nodes)
+    .enter()
+    .append("svg:g")
+    .attr("class", "clickable")
+    .attr("cursor", "pointer")
+    .on("click", function(d) { window.open(d.url) })
+    .on('mouseover.tooltip', function(d) {
+        d3.select(this).select('circle')
+          .transition()
+          .duration(300)
+          .attr("r", nodeRadiusExpanded)
+        tooltip.transition()
+            .duration(300)
+            .style("opacity", .8);
+        tooltip.html(d.full_name)
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY + 10) + "px");
+    })
+    .on('mouseover.fade', fade(0.1))
+    .on("mouseout.tooltip", function() {
+        d3.select(this).select('circle')
+            .transition()
+            .duration(300)
+            .attr("r", nodeRadius);
+        tooltip.transition()
+            .duration(100)
+            .style("opacity", 0);
+    })
+    .on('mouseout.fade', fade(1))
+        .on("mousemove", function() {
+          tooltip.style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY + 10) + "px");
+    });
+
+var circles = node.append("circle")
+    .attr("r", nodeRadius)
+    .attr("fill", d => scale(d.group));
+
+var labels = node.append("text")
+    .text(d => d.name)
+    .merge(node)
+    .attr('x', 10)
+    .attr('y', 7)
+    .style("font-size", "11px")
+    .style("fill", "Black");
+
+circles.call(
+    d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended)
+);
+
+simulation.on("tick", () => {
+    linkNode.attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", function(d) {
+             return getTargetNodeCircumferencePoint(d)[0];
+        })
+        .attr("y2", function(d) {
+             return getTargetNodeCircumferencePoint(d)[1];
+        });
+    circles.attr("cx", d => d.x)
+           .attr("cy", d => d.y);
+
+    labels.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+    linkPaths.attr('d', function(d) { return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y});
+
+    linkText.attr('transform',function(d,i){
+            if (d.target.x<d.source.x){
+                bbox = this.getBBox();
+                rx = bbox.x+bbox.width/2;
+                ry = bbox.y+bbox.height/2;
+                return 'rotate(180 '+rx+' '+ry+')';
+                }
+            else {
+                return 'rotate(0)';
+                }
+        });
+    linkText.attr("dx", function(d) {
+        return 0.5 * Math.sqrt((d.source.x - d.target.x)**2 + (d.source.y - d.target.y)**2);
+    })
+
+    rects.attr("x", function(d) { return d.bbox.x; })
+         .attr("y", function(d) { return d.bbox.y; })
+});
+
+function dragstarted(d) {
+    d3.event.sourceEvent.stopPropagation();
+    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+}
+
+function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+}
+
+function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+}
+
+const linkedByIndex = {};
+links.forEach(d => {
+    linkedByIndex[`${d.source.index},${d.target.index}`] = 1;
+});
+
+function isConnected(a, b) {
+    return linkedByIndex[`${a.index},${b.index}`] || linkedByIndex[`${b.index},${a.index}`] || a.index === b.index;
+}
+
+//Fade rules for hovering over nodes
+function fade(opacity) {
+    return d => {
+      node.style('stroke-opacity', function (o) {
+          const thisOpacity = isConnected(d, o) ? 1 : opacity;
+          this.setAttribute('fill-opacity', thisOpacity);
+          return thisOpacity;
+      });
+      linkNode
+          .style('stroke-opacity', o => (o.source === d || o.target === d ? 1 : opacity))
+          .attr("marker-begin", o => (o.source === d || o.target === d ? "url(#arrowhead)" : "url(#arrowhead_fade)"))
+          .attr("marker-end", o => (o.source === d || o.target === d ? "url(#arrowhead)" : "url(#arrowhead_fade)"));
+      if (opacity === 1) {
+          linkNode.attr("marker-begin", "url(#arrowhead)").attr("marker-end", "url(#arrowhead)");
+      }
+      linkText.style('opacity', o => (o.source === d || o.target === d ? 1 : opacity))
+    };
+}
+
+var sequentialScale = d3.scaleOrdinal(d3.schemeCategory10)
+  .domain(['Variational principle', 'MSMs', 'Regression-based']);
+
+svg.append("g")
+    .attr("class", "legendSequential")
+    .attr("x", 40)
+    .attr("y", 40)
+    .attr('font-size', 11);
+
+var legendSequential = d3.legendColor()
+    .shapeWidth(30)
+    .cells(3)
+    .orient("vertical")
+    .scale(sequentialScale)
+
+svg.select(".legendSequential")
+  .call(legendSequential);
+</script>
+<table class="colwidths-given docutils align-left">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 38%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Assumptions</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="notebooks/tica.html"><span class="doc">TICA</span></a> <a class="footnote-reference brackets" href="#molgedey1994separation" id="id1">1</a> <a class="footnote-reference brackets" href="#naritomi2011slow" id="id2">2</a></p></td>
+<td><p>Time series should be stationary with symmetric covariances (equivalently: reversible with detailed balance)
+and compact Koopman operator (guaranteed to be compact in stochastic systems).</p></td>
+<td><ul class="simple">
+<li><p>Based on variational principle</p></li>
+<li><p>TICA uses the assumptions as prior and thus can yield more interpretable results than
+its generalization VAMP.</p></li>
+<li><p>Might yield biased results if the observed process contains rare events which are not sufficiently
+reflected in the time-series.</p></li>
+<li><p>Dual to DMD: The estimated matrix is the transpose of the one estimated by DMD; TICA estimates eigenfunctions
+and DMD estimates ‘modes’, the coefficients which lead to the approximate Koopman operator
+using the eigenfunctions.</p></li>
+<li><p>Eigenvalues of the decomposition relate to relaxation timescales.</p></li>
+<li><p>Can identify metastabile sets.</p></li>
+<li><p>Is VAMP if system is reversible and ansatz library contains only the full state observable <span class="math">\(\Psi(x) = x\)</span></p></li>
+<li><p>Can deal with a large amount of frames due to online estimation of covariances</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notebooks/vamp.html"><span class="doc">VAMP</span></a> <a class="footnote-reference brackets" href="#wu2020variational" id="id3">3</a></p></td>
+<td><p>Compact Koopman operator (guaranteed to be compact in stochastic systems)</p></td>
+<td><ul class="simple">
+<li><p>Based on variational principle</p></li>
+<li><p>Is canonical correlation analysis (CCA) in time, i.e., time-lagged CCA (TCCA)</p></li>
+<li><p>Is VAC under reversible dynamics and VAMP-1 score</p></li>
+<li><p>Uses a singular value decomposition of covariances instead of eigenvalue decomposition.</p></li>
+<li><p>Deals with off-equilibrium data consistently.</p></li>
+<li><p>The singular functions can be clustered to find metastable and coherent sets.</p></li>
+<li><p>Equivalent to EDMD in case of the VAMP-1 score</p></li>
+<li><p>Uses ansatz library <span class="math">\(\Psi\)</span> of functions as basis</p></li>
+<li><p>Can deal with a large amount of frames due to online estimation of covariances</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notebooks/kcca.html"><span class="doc">kernel VAMP / kernel CCA</span></a> <a class="footnote-reference brackets" href="#bach2002kernel" id="id4">4</a></p></td>
+<td><p>Compact Koopman operator (guaranteed to be compact in stochastic systems)</p></td>
+<td><ul class="simple">
+<li><p>kernelized version of VAMP with <span class="math">\(k(x, x') = \langle\Psi(x), \Psi(x')\rangle\)</span></p></li>
+<li><p>memory requirements grow quadratically with the number of frames</p></li>
+<li><p>generalization of kernel EDMD to nonreversible dynamics</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notebooks/dmd.html"><span class="doc">DMD</span></a> <a class="footnote-reference brackets" href="#schmid2010dynamic" id="id5">5</a> <a class="footnote-reference brackets" href="#tu2013dynamic" id="id6">6</a></p></td>
+<td></td>
+<td><ul class="simple">
+<li><p>dual to TICA (DMD yields coefficients of eigenfunctions, TICA yields eigenfunctions)</p></li>
+<li><p>not an online algorithm but better suited for very high-dimensional data with a lower number of frames</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notebooks/edmd.html"><span class="doc">EDMD</span></a> <a class="footnote-reference brackets" href="#williams2015data" id="id7">7</a></p></td>
+<td></td>
+<td><ul class="simple">
+<li><p>Equivalent to VAMP under the VAMP-1 score</p></li>
+<li><p>Uses an ansatz library <span class="math">\(\Psi\)</span></p></li>
+<li><p>not an online algorithm but better suited for very high-dimensional data with a lower number of frames</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notebooks/kedmd.html"><span class="doc">kernel EDMD</span></a> <a class="footnote-reference brackets" href="#williams2016kernel" id="id8">8</a></p></td>
+<td></td>
+<td><ul class="simple">
+<li><p>kernelized version of EDMD with <span class="math">\(k(x, x') = \langle\Psi(x), \Psi(x')\rangle\)</span></p></li>
+<li><p>memory requirements grow quadratically with the number of frames</p></li>
+<li><p>considering generator kernel EDMD, <a class="reference internal" href="notebooks/sindy.html"><span class="doc">SINDy</span></a> arises as
+special case <a class="footnote-reference brackets" href="#klus2020data" id="id9">9</a></p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>It should be noted that, if available, scores evaluated under different lagtimes are <strong>not</strong> comparable because they
+relate to different operators.</p>
+<p class="rubric">What’s next?</p>
+<p>While a dimensionality reduction is always of great use because it makes it easier to look at the data,
+one can take further steps.</p>
+<p>A commonly performed pipeline would be to <a class="reference internal" href="notebooks/clustering.html"><span class="doc">cluster</span></a> the projected data and then
+building a <a class="reference internal" href="index_msm.html"><span class="doc">markov state model</span></a> on the resulting discretized state space.</p>
+<p class="rubric">Estimating covariances and how to deal with large amounts of data</p>
+<p>While the implementations of <a class="reference internal" href="notebooks/tica.html"><span class="doc">TICA</span></a> and its generalization <a class="reference internal" href="notebooks/vamp.html"><span class="doc">VAMP</span></a>
+can be fit directly by a time series that is kept in the computer’s memory, this might not always be possible.</p>
+<p>The implementations are based on estimating covariance matrices, by default using the
+<a class="reference internal" href="api/generated/deeptime.covariance.Covariance.html#deeptime.covariance.Covariance"><span class="std std-ref">covariance estimator</span></a>.</p>
+<p>This estimator makes use of an online algorithm, so that it can be fit in a streaming fashion:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">estimator</span> <span class="o">=</span> <span class="n">deeptime</span><span class="o">.</span><span class="n">decomposition</span><span class="o">.</span><span class="n">TICA</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="n">tau</span><span class="p">)</span>  <span class="c1"># creating an estimator</span>
+<span class="n">estimator</span> <span class="o">=</span> <span class="n">deeptime</span><span class="o">.</span><span class="n">decomposition</span><span class="o">.</span><span class="n">VAMP</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="n">tau</span><span class="p">)</span>  <span class="c1"># either TICA or VAMP</span>
+</pre></div>
+</div>
+<p>Since toy data usually easily fits into memory, loading data from, e.g., a database or network is simulated with the
+<a class="reference external" href="api/generated/deeptime.data.timeshifted_split.rst#deeptime.data.timeshifted_split">timeshifted_split()</a> utility function.
+It splits the data into timeshifted blocks <span class="math">\(X_t\)</span> and <span class="math">\(X_{t+\tau}\)</span>.</p>
+<p>These blocks are not trajectory-overlapping, i.e., if two or more trajectories are provided then the blocks are
+always completely contained in exactly one of these.</p>
+<p>Note how here we provide both blocks, the block <span class="math">\(X_t\)</span> and the block <span class="math">\(X_{t+\tau}\)</span> as a tuple.
+This is different to <code class="code docutils literal notranslate"><span class="pre">fit()</span></code> where the splitting and shifting is performed internally; in which case it
+suffices to provide the whole dataset as argument.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="ow">in</span> <span class="n">deeptime</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">timeshifted_split</span><span class="p">(</span><span class="n">feature_trajectory</span><span class="p">,</span> <span class="n">lagtime</span><span class="o">=</span><span class="n">tau</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">estimator</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Furthermore, the online algorithm uses a tree-like moment storage with copies of
+intermediate covariance and mean estimates. During the learning procedure, these moment storages are combined so
+that the tree never exceeds a certain depth. This depth can be set by the <cite>ncov</cite> estimator parameter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">estimator</span> <span class="o">=</span> <span class="n">deeptime</span><span class="o">.</span><span class="n">decomposition</span><span class="o">.</span><span class="n">TICA</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncov</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="ow">in</span> <span class="n">deeptime</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">timeshifted_split</span><span class="p">(</span><span class="n">feature_trajectory</span><span class="p">,</span> <span class="n">lagtime</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">tica</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Another factor to consider is numerical stability. While memory consumption can increase with
+larger <cite>ncov</cite>, the stability generally improves.</p>
+<p class="rubric">References</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="molgedey1994separation"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Lutz Molgedey and Heinz Georg Schuster. Separation of a mixture of independent signals using time delayed correlations. <em>Physical Review Letters</em>, 72(23):3634, 1994.</p>
+</dd>
+<dt class="label" id="naritomi2011slow"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Yusuke Naritomi and Sotaro Fuchigami. Slow dynamics in protein fluctuations revealed by time-structure based independent component analysis: the case of domain motions. <em>The Journal of chemical physics</em>, 134(6):02B617, 2011.</p>
+</dd>
+<dt class="label" id="wu2020variational"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Hao Wu and Frank Noé. Variational approach for learning markov processes from time series data. <em>Journal of Nonlinear Science</em>, 30(1):23–66, 2020.</p>
+</dd>
+<dt class="label" id="bach2002kernel"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Francis R Bach and Michael I Jordan. Kernel independent component analysis. <em>Journal of machine learning research</em>, 3(Jul):1–48, 2002.</p>
+</dd>
+<dt class="label" id="schmid2010dynamic"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Peter J Schmid. Dynamic mode decomposition of numerical and experimental data. <em>Journal of fluid mechanics</em>, 656:5–28, 2010.</p>
+</dd>
+<dt class="label" id="tu2013dynamic"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Jonathan H Tu, Clarence W Rowley, Dirk M Luchtenburg, Steven L Brunton, and J Nathan Kutz. On dynamic mode decomposition: theory and applications. <em>arXiv preprint arXiv:1312.0041</em>, 2013.</p>
+</dd>
+<dt class="label" id="williams2015data"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>Matthew O Williams, Ioannis G Kevrekidis, and Clarence W Rowley. A data-driven approximation of the Koopman operator: extending dynamic mode decomposition. <em>Journal of Nonlinear Science</em>, 25(6):1307–1346, 2015.</p>
+</dd>
+<dt class="label" id="williams2016kernel"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dd><p>Matthew O Williams, Clarence W Rowley, and Ioannis G Kevrekidis. A kernel-based method for data-driven Koopman spectral analysis. <em>Journal of Computational Dynamics</em>, 2(2):247–265, 2015.</p>
+</dd>
+<dt class="label" id="klus2020data"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
+<dd><p>Stefan Klus, Feliks Nüske, Sebastian Peitz, Jan-Hendrik Niemann, Cecilia Clementi, and Christof Schütte. Data-driven approximation of the koopman generator: model reduction, system identification, and control. <em>Physica D: Nonlinear Phenomena</em>, 406:132416, 2020.</p>
+</dd>
+</dl>
+</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="_static/scrollbar.js"></script>
+
+  </body>
+</html>

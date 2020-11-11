@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.prior\_rev
+===========================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: prior_rev

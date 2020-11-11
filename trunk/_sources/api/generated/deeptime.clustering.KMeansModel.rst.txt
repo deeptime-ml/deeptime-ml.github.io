@@ -1,0 +1,40 @@
+﻿
+
+*class* KMeansModel
+===================
+
+.. currentmodule:: deeptime.clustering
+
+.. autoclass:: KMeansModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KMeansModel.cluster_centers
+      ~KMeansModel.converged
+      ~KMeansModel.dim
+      ~KMeansModel.inertia
+      ~KMeansModel.inertias
+      ~KMeansModel.metric
+      ~KMeansModel.n_clusters
+      ~KMeansModel.tolerance
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KMeansModel.copy
+      ~KMeansModel.get_params
+      ~KMeansModel.score
+      ~KMeansModel.set_params
+      ~KMeansModel.transform
+   
+   

@@ -1,0 +1,33 @@
+﻿
+
+*class* PBFSimulator
+====================
+
+.. currentmodule:: deeptime.data
+
+.. autoclass:: PBFSimulator
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PBFSimulator.domain_size
+      ~PBFSimulator.n_particles
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PBFSimulator.make_animation
+      ~PBFSimulator.run
+      ~PBFSimulator.simulate_oscillatory_force
+      ~PBFSimulator.transform_to_density
+   
+   

@@ -1,0 +1,23 @@
+﻿
+
+*class* Observable
+==================
+
+.. currentmodule:: deeptime.basis
+
+.. autoclass:: Observable
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Observable.transform
+   
+   

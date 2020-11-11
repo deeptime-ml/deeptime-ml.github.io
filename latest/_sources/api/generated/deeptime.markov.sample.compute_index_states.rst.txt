@@ -1,0 +1,17 @@
+﻿
+
+*function* compute\_index\_states
+=================================
+
+.. currentmodule:: deeptime.markov.sample
+
+.. autofunction:: compute_index_states
+
+   
+   
+   
+
+   
+
+   
+   

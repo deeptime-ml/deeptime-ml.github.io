@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.committor
+========================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: committor

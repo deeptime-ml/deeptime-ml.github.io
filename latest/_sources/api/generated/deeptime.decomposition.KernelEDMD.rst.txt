@@ -1,0 +1,33 @@
+﻿
+
+*class* KernelEDMD
+==================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: KernelEDMD
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KernelEDMD.has_model
+      ~KernelEDMD.model
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KernelEDMD.fetch_model
+      ~KernelEDMD.fit
+      ~KernelEDMD.get_params
+      ~KernelEDMD.set_params
+   
+   

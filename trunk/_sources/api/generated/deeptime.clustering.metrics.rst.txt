@@ -1,0 +1,17 @@
+﻿
+
+*data* metrics
+==============
+
+.. currentmodule:: deeptime.clustering
+
+.. autodata:: metrics
+
+   
+   
+   
+
+   
+
+   
+   

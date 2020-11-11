@@ -1,0 +1,43 @@
+﻿
+
+*class* MiniBatchKMeans
+=======================
+
+.. currentmodule:: deeptime.clustering
+
+.. autoclass:: MiniBatchKMeans
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MiniBatchKMeans.fixed_seed
+      ~MiniBatchKMeans.has_model
+      ~MiniBatchKMeans.init_strategy
+      ~MiniBatchKMeans.initial_centers
+      ~MiniBatchKMeans.max_iter
+      ~MiniBatchKMeans.metric
+      ~MiniBatchKMeans.model
+      ~MiniBatchKMeans.n_clusters
+      ~MiniBatchKMeans.n_jobs
+      ~MiniBatchKMeans.tolerance
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MiniBatchKMeans.fetch_model
+      ~MiniBatchKMeans.fit
+      ~MiniBatchKMeans.get_params
+      ~MiniBatchKMeans.partial_fit
+      ~MiniBatchKMeans.set_params
+      ~MiniBatchKMeans.transform
+   
+   

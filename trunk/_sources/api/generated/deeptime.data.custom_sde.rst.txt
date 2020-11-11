@@ -1,0 +1,17 @@
+﻿
+
+*function* custom\_sde
+======================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: custom_sde
+
+   
+   
+   
+
+   
+
+   
+   

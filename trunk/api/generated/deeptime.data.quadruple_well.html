@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function quadruple_well &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="function quadruple_well_asymmetric" href="deeptime.data.quadruple_well_asymmetric.html" />
+    <link rel="prev" title="function double_well_discrete" href="deeptime.data.double_well_discrete.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_data.html">deeptime.data</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index_data.html#api">API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.double_well_discrete.html"><em>function</em> double_well_discrete</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>function</em> quadruple_well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.quadruple_well_asymmetric.html"><em>function</em> quadruple_well_asymmetric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.triple_well_2d.html"><em>function</em> triple_well_2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.triple_well_1d.html"><em>function</em> triple_well_1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.double_well_2d.html"><em>function</em> double_well_2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.time_dependent_quintuple_well.html"><em>function</em> time_dependent_quintuple_well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.abc_flow.html"><em>function</em> abc_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.ornstein_uhlenbeck.html"><em>function</em> ornstein_uhlenbeck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.prinz_potential.html"><em>function</em> prinz_potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.ellipsoids.html"><em>function</em> ellipsoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.sqrt_model.html"><em>function</em> sqrt_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.swissroll_model.html"><em>function</em> swissroll_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.position_based_fluids.html"><em>function</em> position_based_fluids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.drunkards_walk.html"><em>function</em> drunkards_walk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.bickley_jet.html"><em>function</em> bickley_jet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.birth_death_chain.html"><em>function</em> birth_death_chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.data.tmatrix_metropolis1d.html"><em>function</em> tmatrix_metropolis1d</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_data.html#custom-systems">Custom systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_data.html#implementations">Implementations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_data.html">deeptime.data</a><ul>
+      <li>Previous: <a href="deeptime.data.double_well_discrete.html" title="previous chapter"><em>function</em> double_well_discrete</a></li>
+      <li>Next: <a href="deeptime.data.quadruple_well_asymmetric.html" title="next chapter"><em>function</em> quadruple_well_asymmetric</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="function-quadruple-well">
+<h1><em>function</em> quadruple_well<a class="headerlink" href="#function-quadruple-well" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="deeptime.data.quadruple_well">
+<code class="sig-prename descclassname"><span class="pre">deeptime.data.</span></code><code class="sig-name descname"><span class="pre">quadruple_well</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.data.quadruple_well" title="Permalink to this definition">¶</a></dt>
+<dd><p>This dataset generates trajectories of a two-dimensional particle living in a quadruple-well potential
+landscape. It is subject to the stochastic differential equation</p>
+<div class="math">
+\[\mathrm{d}X_t = \nabla V(X_t) \mathrm{d}t + \sqrt{2\beta^{-1}}\mathrm{d}W_t\]</div>
+<p>with <span class="math">\(W_t\)</span> being a Wiener process and the potential <span class="math">\(V\)</span> being given by</p>
+<div class="math">
+\[V(x) = (x_1 - 1)^2 + (x_2 - 1)^2.\]</div>
+<p>The inverse temperature is set to be <span class="math">\(\beta = 4\)</span>.</p>
+<p>(<a class="reference external" href="../../datasets/plot_quadruple_well.py">Source code</a>, <a class="reference external" href="../../datasets/plot_quadruple_well.png">png</a>, <a class="reference external" href="../../datasets/plot_quadruple_well.hires.png">hires.png</a>, <a class="reference external" href="../../datasets/plot_quadruple_well.pdf">pdf</a>)</p>
+<div class="figure align-default">
+<img alt="../../_images/plot_quadruple_well.png" src="../../_images/plot_quadruple_well.png" />
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>h</strong> (<em>float</em><em>, </em><em>default = 1e-3</em>) – Integration step size. The implementation uses an Euler-Maruyama integrator.</p></li>
+<li><p><strong>n_steps</strong> (<em>int</em><em>, </em><em>default = 10000</em>) – Number of integration steps between each evaluation. That means the default lag time is <code class="code docutils literal notranslate"><span class="pre">h*n_steps=10</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>model</strong> – The model.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="impl/deeptime.data.TimeIndependentSystem.html#deeptime.data.TimeIndependentSystem" title="deeptime.data.TimeIndependentSystem">TimeIndependentSystem</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>The model possesses the capability to simulate trajectories as well as be evaluated at test points:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">deeptime</span> <span class="k">as</span> <span class="nn">dt</span>
+</pre></div>
+</div>
+<p>First, set up the model (which internally already creates the integrator).</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">quadruple_well</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">n_steps</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># create model instance</span>
+</pre></div>
+</div>
+<p>Now, a trajectory can be generated:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">traj</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">trajectory</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># simulate trajectory</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="n">traj</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 1000 evaluations from initial condition [0, 0]</span>
+</pre></div>
+</div>
+<p>Or, alternatively the model can be evaluated at test points (mapping forward using the dynamical system):</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">test_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># 100 test point in [-2, 2] x [-2, 2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">evaluations</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">test_points</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">53</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="n">evaluations</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

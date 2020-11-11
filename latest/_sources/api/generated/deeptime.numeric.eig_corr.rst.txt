@@ -1,0 +1,17 @@
+﻿
+
+*function* eig\_corr
+====================
+
+.. currentmodule:: deeptime.numeric
+
+.. autofunction:: eig_corr
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,17 @@
+﻿
+
+*function* to\_dataset
+======================
+
+.. currentmodule:: deeptime.util.types
+
+.. autofunction:: to_dataset
+
+   
+   
+   
+
+   
+
+   
+   

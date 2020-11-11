@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.connected\_sets
+================================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: connected_sets

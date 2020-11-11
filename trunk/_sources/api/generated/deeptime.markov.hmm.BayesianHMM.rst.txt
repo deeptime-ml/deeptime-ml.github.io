@@ -1,0 +1,42 @@
+﻿
+
+*class* BayesianHMM
+===================
+
+.. currentmodule:: deeptime.markov.hmm
+
+.. autoclass:: BayesianHMM
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BayesianHMM.has_model
+      ~BayesianHMM.initial_distribution_prior
+      ~BayesianHMM.initial_hmm
+      ~BayesianHMM.model
+      ~BayesianHMM.n_samples
+      ~BayesianHMM.reversible
+      ~BayesianHMM.stationary
+      ~BayesianHMM.store_hidden
+      ~BayesianHMM.transition_matrix_prior
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BayesianHMM.chapman_kolmogorov_validator
+      ~BayesianHMM.default
+      ~BayesianHMM.fetch_model
+      ~BayesianHMM.fit
+      ~BayesianHMM.get_params
+      ~BayesianHMM.set_params
+   
+   

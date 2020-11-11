@@ -1,0 +1,17 @@
+﻿
+
+*exception* ZeroRankError
+=========================
+
+.. currentmodule:: deeptime.numeric
+
+.. autoexception:: ZeroRankError
+
+   
+   
+   
+
+   
+
+   
+   

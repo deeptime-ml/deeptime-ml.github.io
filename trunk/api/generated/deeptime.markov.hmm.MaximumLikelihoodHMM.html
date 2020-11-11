@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class MaximumLikelihoodHMM &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class BayesianHMM" href="deeptime.markov.hmm.BayesianHMM.html" />
+    <link rel="prev" title="deeptime.markov.hmm" href="../index_markov_hmm.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index_markov_hmm.html#estimators">Estimators</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>class</em> MaximumLikelihoodHMM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.hmm.BayesianHMM.html"><em>class</em> BayesianHMM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#output-models">Output models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#initial-guess">Initial guess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_hmm.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_markov_hmm.html">deeptime.markov.hmm</a><ul>
+      <li>Previous: <a href="../index_markov_hmm.html" title="previous chapter">deeptime.markov.hmm</a></li>
+      <li>Next: <a href="deeptime.markov.hmm.BayesianHMM.html" title="next chapter"><em>class</em> BayesianHMM</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="class-maximumlikelihoodhmm">
+<h1><em>class</em> MaximumLikelihoodHMM<a class="headerlink" href="#class-maximumlikelihoodhmm" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.markov.hmm.</span></code><code class="sig-name descname"><span class="pre">MaximumLikelihoodHMM</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">deeptime.markov.hmm._hidden_markov_model.HiddenMarkovModel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stride</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lagtime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reversible</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stationary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accuracy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxit_reversible</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum likelihood Hidden Markov model (HMM) estimator.</p>
+<p>This class is used to fit a maximum-likelihood HMM to data. It uses an initial guess HMM with can be obtained with
+one of the provided heuristics and then uses the Baum-Welch algorithm <a class="footnote-reference brackets" href="#baum1967inequality" id="id1">1</a> to fit
+the initial guess to provided data.</p>
+<p>The type of output model (gaussian or discrete)
+and the number of hidden states are extracted from the initial model. In case no initial distribution was given,
+the initial model assumes a uniform initial distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>initial_model</strong> (<a class="reference internal" href="deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><em>HiddenMarkovModel</em></a>) – This model will be used to initialize the hidden markov model estimation routine. Since it is prone to
+get stuck in local optima, several initializations should be tried and scored and/or one of the available
+initialization heuristics should be applied, if appropriate.</p></li>
+<li><p><strong>stride</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>optional</em><em>, </em><em>default=1</em>) – <p>stride between two lagged trajectories extracted from the input trajectories. Given trajectory s[t], stride
+and lag will result in trajectories</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">s[0],</span> <span class="pre">s[lag],</span> <span class="pre">s[2</span> <span class="pre">lag],</span> <span class="pre">...</span></code></p>
+<p><code class="code docutils literal notranslate"><span class="pre">s[stride],</span> <span class="pre">s[stride</span> <span class="pre">+</span> <span class="pre">lag],</span> <span class="pre">s[stride</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">lag],</span> <span class="pre">...</span></code></p>
+</div></blockquote>
+<p>Setting stride = 1 will result in using all data (useful for maximum likelihood estimator), while a
+Bayesian estimator requires a longer stride in order to have statistically uncorrelated trajectories.
+Setting stride = ‘effective’ uses the largest neglected timescale as an fit for the correlation time and
+sets the stride accordingly.</p>
+</p></li>
+<li><p><strong>lagtime</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=1</em>) – Lag parameter used for fitting the HMM</p></li>
+<li><p><strong>reversible</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – If True, a prior that enforces reversible transition matrices (detailed balance) is used;
+otherwise, a standard  non-reversible prior is used.</p></li>
+<li><p><strong>stationary</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – If True, the initial distribution of hidden states is self-consistently computed as the stationary
+distribution of the transition matrix. If False, it will be estimated from the starting states.
+Only set this to true if you’re sure that the observation trajectories are initiated from a global
+equilibrium distribution.</p></li>
+<li><p><strong>p</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Initial or fixed stationary distribution. If given and stationary=True, transition matrices will be
+estimated with the constraint that they have the set parameter as their stationary distribution.
+If given and stationary=False, the parameter is the fixed initial distribution of hidden states.</p></li>
+<li><p><strong>accuracy</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default=1e-3</em>) – Convergence threshold for EM iteration. When two the likelihood does not increase by more than
+accuracy, the iteration is stopped successfully.</p></li>
+<li><p><strong>maxit</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=1000</em>) – Stopping criterion for EM iteration. When this many iterations are performed without reaching the requested
+accuracy, the iteration is stopped without convergence and a warning is given.</p></li>
+<li><p><strong>maxit_reversible</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=1000000</em>) – Maximum number of iterations for reversible transition matrix estimation. Only used with reversible=True.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="baum1967inequality"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Leonard E Baum and John Alonzo Eagon. An inequality with applications to statistical estimation for probabilistic functions of markov processes and to a model for ecology. <em>Bulletin of the American Mathematical Society</em>, 73(3):360–363, 1967.</p>
+</dd>
+</dl>
+</p>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.accuracy" title="deeptime.markov.hmm.MaximumLikelihoodHMM.accuracy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">accuracy</span></code></a></p></td>
+<td><p>Convergence threshold for EM iteration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_initial_distribution" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_initial_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fixed_initial_distribution</span></code></a></p></td>
+<td><p>Fix the initial distribution to the provided value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_stationary_distribution" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_stationary_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fixed_stationary_distribution</span></code></a></p></td>
+<td><p>Fix the stationary distribution to the provided value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.has_model" title="deeptime.markov.hmm.MaximumLikelihoodHMM.has_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_model</span></code></a></p></td>
+<td><p>Property reporting whether this estimator contains an estimated model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.initial_model" title="deeptime.markov.hmm.MaximumLikelihoodHMM.initial_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initial_model</span></code></a></p></td>
+<td><p>The initial transition model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.lagtime" title="deeptime.markov.hmm.MaximumLikelihoodHMM.lagtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lagtime</span></code></a></p></td>
+<td><p>The lag time at which transitions are counted.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.maxit" title="deeptime.markov.hmm.MaximumLikelihoodHMM.maxit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maxit</span></code></a></p></td>
+<td><p>Stopping criterion for EM iteration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.maxit_reversible" title="deeptime.markov.hmm.MaximumLikelihoodHMM.maxit_reversible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maxit_reversible</span></code></a></p></td>
+<td><p>Maximum number of iterations for reversible transition matrix estimation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.model" title="deeptime.markov.hmm.MaximumLikelihoodHMM.model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></a></p></td>
+<td><p>Shortcut to <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fetch_model" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.n_hidden_states" title="deeptime.markov.hmm.MaximumLikelihoodHMM.n_hidden_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_hidden_states</span></code></a></p></td>
+<td><p>The number of hidden states, coincides with the number of hidden states in the initial model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.reversible" title="deeptime.markov.hmm.MaximumLikelihoodHMM.reversible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reversible</span></code></a></p></td>
+<td><p>Whether the hidden transition model should be estimated so that it is reversible.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.stationary" title="deeptime.markov.hmm.MaximumLikelihoodHMM.stationary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stationary</span></code></a></p></td>
+<td><p>If True, the initial distribution of hidden states is self-consistently computed as the stationary distribution of the transition matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.stride" title="deeptime.markov.hmm.MaximumLikelihoodHMM.stride"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stride</span></code></a></p></td>
+<td><p>Stride to be applied to the input data.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.chapman_kolmogorov_validator" title="deeptime.markov.hmm.MaximumLikelihoodHMM.chapman_kolmogorov_validator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chapman_kolmogorov_validator</span></code></a>(mlags[, test_model])</p></td>
+<td><p>Creates a validator instance which can be used to perform a Chapman-Kolmogorov test.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fetch_model" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fetch_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_model</span></code></a>()</p></td>
+<td><p>Yields the current HiddenMarkovModel or None if <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fit" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> was not called yet.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fit" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(dtrajs[, initial_model])</p></td>
+<td><p>Fits a new <a class="reference internal" href="deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">HMM</span></code></a> to data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.get_params" title="deeptime.markov.hmm.MaximumLikelihoodHMM.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
+<td><p>Get the parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.set_params" title="deeptime.markov.hmm.MaximumLikelihoodHMM.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.chapman_kolmogorov_validator">
+<code class="sig-name descname"><span class="pre">chapman_kolmogorov_validator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">deeptime.markov.hmm._hidden_markov_model.HiddenMarkovModel</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.chapman_kolmogorov_validator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a validator instance which can be used to perform a Chapman-Kolmogorov test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mlags</strong> (<em>int</em><em> or </em><em>int-array</em>) – Multiples of lag times for testing the Model, e.g. range(10).
+A single int will trigger a range, i.e. mlags=10 maps to
+mlags=range(1, 10). The setting None will choose mlags automatically
+according to the longest available trajectory.</p></li>
+<li><p><strong>test_model</strong> (<a class="reference internal" href="deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><em>HiddenMarkovModel</em></a><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – The model that is tested. If not provided, uses this estimator’s encapsulated model.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>validator</strong> – The validator.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="deeptime.markov.MembershipsChapmanKolmogorovValidator.html#deeptime.markov.MembershipsChapmanKolmogorovValidator" title="deeptime.markov.MembershipsChapmanKolmogorovValidator">MembershipsChapmanKolmogorovValidator</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – If test_model is None and this estimator has not been <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fit" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> on data yet or the output model
+    was not a discrete output model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.fetch_model">
+<code class="sig-name descname"><span class="pre">fetch_model</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">deeptime.markov.hmm._hidden_markov_model.HiddenMarkovModel</span><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fetch_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the current HiddenMarkovModel or None if <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fit" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> was not called yet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>model</strong> – The model.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel">HiddenMarkovModel</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.fit">
+<code class="sig-name descname"><span class="pre">fit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits a new <a class="reference internal" href="deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">HMM</span></code></a> to data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dtrajs</strong> (<em>array_like</em><em> or </em><em>list of array_like</em>) – Timeseries data.</p></li>
+<li><p><strong>initial_model</strong> (<a class="reference internal" href="deeptime.markov.hmm.HiddenMarkovModel.html#deeptime.markov.hmm.HiddenMarkovModel" title="deeptime.markov.hmm.HiddenMarkovModel"><em>HiddenMarkovModel</em></a><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Override for <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.initial_model" title="deeptime.markov.hmm.MaximumLikelihoodHMM.initial_model"><code class="xref py py-attr docutils literal notranslate"><span class="pre">initial_model</span></code></a>.</p></li>
+<li><p><strong>**kwargs</strong> – Ignored kwargs for scikit-learn compatibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Reference to self.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM" title="deeptime.markov.hmm.MaximumLikelihoodHMM">MaximumLikelihoodHMM</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mapping of string to any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.set_params">
+<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.accuracy">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">accuracy</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convergence threshold for EM iteration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_initial_distribution">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">fixed_initial_distribution</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_initial_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix the initial distribution to the provided value. Only used when <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.stationary" title="deeptime.markov.hmm.MaximumLikelihoodHMM.stationary"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stationary</span></code></a> is False, otherwise
+refer to <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_stationary_distribution" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_stationary_distribution"><code class="xref py py-attr docutils literal notranslate"><span class="pre">fixed_stationary_distribution</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_stationary_distribution">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">fixed_stationary_distribution</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_stationary_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix the stationary distribution to the provided value. Only used when <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.stationary" title="deeptime.markov.hmm.MaximumLikelihoodHMM.stationary"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stationary</span></code></a> is True, otherwise
+refer to <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_initial_distribution" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fixed_initial_distribution"><code class="xref py py-attr docutils literal notranslate"><span class="pre">fixed_initial_distribution</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.has_model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">has_model</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.has_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property reporting whether this estimator contains an estimated model. This assumes that the model
+is initialized with <cite>None</cite> otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.initial_model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">initial_model</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.initial_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>The initial transition model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.lagtime">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">lagtime</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.lagtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lag time at which transitions are counted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.maxit">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">maxit</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.maxit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stopping criterion for EM iteration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.maxit_reversible">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">maxit_reversible</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.maxit_reversible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of iterations for reversible transition matrix estimation. Only used with reversible=True.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.model">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut to <a class="reference internal" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.fetch_model" title="deeptime.markov.hmm.MaximumLikelihoodHMM.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.n_hidden_states">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_hidden_states</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.n_hidden_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of hidden states, coincides with the number of hidden states in the initial model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.reversible">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">reversible</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.reversible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the hidden transition model should be estimated so that it is reversible.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.stationary">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">stationary</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.stationary" title="Permalink to this definition">¶</a></dt>
+<dd><p>If True, the initial distribution of hidden states is self-consistently computed as the stationary
+distribution of the transition matrix. If False, it will be estimated from the starting states.
+Only set this to true if you’re sure that the observation trajectories are initiated from a global
+equilibrium distribution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.markov.hmm.MaximumLikelihoodHMM.stride">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">stride</span></code><a class="headerlink" href="#deeptime.markov.hmm.MaximumLikelihoodHMM.stride" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stride to be applied to the input data. Must be compatible with how the initial model was estimated.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

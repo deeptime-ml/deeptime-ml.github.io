@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.bootstrap\_trajectories
+========================================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: bootstrap_trajectories

@@ -1,0 +1,42 @@
+﻿
+
+*class* TVAE
+============
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autoclass:: TVAE
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TVAE.device
+      ~TVAE.dtype
+      ~TVAE.has_model
+      ~TVAE.learning_rate
+      ~TVAE.model
+      ~TVAE.optimizer
+      ~TVAE.train_losses
+      ~TVAE.validation_losses
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TVAE.evaluate_loss
+      ~TVAE.fetch_model
+      ~TVAE.fit
+      ~TVAE.get_params
+      ~TVAE.set_params
+      ~TVAE.setup_optimizer
+      ~TVAE.transform
+   
+   

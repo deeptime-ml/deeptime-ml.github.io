@@ -1,0 +1,17 @@
+﻿
+
+*function* bickley\_jet
+=======================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: bickley_jet
+
+   
+   
+   
+
+   
+
+   
+   

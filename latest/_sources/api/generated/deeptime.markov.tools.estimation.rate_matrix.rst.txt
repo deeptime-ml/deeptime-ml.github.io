@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.rate\_matrix
+=============================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: rate_matrix

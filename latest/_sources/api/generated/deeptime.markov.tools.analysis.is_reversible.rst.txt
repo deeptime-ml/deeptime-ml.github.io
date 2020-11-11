@@ -1,0 +1,17 @@
+﻿
+
+*function* is\_reversible
+=========================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: is_reversible
+
+   
+   
+   
+
+   
+
+   
+   

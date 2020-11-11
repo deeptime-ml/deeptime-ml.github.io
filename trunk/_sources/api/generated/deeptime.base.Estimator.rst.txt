@@ -1,0 +1,33 @@
+﻿
+
+*class* Estimator
+=================
+
+.. currentmodule:: deeptime.base
+
+.. autoclass:: Estimator
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Estimator.has_model
+      ~Estimator.model
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Estimator.fetch_model
+      ~Estimator.fit
+      ~Estimator.get_params
+      ~Estimator.set_params
+   
+   

@@ -1,0 +1,44 @@
+﻿
+
+*class* TICA
+============
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: TICA
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TICA.dim
+      ~TICA.epsilon
+      ~TICA.has_model
+      ~TICA.lagtime
+      ~TICA.model
+      ~TICA.scaling
+      ~TICA.var_cutoff
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TICA.chapman_kolmogorov_validator
+      ~TICA.covariance_estimator
+      ~TICA.fetch_model
+      ~TICA.fit
+      ~TICA.fit_from_covariances
+      ~TICA.fit_from_timeseries
+      ~TICA.get_params
+      ~TICA.partial_fit
+      ~TICA.set_params
+      ~TICA.transform
+   
+   

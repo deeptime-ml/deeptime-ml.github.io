@@ -1,0 +1,63 @@
+﻿
+
+*class* CovarianceKoopmanModel
+==============================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: CovarianceKoopmanModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CovarianceKoopmanModel.cov
+      ~CovarianceKoopmanModel.cov_00
+      ~CovarianceKoopmanModel.cov_0t
+      ~CovarianceKoopmanModel.cov_tt
+      ~CovarianceKoopmanModel.cumulative_kinetic_variance
+      ~CovarianceKoopmanModel.dim
+      ~CovarianceKoopmanModel.epsilon
+      ~CovarianceKoopmanModel.feature_component_correlation
+      ~CovarianceKoopmanModel.instantaneous_coefficients
+      ~CovarianceKoopmanModel.instantaneous_obs
+      ~CovarianceKoopmanModel.koopman_matrix
+      ~CovarianceKoopmanModel.mean_0
+      ~CovarianceKoopmanModel.mean_t
+      ~CovarianceKoopmanModel.operator
+      ~CovarianceKoopmanModel.operator_inverse
+      ~CovarianceKoopmanModel.output_dimension
+      ~CovarianceKoopmanModel.scaling
+      ~CovarianceKoopmanModel.singular_values
+      ~CovarianceKoopmanModel.singular_vectors_left
+      ~CovarianceKoopmanModel.singular_vectors_right
+      ~CovarianceKoopmanModel.timelagged_coefficients
+      ~CovarianceKoopmanModel.timelagged_obs
+      ~CovarianceKoopmanModel.var_cutoff
+      ~CovarianceKoopmanModel.whitening_rank_0
+      ~CovarianceKoopmanModel.whitening_rank_t
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CovarianceKoopmanModel.backward
+      ~CovarianceKoopmanModel.copy
+      ~CovarianceKoopmanModel.effective_output_dimension
+      ~CovarianceKoopmanModel.expectation
+      ~CovarianceKoopmanModel.forward
+      ~CovarianceKoopmanModel.get_params
+      ~CovarianceKoopmanModel.propagate
+      ~CovarianceKoopmanModel.score
+      ~CovarianceKoopmanModel.set_params
+      ~CovarianceKoopmanModel.timescales
+      ~CovarianceKoopmanModel.transform
+   
+   

@@ -1,0 +1,17 @@
+﻿
+
+*function* handle\_n\_jobs
+==========================
+
+.. currentmodule:: deeptime.util.parallel
+
+.. autofunction:: handle_n_jobs
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function vamp_score &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="function vamp_score_data" href="deeptime.decomposition.vamp_score_data.html" />
+    <link rel="prev" title="class TVAEModel" href="deeptime.decomposition.deep.TVAEModel.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#estimators">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#deep-estimators">Deep estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#models">Models</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_decomposition.html#utils">Utils</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>function</em> vamp_score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.vamp_score_data.html"><em>function</em> vamp_score_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.vamp_score_cv.html"><em>function</em> vamp_score_cv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.cvsplit_trajs.html"><em>function</em> cvsplit_trajs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.TVAEEncoder.html"><em>class</em> TVAEEncoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.koopman_matrix.html"><em>function</em> koopman_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.sym_inverse.html"><em>function</em> sym_inverse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.covariances.html"><em>function</em> covariances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.vamp_score.html"><em>function</em> vamp_score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.vampnet_loss.html"><em>function</em> vampnet_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.kvad_score.html"><em>function</em> kvad_score</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_decomposition.html">deeptime.decomposition</a><ul>
+      <li>Previous: <a href="deeptime.decomposition.deep.TVAEModel.html" title="previous chapter"><em>class</em> TVAEModel</a></li>
+      <li>Next: <a href="deeptime.decomposition.vamp_score_data.html" title="next chapter"><em>function</em> vamp_score_data</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="function-vamp-score">
+<h1><em>function</em> vamp_score<a class="headerlink" href="#function-vamp-score" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="deeptime.decomposition.vamp_score">
+<code class="sig-prename descclassname"><span class="pre">deeptime.decomposition.</span></code><code class="sig-name descname"><span class="pre">vamp_score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">koopman_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">covariances_test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.vamp_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the VAMP score between a covariance-based Koopman model and potentially a
+test model for cross-validation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>koopman_model</strong> (<a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition.CovarianceKoopmanModel"><em>deeptime.decomposition.CovarianceKoopmanModel</em></a>) – The model to score.</p></li>
+<li><p><strong>r</strong> (<em>float</em><em> or </em><em>str</em>) – <p>The type of score to evaluate. Can by an floating point value greater or equal to 1 or ‘E’, yielding the
+VAMP-r score or the VAMP-E score, respectively. <a class="footnote-reference brackets" href="#wu2020variational" id="id1">1</a>
+Typical choices (also accepted as inputs) are:</p>
+<ul>
+<li><dl class="simple">
+<dt>’VAMP1’  Sum of singular values of the half-weighted Koopman matrix.</dt><dd><p>If the model is reversible, this is equal to the sum of
+Koopman matrix eigenvalues, also called Rayleigh quotient <a class="footnote-reference brackets" href="#wu2020variational" id="id2">1</a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>’VAMP2’  Sum of squared singular values of the half-weighted Koopman</dt><dd><p>matrix <a class="footnote-reference brackets" href="#wu2020variational" id="id3">1</a>. If the model is reversible, this is
+equal to the kinetic variance <a class="footnote-reference brackets" href="#noe2015kinetic" id="id4">2</a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>’VAMPE’  Approximation error of the estimated Koopman operator with respect to</dt><dd><p>the true Koopman operator up to an additive constant <a class="footnote-reference brackets" href="#wu2020variational" id="id5">1</a> .</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p></li>
+<li><p><strong>covariances_test</strong> (<a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel" title="deeptime.covariance.CovarianceModel"><em>deeptime.covariance.CovarianceModel</em></a><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – <p>If <cite>test_model</cite> is not None, this method computes the cross-validation score
+between self and <cite>covariances_test</cite>. It is assumed that self was estimated from
+the “training” data and <cite>test_model</cite> was estimated from the “test” data. The
+score is computed for one realization of self and <cite>test_model</cite>. Estimation
+of the average cross-validation score and partitioning of data into test and
+training part is not performed by this method.</p>
+<p>If <cite>covariances_test</cite> is None, this method computes the VAMP score for the model
+contained in self.</p>
+</p></li>
+<li><p><strong>dim</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Artificially restrict the scoring to the top <cite>dim</cite> slowest processes.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em><em>, </em><em>default=1e-10</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>score</strong> – If <cite>test_model</cite> is not None, returns the cross-validation VAMP score between
+self and <cite>test_model</cite>. Otherwise return the selected VAMP-score of self.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>If the Koopman model was estimated using correlations that are based on data with its sample mean removed,
+this effectively removes the constant function from the singular function space and artificially lowers the score
+by 1. This is accounted for in this method, i.e., if <code class="code docutils literal notranslate"><span class="pre">koopman_model.cov.data_mean_removed</span></code> evaluates to
+<cite>True</cite>, the score is internally incremented by 1.</p>
+<p>The VAMP-<span class="math">\(r\)</span> and VAMP-E scores are computed according to <a class="footnote-reference brackets" href="#wu2020variational" id="id6">1</a>,
+Equation (33) and Equation (30), respectively.</p>
+<p class="rubric">References</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="wu2020variational"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>)</span></dt>
+<dd><p>Hao Wu and Frank Noé. Variational approach for learning markov processes from time series data. <em>Journal of Nonlinear Science</em>, 30(1):23–66, 2020.</p>
+</dd>
+<dt class="label" id="noe2015kinetic"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p>Frank Noé and Cecilia Clementi. Kinetic distance and kinetic maps from molecular dynamics simulation. <em>Journal of chemical theory and computation</em>, 11(10):5002–5011, 2015.</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

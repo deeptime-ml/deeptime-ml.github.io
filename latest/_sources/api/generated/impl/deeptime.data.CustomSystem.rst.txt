@@ -1,0 +1,35 @@
+﻿
+
+*class* CustomSystem
+====================
+
+.. currentmodule:: deeptime.data
+
+.. autoclass:: CustomSystem
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CustomSystem.dimension
+      ~CustomSystem.h
+      ~CustomSystem.has_potential_function
+      ~CustomSystem.integrator
+      ~CustomSystem.n_steps
+      ~CustomSystem.time_dependent
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CustomSystem.potential
+      ~CustomSystem.trajectory
+   
+   

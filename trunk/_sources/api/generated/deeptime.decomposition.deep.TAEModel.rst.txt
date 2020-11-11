@@ -1,0 +1,33 @@
+﻿
+
+*class* TAEModel
+================
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autoclass:: TAEModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TAEModel.decoder
+      ~TAEModel.encoder
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TAEModel.copy
+      ~TAEModel.get_params
+      ~TAEModel.set_params
+      ~TAEModel.transform
+   
+   

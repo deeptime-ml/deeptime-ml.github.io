@@ -1,0 +1,17 @@
+﻿
+
+*function* is\_torch\_kernel
+============================
+
+.. currentmodule:: deeptime.kernels
+
+.. autofunction:: is_torch_kernel
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,17 @@
+﻿
+
+*function* eigenvectors
+=======================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: eigenvectors
+
+   
+   
+   
+
+   
+
+   
+   

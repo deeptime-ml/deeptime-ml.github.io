@@ -1,0 +1,17 @@
+﻿
+
+*function* atleast\_nd
+======================
+
+.. currentmodule:: deeptime.util.types
+
+.. autofunction:: atleast_nd
+
+   
+   
+   
+
+   
+
+   
+   

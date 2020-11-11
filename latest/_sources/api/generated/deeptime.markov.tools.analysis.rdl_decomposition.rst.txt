@@ -1,0 +1,17 @@
+﻿
+
+*function* rdl\_decomposition
+=============================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: rdl_decomposition
+
+   
+   
+   
+
+   
+
+   
+   

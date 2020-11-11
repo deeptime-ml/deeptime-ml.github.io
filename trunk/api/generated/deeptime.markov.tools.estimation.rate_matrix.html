@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deeptime.markov.tools.estimation.rate_matrix &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="deeptime.markov.tools.estimation.log_likelihood" href="deeptime.markov.tools.estimation.log_likelihood.html" />
+    <link rel="prev" title="deeptime.markov.tools.estimation.transition_matrix" href="deeptime.markov.tools.estimation.transition_matrix.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index_markov_tools.html#msm-estimation">MSM estimation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#countmatrix">Countmatrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#connectivity">Connectivity</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_markov_tools.html#estimation">Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#sampling">Sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#bootstrap">Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#priors">Priors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_tools.html#msm-analysis">MSM analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_tools.html#transition-path-theory-tools">Transition path theory tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_markov_tools.html">deeptime.markov.tools</a><ul>
+      <li>Previous: <a href="deeptime.markov.tools.estimation.transition_matrix.html" title="previous chapter">deeptime.markov.tools.estimation.transition_matrix</a></li>
+      <li>Next: <a href="deeptime.markov.tools.estimation.log_likelihood.html" title="next chapter">deeptime.markov.tools.estimation.log_likelihood</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="deeptime-markov-tools-estimation-rate-matrix">
+<h1>deeptime.markov.tools.estimation.rate_matrix<a class="headerlink" href="#deeptime-markov-tools-estimation-rate-matrix" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="deeptime.markov.tools.estimation.rate_matrix">
+<code class="sig-prename descclassname"><span class="pre">deeptime.markov.tools.estimation.</span></code><code class="sig-name descname"><span class="pre">rate_matrix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'KL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sparsity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_agg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'raise'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.tools.estimation.rate_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate a reversible rate matrix from a count matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>C</strong> (<em>(</em><em>N</em><em>,</em><em>N</em><em>) </em><em>ndarray</em>) – count matrix at a lag time dt</p></li>
+<li><p><strong>dt</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default=1.0</em>) – lag time that was used to estimate C</p></li>
+<li><p><strong>method</strong> (<em>str</em><em>, </em><em>one of {'KL'</em><em>, </em><em>'CVE'</em><em>, </em><em>'pseudo'</em><em>, </em><em>'truncated_log'}</em>) – <p>Method to use for estimation of the rate matrix.</p>
+<ul>
+<li><p>’pseudo’ selects the pseudo-generator. A reversible transition
+matrix T is estimated and <span class="math">\((T-Id)/d\)</span> is returned as the rate matrix.</p></li>
+<li><p>’truncated_log’ selects the truncated logarithm <a class="footnote-reference brackets" href="#davies2010embeddable" id="id1">1</a>. A
+reversible transition matrix T is estimated and <span class="math">\(max(logm(T*T)/(2dt),0)\)</span>
+is returned as the rate matrix. logm is the matrix logarithm and
+the maximum is taken element-wise.</p></li>
+<li><p>’CVE’ selects the algorithm of Crommelin and Vanden-Eijnden <a class="footnote-reference brackets" href="#crommelin2009data" id="id2">2</a>.
+It consists of minimizing the following objective function:</p>
+<div class="math">
+\[f(K)=\sum_{ij}\left(\sum_{kl} U_{ik}^{-1}K_{kl}U_{lj}-L_{ij}\right)^2 \left|\Lambda_{i}\Lambda_{j}\right|
+
+\]</div>
+<p>where <span class="math">\(\Lambda_i\)</span> are the eigenvalues of <span class="math">\(T\)</span> and <span class="math">\(U\)</span>
+is the matrix of its (right) eigenvectors; <span class="math">\(L_{ij}=\delta_{ij}\frac{1}{\tau}\log\left|\Lambda_i\right|\)</span>.
+<span class="math">\(T\)</span> is computed from C using the reversible maximum likelihood
+estimator.</p>
+</li>
+<li><p>’KL’ selects the algorihtm of Kalbfleisch and Lawless <a class="footnote-reference brackets" href="#kalbfleisch1985analysis" id="id3">3</a>.
+It consists of maximizing the following log-likelihood:</p>
+<div class="math">
+\[f(K)=\log L=\sum_{ij}C_{ij}\log(e^{K\Delta t})_{ij}
+
+\]</div>
+<p>where <span class="math">\(C_{ij}\)</span> are the transition counts at a lag-time <span class="math">\(\Delta t\)</span>.
+Here <span class="math">\(e\)</span> is the matrix exponential and the logarithm is taken
+element-wise.</p>
+</li>
+</ul>
+</p></li>
+<li><p><strong>sparsity</strong> (<em>(</em><em>N</em><em>,</em><em>N</em><em>) </em><em>ndarray</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – If sparsity is None, a fully occupied rate matrix will be estimated.
+Alternatively, with the methods ‘CVE’ and ‘KL’ a ndarray of the
+same shape as C can be supplied. If sparsity[i,j]=0 and sparsity[j,i]=0
+the rate matrix elements <span class="math">\(K_{ij}\)</span> and <span class="math">\(K_{ji}\)</span> will be
+constrained to zero.</p></li>
+<li><p><strong>t_agg</strong> (<em>float</em><em>, </em><em>optional</em>) – the aggregated simulation time;
+by default this is the total number of transition counts times
+the lag time (no sliding window counting). This value is used
+to compute the lower bound on the transition rate (that are not zero).
+If sparsity is None, this value is ignored.</p></li>
+<li><p><strong>pi</strong> – the stationary vector of the desired rate matrix K.
+If no pi is given, the function takes the stationary vector
+of the MLE reversible T matrix that is computed from C.</p></li>
+<li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default = 1.0E7</em>) – Tolerance of the quasi-Newton algorithm that is used to minimize
+the objective function. This is passed as the <cite>factr</cite> parameter to
+<cite>scipy.optimize.fmin_l_bfgs_b</cite>.
+Typical values for factr are: 1e12 for low accuracy; 1e7
+for moderate accuracy; 10.0 for extremely high accuracy.</p></li>
+<li><p><strong>maxiter</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default = 100000</em>) – Minimization of the objective function will do at most this number
+of steps.</p></li>
+<li><p><strong>on_error</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default = 'raise'</em>) – What to do then an error happend. When ‘raise’ is given, raise
+an exception. When ‘warn’ is given, produce a (Python) warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>K</strong> – the optimal rate matrix</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(N,N) ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In this implementation the algorithm of Crommelin and Vanden-Eijnden
+(CVE) is initialized with the pseudo-generator estimate. The
+algorithm of Kalbfleisch and Lawless (KL) is initialized using the
+CVE result.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">deeptime.markov.tools.estimation</span> <span class="kn">import</span> <span class="n">rate_matrix</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rate_matrix</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="go">array([[-0.0138...,  0.0138...],</span>
+<span class="go">       [ 0.6993..., -0.6993...]])</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="davies2010embeddable"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>E Davies. Embeddable markov matrices. <em>Electronic Journal of Probability</em>, 15:1474–1486, 2010.</p>
+</dd>
+<dt class="label" id="crommelin2009data"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Daan Crommelin and Eric Vanden-Eijnden. Data-based inference of generators for markov jump processes using convex optimization. <em>Multiscale Modeling &amp; Simulation</em>, 7(4):1751–1778, 2009.</p>
+</dd>
+<dt class="label" id="kalbfleisch1985analysis"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>JD Kalbfleisch and Jerald Franklin Lawless. The analysis of panel data under a markov assumption. <em>Journal of the American Statistical Association</em>, 80(392):863–871, 1985.</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

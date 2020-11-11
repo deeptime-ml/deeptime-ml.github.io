@@ -1,0 +1,17 @@
+﻿
+
+*function* spd\_inv\_sqrt
+=========================
+
+.. currentmodule:: deeptime.numeric
+
+.. autofunction:: spd_inv_sqrt
+
+   
+   
+   
+
+   
+
+   
+   

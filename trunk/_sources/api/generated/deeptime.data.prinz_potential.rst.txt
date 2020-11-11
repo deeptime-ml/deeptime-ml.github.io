@@ -1,0 +1,17 @@
+﻿
+
+*function* prinz\_potential
+===========================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: prinz_potential
+
+   
+   
+   
+
+   
+
+   
+   

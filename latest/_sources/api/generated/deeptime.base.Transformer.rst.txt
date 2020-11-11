@@ -1,0 +1,23 @@
+﻿
+
+*class* Transformer
+===================
+
+.. currentmodule:: deeptime.base
+
+.. autoclass:: Transformer
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Transformer.transform
+   
+   

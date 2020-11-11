@@ -1,0 +1,41 @@
+﻿
+
+*class* DiscreteOutputModel
+===========================
+
+.. currentmodule:: deeptime.markov.hmm
+
+.. autoclass:: DiscreteOutputModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DiscreteOutputModel.ignore_outliers
+      ~DiscreteOutputModel.n_hidden_states
+      ~DiscreteOutputModel.n_observable_states
+      ~DiscreteOutputModel.output_probabilities
+      ~DiscreteOutputModel.prior
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DiscreteOutputModel.copy
+      ~DiscreteOutputModel.fit
+      ~DiscreteOutputModel.generate_observation_trajectory
+      ~DiscreteOutputModel.get_params
+      ~DiscreteOutputModel.normalize
+      ~DiscreteOutputModel.sample
+      ~DiscreteOutputModel.set_params
+      ~DiscreteOutputModel.submodel
+      ~DiscreteOutputModel.to_state_probability_trajectory
+   
+   

@@ -1,0 +1,32 @@
+﻿
+
+*class* QuantityStatistics
+==========================
+
+.. currentmodule:: deeptime.util
+
+.. autoclass:: QuantityStatistics
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~QuantityStatistics.L
+      ~QuantityStatistics.R
+      ~QuantityStatistics.mean
+      ~QuantityStatistics.std
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~QuantityStatistics.gather
+   
+   

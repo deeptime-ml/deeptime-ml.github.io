@@ -1,0 +1,17 @@
+﻿
+
+*function* ornstein\_uhlenbeck
+==============================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: ornstein_uhlenbeck
+
+   
+   
+   
+
+   
+
+   
+   

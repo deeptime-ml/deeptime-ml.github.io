@@ -1,0 +1,17 @@
+﻿
+
+*function* moments\_block
+=========================
+
+.. currentmodule:: deeptime.covariance
+
+.. autofunction:: moments_block
+
+   
+   
+   
+
+   
+
+   
+   

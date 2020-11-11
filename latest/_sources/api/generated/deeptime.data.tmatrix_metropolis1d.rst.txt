@@ -1,0 +1,17 @@
+﻿
+
+*function* tmatrix\_metropolis1d
+================================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: tmatrix_metropolis1d
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ellipsoids dataset &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../_static/d3.v5.min.js"></script>
+    <script src="../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Arnold-Beltrami-Childress flow" href="plot_abc_flow.html" />
+    <link rel="prev" title="Sqrt model" href="plot_sqrt_model.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../_static/favicon-16x16.png">
+<link rel="manifest" href="../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="plot_ornstein_uhlenbeck.html">One-dimensional Ornstein-Uhlenbeck process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_bickley_jet.html">Bickley Jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_custom_ode.html">Custom ODEs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_prinz.html">One-dimensional Prinz potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pbf.html">Position-based fluids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_swissroll_model.html">Swissroll model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_triple_well_1d.html">Triple-well 1D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_tmatrix_1d.html">Metropolis chain in 1D energy landscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_double_well_discrete.html">Double-well discrete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_sqrt_model.html">Sqrt model</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Ellipsoids dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_abc_flow.html">Arnold-Beltrami-Childress flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_birth_death_chain.html">Birth-death chain model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_drunkards_walk.html">Drunkard’s walk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_triple_well_2d.html">Triple-well 2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_double_well_2d.html">Double-well 2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_quadruple_well.html">Quadruple-well</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_custom_sde.html">Custom SDEs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_time_quintuple_well.html">Time-dependent quintuple well</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_quadruple_well_asymmetric.html">Asymmetric Quadruple-well</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../contents.html">Documentation overview</a><ul>
+  <li><a href="index.html">Datasets</a><ul>
+      <li>Previous: <a href="plot_sqrt_model.html" title="previous chapter">Sqrt model</a></li>
+      <li>Next: <a href="plot_abc_flow.html" title="next chapter">Arnold-Beltrami-Childress flow</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-datasets-plot-ellipsoids-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="ellipsoids-dataset">
+<span id="sphx-glr-datasets-plot-ellipsoids-py"></span><h1>Ellipsoids dataset<a class="headerlink" href="#ellipsoids-dataset" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference internal" href="../api/generated/deeptime.data.ellipsoids.html#deeptime.data.ellipsoids" title="deeptime.data.ellipsoids"><code class="xref py py-meth docutils literal notranslate"><span class="pre">deeptime.data.ellipsoids()</span></code></a> dataset.</p>
+<img alt="Ellipsoids dataset observations with laziness of $0.97$." class="sphx-glr-single-img" src="../_images/sphx_glr_plot_ellipsoids_001.png" />
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+ <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+ <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">multivariate_normal</span>
+
+ <span class="kn">from</span> <span class="nn">deeptime.data</span> <span class="kn">import</span> <span class="n">ellipsoids</span>
+
+ <span class="n">data_source</span> <span class="o">=</span> <span class="n">ellipsoids</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
+ <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+ <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+ <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+ <span class="n">pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="p">,))</span>
+ <span class="n">pos</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span>
+ <span class="n">pos</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">Y</span>
+ <span class="n">rv1</span> <span class="o">=</span> <span class="n">multivariate_normal</span><span class="p">(</span><span class="n">data_source</span><span class="o">.</span><span class="n">state_0_mean</span><span class="p">,</span> <span class="n">data_source</span><span class="o">.</span><span class="n">covariance_matrix</span><span class="p">)</span>
+ <span class="n">rv2</span> <span class="o">=</span> <span class="n">multivariate_normal</span><span class="p">(</span><span class="n">data_source</span><span class="o">.</span><span class="n">state_1_mean</span><span class="p">,</span> <span class="n">data_source</span><span class="o">.</span><span class="n">covariance_matrix</span><span class="p">)</span>
+
+ <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+ <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+ <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="p">(</span><span class="n">rv1</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="o">+</span> <span class="n">rv2</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">pos</span><span class="p">))</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
+ <span class="n">ax</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+ <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+ <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">data_source</span><span class="o">.</span><span class="n">observations</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;samples&#39;</span><span class="p">)</span>
+ <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+ <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Ellipsoids dataset observations with laziness of $0.97$.&#39;</span><span class="p">)</span>
+ <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.501 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  9 MB</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-datasets-plot-ellipsoids-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/a23f73903a507f40b05721071c511ce6/plot_ellipsoids.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_ellipsoids.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/325875028061e573cafdc8aae0996c8a/plot_ellipsoids.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_ellipsoids.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../_static/scrollbar.js"></script>
+
+  </body>
+</html>

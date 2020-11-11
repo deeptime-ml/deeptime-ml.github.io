@@ -1,0 +1,43 @@
+﻿
+
+*class* BickleyJet
+==================
+
+.. currentmodule:: deeptime.data
+
+.. autoclass:: BickleyJet
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BickleyJet.L0
+      ~BickleyJet.U0
+      ~BickleyJet.c
+      ~BickleyJet.dimension
+      ~BickleyJet.eps
+      ~BickleyJet.h
+      ~BickleyJet.has_potential_function
+      ~BickleyJet.integrator
+      ~BickleyJet.k
+      ~BickleyJet.n_steps
+      ~BickleyJet.r0
+      ~BickleyJet.time_dependent
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BickleyJet.generate
+      ~BickleyJet.potential
+      ~BickleyJet.to_3d
+      ~BickleyJet.trajectory
+   
+   

@@ -1,0 +1,17 @@
+﻿
+
+*function* reactive\_flux
+=========================
+
+.. currentmodule:: deeptime.markov
+
+.. autofunction:: reactive_flux
+
+   
+   
+   
+
+   
+
+   
+   

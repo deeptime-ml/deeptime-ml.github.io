@@ -1,0 +1,76 @@
+﻿
+
+*class* MarkovStateModelCollection
+==================================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: MarkovStateModelCollection
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MarkovStateModelCollection.count_fraction
+      ~MarkovStateModelCollection.count_fractions
+      ~MarkovStateModelCollection.count_model
+      ~MarkovStateModelCollection.current_model
+      ~MarkovStateModelCollection.empirical_koopman_model
+      ~MarkovStateModelCollection.has_count_model
+      ~MarkovStateModelCollection.koopman_model
+      ~MarkovStateModelCollection.lagtime
+      ~MarkovStateModelCollection.n_connected_msms
+      ~MarkovStateModelCollection.n_eigenvalues
+      ~MarkovStateModelCollection.n_states
+      ~MarkovStateModelCollection.ncv
+      ~MarkovStateModelCollection.reversible
+      ~MarkovStateModelCollection.sparse
+      ~MarkovStateModelCollection.state_fraction
+      ~MarkovStateModelCollection.state_fractions
+      ~MarkovStateModelCollection.stationary
+      ~MarkovStateModelCollection.stationary_distribution
+      ~MarkovStateModelCollection.transition_matrix
+      ~MarkovStateModelCollection.transition_matrix_tolerance
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MarkovStateModelCollection.committor_backward
+      ~MarkovStateModelCollection.committor_forward
+      ~MarkovStateModelCollection.compute_state_indices
+      ~MarkovStateModelCollection.compute_trajectory_weights
+      ~MarkovStateModelCollection.copy
+      ~MarkovStateModelCollection.correlation
+      ~MarkovStateModelCollection.eigenvalues
+      ~MarkovStateModelCollection.eigenvectors_left
+      ~MarkovStateModelCollection.eigenvectors_right
+      ~MarkovStateModelCollection.expectation
+      ~MarkovStateModelCollection.fingerprint_correlation
+      ~MarkovStateModelCollection.fingerprint_relaxation
+      ~MarkovStateModelCollection.get_params
+      ~MarkovStateModelCollection.hmm
+      ~MarkovStateModelCollection.mfpt
+      ~MarkovStateModelCollection.pcca
+      ~MarkovStateModelCollection.propagate
+      ~MarkovStateModelCollection.reactive_flux
+      ~MarkovStateModelCollection.relaxation
+      ~MarkovStateModelCollection.score
+      ~MarkovStateModelCollection.select
+      ~MarkovStateModelCollection.set_params
+      ~MarkovStateModelCollection.simulate
+      ~MarkovStateModelCollection.state_symbols
+      ~MarkovStateModelCollection.submodel
+      ~MarkovStateModelCollection.timescales
+      ~MarkovStateModelCollection.to_koopman_model
+      ~MarkovStateModelCollection.update_stationary_distribution
+      ~MarkovStateModelCollection.update_transition_matrix
+   
+   

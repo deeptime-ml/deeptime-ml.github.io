@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.eigenvector\_sensitivity
+=======================================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: eigenvector_sensitivity

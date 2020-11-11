@@ -1,0 +1,17 @@
+﻿
+
+*function* ellipsoids
+=====================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: ellipsoids
+
+   
+   
+   
+
+   
+
+   
+   

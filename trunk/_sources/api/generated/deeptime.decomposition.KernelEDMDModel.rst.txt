@@ -1,0 +1,39 @@
+﻿
+
+*class* KernelEDMDModel
+=======================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: KernelEDMDModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KernelEDMDModel.instantaneous_obs
+      ~KernelEDMDModel.koopman_matrix
+      ~KernelEDMDModel.operator
+      ~KernelEDMDModel.operator_inverse
+      ~KernelEDMDModel.output_dimension
+      ~KernelEDMDModel.timelagged_obs
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KernelEDMDModel.backward
+      ~KernelEDMDModel.copy
+      ~KernelEDMDModel.forward
+      ~KernelEDMDModel.get_params
+      ~KernelEDMDModel.set_params
+      ~KernelEDMDModel.transform
+   
+   

@@ -1,0 +1,32 @@
+﻿
+
+*class* TrajectoriesDataset
+===========================
+
+.. currentmodule:: deeptime.util.data
+
+.. autoclass:: TrajectoriesDataset
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TrajectoriesDataset.lagtime
+      ~TrajectoriesDataset.subsets
+      ~TrajectoriesDataset.trajectories
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TrajectoriesDataset.from_numpy
+      ~TrajectoriesDataset.setflags
+   
+   

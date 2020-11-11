@@ -1,0 +1,36 @@
+﻿
+
+*class* KoopmanWeightingEstimator
+=================================
+
+.. currentmodule:: deeptime.covariance
+
+.. autoclass:: KoopmanWeightingEstimator
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KoopmanWeightingEstimator.has_model
+      ~KoopmanWeightingEstimator.lagtime
+      ~KoopmanWeightingEstimator.model
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KoopmanWeightingEstimator.fetch_model
+      ~KoopmanWeightingEstimator.fit
+      ~KoopmanWeightingEstimator.get_params
+      ~KoopmanWeightingEstimator.partial_fit
+      ~KoopmanWeightingEstimator.set_params
+      ~KoopmanWeightingEstimator.transform
+   
+   

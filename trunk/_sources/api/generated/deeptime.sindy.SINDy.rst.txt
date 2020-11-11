@@ -1,0 +1,33 @@
+﻿
+
+*class* SINDy
+=============
+
+.. currentmodule:: deeptime.sindy
+
+.. autoclass:: SINDy
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SINDy.has_model
+      ~SINDy.model
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SINDy.fetch_model
+      ~SINDy.fit
+      ~SINDy.get_params
+      ~SINDy.set_params
+   
+   

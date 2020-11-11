@@ -1,0 +1,44 @@
+﻿
+
+*class* VAMP
+============
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: VAMP
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~VAMP.dim
+      ~VAMP.epsilon
+      ~VAMP.has_model
+      ~VAMP.lagtime
+      ~VAMP.model
+      ~VAMP.scaling
+      ~VAMP.var_cutoff
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~VAMP.chapman_kolmogorov_validator
+      ~VAMP.covariance_estimator
+      ~VAMP.fetch_model
+      ~VAMP.fit
+      ~VAMP.fit_from_covariances
+      ~VAMP.fit_from_timeseries
+      ~VAMP.get_params
+      ~VAMP.partial_fit
+      ~VAMP.set_params
+      ~VAMP.transform
+   
+   

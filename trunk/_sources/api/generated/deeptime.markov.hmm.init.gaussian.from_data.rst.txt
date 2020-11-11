@@ -1,0 +1,17 @@
+﻿
+
+*function* from\_data
+=====================
+
+.. currentmodule:: deeptime.markov.hmm.init.gaussian
+
+.. autofunction:: from_data
+
+   
+   
+   
+
+   
+
+   
+   

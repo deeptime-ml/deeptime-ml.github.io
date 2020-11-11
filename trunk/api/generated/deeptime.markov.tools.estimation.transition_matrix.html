@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deeptime.markov.tools.estimation.transition_matrix &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="deeptime.markov.tools.estimation.rate_matrix" href="deeptime.markov.tools.estimation.rate_matrix.html" />
+    <link rel="prev" title="deeptime.markov.tools.estimation.is_connected" href="deeptime.markov.tools.estimation.is_connected.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index_markov_tools.html#msm-estimation">MSM estimation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#countmatrix">Countmatrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#connectivity">Connectivity</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_markov_tools.html#estimation">Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#sampling">Sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#bootstrap">Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov_tools.html#priors">Priors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_tools.html#msm-analysis">MSM analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov_tools.html#transition-path-theory-tools">Transition path theory tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_markov_tools.html">deeptime.markov.tools</a><ul>
+      <li>Previous: <a href="deeptime.markov.tools.estimation.is_connected.html" title="previous chapter">deeptime.markov.tools.estimation.is_connected</a></li>
+      <li>Next: <a href="deeptime.markov.tools.estimation.rate_matrix.html" title="next chapter">deeptime.markov.tools.estimation.rate_matrix</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="deeptime-markov-tools-estimation-transition-matrix">
+<h1>deeptime.markov.tools.estimation.transition_matrix<a class="headerlink" href="#deeptime-markov-tools-estimation-transition-matrix" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="deeptime.markov.tools.estimation.transition_matrix">
+<code class="sig-prename descclassname"><span class="pre">deeptime.markov.tools.estimation.</span></code><code class="sig-name descname"><span class="pre">transition_matrix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reversible</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxerr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1e-08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rev_pisym</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_statdist</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warn_not_converged</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sparse_newton</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.tools.estimation.transition_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate the transition matrix from the given countmatrix. <a class="footnote-reference brackets" href="#prinz2011markov" id="id1">1</a>
+<a class="footnote-reference brackets" href="#bowman2009progress" id="id2">2</a> <a class="footnote-reference brackets" href="#trendelkamp2015estimation" id="id3">3</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>C</strong> (<em>numpy ndarray</em><em> or </em><em>scipy.sparse matrix</em>) – Count matrix</p></li>
+<li><p><strong>reversible</strong> (<em>bool</em><em> (</em><em>optional</em><em>)</em>) – If True restrict the ensemble of transition matrices
+to those having a detailed balance symmetry otherwise
+the likelihood optimization is carried out over the whole
+space of stochastic matrices.</p></li>
+<li><p><strong>mu</strong> (<em>array_like</em>) – The stationary distribution of the MLE transition matrix.</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – Select which implementation to use for the estimation.
+One of ‘auto’, ‘dense’ and ‘sparse’, optional, default=’auto’.
+‘dense’ always selects the dense implementation, ‘sparse’ always selects
+the sparse one.
+‘auto’ selects the most efficient implementation according to
+the sparsity structure of the matrix: if the occupation of the C
+matrix is less then one third, select sparse. Else select dense.
+The type of the T matrix returned always matches the type of the
+C matrix, irrespective of the method that was used to compute it.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>maxiter</strong> (<em>int, optional, default=1000000</em>) – Optional parameter with reversible = True.
+maximum number of iterations before the method exits</p></li>
+<li><p><strong>maxerr</strong> (<em>float, optional, default=1e-8</em>) – Optional parameter with reversible = True.
+convergence tolerance for transition matrix estimation.
+This specifies the maximum change of the Euclidean norm of relative
+stationary probabilities (<span class="math">\(x_i = \sum_k x_{ik}\)</span>). The relative stationary probability changes
+<span class="math">\(e_i = (x_i^{(1)} - x_i^{(2)})/(x_i^{(1)} + x_i^{(2)})\)</span> are used in order to track changes in small
+probabilities. The Euclidean norm of the change vector, <span class="math">\(|e_i|_2\)</span>, is compared to maxerr.</p></li>
+<li><p><strong>rev_pisym</strong> (<em>bool, optional, default=False</em>) – Fast computation of reversible transition matrix by normalizing
+<span class="math">\(x_{ij} = \pi_i p_{ij} + \pi_j p_{ji}\)</span>. <span class="math">\(p_{ij}\)</span> is the direct
+(nonreversible) estimate and <span class="math">\(pi_i\)</span> is its stationary distribution.
+This estimator is asympotically unbiased but not maximum likelihood.</p></li>
+<li><p><strong>return_statdist</strong> (<em>bool, optional, default=False</em>) – Optional parameter with reversible = True.
+If set to true, the stationary distribution is also returned</p></li>
+<li><p><strong>return_conv</strong> (<em>bool, optional, default=False</em>) – Optional parameter with reversible = True.
+If set to true, the likelihood history and the pi_change history is returned.</p></li>
+<li><p><strong>warn_not_converged</strong> (<em>bool, optional, default=True</em>) – Prints a warning if not converged.</p></li>
+<li><p><strong>sparse_newton</strong> (<em>bool, optional, default=False</em>) – If True, use the experimental primal-dual interior-point solver for sparse input/computation method.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>result</strong> – The MLE transition matrix and optionally the stationary distribution if <cite>return_statist=True</cite>.
+The transition matrix has the same data type (dense or sparse) as the input matrix C.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[array_like, Tuple[array_like, np.ndarray]]</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The transition matrix is a maximum likelihood estimate (MLE) of
+the probability distribution of transition matrices with
+parameters given by the count matrix.</p>
+<p class="rubric">References</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="prinz2011markov"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Jan-Hendrik Prinz, Hao Wu, Marco Sarich, Bettina Keller, Martin Senne, Martin Held, John D Chodera, Christof Schütte, and Frank Noé. Markov models of molecular kinetics: generation and validation. <em>The Journal of chemical physics</em>, 134(17):174105, 2011.</p>
+</dd>
+<dt class="label" id="bowman2009progress"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Gregory R Bowman, Kyle A Beauchamp, George Boxer, and Vijay S Pande. Progress and challenges in the automated construction of markov state models for full protein systems. <em>The Journal of chemical physics</em>, 131(12):124101, 2009.</p>
+</dd>
+<dt class="label" id="trendelkamp2015estimation"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Benjamin Trendelkamp-Schroer, Hao Wu, Fabian Paul, and Frank Noé. Estimation and uncertainty of reversible markov models. <em>The Journal of chemical physics</em>, 143(17):11B601_1, 2015.</p>
+</dd>
+</dl>
+</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">deeptime.markov.tools.estimation</span> <span class="kn">import</span> <span class="n">transition_matrix</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>Non-reversible estimate</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">T_nrev</span> <span class="o">=</span> <span class="n">transition_matrix</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array_str</span><span class="p">(</span><span class="n">T_nrev</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="go">[[0.833 0.083 0.083]</span>
+<span class="go"> [0.4   0.    0.6  ]</span>
+<span class="go"> [0.    0.2   0.8  ]]</span>
+</pre></div>
+</div>
+<p>Reversible estimate</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">T_rev</span> <span class="o">=</span> <span class="n">transition_matrix</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">reversible</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array_str</span><span class="p">(</span><span class="n">T_rev</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="go">[[0.833 0.104 0.063]</span>
+<span class="go"> [0.351 0.    0.649]</span>
+<span class="go"> [0.049 0.151 0.8  ]]</span>
+</pre></div>
+</div>
+<p>Reversible estimate with given stationary vector</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.29</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">T_mu</span> <span class="o">=</span> <span class="n">transition_matrix</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">reversible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array_str</span><span class="p">(</span><span class="n">T_mu</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="go">[[0.948 0.006 0.046]</span>
+<span class="go"> [0.429 0.    0.571]</span>
+<span class="go"> [0.111 0.02  0.869]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

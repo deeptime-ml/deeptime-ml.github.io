@@ -1,0 +1,17 @@
+﻿
+
+*function* confidence\_interval
+===============================
+
+.. currentmodule:: deeptime.util
+
+.. autofunction:: confidence_interval
+
+   
+   
+   
+
+   
+
+   
+   

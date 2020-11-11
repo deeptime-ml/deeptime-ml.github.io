@@ -1,0 +1,39 @@
+﻿
+
+*class* EDMDModel
+=================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: EDMDModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EDMDModel.instantaneous_obs
+      ~EDMDModel.koopman_matrix
+      ~EDMDModel.operator
+      ~EDMDModel.operator_inverse
+      ~EDMDModel.output_dimension
+      ~EDMDModel.timelagged_obs
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~EDMDModel.backward
+      ~EDMDModel.copy
+      ~EDMDModel.forward
+      ~EDMDModel.get_params
+      ~EDMDModel.set_params
+      ~EDMDModel.transform
+   
+   

@@ -1,0 +1,42 @@
+﻿
+
+*class* KMeans
+==============
+
+.. currentmodule:: deeptime.clustering
+
+.. autoclass:: KMeans
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KMeans.fixed_seed
+      ~KMeans.has_model
+      ~KMeans.init_strategy
+      ~KMeans.initial_centers
+      ~KMeans.max_iter
+      ~KMeans.metric
+      ~KMeans.model
+      ~KMeans.n_clusters
+      ~KMeans.n_jobs
+      ~KMeans.tolerance
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KMeans.fetch_model
+      ~KMeans.fit
+      ~KMeans.get_params
+      ~KMeans.set_params
+      ~KMeans.transform
+   
+   

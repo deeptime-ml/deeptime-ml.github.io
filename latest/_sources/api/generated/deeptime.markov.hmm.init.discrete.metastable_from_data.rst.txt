@@ -1,0 +1,17 @@
+﻿
+
+*function* metastable\_from\_data
+=================================
+
+.. currentmodule:: deeptime.markov.hmm.init.discrete
+
+.. autofunction:: metastable_from_data
+
+   
+   
+   
+
+   
+
+   
+   

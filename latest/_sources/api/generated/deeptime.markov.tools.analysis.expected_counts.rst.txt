@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.analysis.expected\_counts
+===============================================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: expected_counts

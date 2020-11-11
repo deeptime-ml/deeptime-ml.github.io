@@ -1,0 +1,17 @@
+﻿
+
+*function* compute\_effective\_stride
+=====================================
+
+.. currentmodule:: deeptime.markov
+
+.. autofunction:: compute_effective_stride
+
+   
+   
+   
+
+   
+
+   
+   

@@ -1,0 +1,38 @@
+﻿
+
+*class* BayesianHMMPosterior
+============================
+
+.. currentmodule:: deeptime.markov.hmm
+
+.. autoclass:: BayesianHMMPosterior
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BayesianHMMPosterior.hidden_state_trajectories_samples
+      ~BayesianHMMPosterior.prior
+      ~BayesianHMMPosterior.samples
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BayesianHMMPosterior.copy
+      ~BayesianHMMPosterior.evaluate_samples
+      ~BayesianHMMPosterior.gather_stats
+      ~BayesianHMMPosterior.get_params
+      ~BayesianHMMPosterior.set_params
+      ~BayesianHMMPosterior.submodel
+      ~BayesianHMMPosterior.submodel_largest
+      ~BayesianHMMPosterior.submodel_populous
+   
+   

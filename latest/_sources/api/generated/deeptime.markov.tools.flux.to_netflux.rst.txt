@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.flux.to\_netflux
+======================================
+
+.. currentmodule:: deeptime.markov.tools.flux
+
+.. autofunction:: to_netflux

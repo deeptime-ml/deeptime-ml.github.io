@@ -1,0 +1,33 @@
+﻿
+
+*class* TVAEModel
+=================
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autoclass:: TVAEModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TVAEModel.decoder
+      ~TVAEModel.encoder
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TVAEModel.copy
+      ~TVAEModel.get_params
+      ~TVAEModel.set_params
+      ~TVAEModel.transform
+   
+   

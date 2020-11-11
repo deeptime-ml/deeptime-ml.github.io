@@ -1,0 +1,17 @@
+﻿
+
+*function* kvad\_score
+======================
+
+.. currentmodule:: deeptime.decomposition.deep
+
+.. autofunction:: kvad_score
+
+   
+   
+   
+
+   
+
+   
+   

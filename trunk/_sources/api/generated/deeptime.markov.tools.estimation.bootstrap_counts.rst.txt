@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.bootstrap\_counts
+==================================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: bootstrap_counts

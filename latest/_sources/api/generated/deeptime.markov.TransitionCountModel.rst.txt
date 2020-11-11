@@ -1,0 +1,52 @@
+﻿
+
+*class* TransitionCountModel
+============================
+
+.. currentmodule:: deeptime.markov
+
+.. autoclass:: TransitionCountModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TransitionCountModel.count_matrix
+      ~TransitionCountModel.count_matrix_full
+      ~TransitionCountModel.counting_mode
+      ~TransitionCountModel.is_full_model
+      ~TransitionCountModel.lagtime
+      ~TransitionCountModel.n_states
+      ~TransitionCountModel.n_states_full
+      ~TransitionCountModel.selected_count_fraction
+      ~TransitionCountModel.selected_state_fraction
+      ~TransitionCountModel.state_histogram
+      ~TransitionCountModel.state_histogram_full
+      ~TransitionCountModel.state_symbols
+      ~TransitionCountModel.states
+      ~TransitionCountModel.total_count
+      ~TransitionCountModel.visited_set
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TransitionCountModel.connected_sets
+      ~TransitionCountModel.copy
+      ~TransitionCountModel.count_matrix_histogram
+      ~TransitionCountModel.get_params
+      ~TransitionCountModel.set_params
+      ~TransitionCountModel.states_to_symbols
+      ~TransitionCountModel.submodel
+      ~TransitionCountModel.submodel_largest
+      ~TransitionCountModel.symbols_to_states
+      ~TransitionCountModel.transform_discrete_trajectories_to_submodel
+   
+   

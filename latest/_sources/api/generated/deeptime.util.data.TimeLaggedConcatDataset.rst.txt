@@ -1,0 +1,29 @@
+﻿
+
+*class* TimeLaggedConcatDataset
+===============================
+
+.. currentmodule:: deeptime.util.data
+
+.. autoclass:: TimeLaggedConcatDataset
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TimeLaggedConcatDataset.subsets
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TimeLaggedConcatDataset.setflags
+   
+   

@@ -1,0 +1,17 @@
+﻿
+
+*function* count\_states
+========================
+
+.. currentmodule:: deeptime.markov
+
+.. autofunction:: count_states
+
+   
+   
+   
+
+   
+
+   
+   

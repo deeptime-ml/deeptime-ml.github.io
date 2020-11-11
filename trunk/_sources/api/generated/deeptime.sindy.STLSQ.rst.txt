@@ -1,0 +1,27 @@
+﻿
+
+*class* STLSQ
+=============
+
+.. currentmodule:: deeptime.sindy
+
+.. autoclass:: STLSQ
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~STLSQ.fit
+      ~STLSQ.get_params
+      ~STLSQ.predict
+      ~STLSQ.score
+      ~STLSQ.set_params
+   
+   

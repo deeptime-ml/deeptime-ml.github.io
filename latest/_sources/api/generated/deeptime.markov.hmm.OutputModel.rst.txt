@@ -1,0 +1,38 @@
+﻿
+
+*class* OutputModel
+===================
+
+.. currentmodule:: deeptime.markov.hmm
+
+.. autoclass:: OutputModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~OutputModel.ignore_outliers
+      ~OutputModel.n_hidden_states
+      ~OutputModel.n_observable_states
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~OutputModel.copy
+      ~OutputModel.fit
+      ~OutputModel.generate_observation_trajectory
+      ~OutputModel.get_params
+      ~OutputModel.sample
+      ~OutputModel.set_params
+      ~OutputModel.submodel
+      ~OutputModel.to_state_probability_trajectory
+   
+   

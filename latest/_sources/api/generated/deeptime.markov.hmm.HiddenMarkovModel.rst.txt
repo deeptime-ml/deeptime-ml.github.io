@@ -1,0 +1,75 @@
+﻿
+
+*class* HiddenMarkovModel
+=========================
+
+.. currentmodule:: deeptime.markov.hmm
+
+.. autoclass:: HiddenMarkovModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~HiddenMarkovModel.count_model
+      ~HiddenMarkovModel.eigenvectors_left_obs
+      ~HiddenMarkovModel.eigenvectors_right_obs
+      ~HiddenMarkovModel.hidden_state_trajectories
+      ~HiddenMarkovModel.initial_count
+      ~HiddenMarkovModel.initial_distribution
+      ~HiddenMarkovModel.lagtime
+      ~HiddenMarkovModel.lifetimes
+      ~HiddenMarkovModel.likelihood
+      ~HiddenMarkovModel.likelihoods
+      ~HiddenMarkovModel.metastable_assignments
+      ~HiddenMarkovModel.metastable_distributions
+      ~HiddenMarkovModel.metastable_memberships
+      ~HiddenMarkovModel.metastable_sets
+      ~HiddenMarkovModel.n_hidden_states
+      ~HiddenMarkovModel.n_observation_states
+      ~HiddenMarkovModel.observation_symbols
+      ~HiddenMarkovModel.observation_symbols_full
+      ~HiddenMarkovModel.output_model
+      ~HiddenMarkovModel.output_probabilities
+      ~HiddenMarkovModel.state_probabilities
+      ~HiddenMarkovModel.stationary_distribution_obs
+      ~HiddenMarkovModel.stride
+      ~HiddenMarkovModel.transition_counts
+      ~HiddenMarkovModel.transition_model
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~HiddenMarkovModel.collect_observations_in_state
+      ~HiddenMarkovModel.compute_observation_likelihood
+      ~HiddenMarkovModel.compute_viterbi_paths
+      ~HiddenMarkovModel.copy
+      ~HiddenMarkovModel.correlation_obs
+      ~HiddenMarkovModel.expectation_obs
+      ~HiddenMarkovModel.fingerprint_correlation_obs
+      ~HiddenMarkovModel.fingerprint_relaxation_obs
+      ~HiddenMarkovModel.get_params
+      ~HiddenMarkovModel.nonempty_obs
+      ~HiddenMarkovModel.propagate
+      ~HiddenMarkovModel.relaxation_obs
+      ~HiddenMarkovModel.sample_by_observation_probabilities
+      ~HiddenMarkovModel.set_params
+      ~HiddenMarkovModel.simulate
+      ~HiddenMarkovModel.states_largest
+      ~HiddenMarkovModel.states_populous
+      ~HiddenMarkovModel.submodel
+      ~HiddenMarkovModel.submodel_disconnect
+      ~HiddenMarkovModel.submodel_largest
+      ~HiddenMarkovModel.submodel_populous
+      ~HiddenMarkovModel.transform_discrete_trajectories_to_observed_symbols
+      ~HiddenMarkovModel.transition_matrix_obs
+   
+   

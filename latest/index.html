@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deeptime &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="_static/d3.v5.min.js"></script>
+    <script src="_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="_static/favicon-16x16.png">
+<link rel="manifest" href="_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="#">
+    <img class="logo" src="_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="contents.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <h1>Deeptime</h1>
+    <p>
+        Deeptime is a Python library for analysis of time series data. In particular, methods for dimension
+        reduction, clustering, and Markov model estimation are implemented.
+    </p>
+    <p>
+        The API is similar to that of <a href="https://scikit-learn.org/">scikit-learn</a> and offers basic
+        compatibility to its tools via ducktyping.
+    </p>
+    <p>
+        Deeptime can be installed via pip (<code class="code docutils literal notranslate"><span class="pre">pip install deeptime</span></code>)
+        and is also available via conda on conda-forge
+        (<code class="code docutils literal notranslate"><span class="pre">conda install -c conda-forge deeptime</span></code>).
+    </p>
+
+    <div class="section" id="contents">
+        <h3>Main algorithms</h3>
+
+        <a href="index_dimreduction.html">
+            <div class="gallery">
+                <div class="desc">Dimension reduction of dynamical data</div>
+                <img src="_static/landing-page/dimredux_tica.png" alt="TICA on Ellipsoids dataset">
+            </div>
+        </a>
+
+        <a href="index_deepdimreduction.html">
+            <div class="gallery">
+                <div class="desc">Deep dimension reduction with neural networks</div>
+                <img src="_static/landing-page/vamp_v_vampnet.png" alt="VAMPNet vs. VAMP">
+            </div>
+        </a>
+
+        <a href="notebooks/sindy.html">
+            <div class="gallery">
+                <div class="desc">SINDy - Find governing equations from data</div>
+                <img src="_static/landing-page/sindy.png" alt="SINDy on the Rossler system.">
+            </div>
+        </a>
+
+        <a href="index_msm.html">
+            <div class="gallery">
+                <div class="desc">Markov state models</div>
+                <img src="_static/landing-page/msm_tpt.png" alt="TPT on drunkard's walk">
+            </div>
+        </a>
+
+        <a href="notebooks/hmm.html">
+            <div class="gallery">
+                <div class="desc">Hidden markov models</div>
+                <img src="_static/landing-page/hmm.png" alt="Discrete HMM example.">
+            </div>
+        </a>
+    </div>
+    <div class="section" id="contents">
+        <h3>Tools and data</h3>
+
+        <a href="notebooks/clustering.html">
+            <div class="gallery">
+                <div class="desc">Clustering algorithms</div>
+                <img src="_static/landing-page/clustering_regspace.png" alt="Regular space clustering">
+            </div>
+        </a>
+
+        <a href="datasets/index.html">
+            <div class="gallery">
+                <div class="desc">Data - Some toy datasets</div>
+                <img src="_static/landing-page/bickley.png" alt="The Bickley jet.">
+            </div>
+        </a>
+    </div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="_static/scrollbar.js"></script>
+
+  </body>
+</html>

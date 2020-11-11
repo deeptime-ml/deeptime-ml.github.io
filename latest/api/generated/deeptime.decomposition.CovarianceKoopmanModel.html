@@ -1,0 +1,867 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class CovarianceKoopmanModel &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class DMDModel" href="deeptime.decomposition.DMDModel.html" />
+    <link rel="prev" title="class KoopmanModel" href="deeptime.decomposition.KoopmanModel.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#estimators">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#deep-estimators">Deep estimators</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_decomposition.html#models">Models</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.KoopmanModel.html"><em>class</em> KoopmanModel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>class</em> CovarianceKoopmanModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.DMDModel.html"><em>class</em> DMDModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.EDMDModel.html"><em>class</em> EDMDModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.KernelEDMDModel.html"><em>class</em> KernelEDMDModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.KernelCCAModel.html"><em>class</em> KernelCCAModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.VAMPNetModel.html"><em>class</em> VAMPNetModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.TAEModel.html"><em>class</em> TAEModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.deep.TVAEModel.html"><em>class</em> TVAEModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#utils">Utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_decomposition.html">deeptime.decomposition</a><ul>
+      <li>Previous: <a href="deeptime.decomposition.KoopmanModel.html" title="previous chapter"><em>class</em> KoopmanModel</a></li>
+      <li>Next: <a href="deeptime.decomposition.DMDModel.html" title="next chapter"><em>class</em> DMDModel</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="class-covariancekoopmanmodel">
+<h1><em>class</em> CovarianceKoopmanModel<a class="headerlink" href="#class-covariancekoopmanmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.decomposition.</span></code><code class="sig-name descname"><span class="pre">CovarianceKoopmanModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">instantaneous_coefficients,</span> <span class="pre">singular_values,</span> <span class="pre">timelagged_coefficients,</span> <span class="pre">cov,</span> <span class="pre">rank_0:</span> <span class="pre">int,</span> <span class="pre">rank_t:</span> <span class="pre">int,</span> <span class="pre">dim=None,</span> <span class="pre">var_cutoff=None,</span> <span class="pre">scaling=None,</span> <span class="pre">epsilon=1e-10,</span> <span class="pre">instantaneous_obs:</span> <span class="pre">Callable[[numpy.ndarray],</span> <span class="pre">numpy.ndarray]</span> <span class="pre">=</span> <span class="pre">&lt;deeptime.basis._monomials.Identity</span> <span class="pre">object&gt;,</span> <span class="pre">timelagged_obs:</span> <span class="pre">Callable[[numpy.ndarray],</span> <span class="pre">numpy.ndarray]</span> <span class="pre">=</span> <span class="pre">&lt;deeptime.basis._monomials.Identity</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A type of Koopman model <span class="math">\(\mathbb{E}[g(x_{t+\tau})] = K^\top \mathbb{E}[f(x_{t})]\)</span>
+which was obtained through diagonalization of covariance matrices. This leads to
+a Koopman operator which is a diagonal matrix and can be used to project onto specific processes of the system.</p>
+<p>In particular, this model expects matrices <span class="math">\(U\)</span> and <span class="math">\(V\)</span> as well as singular values <span class="math">\(\sigma_i\)</span>,
+such that</p>
+<div class="math">
+\[\mathbb{E}[V^\top\chi_1 (x_{t+\tau})]=\mathbb{E}[g(x_{t+\tau})] \approx K^\top \mathbb{E}[f(x_{t})] = \mathrm{diag}(\sigma_i) \mathbb{E}[U^\top\chi_0(x_{t})],
+
+\]</div>
+<p>where <span class="math">\(\chi_0,\chi_1\)</span> are basis transformations of the full state <span class="math">\(x_t\)</span>.</p>
+<p>The estimators which produce this kind of model are <a class="reference internal" href="deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP" title="deeptime.decomposition.VAMP"><code class="xref py py-class docutils literal notranslate"><span class="pre">VAMP</span></code></a> and
+<a class="reference internal" href="deeptime.decomposition.TICA.html#deeptime.decomposition.TICA" title="deeptime.decomposition.TICA"><code class="xref py py-class docutils literal notranslate"><span class="pre">TICA</span></code></a>.</p>
+<p>For a description of parameters <cite>operator</cite>, <cite>basis_transform_forward</cite>, <cite>basis_transform_backward</cite>,
+and <cite>output_dimension</cite>: please see <a class="reference internal" href="deeptime.decomposition.KoopmanModel.html#deeptime.decomposition.KoopmanModel" title="deeptime.decomposition.KoopmanModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">KoopmanModel</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>instantaneous_coefficients</strong> (<em>(</em><em>n</em><em>, </em><em>k</em><em>) </em><em>ndarray</em>) – The coefficient matrix <span class="math">\(U\)</span>.</p></li>
+<li><p><strong>singular_values</strong> (<em>(</em><em>k</em><em>,</em><em>) </em><em>ndarray</em>) – Singular values <span class="math">\(\sigma_i\)</span>.</p></li>
+<li><p><strong>instantaneous_coefficients</strong> – The coefficient matrix <span class="math">\(V\)</span>.</p></li>
+<li><p><strong>cov</strong> (<a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel" title="deeptime.covariance.CovarianceModel"><em>CovarianceModel</em></a>) – Covariances <span class="math">\(C_{00}\)</span>, <span class="math">\(C_{0t}\)</span>, and <span class="math">\(C_{tt}\)</span>.</p></li>
+<li><p><strong>rank_0</strong> (<em>int</em>) – Rank of the instantaneous whitening transformation <span class="math">\(C_{00}^{-1/2}\)</span>.</p></li>
+<li><p><strong>rank_t</strong> (<em>int</em>) – Rank of the time-lagged whitening transformation <span class="math">\(C_{tt}^{-1/2}\)</span>.</p></li>
+<li><p><strong>scaling</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>default=None</em>) – Scaling parameter which was applied to singular values for additional structure in the projected space.
+See the respective estimator for details.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em><em>, </em><em>default=1e-6</em>) – Eigenvalue / singular value cutoff. Eigenvalues (or singular values) of <span class="math">\(C_{00}\)</span> and <span class="math">\(C_{11}\)</span>
+with norms &lt;= epsilon were cut off. The remaining number of eigenvalues together with the value of <cite>dim</cite>
+define the effective output dimension.</p></li>
+<li><p><strong>instantaneous_obs</strong> (<em>Callable</em><em>, </em><em>optional</em><em>, </em><em>default=identity</em>) – Transforms the current state <span class="math">\(x_t\)</span> to <span class="math">\(\chi_0(x_t)\)</span>. Defaults to <cite>chi_0(x) = x</cite>.</p></li>
+<li><p><strong>timelagged_obs</strong> (<em>Callable</em><em>, </em><em>optional</em><em>, </em><em>default=identity</em>) – Transforms the future state <span class="math">\(x_{t+\tau}\)</span> to <span class="math">\(\chi_1(x_{t+\tau})\)</span>. Defaults to <cite>chi_1(x) = x</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.cov" title="deeptime.decomposition.CovarianceKoopmanModel.cov"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov</span></code></a></p></td>
+<td><p>Estimated covariances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.cov_00" title="deeptime.decomposition.CovarianceKoopmanModel.cov_00"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_00</span></code></a></p></td>
+<td><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.cov_00" title="deeptime.covariance.CovarianceModel.cov_00"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cov_00</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.cov_0t" title="deeptime.decomposition.CovarianceKoopmanModel.cov_0t"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_0t</span></code></a></p></td>
+<td><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.cov_0t" title="deeptime.covariance.CovarianceModel.cov_0t"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cov_0t</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.cov_tt" title="deeptime.decomposition.CovarianceKoopmanModel.cov_tt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_tt</span></code></a></p></td>
+<td><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.cov_tt" title="deeptime.covariance.CovarianceModel.cov_tt"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cov_tt</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.cumulative_kinetic_variance" title="deeptime.decomposition.CovarianceKoopmanModel.cumulative_kinetic_variance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cumulative_kinetic_variance</span></code></a></p></td>
+<td><p>Yields the cumulative kinetic variance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.dim" title="deeptime.decomposition.CovarianceKoopmanModel.dim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dim</span></code></a></p></td>
+<td><p>Dimension attribute.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.epsilon" title="deeptime.decomposition.CovarianceKoopmanModel.epsilon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">epsilon</span></code></a></p></td>
+<td><p>Singular value cutoff.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.feature_component_correlation" title="deeptime.decomposition.CovarianceKoopmanModel.feature_component_correlation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">feature_component_correlation</span></code></a></p></td>
+<td><p>Instantaneous correlation matrix between mean-free input features and projection components.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.instantaneous_coefficients" title="deeptime.decomposition.CovarianceKoopmanModel.instantaneous_coefficients"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instantaneous_coefficients</span></code></a></p></td>
+<td><p>Coefficient matrix <span class="math">\(U\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.instantaneous_obs" title="deeptime.decomposition.CovarianceKoopmanModel.instantaneous_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instantaneous_obs</span></code></a></p></td>
+<td><p>Transforms the current state <span class="math">\(x_t\)</span> to <span class="math">\(f(x_t)\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.koopman_matrix" title="deeptime.decomposition.CovarianceKoopmanModel.koopman_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">koopman_matrix</span></code></a></p></td>
+<td><p>Same as <a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.operator" title="deeptime.decomposition.CovarianceKoopmanModel.operator"><code class="xref py py-attr docutils literal notranslate"><span class="pre">operator</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.mean_0" title="deeptime.decomposition.CovarianceKoopmanModel.mean_0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_0</span></code></a></p></td>
+<td><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.mean_0" title="deeptime.covariance.CovarianceModel.mean_0"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mean_0</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.mean_t" title="deeptime.decomposition.CovarianceKoopmanModel.mean_t"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_t</span></code></a></p></td>
+<td><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.mean_t" title="deeptime.covariance.CovarianceModel.mean_t"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mean_t</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.operator" title="deeptime.decomposition.CovarianceKoopmanModel.operator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">operator</span></code></a></p></td>
+<td><p>The operator <span class="math">\(K\)</span> so that <span class="math">\(\mathbb{E}[g(x_{t+\tau}] = K^\top \mathbb{E}[f(x_t)]\)</span> in transformed bases.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.operator_inverse" title="deeptime.decomposition.CovarianceKoopmanModel.operator_inverse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">operator_inverse</span></code></a></p></td>
+<td><p>Inverse of the operator <span class="math">\(K\)</span>, i.e., <span class="math">\(K^{-1}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.output_dimension" title="deeptime.decomposition.CovarianceKoopmanModel.output_dimension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_dimension</span></code></a></p></td>
+<td><p>The dimension of data after propagation by <span class="math">\(K\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.scaling" title="deeptime.decomposition.CovarianceKoopmanModel.scaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scaling</span></code></a></p></td>
+<td><p>Scaling of projection.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.singular_values" title="deeptime.decomposition.CovarianceKoopmanModel.singular_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">singular_values</span></code></a></p></td>
+<td><p>The singular values of the half-weighted Koopman matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.singular_vectors_left" title="deeptime.decomposition.CovarianceKoopmanModel.singular_vectors_left"><code class="xref py py-obj docutils literal notranslate"><span class="pre">singular_vectors_left</span></code></a></p></td>
+<td><p>Transformation matrix that represents the linear map from mean-free feature space to the space of left singular functions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.singular_vectors_right" title="deeptime.decomposition.CovarianceKoopmanModel.singular_vectors_right"><code class="xref py py-obj docutils literal notranslate"><span class="pre">singular_vectors_right</span></code></a></p></td>
+<td><p>Transformation matrix that represents the linear map from mean-free feature space to the space of right singular functions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.timelagged_coefficients" title="deeptime.decomposition.CovarianceKoopmanModel.timelagged_coefficients"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timelagged_coefficients</span></code></a></p></td>
+<td><p>Coefficient matrix <span class="math">\(V\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.timelagged_obs" title="deeptime.decomposition.CovarianceKoopmanModel.timelagged_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timelagged_obs</span></code></a></p></td>
+<td><p>Transforms the future state <span class="math">\(x_{t+\tau}\)</span> to <span class="math">\(g(x_{t+\tau})\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.var_cutoff" title="deeptime.decomposition.CovarianceKoopmanModel.var_cutoff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">var_cutoff</span></code></a></p></td>
+<td><p>Variance cutoff parameter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.whitening_rank_0" title="deeptime.decomposition.CovarianceKoopmanModel.whitening_rank_0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">whitening_rank_0</span></code></a></p></td>
+<td><p>Rank of the instantaneous whitening transformation <span class="math">\(C_{00}^{-1/2}\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.whitening_rank_t" title="deeptime.decomposition.CovarianceKoopmanModel.whitening_rank_t"><code class="xref py py-obj docutils literal notranslate"><span class="pre">whitening_rank_t</span></code></a></p></td>
+<td><p>Rank of the time-lagged whitening transformation <span class="math">\(C_{tt}^{-1/2}\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.backward" title="deeptime.decomposition.CovarianceKoopmanModel.backward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">backward</span></code></a>(data[, propagate])</p></td>
+<td><p>Maps data backward in time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.copy" title="deeptime.decomposition.CovarianceKoopmanModel.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Makes a deep copy of this model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.effective_output_dimension" title="deeptime.decomposition.CovarianceKoopmanModel.effective_output_dimension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">effective_output_dimension</span></code></a>(rank0, rankt, …)</p></td>
+<td><p>Computes effective output dimension.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.expectation" title="deeptime.decomposition.CovarianceKoopmanModel.expectation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expectation</span></code></a>(observables, statistics[, …])</p></td>
+<td><p>Compute future expectation of observable or covariance using the approximated Koopman operator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.forward" title="deeptime.decomposition.CovarianceKoopmanModel.forward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forward</span></code></a>(data[, propagate])</p></td>
+<td><p>Maps data forward in time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.get_params" title="deeptime.decomposition.CovarianceKoopmanModel.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
+<td><p>Get the parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.propagate" title="deeptime.decomposition.CovarianceKoopmanModel.propagate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">propagate</span></code></a>(trajectory[, components])</p></td>
+<td><p>Applies the forward transform to the trajectory in non-transformed space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.score" title="deeptime.decomposition.CovarianceKoopmanModel.score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score</span></code></a>(r[, test_model, epsilon, dim])</p></td>
+<td><p>Compute the VAMP score between a this model and potentially a test model for cross-validation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.set_params" title="deeptime.decomposition.CovarianceKoopmanModel.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.timescales" title="deeptime.decomposition.CovarianceKoopmanModel.timescales"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timescales</span></code></a>([k, lagtime])</p></td>
+<td><p>Implied timescales of the TICA transformation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.transform" title="deeptime.decomposition.CovarianceKoopmanModel.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(data, **kw)</p></td>
+<td><p>Projects data onto the Koopman modes <span class="math">\(f(x) = U^\top \chi_0 (x)\)</span>, where <span class="math">\(U\)</span> are the coefficients of the basis <span class="math">\(\chi_0\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.__call__">
+<code class="sig-name descname"><span class="pre">__call__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.backward">
+<code class="sig-name descname"><span class="pre">backward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.backward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps data backward in time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>(</em><em>T</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – Input data</p></li>
+<li><p><strong>propagate</strong> (<em>bool</em><em>, </em><em>default=True</em>) – Whether to apply the Koopman operator to the featurized data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mapped_data</strong> – Mapped data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, m) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.copy">
+<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">deeptime.base.Model</span></a><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a deep copy of this model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A new copy of this model.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.effective_output_dimension">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">effective_output_dimension</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rank0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rankt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_cutoff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singular_values</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.effective_output_dimension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes effective output dimension.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.expectation">
+<code class="sig-name descname"><span class="pre">expectation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statistics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lag_multiple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observables_mean_free</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statistics_mean_free</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.expectation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute future expectation of observable or covariance using the approximated Koopman operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>observables</strong> (<em>np.ndarray</em><em>(</em><em>(</em><em>input_dimension</em><em>, </em><em>n_observables</em><em>)</em><em>)</em>) – Coefficients that express one or multiple observables in
+the basis of the input features.</p></li>
+<li><p><strong>statistics</strong> (<em>np.ndarray</em><em>(</em><em>(</em><em>input_dimension</em><em>, </em><em>n_statistics</em><em>)</em><em>)</em><em>, </em><em>optional</em>) – Coefficients that express one or multiple statistics in
+the basis of the input features.
+This parameter can be None. In that case, this method
+returns the future expectation value of the observable(s).</p></li>
+<li><p><strong>lag_multiple</strong> (<em>int</em>) – If &gt; 1, extrapolate to a multiple of the estimator’s lag
+time by assuming Markovianity of the approximated Koopman
+operator.</p></li>
+<li><p><strong>observables_mean_free</strong> (<em>bool</em><em>, </em><em>default=False</em>) – If true, coefficients in <cite>observables</cite> refer to the input
+features with feature means removed.
+If false, coefficients in <cite>observables</cite> refer to the
+unmodified input features.</p></li>
+<li><p><strong>statistics_mean_free</strong> (<em>bool</em><em>, </em><em>default=False</em>) – If true, coefficients in <cite>statistics</cite> refer to the input
+features with feature means removed.
+If false, coefficients in <cite>statistics</cite> refer to the
+unmodified input features.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>expectation</strong> – The equilibrium expectation of observables or covariance if statistics is not None.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>A “future expectation” of a observable g is the average of g computed
+over a time window that has the same total length as the input data
+from which the Koopman operator was estimated but is shifted
+by <code class="docutils literal notranslate"><span class="pre">lag_multiple*tau</span></code> time steps into the future (where tau is the lag
+time).</p>
+<p>It is computed with the equation:</p>
+<div class="math">
+\[\mathbb{E}[g]_{\rho_{n}}=\mathbf{q}^{T}\mathbf{P}^{n-1}\mathbf{e}_{1}\]</div>
+<p>where</p>
+<div class="math">
+\[P_{ij}=\sigma_{i}\langle\psi_{i},\phi_{j}\rangle_{\rho_{1}}\]</div>
+<p>and</p>
+<div class="math">
+\[q_{i}=\langle g,\phi_{i}\rangle_{\rho_{1}}\]</div>
+<p>and <span class="math">\(\mathbf{e}_{1}\)</span> is the first canonical unit vector.</p>
+<p>A model prediction of time-lagged covariances between the
+observable f and the statistic g at a lag-time of <code class="docutils literal notranslate"><span class="pre">lag_multiple*tau</span></code>
+is computed with the equation:</p>
+<div class="math">
+\[\mathrm{cov}[g,\,f;n\tau]=\mathbf{q}^{T}\mathbf{P}^{n-1}\boldsymbol{\Sigma}\mathbf{r}\]</div>
+<p>where <span class="math">\(r_{i}=\langle\psi_{i},f\rangle_{\rho_{0}}\)</span> and
+<span class="math">\(\boldsymbol{\Sigma}=\mathrm{diag(\boldsymbol{\sigma})}\)</span> .</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.forward">
+<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps data forward in time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>(</em><em>T</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – Input data</p></li>
+<li><p><strong>propagate</strong> (<em>bool</em><em>, </em><em>default=True</em>) – Whether to apply the Koopman operator to the featurized data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mapped_data</strong> – Mapped data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, m) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mapping of string to any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.propagate">
+<code class="sig-name descname"><span class="pre">propagate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trajectory</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.propagate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the forward transform to the trajectory in non-transformed space. Given the Koopman operator
+<span class="math">\(\Sigma\)</span>, transformations  <span class="math">\(V^\top - \mu_t\)</span> and <span class="math">\(U^\top -\mu_0\)</span> for
+bases <span class="math">\(f\)</span> and <span class="math">\(g\)</span>, respectively, this is achieved by transforming each frame <span class="math">\(X_t\)</span> with</p>
+<div class="math">
+\[\hat{X}_{t+\tau} = (V^\top)^{-1} \Sigma U^\top (X_t - \mu_0) + \mu_t.
+
+\]</div>
+<p>If the model stems from a <a class="reference internal" href="deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP" title="deeptime.decomposition.VAMP"><code class="xref py py-class docutils literal notranslate"><span class="pre">VAMP</span></code></a> estimator, <span class="math">\(V\)</span> are the left
+singular vectors, <span class="math">\(\Sigma\)</span> the singular values, and <span class="math">\(U\)</span> the right singular vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trajectory</strong> (<em>(</em><em>T</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – The input trajectory</p></li>
+<li><p><strong>components</strong> (<em>int</em><em> or </em><em>list of int</em><em> or </em><em>None</em><em>, </em><em>default=None</em>) – Optional arguments for the Koopman operator if appropriate. If the model stems from
+a <a class="reference internal" href="deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP" title="deeptime.decomposition.VAMP"><code class="xref py py-class docutils literal notranslate"><span class="pre">VAMP</span></code></a> estimator, these are the component(s) to project onto.
+If None, all processes are taken into account, if list of integer, this sets all singular values
+to zero but the “components”th ones.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>predictions</strong> – The predicted trajectory.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, n) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.score">
+<code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the VAMP score between a this model and potentially a test model for cross-validation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<em>float</em><em> or </em><em>str</em>) – <p>The type of score to evaluate. Can by an floating point value greater or equal to 1 or ‘E’, yielding the
+VAMP-r score or the VAMP-E score, respectively. <a class="footnote-reference brackets" href="#wu2020variational" id="id1">1</a>
+Typical choices are:</p>
+<ul>
+<li><dl class="simple">
+<dt>’VAMP1’  Sum of singular values of the half-weighted Koopman matrix.</dt><dd><p>If the model is reversible, this is equal to the sum of
+Koopman matrix eigenvalues, also called Rayleigh quotient <a class="footnote-reference brackets" href="#wu2020variational" id="id2">1</a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>’VAMP2’  Sum of squared singular values of the half-weighted Koopman</dt><dd><p>matrix <a class="footnote-reference brackets" href="#wu2020variational" id="id3">1</a>. If the model is reversible, this is
+equal to the kinetic variance <a class="footnote-reference brackets" href="#noe2015kinetic" id="id4">2</a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>’VAMPE’  Approximation error of the estimated Koopman operator with respect to</dt><dd><p>the true Koopman operator up to an additive constant <a class="footnote-reference brackets" href="#wu2020variational" id="id5">1</a> .</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p></li>
+<li><p><strong>test_model</strong> (<a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition.CovarianceKoopmanModel"><em>CovarianceKoopmanModel</em></a><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – <p>If <cite>test_model</cite> is not None, this method computes the cross-validation score
+between self and <cite>covariances_test</cite>. It is assumed that self was estimated from
+the “training” data and <cite>test_model</cite> was estimated from the “test” data. The
+score is computed for one realization of self and <cite>test_model</cite>. Estimation
+of the average cross-validation score and partitioning of data into test and
+training part is not performed by this method.</p>
+<p>If <cite>covariances_test</cite> is None, this method computes the VAMP score for the model
+contained in self.</p>
+</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em><em>, </em><em>default=1e-6</em>) – Regularization parameter for computing sqrt-inverses of spd matrices.</p></li>
+<li><p><strong>dim</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – How many components to use for scoring.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>score</strong> – If <cite>test_model</cite> is not None, returns the cross-validation VAMP score between
+self and <cite>test_model</cite>. Otherwise return the selected VAMP-score of self.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The VAMP-<span class="math">\(r\)</span> and VAMP-E scores are computed according to <a class="footnote-reference brackets" href="#wu2020variational" id="id6">1</a>,
+Equation (33) and Equation (30), respectively.</p>
+<p class="rubric">References</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="wu2020variational"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>)</span></dt>
+<dd><p>Hao Wu and Frank Noé. Variational approach for learning markov processes from time series data. <em>Journal of Nonlinear Science</em>, 30(1):23–66, 2020.</p>
+</dd>
+<dt class="label" id="noe2015kinetic"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p>Frank Noé and Cecilia Clementi. Kinetic distance and kinetic maps from molecular dynamics simulation. <em>Journal of chemical theory and computation</em>, 11(10):5002–5011, 2015.</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.set_params">
+<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.timescales">
+<code class="sig-name descname"><span class="pre">timescales</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lagtime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.timescales" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implied timescales of the TICA transformation</p>
+<p>For each <span class="math">\(i\)</span>-th eigenvalue, this returns</p>
+<div class="math">
+\[t_i = -\frac{\tau}{\log(|\lambda_i|)}\]</div>
+<p>where <span class="math">\(\tau\)</span> is the <code class="xref py py-attr docutils literal notranslate"><span class="pre">lagtime</span></code> of the TICA object and <span class="math">\(\lambda_i\)</span> is the <cite>i</cite>-th
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">eigenvalue</span></code> of the TICA object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Number of timescales to be returned. By default with respect to all available singular values.</p></li>
+<li><p><strong>lagtime</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – The lagtime with respect to which to compute the timescale. If <code class="code docutils literal notranslate"><span class="pre">None</span></code>, this defaults to the
+lagtime under which the covariances were estimated.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>timescales</strong> – numpy array with the implied timescales. In principle, one should expect as many timescales as
+input coordinates were available. However, less eigenvalues will be returned if the TICA matrices
+were not full rank or <a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.dim" title="deeptime.decomposition.CovarianceKoopmanModel.dim"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dim</span></code></a> contained a floating point percentage, i.e., was interpreted as
+variance cutoff.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n,) np.array</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If any of the singular values not real, i.e., has a non-zero imaginary component.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.transform">
+<code class="sig-name descname"><span class="pre">transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Projects data onto the Koopman modes <span class="math">\(f(x) = U^\top \chi_0 (x)\)</span>, where <span class="math">\(U\)</span> are the
+coefficients of the basis <span class="math">\(\chi_0\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>(</em><em>T</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – Input data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>transformed_data</strong> – Data projected onto the Koopman modes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, k) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.cov">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cov</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.cov" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimated covariances.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.cov_00">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cov_00</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.cov_00" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.cov_00" title="deeptime.covariance.CovarianceModel.cov_00"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cov_00</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.cov_0t">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cov_0t</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.cov_0t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.cov_0t" title="deeptime.covariance.CovarianceModel.cov_0t"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cov_0t</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.cov_tt">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cov_tt</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.cov_tt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.cov_tt" title="deeptime.covariance.CovarianceModel.cov_tt"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cov_tt</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.cumulative_kinetic_variance">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cumulative_kinetic_variance</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.cumulative_kinetic_variance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the cumulative kinetic variance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.dim">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dim</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dimension attribute. Can either be int or None. In case of</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">int</span></code> it evaluates it as the actual dimension, must be strictly greater 0,</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">None</span></code> all numerically available components are used.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>yields the dimension</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>sets a new dimension</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.epsilon">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">epsilon</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.epsilon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Singular value cutoff.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.feature_component_correlation">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">feature_component_correlation</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.feature_component_correlation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantaneous correlation matrix between mean-free input features and projection components.</p>
+<p>Denoting the input features as <span class="math">\(X_i\)</span> and the projection components as <span class="math">\(\theta_j\)</span>, the
+instantaneous, linear correlation between them can be written as</p>
+<div class="math">
+\[\mathbf{Corr}(X_i - \mu_i, \mathbf{\theta}_j) = \frac{1}{\sigma_{X_i - \mu_i}}\sum_l \sigma_{(X_i - \mu_i)(X_l - \mu_l)} \mathbf{U}_{li}
+
+\]</div>
+<p>The matrix <span class="math">\(\mathbf{U}\)</span> is the matrix containing the eigenvectors of the generalized
+eigenvalue problem as column vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>corr</strong> – Correlation matrix between input features and projection components. There is a row for each
+feature and a column for each component.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ndarray(n,m)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.instantaneous_coefficients">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">instantaneous_coefficients</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.instantaneous_coefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coefficient matrix <span class="math">\(U\)</span>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.instantaneous_obs">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">instantaneous_obs</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.instantaneous_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the current state <span class="math">\(x_t\)</span> to <span class="math">\(f(x_t)\)</span>. Defaults to <cite>f(x) = x</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.koopman_matrix">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">koopman_matrix</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.koopman_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.operator" title="deeptime.decomposition.CovarianceKoopmanModel.operator"><code class="xref py py-attr docutils literal notranslate"><span class="pre">operator</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.mean_0">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mean_0</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.mean_0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.mean_0" title="deeptime.covariance.CovarianceModel.mean_0"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mean_0</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.mean_t">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mean_t</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.mean_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut to <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel.mean_t" title="deeptime.covariance.CovarianceModel.mean_t"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mean_t</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.operator">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">operator</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operator <span class="math">\(K\)</span> so that <span class="math">\(\mathbb{E}[g(x_{t+\tau}] = K^\top \mathbb{E}[f(x_t)]\)</span> in transformed
+bases.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.operator_inverse">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">operator_inverse</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.operator_inverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse of the operator <span class="math">\(K\)</span>, i.e., <span class="math">\(K^{-1}\)</span>.
+Potentially pseudo-inverse instead of true inverse.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.output_dimension">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">output_dimension</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.output_dimension" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dimension of data after propagation by <span class="math">\(K\)</span>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.scaling">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">scaling</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.scaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaling of projection. Can be <code class="code docutils literal notranslate"><span class="pre">None</span></code>, ‘kinetic map’, or ‘km’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.singular_values">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">singular_values</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.singular_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>The singular values of the half-weighted Koopman matrix.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.singular_vectors_left">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">singular_vectors_left</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.singular_vectors_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transformation matrix that represents the linear map from mean-free feature space
+to the space of left singular functions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.singular_vectors_right">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">singular_vectors_right</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.singular_vectors_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transformation matrix that represents the linear map from mean-free feature space
+to the space of right singular functions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.timelagged_coefficients">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">timelagged_coefficients</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.timelagged_coefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coefficient matrix <span class="math">\(V\)</span>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.timelagged_obs">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">timelagged_obs</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.timelagged_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the future state <span class="math">\(x_{t+\tau}\)</span> to <span class="math">\(g(x_{t+\tau})\)</span>. Defaults to <cite>f(x) = x</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.var_cutoff">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">var_cutoff</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.var_cutoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variance cutoff parameter. Can be set to include dimensions up to a certain threshold. Takes
+precedence over the <a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.dim" title="deeptime.decomposition.CovarianceKoopmanModel.dim"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dim()</span></code></a> parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Yields the current variance cutoff.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets a new variance cutoff</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.whitening_rank_0">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">whitening_rank_0</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.whitening_rank_0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rank of the instantaneous whitening transformation <span class="math">\(C_{00}^{-1/2}\)</span>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.decomposition.CovarianceKoopmanModel.whitening_rank_t">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">whitening_rank_t</span></code><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.whitening_rank_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rank of the time-lagged whitening transformation <span class="math">\(C_{tt}^{-1/2}\)</span>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

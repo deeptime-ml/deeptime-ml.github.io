@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.log\_likelihood
+================================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: log_likelihood

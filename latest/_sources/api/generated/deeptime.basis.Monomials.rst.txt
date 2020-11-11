@@ -1,0 +1,24 @@
+﻿
+
+*class* Monomials
+=================
+
+.. currentmodule:: deeptime.basis
+
+.. autoclass:: Monomials
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Monomials.get_feature_names
+      ~Monomials.transform
+   
+   

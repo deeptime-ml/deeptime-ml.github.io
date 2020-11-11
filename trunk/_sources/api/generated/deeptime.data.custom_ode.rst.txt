@@ -1,0 +1,17 @@
+﻿
+
+*function* custom\_ode
+======================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: custom_ode
+
+   
+   
+   
+
+   
+
+   
+   

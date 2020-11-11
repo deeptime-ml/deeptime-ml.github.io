@@ -1,0 +1,37 @@
+﻿
+
+*class* DoubleWellDiscrete
+==========================
+
+.. currentmodule:: deeptime.data
+
+.. autoclass:: DoubleWellDiscrete
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DoubleWellDiscrete.analytic_msm
+      ~DoubleWellDiscrete.dtraj
+      ~DoubleWellDiscrete.dtraj_n2bad
+      ~DoubleWellDiscrete.dtraj_n2good
+      ~DoubleWellDiscrete.dtraj_n6good
+      ~DoubleWellDiscrete.transition_matrix
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DoubleWellDiscrete.dtraj_n
+      ~DoubleWellDiscrete.dtraj_n2
+      ~DoubleWellDiscrete.simulate_trajectories
+      ~DoubleWellDiscrete.simulate_trajectory
+   
+   

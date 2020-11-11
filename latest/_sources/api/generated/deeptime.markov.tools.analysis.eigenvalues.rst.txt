@@ -1,0 +1,17 @@
+﻿
+
+*function* eigenvalues
+======================
+
+.. currentmodule:: deeptime.markov.tools.analysis
+
+.. autofunction:: eigenvalues
+
+   
+   
+   
+
+   
+
+   
+   

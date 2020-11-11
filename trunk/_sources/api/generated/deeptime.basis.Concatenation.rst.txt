@@ -1,0 +1,23 @@
+﻿
+
+*class* Concatenation
+=====================
+
+.. currentmodule:: deeptime.basis
+
+.. autoclass:: Concatenation
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Concatenation.transform
+   
+   

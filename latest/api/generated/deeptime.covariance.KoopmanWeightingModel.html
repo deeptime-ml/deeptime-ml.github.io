@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class KoopmanWeightingModel &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class WhiteningTransform" href="impl/deeptime.covariance.WhiteningTransform.html" />
+    <link rel="prev" title="class CovarianceModel" href="deeptime.covariance.CovarianceModel.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_covariance.html#estimators">Estimators</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_covariance.html#models">Models</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deeptime.covariance.CovarianceModel.html"><em>class</em> CovarianceModel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>class</em> KoopmanWeightingModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_covariance.html#utilities">Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov.html">deeptime.markov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.2.7)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_covariance.html">deeptime.covariance</a><ul>
+      <li>Previous: <a href="deeptime.covariance.CovarianceModel.html" title="previous chapter"><em>class</em> CovarianceModel</a></li>
+      <li>Next: <a href="impl/deeptime.covariance.WhiteningTransform.html" title="next chapter"><em>class</em> WhiteningTransform</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="class-koopmanweightingmodel">
+<h1><em>class</em> KoopmanWeightingModel<a class="headerlink" href="#class-koopmanweightingmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="deeptime.covariance.KoopmanWeightingModel">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.covariance.</span></code><code class="sig-name descname"><span class="pre">KoopmanWeightingModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_const</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">koopman_operator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whitening_transformation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">covariances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A model which contains the Koopman operator in a modified basis <cite>(PC|1)</cite> and can transform data into Koopman
+weights.</p>
+<p>Weights are computed according to <a class="footnote-reference brackets" href="#wu2017variational" id="id1">1</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>ndarray</em>) – Reweighting vector in input basis</p></li>
+<li><p><strong>u_const</strong> (<em>float</em>) – Constant offset for reweighting in input basis.</p></li>
+<li><p><strong>koopman_operator</strong> (<em>ndarray</em>) – Koopman operator in modified basis.</p></li>
+<li><p><strong>whitening_transformation</strong> (<em>ndarray</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Whitening transformation.</p></li>
+<li><p><strong>covariances</strong> (<a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel" title="deeptime.covariance.CovarianceModel"><em>CovarianceModel</em></a><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Estimated covariances.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p><dl class="footnote brackets">
+<dt class="label" id="wu2017variational"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Hao Wu, Feliks Nüske, Fabian Paul, Stefan Klus, Péter Koltai, and Frank Noé. Variational koopman models: slow collective variables and molecular kinetics from short off-equilibrium simulations. <em>The Journal of chemical physics</em>, 146(15):154104, 2017.</p>
+</dd>
+</dl>
+</p>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.const_weight_input" title="deeptime.covariance.KoopmanWeightingModel.const_weight_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">const_weight_input</span></code></a></p></td>
+<td><p>Yields the constant offset for reweighting in input basis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.covariances" title="deeptime.covariance.KoopmanWeightingModel.covariances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">covariances</span></code></a></p></td>
+<td><p>Covariance model which was used to compute the Koopman model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.koopman_operator" title="deeptime.covariance.KoopmanWeightingModel.koopman_operator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">koopman_operator</span></code></a></p></td>
+<td><p>The Koopman operator in modified basis (PC|1).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.weights_input" title="deeptime.covariance.KoopmanWeightingModel.weights_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weights_input</span></code></a></p></td>
+<td><p>Yields the reweighting vector in input basis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.whitening_transformation" title="deeptime.covariance.KoopmanWeightingModel.whitening_transformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">whitening_transformation</span></code></a></p></td>
+<td><p>Estimated whitening transformation for data</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.copy" title="deeptime.covariance.KoopmanWeightingModel.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Makes a deep copy of this model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.get_params" title="deeptime.covariance.KoopmanWeightingModel.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
+<td><p>Get the parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.set_params" title="deeptime.covariance.KoopmanWeightingModel.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.transform" title="deeptime.covariance.KoopmanWeightingModel.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(data, **kw)</p></td>
+<td><p>Same as <a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.weights" title="deeptime.covariance.KoopmanWeightingModel.weights"><code class="xref py py-meth docutils literal notranslate"><span class="pre">weights()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.weights" title="deeptime.covariance.KoopmanWeightingModel.weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weights</span></code></a>(X)</p></td>
+<td><p>Applies reweighting vectors to data, yielding corresponding weights.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.__call__">
+<code class="sig-name descname"><span class="pre">__call__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.copy">
+<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">deeptime.base.Model</span></a><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a deep copy of this model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A new copy of this model.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mapping of string to any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.set_params">
+<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.transform">
+<code class="sig-name descname"><span class="pre">transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#deeptime.covariance.KoopmanWeightingModel.weights" title="deeptime.covariance.KoopmanWeightingModel.weights"><code class="xref py py-meth docutils literal notranslate"><span class="pre">weights()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.weights">
+<code class="sig-name descname"><span class="pre">weights</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies reweighting vectors to data, yielding corresponding weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>(</em><em>T</em><em>, </em><em>d</em><em>) </em><em>ndarray</em>) – The input data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>weights</strong> – Weights for input data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(T, 1) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.const_weight_input">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">const_weight_input</span></code><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.const_weight_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the constant offset for reweighting in input basis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.covariances">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">covariances</span></code><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.covariances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Covariance model which was used to compute the Koopman model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel" title="deeptime.covariance.CovarianceModel">CovarianceModel</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.koopman_operator">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">koopman_operator</span></code><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.koopman_operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Koopman operator in modified basis (PC|1).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.weights_input">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">weights_input</span></code><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.weights_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the reweighting vector in input basis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>(T, d) ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.covariance.KoopmanWeightingModel.whitening_transformation">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">whitening_transformation</span></code><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingModel.whitening_transformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimated whitening transformation for data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>ndarray or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>
