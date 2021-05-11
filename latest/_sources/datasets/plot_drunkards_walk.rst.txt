@@ -27,9 +27,10 @@ The :meth:`deeptime.data.drunkards_walk` model, a markov state model on a 2-dime
 
 
 
-.. image:: /datasets/images/sphx_glr_plot_drunkards_walk_001.png
-    :alt: plot drunkards walk
-    :class: sphx-glr-single-img
+.. image-sg:: /datasets/images/sphx_glr_plot_drunkards_walk_001.png
+   :alt: plot drunkards walk
+   :srcset: /datasets/images/sphx_glr_plot_drunkards_walk_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -84,9 +85,9 @@ The :meth:`deeptime.data.drunkards_walk` model, a markov state model on a 2-dime
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.757 seconds)
+   **Total running time of the script:** ( 0 minutes  0.778 seconds)
 
-**Estimated memory usage:**  28 MB
+**Estimated memory usage:**  30 MB
 
 
 .. _sphx_glr_download_datasets_plot_drunkards_walk.py:

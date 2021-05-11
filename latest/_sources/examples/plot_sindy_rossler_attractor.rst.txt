@@ -38,15 +38,17 @@ also pass in a numerical approximation in their place.
 
     *
 
-      .. image:: /examples/images/sphx_glr_plot_sindy_rossler_attractor_001.png
-          :alt: Training data (Rossler system)
-          :class: sphx-glr-multi-img
+      .. image-sg:: /examples/images/sphx_glr_plot_sindy_rossler_attractor_001.png
+         :alt: Training data (Rossler system)
+         :srcset: /examples/images/sphx_glr_plot_sindy_rossler_attractor_001.png
+         :class: sphx-glr-multi-img
 
     *
 
-      .. image:: /examples/images/sphx_glr_plot_sindy_rossler_attractor_002.png
-          :alt: Testing data (Rossler system)
-          :class: sphx-glr-multi-img
+      .. image-sg:: /examples/images/sphx_glr_plot_sindy_rossler_attractor_002.png
+         :alt: Testing data (Rossler system)
+         :srcset: /examples/images/sphx_glr_plot_sindy_rossler_attractor_002.png
+         :class: sphx-glr-multi-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -144,9 +146,9 @@ also pass in a numerical approximation in their place.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.207 seconds)
+   **Total running time of the script:** ( 0 minutes  1.330 seconds)
 
-**Estimated memory usage:**  10 MB
+**Estimated memory usage:**  11 MB
 
 
 .. _sphx_glr_download_examples_plot_sindy_rossler_attractor.py:

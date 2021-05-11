@@ -28,9 +28,10 @@ see the `VAMP tutorial <../notebooks/vamp.ipynb#Example-with-position-based-flui
 
 
 
-.. image:: /examples/images/sphx_glr_plot_vamp_pbf_projection_001.png
-    :alt: plot vamp pbf projection
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/images/sphx_glr_plot_vamp_pbf_projection_001.png
+   :alt: plot vamp pbf projection
+   :srcset: /examples/images/sphx_glr_plot_vamp_pbf_projection_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -73,9 +74,9 @@ see the `VAMP tutorial <../notebooks/vamp.ipynb#Example-with-position-based-flui
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.147 seconds)
+   **Total running time of the script:** ( 0 minutes  10.321 seconds)
 
-**Estimated memory usage:**  52 MB
+**Estimated memory usage:**  50 MB
 
 
 .. _sphx_glr_download_examples_plot_vamp_pbf_projection.py:

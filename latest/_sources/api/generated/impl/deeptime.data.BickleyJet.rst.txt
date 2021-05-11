@@ -18,13 +18,16 @@
       ~BickleyJet.c
       ~BickleyJet.dimension
       ~BickleyJet.eps
+      ~BickleyJet.f
       ~BickleyJet.h
       ~BickleyJet.has_potential_function
       ~BickleyJet.integrator
       ~BickleyJet.k
       ~BickleyJet.n_steps
+      ~BickleyJet.periodic_bc
       ~BickleyJet.r0
       ~BickleyJet.time_dependent
+      ~BickleyJet.vectorized_f
    
    
 
@@ -35,6 +38,7 @@
 
    .. autosummary::
    
+      ~BickleyJet.apply_periodic_boundary_conditions
       ~BickleyJet.generate
       ~BickleyJet.potential
       ~BickleyJet.to_3d

@@ -32,6 +32,7 @@
       ~MaximumLikelihoodMSM.chapman_kolmogorov_validator
       ~MaximumLikelihoodMSM.fetch_model
       ~MaximumLikelihoodMSM.fit
+      ~MaximumLikelihoodMSM.fit_fetch
       ~MaximumLikelihoodMSM.fit_from_counts
       ~MaximumLikelihoodMSM.fit_from_discrete_timeseries
       ~MaximumLikelihoodMSM.get_params

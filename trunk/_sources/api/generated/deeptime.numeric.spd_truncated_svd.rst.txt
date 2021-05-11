@@ -1,0 +1,17 @@
+﻿
+
+*function* spd\_truncated\_svd
+==============================
+
+.. currentmodule:: deeptime.numeric
+
+.. autofunction:: spd_truncated_svd
+
+   
+   
+   
+
+   
+
+   
+   

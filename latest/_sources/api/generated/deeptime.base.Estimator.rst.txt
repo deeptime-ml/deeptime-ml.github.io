@@ -27,6 +27,7 @@
    
       ~Estimator.fetch_model
       ~Estimator.fit
+      ~Estimator.fit_fetch
       ~Estimator.get_params
       ~Estimator.set_params
    

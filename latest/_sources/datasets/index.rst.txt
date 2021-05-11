@@ -330,27 +330,6 @@ Examples contained in the :mod:`deeptime.data` module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.double_well_2d dataset.">
-
-.. only:: html
-
- .. figure:: /datasets/images/thumb/sphx_glr_plot_double_well_2d_thumb.png
-     :alt: Double-well 2D
-
-     :ref:`sphx_glr_datasets_plot_double_well_2d.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /datasets/plot_double_well_2d
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.quadruple_well dataset.">
 
 .. only:: html
@@ -369,6 +348,27 @@ Examples contained in the :mod:`deeptime.data` module.
    :hidden:
 
    /datasets/plot_quadruple_well
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.double_well_2d dataset.">
+
+.. only:: html
+
+ .. figure:: /datasets/images/thumb/sphx_glr_plot_double_well_2d_thumb.png
+     :alt: Double-well 2D
+
+     :ref:`sphx_glr_datasets_plot_double_well_2d.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /datasets/plot_double_well_2d
 
 .. raw:: html
 

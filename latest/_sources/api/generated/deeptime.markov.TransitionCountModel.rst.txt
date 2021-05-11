@@ -42,6 +42,7 @@
       ~TransitionCountModel.copy
       ~TransitionCountModel.count_matrix_histogram
       ~TransitionCountModel.get_params
+      ~TransitionCountModel.is_connected
       ~TransitionCountModel.set_params
       ~TransitionCountModel.states_to_symbols
       ~TransitionCountModel.submodel

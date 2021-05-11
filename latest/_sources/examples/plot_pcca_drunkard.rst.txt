@@ -29,9 +29,10 @@ The state assignments are shown via their probability distributions over the mic
 
 
 
-.. image:: /examples/images/sphx_glr_plot_pcca_drunkard_001.png
-    :alt: Memberships for metastable set 1, Memberships for metastable set 2, Memberships for metastable set 3, Memberships for metastable set 4, Memberships for metastable set 5, Memberships for metastable set 6
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/images/sphx_glr_plot_pcca_drunkard_001.png
+   :alt: Memberships for metastable set 1, Memberships for metastable set 2, Memberships for metastable set 3, Memberships for metastable set 4, Memberships for metastable set 5, Memberships for metastable set 6
+   :srcset: /examples/images/sphx_glr_plot_pcca_drunkard_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -75,9 +76,9 @@ The state assignments are shown via their probability distributions over the mic
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.676 seconds)
+   **Total running time of the script:** ( 0 minutes  1.849 seconds)
 
-**Estimated memory usage:**  29 MB
+**Estimated memory usage:**  25 MB
 
 
 .. _sphx_glr_download_examples_plot_pcca_drunkard.py:

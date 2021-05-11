@@ -32,6 +32,7 @@
    
       ~RegularSpace.fetch_model
       ~RegularSpace.fit
+      ~RegularSpace.fit_fetch
       ~RegularSpace.get_params
       ~RegularSpace.partial_fit
       ~RegularSpace.set_params

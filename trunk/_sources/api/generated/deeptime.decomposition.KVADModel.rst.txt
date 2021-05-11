@@ -1,0 +1,39 @@
+﻿
+
+*class* KVADModel
+=================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: KVADModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KVADModel.instantaneous_obs
+      ~KVADModel.koopman_matrix
+      ~KVADModel.operator
+      ~KVADModel.operator_inverse
+      ~KVADModel.output_dimension
+      ~KVADModel.timelagged_obs
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KVADModel.backward
+      ~KVADModel.copy
+      ~KVADModel.forward
+      ~KVADModel.get_params
+      ~KVADModel.set_params
+      ~KVADModel.transform
+   
+   

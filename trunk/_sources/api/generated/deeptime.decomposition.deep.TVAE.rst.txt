@@ -34,6 +34,8 @@
       ~TVAE.evaluate_loss
       ~TVAE.fetch_model
       ~TVAE.fit
+      ~TVAE.fit_fetch
+      ~TVAE.fit_transform
       ~TVAE.get_params
       ~TVAE.set_params
       ~TVAE.setup_optimizer

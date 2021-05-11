@@ -1,0 +1,39 @@
+﻿
+
+*class* TransferOperatorModel
+=============================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: TransferOperatorModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TransferOperatorModel.instantaneous_obs
+      ~TransferOperatorModel.koopman_matrix
+      ~TransferOperatorModel.operator
+      ~TransferOperatorModel.operator_inverse
+      ~TransferOperatorModel.output_dimension
+      ~TransferOperatorModel.timelagged_obs
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TransferOperatorModel.backward
+      ~TransferOperatorModel.copy
+      ~TransferOperatorModel.forward
+      ~TransferOperatorModel.get_params
+      ~TransferOperatorModel.set_params
+      ~TransferOperatorModel.transform
+   
+   

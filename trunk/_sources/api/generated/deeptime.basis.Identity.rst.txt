@@ -18,7 +18,7 @@
 
    .. autosummary::
    
-      ~Identity.get_feature_names
+      ~Identity.get_feature_names_out
       ~Identity.transform
    
    

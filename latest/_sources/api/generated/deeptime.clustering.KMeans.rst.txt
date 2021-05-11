@@ -35,6 +35,8 @@
    
       ~KMeans.fetch_model
       ~KMeans.fit
+      ~KMeans.fit_fetch
+      ~KMeans.fit_transform
       ~KMeans.get_params
       ~KMeans.set_params
       ~KMeans.transform

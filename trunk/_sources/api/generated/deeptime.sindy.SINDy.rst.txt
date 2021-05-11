@@ -27,6 +27,7 @@
    
       ~SINDy.fetch_model
       ~SINDy.fit
+      ~SINDy.fit_fetch
       ~SINDy.get_params
       ~SINDy.set_params
    

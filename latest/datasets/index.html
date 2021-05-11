@@ -4,20 +4,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datasets &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Datasets &#8212; deeptime 0.3.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -25,14 +27,15 @@
     <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../_static/d3.v5.min.js"></script>
     <script src="../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
     <script src="../_static/katex_autorenderer.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="One-dimensional Ornstein-Uhlenbeck process" href="plot_ornstein_uhlenbeck.html" />
-    <link rel="prev" title="VAMPNets on Alanine Dipeptide" href="../notebooks/examples/ala2-example.html" />
+    <link rel="prev" title="Coherent set comparison on Bickley jet" href="../notebooks/examples/coherence-bickley-jet.html" />
 <link rel="apple-touch-icon" sizes="180x180" href="../_static/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../_static/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../_static/favicon-16x16.png">
@@ -60,7 +63,7 @@
 
 
 <!-- h3>Navigation</h3 -->
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index_dimreduction.html">Dimension reduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_deepdimreduction.html">Deep dim reduction</a></li>
@@ -85,8 +88,8 @@
 <li class="toctree-l2"><a class="reference internal" href="plot_birth_death_chain.html">Birth-death chain model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_drunkards_walk.html">Drunkard’s walk</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_triple_well_2d.html">Triple-well 2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_double_well_2d.html">Double-well 2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_quadruple_well.html">Quadruple-well</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_double_well_2d.html">Double-well 2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_custom_sde.html">Custom SDEs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_time_quintuple_well.html">Time-dependent quintuple well</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_quadruple_well_asymmetric.html">Asymmetric Quadruple-well</a></li>
@@ -94,7 +97,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../index_dev.html">For developers</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API docs</span></p>
+<p class="caption" role="heading"><span class="caption-text">API docs</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_base.html">deeptime.base</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_clustering.html">deeptime.clustering</a></li>
@@ -110,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../api/index_numeric.html">deeptime.numeric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_util.html">deeptime.util</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imprint.html">Imprint</a></li>
@@ -133,7 +136,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../index.html">Latest release
-            (0.2.7)</a>
+            (0.3.0)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -152,7 +155,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../contents.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../notebooks/examples/ala2-example.html" title="previous chapter">VAMPNets on Alanine Dipeptide</a></li>
+      <li>Previous: <a href="../notebooks/examples/coherence-bickley-jet.html" title="previous chapter">Coherent set comparison on Bickley jet</a></li>
       <li>Next: <a href="plot_ornstein_uhlenbeck.html" title="next chapter">One-dimensional Ornstein-Uhlenbeck process</a></li>
   </ul></li>
 </ul>
@@ -185,130 +188,170 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="datasets">
+  <section id="datasets">
 <span id="data-examples"></span><span id="sphx-glr-datasets"></span><h1>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h1>
 <p>Examples contained in the <a class="reference internal" href="../api/index_data.html#module-deeptime.data" title="deeptime.data"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deeptime.data</span></code></a> module.</p>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.ornstein_uhlenbeck dataset."><div class="figure align-default" id="id1">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.ornstein_uhlenbeck dataset."><figure class="align-default" id="id1">
 <img alt="One-dimensional Ornstein-Uhlenbeck process" src="../_images/sphx_glr_plot_ornstein_uhlenbeck_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_ornstein_uhlenbeck.html#sphx-glr-datasets-plot-ornstein-uhlenbeck-py"><span class="std std-ref">One-dimensional Ornstein-Uhlenbeck process</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_ornstein_uhlenbeck.html#sphx-glr-datasets-plot-ornstein-uhlenbeck-py"><span class="std std-ref">One-dimensional Ornstein-Uhlenbeck process</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The deeptime.data.bickley_jet dataset."><div class="figure align-default" id="id2">
+<div class="sphx-glr-thumbcontainer" tooltip="The deeptime.data.bickley_jet dataset."><figure class="align-default" id="id2">
 <img alt="Bickley Jet" src="../_images/sphx_glr_plot_bickley_jet_thumb.gif" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_bickley_jet.html#sphx-glr-datasets-plot-bickley-jet-py"><span class="std std-ref">Bickley Jet</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_bickley_jet.html#sphx-glr-datasets-plot-bickley-jet-py"><span class="std std-ref">Bickley Jet</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Demonstrating usage of deeptime.data.custom_ode."><div class="figure align-default" id="id3">
+<div class="sphx-glr-thumbcontainer" tooltip="Demonstrating usage of deeptime.data.custom_ode."><figure class="align-default" id="id3">
 <img alt="Custom ODEs" src="../_images/sphx_glr_plot_custom_ode_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_custom_ode.html#sphx-glr-datasets-plot-custom-ode-py"><span class="std std-ref">Custom ODEs</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_custom_ode.html#sphx-glr-datasets-plot-custom-ode-py"><span class="std std-ref">Custom ODEs</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.prinz_potential dataset."><div class="figure align-default" id="id4">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.prinz_potential dataset."><figure class="align-default" id="id4">
 <img alt="One-dimensional Prinz potential" src="../_images/sphx_glr_plot_prinz_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_prinz.html#sphx-glr-datasets-plot-prinz-py"><span class="std std-ref">One-dimensional Prinz potential</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_prinz.html#sphx-glr-datasets-plot-prinz-py"><span class="std std-ref">One-dimensional Prinz potential</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example of the deeptime.data.position_based_fluids simulation engine."><div class="figure align-default" id="id5">
+<div class="sphx-glr-thumbcontainer" tooltip="Example of the deeptime.data.position_based_fluids simulation engine."><figure class="align-default" id="id5">
 <img alt="Position-based fluids" src="../_images/sphx_glr_plot_pbf_thumb.gif" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_pbf.html#sphx-glr-datasets-plot-pbf-py"><span class="std std-ref">Position-based fluids</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_pbf.html#sphx-glr-datasets-plot-pbf-py"><span class="std std-ref">Position-based fluids</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Sample a hidden state and an swissroll-transformed emission trajectory. Demonstrates deeptime.d..."><div class="figure align-default" id="id6">
+<div class="sphx-glr-thumbcontainer" tooltip="Sample a hidden state and an swissroll-transformed emission trajectory. Demonstrates deeptime.d..."><figure class="align-default" id="id6">
 <img alt="Swissroll model" src="../_images/sphx_glr_plot_swissroll_model_thumb.gif" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_swissroll_model.html#sphx-glr-datasets-plot-swissroll-model-py"><span class="std std-ref">Swissroll model</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_swissroll_model.html#sphx-glr-datasets-plot-swissroll-model-py"><span class="std std-ref">Swissroll model</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.triple_well_1d dataset."><div class="figure align-default" id="id7">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.triple_well_1d dataset."><figure class="align-default" id="id7">
 <img alt="Triple-well 1D" src="../_images/sphx_glr_plot_triple_well_1d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_triple_well_1d.html#sphx-glr-datasets-plot-triple-well-1d-py"><span class="std std-ref">Triple-well 1D</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_triple_well_1d.html#sphx-glr-datasets-plot-triple-well-1d-py"><span class="std std-ref">Triple-well 1D</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for deeptime.data.tmatrix_metropolis1d."><div class="figure align-default" id="id8">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for deeptime.data.tmatrix_metropolis1d."><figure class="align-default" id="id8">
 <img alt="Metropolis chain in 1D energy landscape" src="../_images/sphx_glr_plot_tmatrix_1d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_tmatrix_1d.html#sphx-glr-datasets-plot-tmatrix-1d-py"><span class="std std-ref">Metropolis chain in 1D energy landscape</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_tmatrix_1d.html#sphx-glr-datasets-plot-tmatrix-1d-py"><span class="std std-ref">Metropolis chain in 1D energy landscape</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Showcase use of the deeptime.data.double_well_discrete dataset."><div class="figure align-default" id="id9">
+<div class="sphx-glr-thumbcontainer" tooltip="Showcase use of the deeptime.data.double_well_discrete dataset."><figure class="align-default" id="id9">
 <img alt="Double-well discrete" src="../_images/sphx_glr_plot_double_well_discrete_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_double_well_discrete.html#sphx-glr-datasets-plot-double-well-discrete-py"><span class="std std-ref">Double-well discrete</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_double_well_discrete.html#sphx-glr-datasets-plot-double-well-discrete-py"><span class="std std-ref">Double-well discrete</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Sample a hidden state and an sqrt-transformed emission trajectory. Demonstrates deeptime.data.s..."><div class="figure align-default" id="id10">
+<div class="sphx-glr-thumbcontainer" tooltip="Sample a hidden state and an sqrt-transformed emission trajectory. Demonstrates deeptime.data.s..."><figure class="align-default" id="id10">
 <img alt="Sqrt model" src="../_images/sphx_glr_plot_sqrt_model_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_sqrt_model.html#sphx-glr-datasets-plot-sqrt-model-py"><span class="std std-ref">Sqrt model</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_sqrt_model.html#sphx-glr-datasets-plot-sqrt-model-py"><span class="std std-ref">Sqrt model</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The deeptime.data.ellipsoids dataset."><div class="figure align-default" id="id11">
+<div class="sphx-glr-thumbcontainer" tooltip="The deeptime.data.ellipsoids dataset."><figure class="align-default" id="id11">
 <img alt="Ellipsoids dataset" src="../_images/sphx_glr_plot_ellipsoids_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_ellipsoids.html#sphx-glr-datasets-plot-ellipsoids-py"><span class="std std-ref">Ellipsoids dataset</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_ellipsoids.html#sphx-glr-datasets-plot-ellipsoids-py"><span class="std std-ref">Ellipsoids dataset</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.abc_flow dataset."><div class="figure align-default" id="id12">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.abc_flow dataset."><figure class="align-default" id="id12">
 <img alt="Arnold-Beltrami-Childress flow" src="../_images/sphx_glr_plot_abc_flow_thumb.gif" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_abc_flow.html#sphx-glr-datasets-plot-abc-flow-py"><span class="std std-ref">Arnold-Beltrami-Childress flow</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_abc_flow.html#sphx-glr-datasets-plot-abc-flow-py"><span class="std std-ref">Arnold-Beltrami-Childress flow</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.birth_death_chain model."><div class="figure align-default" id="id13">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.birth_death_chain model."><figure class="align-default" id="id13">
 <img alt="Birth-death chain model" src="../_images/sphx_glr_plot_birth_death_chain_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_birth_death_chain.html#sphx-glr-datasets-plot-birth-death-chain-py"><span class="std std-ref">Birth-death chain model</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_birth_death_chain.html#sphx-glr-datasets-plot-birth-death-chain-py"><span class="std std-ref">Birth-death chain model</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The deeptime.data.drunkards_walk model, a markov state model on a 2-dimensional grid."><div class="figure align-default" id="id14">
+<div class="sphx-glr-thumbcontainer" tooltip="The deeptime.data.drunkards_walk model, a markov state model on a 2-dimensional grid."><figure class="align-default" id="id14">
 <img alt="Drunkard's walk" src="../_images/sphx_glr_plot_drunkards_walk_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_drunkards_walk.html#sphx-glr-datasets-plot-drunkards-walk-py"><span class="std std-ref">Drunkard’s walk</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_drunkards_walk.html#sphx-glr-datasets-plot-drunkards-walk-py"><span class="std std-ref">Drunkard’s walk</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.triple_well_2d dataset."><div class="figure align-default" id="id15">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.triple_well_2d dataset."><figure class="align-default" id="id15">
 <img alt="Triple-well 2D" src="../_images/sphx_glr_plot_triple_well_2d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_triple_well_2d.html#sphx-glr-datasets-plot-triple-well-2d-py"><span class="std std-ref">Triple-well 2D</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_triple_well_2d.html#sphx-glr-datasets-plot-triple-well-2d-py"><span class="std std-ref">Triple-well 2D</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.double_well_2d dataset."><div class="figure align-default" id="id16">
-<img alt="Double-well 2D" src="../_images/sphx_glr_plot_double_well_2d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_double_well_2d.html#sphx-glr-datasets-plot-double-well-2d-py"><span class="std std-ref">Double-well 2D</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.quadruple_well dataset."><div class="figure align-default" id="id17">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.quadruple_well dataset."><figure class="align-default" id="id16">
 <img alt="Quadruple-well" src="../_images/sphx_glr_plot_quadruple_well_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_quadruple_well.html#sphx-glr-datasets-plot-quadruple-well-py"><span class="std std-ref">Quadruple-well</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_quadruple_well.html#sphx-glr-datasets-plot-quadruple-well-py"><span class="std std-ref">Quadruple-well</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Demonstrating usage of deeptime.data.custom_sde."><div class="figure align-default" id="id18">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.double_well_2d dataset."><figure class="align-default" id="id17">
+<img alt="Double-well 2D" src="../_images/sphx_glr_plot_double_well_2d_thumb.png" />
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_double_well_2d.html#sphx-glr-datasets-plot-double-well-2d-py"><span class="std std-ref">Double-well 2D</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Demonstrating usage of deeptime.data.custom_sde."><figure class="align-default" id="id18">
 <img alt="Custom SDEs" src="../_images/sphx_glr_plot_custom_sde_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_custom_sde.html#sphx-glr-datasets-plot-custom-sde-py"><span class="std std-ref">Custom SDEs</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_custom_sde.html#sphx-glr-datasets-plot-custom-sde-py"><span class="std std-ref">Custom SDEs</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Demonstrates deeptime.data.time_dependent_quintuple_well. The potential wells slowly oscillate ..."><div class="figure align-default" id="id19">
+<div class="sphx-glr-thumbcontainer" tooltip="Demonstrates deeptime.data.time_dependent_quintuple_well. The potential wells slowly oscillate ..."><figure class="align-default" id="id19">
 <img alt="Time-dependent quintuple well" src="../_images/sphx_glr_plot_time_quintuple_well_thumb.gif" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_time_quintuple_well.html#sphx-glr-datasets-plot-time-quintuple-well-py"><span class="std std-ref">Time-dependent quintuple well</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_time_quintuple_well.html#sphx-glr-datasets-plot-time-quintuple-well-py"><span class="std std-ref">Time-dependent quintuple well</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.quadruple_well_asymmetric dataset."><div class="figure align-default" id="id20">
+<div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.quadruple_well_asymmetric dataset."><figure class="align-default" id="id20">
 <img alt="Asymmetric Quadruple-well" src="../_images/sphx_glr_plot_quadruple_well_asymmetric_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_quadruple_well_asymmetric.html#sphx-glr-datasets-plot-quadruple-well-asymmetric-py"><span class="std std-ref">Asymmetric Quadruple-well</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="plot_quadruple_well_asymmetric.html#sphx-glr-datasets-plot-quadruple-well-asymmetric-py"><span class="std std-ref">Asymmetric Quadruple-well</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-clear"></div></div>
+<div class="sphx-glr-clear"></div></section>
 
 
           </div>

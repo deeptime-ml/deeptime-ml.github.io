@@ -27,7 +27,10 @@
    
       ~KernelEDMD.fetch_model
       ~KernelEDMD.fit
+      ~KernelEDMD.fit_fetch
+      ~KernelEDMD.fit_transform
       ~KernelEDMD.get_params
       ~KernelEDMD.set_params
+      ~KernelEDMD.transform
    
    

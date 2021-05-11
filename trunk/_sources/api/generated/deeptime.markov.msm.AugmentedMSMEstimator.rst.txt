@@ -38,6 +38,7 @@
       ~AugmentedMSMEstimator.estimator_from_feature_trajectories
       ~AugmentedMSMEstimator.fetch_model
       ~AugmentedMSMEstimator.fit
+      ~AugmentedMSMEstimator.fit_fetch
       ~AugmentedMSMEstimator.get_params
       ~AugmentedMSMEstimator.set_params
    

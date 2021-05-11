@@ -14,11 +14,13 @@
    .. autosummary::
    
       ~CustomSystem.dimension
+      ~CustomSystem.f
       ~CustomSystem.h
       ~CustomSystem.has_potential_function
       ~CustomSystem.integrator
       ~CustomSystem.n_steps
       ~CustomSystem.time_dependent
+      ~CustomSystem.vectorized_f
    
    
 

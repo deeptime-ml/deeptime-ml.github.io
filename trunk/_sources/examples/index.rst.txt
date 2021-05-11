@@ -180,6 +180,27 @@ Short examples for some of the methods.
    :hidden:
 
    /examples/plot_kcca_projection
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use the transition-based reweighting analysis method (TRAM) to estima...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_tram_thumb.png
+     :alt: TRAM on a 1D double well
+
+     :ref:`sphx_glr_examples_plot_tram.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_tram
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>

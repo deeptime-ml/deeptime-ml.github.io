@@ -29,6 +29,7 @@
    
       ~MembershipsChapmanKolmogorovValidator.fetch_model
       ~MembershipsChapmanKolmogorovValidator.fit
+      ~MembershipsChapmanKolmogorovValidator.fit_fetch
       ~MembershipsChapmanKolmogorovValidator.get_params
       ~MembershipsChapmanKolmogorovValidator.set_params
    

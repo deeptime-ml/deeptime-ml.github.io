@@ -34,8 +34,10 @@
       ~VAMP.covariance_estimator
       ~VAMP.fetch_model
       ~VAMP.fit
+      ~VAMP.fit_fetch
       ~VAMP.fit_from_covariances
       ~VAMP.fit_from_timeseries
+      ~VAMP.fit_transform
       ~VAMP.get_params
       ~VAMP.partial_fit
       ~VAMP.set_params

@@ -27,6 +27,7 @@
    
       ~LaggedModelValidator.fetch_model
       ~LaggedModelValidator.fit
+      ~LaggedModelValidator.fit_fetch
       ~LaggedModelValidator.get_params
       ~LaggedModelValidator.set_params
    

@@ -27,6 +27,7 @@
    
       ~KernelCCA.fetch_model
       ~KernelCCA.fit
+      ~KernelCCA.fit_fetch
       ~KernelCCA.get_params
       ~KernelCCA.set_params
    

@@ -35,9 +35,10 @@ for :math:`X_t\in\mathbb{R}^d`, :math:`d\in\{1,2,3,4,5\}`.
 
 
 
-.. image:: /datasets/images/sphx_glr_plot_custom_sde_001.png
-    :alt: plot custom sde
-    :class: sphx-glr-single-img
+.. image-sg:: /datasets/images/sphx_glr_plot_custom_sde_001.png
+   :alt: plot custom sde
+   :srcset: /datasets/images/sphx_glr_plot_custom_sde_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -86,7 +87,7 @@ for :math:`X_t\in\mathbb{R}^d`, :math:`d\in\{1,2,3,4,5\}`.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.702 seconds)
+   **Total running time of the script:** ( 0 minutes  0.730 seconds)
 
 **Estimated memory usage:**  9 MB
 

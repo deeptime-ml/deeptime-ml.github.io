@@ -4,20 +4,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>class TICA &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>class TICA &#8212; deeptime 0.3.1+23.ga9f1138.dirty documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -25,10 +27,11 @@
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../../_static/d3.v5.min.js"></script>
     <script src="../../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
     <script src="../../_static/katex_autorenderer.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="class DMD" href="deeptime.decomposition.DMD.html" />
@@ -60,7 +63,7 @@
 
 
 <!-- h3>Navigation</h3 -->
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
@@ -72,7 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API docs</span></p>
+<p class="caption" role="heading"><span class="caption-text">API docs</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
@@ -86,6 +89,7 @@
 <li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.EDMD.html"><em>class</em> EDMD</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.KernelEDMD.html"><em>class</em> KernelEDMD</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.KernelCCA.html"><em>class</em> KernelCCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.decomposition.KVAD.html"><em>class</em> KVAD</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../index_decomposition.html#deep-estimators">Deep estimators</a></li>
@@ -102,7 +106,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
@@ -125,7 +129,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.2.7)</a>
+            (0.3.1)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -179,11 +183,11 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="class-tica">
+  <section id="class-tica">
 <h1><em>class</em> TICA<a class="headerlink" href="#class-tica" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="deeptime.decomposition.TICA">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.decomposition.</span></code><code class="sig-name descname"><span class="pre">TICA</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">lagtime:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">epsilon:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">1e-06,</span> <span class="pre">dim:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">var_cutoff:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">scaling:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">'kinetic_map',</span> <span class="pre">observable_transform:</span> <span class="pre">Callable[[numpy.ndarray],</span> <span class="pre">numpy.ndarray]</span> <span class="pre">=</span> <span class="pre">&lt;deeptime.basis._monomials.Identity</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.decomposition.</span></span><span class="sig-name descname"><span class="pre">TICA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">lagtime:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">epsilon:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">1e-06,</span> <span class="pre">dim:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">var_cutoff:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">scaling:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">'kinetic_map',</span> <span class="pre">observable_transform:</span> <span class="pre">Callable[[numpy.ndarray],</span> <span class="pre">numpy.ndarray]</span> <span class="pre">=</span> <span class="pre">&lt;deeptime.basis._monomials.Identity</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time-lagged independent component analysis (TICA).</p>
 <p>TICA is a linear transformation method. In contrast to PCA, which finds
 coordinates of maximal variance, TICA finds coordinates of maximal
@@ -193,7 +197,7 @@ transform molecular dynamics data before clustering data for the
 construction of a Markov model. When the input data is the result of a
 Markov process (such as thermostatted molecular dynamics), TICA finds in
 fact an approximation to the eigenfunctions and eigenvalues of the
-underlying Markov operator <a class="footnote-reference brackets" href="#perez2013identification" id="id1">1</a>.</p>
+underlying Markov operator <a class="footnote-reference brackets" href="#footcite-perez2013identification" id="id1">1</a>.</p>
 <p>It estimates a TICA transformation from <em>data</em>. The resulting model can be used
 to obtain eigenvalues, eigenvectors,
 or project input data onto the slowest TICA components.</p>
@@ -217,8 +221,8 @@ of dimensions to keep.</p></li>
 <li><p><strong>var_cutoff</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Determines the number of output dimensions by including dimensions until their cumulative kinetic variance
 exceeds the fraction subspace variance. var_cutoff=1.0 means all numerically available dimensions
 (see epsilon) will be used, unless set by dim. Setting var_cutoff smaller than 1.0 is exclusive with dim.</p></li>
-<li><p><strong>scaling</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>default='kinetic_map'</em>) – Can be set to <code class="code docutils literal notranslate"><span class="pre">None</span></code>, ‘kinetic_map’ (<a class="footnote-reference brackets" href="#noe2015kinetic" id="id2">2</a>),
-or ‘commute_map’ (<a class="footnote-reference brackets" href="#noe2016commute" id="id3">3</a>). For more details see <a class="reference internal" href="#deeptime.decomposition.TICA.scaling" title="deeptime.decomposition.TICA.scaling"><code class="xref py py-attr docutils literal notranslate"><span class="pre">scaling</span></code></a>.</p></li>
+<li><p><strong>scaling</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>default='kinetic_map'</em>) – Can be set to <code class="code docutils literal notranslate"><span class="pre">None</span></code>, ‘kinetic_map’ (<a class="footnote-reference brackets" href="#footcite-noe2015kinetic" id="id2">2</a>),
+or ‘commute_map’ (<a class="footnote-reference brackets" href="#footcite-noe2016commute" id="id3">3</a>). For more details see <a class="reference internal" href="#deeptime.decomposition.TICA.scaling" title="deeptime.decomposition.TICA.scaling"><code class="xref py py-attr docutils literal notranslate"><span class="pre">scaling</span></code></a>.</p></li>
 <li><p><strong>observable_transform</strong> (<em>callable</em><em>, </em><em>optional</em><em>, </em><em>default=Identity</em>) – A feature transformation on the raw data which is used to estimate the model.</p></li>
 </ul>
 </dd>
@@ -233,7 +237,7 @@ C_{\tau} &= (X_t - \mu)^T \mathrm{diag}(w) (X_{t + \tau} - \mu)
 \end{aligned}\]</div>
 <p>where <span class="math">\(w\)</span> is a vector of weights for each time step. By default, these weights
 are all equal to one, but different weights are possible, like the re-weighting
-to equilibrium described in <a class="footnote-reference brackets" href="#wu2017variational" id="id4">4</a>. Subsequently, the eigenvalue problem</p>
+to equilibrium described in <a class="footnote-reference brackets" href="#footcite-wu2017variational" id="id4">4</a>. Subsequently, the eigenvalue problem</p>
 <div class="math">
 \[C_{\tau} r_i = C_0 \lambda_i r_i,
 
@@ -247,10 +251,10 @@ related to the relaxation timescale by</p>
 onto the dominant independent components.</p>
 <p>Under the assumption of reversible dynamics and the limit of good statistics, the time-lagged autocovariance
 <span class="math">\(C_\tau\)</span> is symmetric. Due to finite data, this symmetry is explicitly enforced in the estimator.</p>
-<p>TICA was originally introduced for signal processing in <a class="footnote-reference brackets" href="#molgedey1994separation" id="id5">5</a>. It was
+<p>TICA was originally introduced for signal processing in <a class="footnote-reference brackets" href="#footcite-molgedey1994separation" id="id5">5</a>. It was
 introduced to molecular dynamics and as a method for the construction
-of Markov models in <a class="footnote-reference brackets" href="#perez2013identification" id="id6">1</a> and <a class="footnote-reference brackets" href="#schwantes2013improvements" id="id7">6</a>. It was shown
-in <a class="footnote-reference brackets" href="#perez2013identification" id="id8">1</a> that when applied
+of Markov models in <a class="footnote-reference brackets" href="#footcite-perez2013identification" id="id6">1</a> and <a class="footnote-reference brackets" href="#footcite-schwantes2013improvements" id="id7">6</a>. It was shown
+in <a class="footnote-reference brackets" href="#footcite-perez2013identification" id="id8">1</a> that when applied
 to molecular dynamics data, TICA is an approximation to the eigenvalues
 and eigenvectors of the true underlying dynamics.</p>
 <p class="rubric">Examples</p>
@@ -280,23 +284,23 @@ and eigenvectors of the true underlying dynamics.</p>
 </dl>
 </div>
 <p class="rubric">References</p>
-<p><dl class="footnote brackets">
-<dt class="label" id="perez2013identification"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>,<a href="#id8">3</a>)</span></dt>
+<p id="id9"><dl class="footnote brackets">
+<dt class="label" id="footcite-perez2013identification"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>,<a href="#id8">3</a>)</span></dt>
 <dd><p>Guillermo Pérez-Hernández, Fabian Paul, Toni Giorgino, Gianni De Fabritiis, and Frank Noé. Identification of slow molecular order parameters for markov model construction. <em>The Journal of chemical physics</em>, 139(1):07B604_1, 2013.</p>
 </dd>
-<dt class="label" id="noe2015kinetic"><span class="brackets">2</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id10">2</a>)</span></dt>
+<dt class="label" id="footcite-noe2015kinetic"><span class="brackets">2</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id11">2</a>)</span></dt>
 <dd><p>Frank Noé and Cecilia Clementi. Kinetic distance and kinetic maps from molecular dynamics simulation. <em>Journal of chemical theory and computation</em>, 11(10):5002–5011, 2015.</p>
 </dd>
-<dt class="label" id="noe2016commute"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id11">2</a>)</span></dt>
+<dt class="label" id="footcite-noe2016commute"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id12">2</a>)</span></dt>
 <dd><p>Frank Noé, Ralf Banisch, and Cecilia Clementi. Commute maps: separating slowly mixing molecular configurations for kinetic modeling. <em>Journal of chemical theory and computation</em>, 12(11):5620–5630, 2016.</p>
 </dd>
-<dt class="label" id="wu2017variational"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="footcite-wu2017variational"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>Hao Wu, Feliks Nüske, Fabian Paul, Stefan Klus, Péter Koltai, and Frank Noé. Variational koopman models: slow collective variables and molecular kinetics from short off-equilibrium simulations. <em>The Journal of chemical physics</em>, 146(15):154104, 2017.</p>
 </dd>
-<dt class="label" id="molgedey1994separation"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="footcite-molgedey1994separation"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>Lutz Molgedey and Heinz Georg Schuster. Separation of a mixture of independent signals using time delayed correlations. <em>Physical Review Letters</em>, 72(23):3634, 1994.</p>
 </dd>
-<dt class="label" id="schwantes2013improvements"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dt class="label" id="footcite-schwantes2013improvements"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
 <dd><p>Christian R Schwantes and Vijay S Pande. Improvements in Markov state model construction reveal many non-native interactions in the folding of NTL9. <em>Journal of chemical theory and computation</em>, 9(4):2000–2009, 2013.</p>
 </dd>
 </dl>
@@ -338,7 +342,7 @@ and eigenvectors of the true underlying dynamics.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.chapman_kolmogorov_validator" title="deeptime.decomposition.TICA.chapman_kolmogorov_validator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chapman_kolmogorov_validator</span></code></a>(mlags[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.chapman_kolmogorov_validator" title="deeptime.decomposition.TICA.chapman_kolmogorov_validator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chapman_kolmogorov_validator</span></code></a>(mlags[, ...])</p></td>
 <td><p>Returns a Chapman-Kolmogorov validator based on this estimator and a test model.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.covariance_estimator" title="deeptime.decomposition.TICA.covariance_estimator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">covariance_estimator</span></code></a>(lagtime[, ncov])</p></td>
@@ -350,11 +354,17 @@ and eigenvectors of the true underlying dynamics.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.fit" title="deeptime.decomposition.TICA.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(data, *args, **kw)</p></td>
 <td><p>Fits a new <a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition.CovarianceKoopmanModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">CovarianceKoopmanModel</span></code></a> which can be obtained by a subsequent call to <a class="reference internal" href="#deeptime.decomposition.TICA.fetch_model" title="deeptime.decomposition.TICA.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.fit_from_covariances" title="deeptime.decomposition.TICA.fit_from_covariances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_from_covariances</span></code></a>(covariances)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.fit_fetch" title="deeptime.decomposition.TICA.fit_fetch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_fetch</span></code></a>(data, **kwargs)</p></td>
+<td><p>Fits the internal model on data and subsequently fetches it in one call.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.fit_from_covariances" title="deeptime.decomposition.TICA.fit_from_covariances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_from_covariances</span></code></a>(covariances)</p></td>
 <td><p>Fits a model based on provided symmetrized covariances.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.fit_from_timeseries" title="deeptime.decomposition.TICA.fit_from_timeseries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_from_timeseries</span></code></a>(data[, weights])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.fit_from_timeseries" title="deeptime.decomposition.TICA.fit_from_timeseries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_from_timeseries</span></code></a>(data[, weights])</p></td>
 <td><p>Estimates a <a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition.CovarianceKoopmanModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">CovarianceKoopmanModel</span></code></a> directly from time-series data using the <code class="xref py py-class docutils literal notranslate"><span class="pre">Covariance</span></code> estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.fit_transform" title="deeptime.decomposition.TICA.fit_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_transform</span></code></a>(data[, fit_options, ...])</p></td>
+<td><p>Fits a model which simultaneously functions as transformer and subsequently transforms the input data.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.TICA.get_params" title="deeptime.decomposition.TICA.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
 <td><p>Get the parameters.</p></td>
@@ -371,14 +381,14 @@ and eigenvectors of the true underlying dynamics.</p>
 </tbody>
 </table>
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.__call__">
-<code class="sig-name descname"><span class="pre">__call__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.__call__" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.__call__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Call self as a function.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.chapman_kolmogorov_validator">
-<code class="sig-name descname"><span class="pre">chapman_kolmogorov_validator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">deeptime.decomposition._koopman.CovarianceKoopmanModel</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_observables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'phi'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statistics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'psi'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.chapman_kolmogorov_validator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.chapman_kolmogorov_validator">
+<span class="sig-name descname"><span class="pre">chapman_kolmogorov_validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition._koopman.CovarianceKoopmanModel"><span class="pre">deeptime.decomposition._koopman.CovarianceKoopmanModel</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_observables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'phi'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statistics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'psi'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.chapman_kolmogorov_validator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Chapman-Kolmogorov validator based on this estimator and a test model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -423,15 +433,15 @@ Koopman matrix contained in self.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.covariance_estimator">
-<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">covariance_estimator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lagtime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncov</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.covariance_estimator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.covariance_estimator">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">covariance_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lagtime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.covariance_estimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Yields a properly configured covariance estimator so that its model can be used as input for the vamp
 estimator.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>lagtime</strong> (<em>int</em>) – Positive integer denoting the time shift which is considered for autocorrelations.</p></li>
-<li><p><strong>ncov</strong> (<em>int</em><em> or </em><em>float</em><em>(</em><em>'inf'</em><em>)</em><em>, </em><em>optional</em><em>, </em><em>default=float</em><em>(</em><em>'inf'</em><em>)</em>) – Limit the memory usage of the algorithm from <a class="footnote-reference brackets" href="#chan1982updating" id="id9">7</a> to an amount that corresponds
+<li><p><strong>ncov</strong> (<em>int</em><em> or </em><em>float</em><em>(</em><em>'inf'</em><em>)</em><em>, </em><em>optional</em><em>, </em><em>default=float</em><em>(</em><em>'inf'</em><em>)</em>) – Limit the memory usage of the algorithm from <a class="footnote-reference brackets" href="#footcite-chan1982updating" id="id10">7</a> to an amount that corresponds
 to ncov additional copies of each correlation matrix.</p></li>
 </ul>
 </dd>
@@ -445,8 +455,8 @@ to ncov additional copies of each correlation matrix.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.fetch_model">
-<code class="sig-name descname"><span class="pre">fetch_model</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">deeptime.decomposition._koopman.CovarianceKoopmanModel</span><a class="headerlink" href="#deeptime.decomposition.TICA.fetch_model" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.fetch_model">
+<span class="sig-name descname"><span class="pre">fetch_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition._koopman.CovarianceKoopmanModel"><span class="pre">deeptime.decomposition._koopman.CovarianceKoopmanModel</span></a></span></span><a class="headerlink" href="#deeptime.decomposition.TICA.fetch_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finalizes current model and yields new <a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition.CovarianceKoopmanModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">CovarianceKoopmanModel</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -459,8 +469,8 @@ to ncov additional copies of each correlation matrix.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.fit">
-<code class="sig-name descname"><span class="pre">fit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.fit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fits a new <a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition.CovarianceKoopmanModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">CovarianceKoopmanModel</span></code></a> which can be obtained by a
 subsequent call to <a class="reference internal" href="#deeptime.decomposition.TICA.fetch_model" title="deeptime.decomposition.TICA.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p>
 <dl class="field-list simple">
@@ -480,11 +490,44 @@ Optionally, this can also be timeseries data directly, in which case a ‘lagtim
 <dd class="field-odd"><p><a class="reference internal" href="deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP" title="deeptime.decomposition.VAMP">VAMP</a></p>
 </dd>
 </dl>
+<p class="rubric">Notes</p>
+<p>If you are running into memory problems for potentially multiple trajectories you can decrease memory load
+by using <a class="reference internal" href="#deeptime.decomposition.TICA.partial_fit" title="deeptime.decomposition.TICA.partial_fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">partial_fit()</span></code></a> on individual trajectories or in conjunction with
+<a class="reference internal" href="deeptime.util.data.timeshifted_split.html#deeptime.util.data.timeshifted_split" title="deeptime.util.data.timeshifted_split"><code class="xref py py-meth docutils literal notranslate"><span class="pre">timeshifted_split</span></code></a>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">deeptime.decomposition</span> <span class="kn">import</span> <span class="n">TICA</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">deeptime.util.data</span> <span class="kn">import</span> <span class="n">timeshifted_split</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">estimator</span> <span class="o">=</span> <span class="n">TICA</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="ow">in</span> <span class="n">timeshifted_split</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">)),</span> <span class="n">lagtime</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">40</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">estimator</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joint_model</span> <span class="o">=</span> <span class="n">estimator</span><span class="o">.</span><span class="n">fetch_model</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.fit_from_covariances">
-<code class="sig-name descname"><span class="pre">fit_from_covariances</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">covariances</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">deeptime.covariance._covariance.Covariance</span><span class="p"><span class="pre">,</span> </span><span class="pre">deeptime.covariance._covariance.CovarianceModel</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.fit_from_covariances" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.fit_fetch">
+<span class="sig-name descname"><span class="pre">fit_fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.fit_fetch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits the internal model on data and subsequently fetches it in one call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>array_like</em>) – Data that is used to fit the model.</p></li>
+<li><p><strong>**kwargs</strong> – Additional arguments to <a class="reference internal" href="#deeptime.decomposition.TICA.fit" title="deeptime.decomposition.TICA.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The estimated model.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.fit_from_covariances">
+<span class="sig-name descname"><span class="pre">fit_from_covariances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">covariances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="deeptime.covariance.Covariance.html#deeptime.covariance.Covariance" title="deeptime.covariance._covariance.Covariance"><span class="pre">deeptime.covariance._covariance.Covariance</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel" title="deeptime.covariance._covariance.CovarianceModel"><span class="pre">deeptime.covariance._covariance.CovarianceModel</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.fit_from_covariances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fits a model based on provided symmetrized covariances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -500,8 +543,8 @@ Optionally, this can also be timeseries data directly, in which case a ‘lagtim
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.fit_from_timeseries">
-<code class="sig-name descname"><span class="pre">fit_from_timeseries</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.fit_from_timeseries" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.fit_from_timeseries">
+<span class="sig-name descname"><span class="pre">fit_from_timeseries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.fit_from_timeseries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimates a <a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition.CovarianceKoopmanModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">CovarianceKoopmanModel</span></code></a> directly from time-series data using the <code class="xref py py-class docutils literal notranslate"><span class="pre">Covariance</span></code>
 estimator. For parameters <cite>dim</cite>, <cite>scaling</cite>, <cite>epsilon</cite>.</p>
 <dl class="field-list simple">
@@ -521,8 +564,30 @@ estimator. For parameters <cite>dim</cite>, <cite>scaling</cite>, <cite>epsilon<
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.get_params">
-<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.get_params" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.fit_transform">
+<span class="sig-name descname"><span class="pre">fit_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits a model which simultaneously functions as transformer and subsequently transforms
+the input data. The estimated model can be accessed by calling <a class="reference internal" href="#deeptime.decomposition.TICA.fetch_model" title="deeptime.decomposition.TICA.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>array_like</em>) – The input data.</p></li>
+<li><p><strong>fit_options</strong> (<em>dict</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Optional keyword arguments passed on to the fit method.</p></li>
+<li><p><strong>transform_options</strong> (<em>dict</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Optional keyword arguments passed on to the transform method.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>output</strong> – Transformed data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -535,8 +600,8 @@ estimator. For parameters <cite>dim</cite>, <cite>scaling</cite>, <cite>epsilon<
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.partial_fit">
-<code class="sig-name descname"><span class="pre">partial_fit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.partial_fit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.partial_fit">
+<span class="sig-name descname"><span class="pre">partial_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.partial_fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the covariance estimates through a new batch of data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -553,8 +618,8 @@ Here, <span class="math">\(\tau\)</span> denotes the lagtime.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.set_params">
-<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.set_params" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The latter have parameters of the form
@@ -574,8 +639,8 @@ component of a nested object.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.TICA.transform">
-<code class="sig-name descname"><span class="pre">transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.transform" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.TICA.transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Projects given timeseries onto dominant singular functions. This method dispatches to
 <a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel.transform" title="deeptime.decomposition.CovarianceKoopmanModel.transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CovarianceKoopmanModel.transform()</span></code></a>.</p>
 <dl class="field-list simple">
@@ -596,9 +661,9 @@ the left singular functions.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.decomposition.TICA.dim">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dim</span></code><a class="headerlink" href="#deeptime.decomposition.TICA.dim" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.dim">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.TICA.dim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimension attribute. Can either be int or float. In case of</p>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">int</span></code> it evaluates it as the actual dimension, must be strictly greater 0,</p></li>
@@ -617,9 +682,9 @@ the left singular functions.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.decomposition.TICA.epsilon">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">epsilon</span></code><a class="headerlink" href="#deeptime.decomposition.TICA.epsilon" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.epsilon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epsilon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#deeptime.decomposition.TICA.epsilon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Eigenvalue norm cutoff.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -628,9 +693,9 @@ the left singular functions.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.decomposition.TICA.has_model">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">has_model</span></code><a class="headerlink" href="#deeptime.decomposition.TICA.has_model" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.has_model">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#deeptime.decomposition.TICA.has_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Property reporting whether this estimator contains an estimated model. This assumes that the model
 is initialized with <cite>None</cite> otherwise.</p>
 <dl class="field-list simple">
@@ -640,9 +705,9 @@ is initialized with <cite>None</cite> otherwise.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.decomposition.TICA.lagtime">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">lagtime</span></code><a class="headerlink" href="#deeptime.decomposition.TICA.lagtime" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.lagtime">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lagtime</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.TICA.lagtime" title="Permalink to this definition">¶</a></dt>
 <dd><p>The lagtime under which covariances are estimated. Can be <cite>None</cite> in case covariances are provided
 directly instead of estimating them inside this estimator.</p>
 <dl class="field-list simple">
@@ -658,23 +723,23 @@ directly instead of estimating them inside this estimator.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.decomposition.TICA.model">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#deeptime.decomposition.TICA.model" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.model">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#deeptime.decomposition.TICA.model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shortcut to <a class="reference internal" href="#deeptime.decomposition.TICA.fetch_model" title="deeptime.decomposition.TICA.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.decomposition.TICA.scaling">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">scaling</span></code><a class="headerlink" href="#deeptime.decomposition.TICA.scaling" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.scaling">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scaling</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.TICA.scaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scaling parameter. Can take the following values:</p>
 <ul class="simple">
 <li><p>None: unscaled.</p></li>
 <li><p>‘kinetic_map’: Eigenvectors will be scaled by eigenvalues. As a result, Euclidean
-distances in the transformed data approximate kinetic distances <a class="footnote-reference brackets" href="#noe2015kinetic" id="id10">2</a>.
+distances in the transformed data approximate kinetic distances <a class="footnote-reference brackets" href="#footcite-noe2015kinetic" id="id11">2</a>.
 This is a good choice when the data is further processed by clustering.</p></li>
 <li><p>‘commute_map’: Eigenvector i will be scaled by sqrt(timescale_i / 2). As a result,
-Euclidean distances in the transformed data will approximate commute distances <a class="footnote-reference brackets" href="#noe2016commute" id="id11">3</a>.</p></li>
+Euclidean distances in the transformed data will approximate commute distances <a class="footnote-reference brackets" href="#footcite-noe2016commute" id="id12">3</a>.</p></li>
 </ul>
 <dl class="field-list simple">
 <dt class="field-odd">Getter</dt>
@@ -689,9 +754,9 @@ Euclidean distances in the transformed data will approximate commute distances <
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.decomposition.TICA.var_cutoff">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">var_cutoff</span></code><a class="headerlink" href="#deeptime.decomposition.TICA.var_cutoff" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.decomposition.TICA.var_cutoff">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">var_cutoff</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.TICA.var_cutoff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Variational cutoff which can be used to further restrict the dimension. This takes precedence over the
 <a class="reference internal" href="#deeptime.decomposition.TICA.dim" title="deeptime.decomposition.TICA.dim"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dim()</span></code></a> property.</p>
 <dl class="field-list simple">
@@ -709,7 +774,7 @@ Euclidean distances in the transformed data will approximate commute distances <
 
 </dd></dl>
 
-</div>
+</section>
 
 
           </div>

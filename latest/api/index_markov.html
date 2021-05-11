@@ -4,20 +4,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>deeptime.markov &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>deeptime.markov &#8212; deeptime 0.3.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -25,10 +27,11 @@
     <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../_static/d3.v5.min.js"></script>
     <script src="../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
     <script src="../_static/katex_autorenderer.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="class MaximumLikelihoodMSM" href="generated/deeptime.markov.msm.MaximumLikelihoodMSM.html" />
@@ -60,7 +63,7 @@
 
 
 <!-- h3>Navigation</h3 -->
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index_dimreduction.html">Dimension reduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_deepdimreduction.html">Deep dim reduction</a></li>
@@ -72,7 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../datasets/index.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_dev.html">For developers</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API docs</span></p>
+<p class="caption" role="heading"><span class="caption-text">API docs</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index_base.html">deeptime.base</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_clustering.html">deeptime.clustering</a></li>
@@ -123,7 +126,7 @@
 <li class="toctree-l1"><a class="reference internal" href="index_numeric.html">deeptime.numeric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_util.html">deeptime.util</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imprint.html">Imprint</a></li>
@@ -146,7 +149,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../index.html">Latest release
-            (0.2.7)</a>
+            (0.3.0)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -198,11 +201,11 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="deeptime-markov">
+  <section id="deeptime-markov">
 <span id="ref-markov-hmm"></span><h1>deeptime.markov<a class="headerlink" href="#deeptime-markov" title="Permalink to this headline">¶</a></h1>
 <p>The <em>markov</em> package contains algorithms which can be used to estimate markov state models and apply
 analysis tools like PCCA+, TPT, bayesian sampling for confidence intervals.</p>
-<div class="section" id="estimators">
+<section id="estimators">
 <h2>Estimators<a class="headerlink" href="#estimators" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -210,16 +213,16 @@ analysis tools like PCCA+, TPT, bayesian sampling for confidence intervals.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.MaximumLikelihoodMSM.html#deeptime.markov.msm.MaximumLikelihoodMSM" title="deeptime.markov.msm.MaximumLikelihoodMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.MaximumLikelihoodMSM</span></code></a>(reversible, …[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.MaximumLikelihoodMSM.html#deeptime.markov.msm.MaximumLikelihoodMSM" title="deeptime.markov.msm.MaximumLikelihoodMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.MaximumLikelihoodMSM</span></code></a>([reversible, ...])</p></td>
 <td><p>Maximum likelihood estimator for MSMs (<a class="reference internal" href="generated/deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MarkovStateModel</span></code></a>) given discrete trajectories or statistics thereof.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.BayesianMSM.html#deeptime.markov.msm.BayesianMSM" title="deeptime.markov.msm.BayesianMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.BayesianMSM</span></code></a>(n_samples, n_steps, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.BayesianMSM.html#deeptime.markov.msm.BayesianMSM" title="deeptime.markov.msm.BayesianMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.BayesianMSM</span></code></a>([n_samples, n_steps, ...])</p></td>
 <td><p>Bayesian estimator for MSMs given discrete trajectory statistics.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="models">
+</section>
+<section id="models">
 <h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -227,10 +230,10 @@ analysis tools like PCCA+, TPT, bayesian sampling for confidence intervals.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.MarkovStateModel</span></code></a>(transition_matrix[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.MarkovStateModel</span></code></a>(transition_matrix[, ...])</p></td>
 <td><p>Markov model with a given transition matrix.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.MarkovStateModelCollection.html#deeptime.markov.msm.MarkovStateModelCollection" title="deeptime.markov.msm.MarkovStateModelCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.MarkovStateModelCollection</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.MarkovStateModelCollection.html#deeptime.markov.msm.MarkovStateModelCollection" title="deeptime.markov.msm.MarkovStateModelCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.MarkovStateModelCollection</span></code></a>(...)</p></td>
 <td><p>A collection of Markov state models.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.BayesianPosterior.html#deeptime.markov.msm.BayesianPosterior" title="deeptime.markov.msm.BayesianPosterior"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.BayesianPosterior</span></code></a>([prior, samples])</p></td>
@@ -238,8 +241,8 @@ analysis tools like PCCA+, TPT, bayesian sampling for confidence intervals.</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="analysis-tools">
+</section>
+<section id="analysis-tools">
 <h2>Analysis tools<a class="headerlink" href="#analysis-tools" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -250,10 +253,10 @@ analysis tools like PCCA+, TPT, bayesian sampling for confidence intervals.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.pcca.html#deeptime.markov.pcca" title="deeptime.markov.pcca"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcca</span></code></a>(P, m[, stationary_distribution])</p></td>
 <td><p>PCCA+ spectral clustering method with optimized memberships.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.reactive_flux.html#deeptime.markov.reactive_flux" title="deeptime.markov.reactive_flux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reactive_flux</span></code></a>(transition_matrix, …[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.reactive_flux.html#deeptime.markov.reactive_flux" title="deeptime.markov.reactive_flux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reactive_flux</span></code></a>(transition_matrix, ...[, ...])</p></td>
 <td><p>Computes the A-&gt;B reactive flux using transition path theory (TPT).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.MembershipsChapmanKolmogorovValidator.html#deeptime.markov.MembershipsChapmanKolmogorovValidator" title="deeptime.markov.MembershipsChapmanKolmogorovValidator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MembershipsChapmanKolmogorovValidator</span></code></a>(…[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.MembershipsChapmanKolmogorovValidator.html#deeptime.markov.MembershipsChapmanKolmogorovValidator" title="deeptime.markov.MembershipsChapmanKolmogorovValidator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MembershipsChapmanKolmogorovValidator</span></code></a>(...[, ...])</p></td>
 <td><p>Validates a model estimated at lag time tau by testing its predictions for longer lag times.</p></td>
 </tr>
 </tbody>
@@ -265,16 +268,16 @@ analysis tools like PCCA+, TPT, bayesian sampling for confidence intervals.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.PCCAModel.html#deeptime.markov.PCCAModel" title="deeptime.markov.PCCAModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PCCAModel</span></code></a>(transition_matrix_coarse, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.PCCAModel.html#deeptime.markov.PCCAModel" title="deeptime.markov.PCCAModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PCCAModel</span></code></a>(transition_matrix_coarse, ...)</p></td>
 <td><p>Model for PCCA+ spectral clustering method with optimized memberships.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.ReactiveFlux.html#deeptime.markov.ReactiveFlux" title="deeptime.markov.ReactiveFlux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ReactiveFlux</span></code></a>(source_states, target_states, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.ReactiveFlux.html#deeptime.markov.ReactiveFlux" title="deeptime.markov.ReactiveFlux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ReactiveFlux</span></code></a>(source_states, target_states, ...)</p></td>
 <td><p>The A-&gt;B reactive flux from transition path theory (TPT).</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="utilities-and-alternatives">
+</section>
+<section id="utilities-and-alternatives">
 <h2>Utilities and alternatives<a class="headerlink" href="#utilities-and-alternatives" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -288,30 +291,30 @@ analysis tools like PCCA+, TPT, bayesian sampling for confidence intervals.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.count_states.html#deeptime.markov.count_states" title="deeptime.markov.count_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">count_states</span></code></a>(dtrajs[, ignore_negative])</p></td>
 <td><p>Computes a histogram over the visited states in one or multiple discretized trajectories.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.compute_connected_sets.html#deeptime.markov.compute_connected_sets" title="deeptime.markov.compute_connected_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_connected_sets</span></code></a>(count_matrix[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.compute_connected_sets.html#deeptime.markov.compute_connected_sets" title="deeptime.markov.compute_connected_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_connected_sets</span></code></a>(count_matrix[, ...])</p></td>
 <td><p>Computes the connected sets of a count matrix C.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.compute_dtrajs_effective.html#deeptime.markov.compute_dtrajs_effective" title="deeptime.markov.compute_dtrajs_effective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_dtrajs_effective</span></code></a>(dtrajs, lagtime, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.compute_dtrajs_effective.html#deeptime.markov.compute_dtrajs_effective" title="deeptime.markov.compute_dtrajs_effective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_dtrajs_effective</span></code></a>(dtrajs, lagtime, ...)</p></td>
 <td><p>Takes discrete trajectories as input and strides these with an effective stride.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.compute_effective_stride.html#deeptime.markov.compute_effective_stride" title="deeptime.markov.compute_effective_stride"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_effective_stride</span></code></a>(dtrajs, lagtime, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.compute_effective_stride.html#deeptime.markov.compute_effective_stride" title="deeptime.markov.compute_effective_stride"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_effective_stride</span></code></a>(dtrajs, lagtime, ...)</p></td>
 <td><p>Computes the effective stride which is an estimate of the striding required to produce uncorrelated samples.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.sample.indices_by_distribution.html#deeptime.markov.sample.indices_by_distribution" title="deeptime.markov.sample.indices_by_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample.indices_by_distribution</span></code></a>(indices, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.sample.indices_by_distribution.html#deeptime.markov.sample.indices_by_distribution" title="deeptime.markov.sample.indices_by_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample.indices_by_distribution</span></code></a>(indices, ...)</p></td>
 <td><p>Samples trajectory/time indices according to the given probability distributions</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.sample.compute_index_states.html#deeptime.markov.sample.compute_index_states" title="deeptime.markov.sample.compute_index_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample.compute_index_states</span></code></a>(dtrajs[, subset])</p></td>
 <td><p>Generates a trajectory/time indices for the given list of states</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.sample.indices_by_sequence.html#deeptime.markov.sample.indices_by_sequence" title="deeptime.markov.sample.indices_by_sequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample.indices_by_sequence</span></code></a>(indices, sequence)</p></td>
-<td><p>Samples trajectory/time indices according to the given sequence of states</p></td>
+<td><p>Samples trajectory/time indices according to the given sequence of states.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.sample.indices_by_state.html#deeptime.markov.sample.indices_by_state" title="deeptime.markov.sample.indices_by_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample.indices_by_state</span></code></a>(indices, nsample[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.sample.indices_by_state.html#deeptime.markov.sample.indices_by_state" title="deeptime.markov.sample.indices_by_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample.indices_by_state</span></code></a>(indices, nsample[, ...])</p></td>
 <td><p>Samples trajectory/time indices according to the given sequence of states</p></td>
 </tr>
 </tbody>
 </table>
-<div class="section" id="transition-counting">
+<section id="transition-counting">
 <h3>Transition counting<a class="headerlink" href="#transition-counting" title="Permalink to this headline">¶</a></h3>
 <p>An alternative to estimating Markov state models directly from discrete timeseries is to first estimate (and
 potentially subselect) a count matrix and then use that for estimation.</p>
@@ -324,13 +327,13 @@ potentially subselect) a count matrix and then use that for estimation.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.TransitionCountEstimator.html#deeptime.markov.TransitionCountEstimator" title="deeptime.markov.TransitionCountEstimator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransitionCountEstimator</span></code></a>(lagtime, count_mode)</p></td>
 <td><p>Estimator which produces a <a class="reference internal" href="generated/deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel" title="deeptime.markov.TransitionCountModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransitionCountModel</span></code></a> given discretized trajectories.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel" title="deeptime.markov.TransitionCountModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransitionCountModel</span></code></a>(count_matrix, …[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel" title="deeptime.markov.TransitionCountModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransitionCountModel</span></code></a>(count_matrix[, ...])</p></td>
 <td><p>Statistics, count matrices, and connectivity from discrete trajectories.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="special-msm-estimators-and-models">
+</section>
+<section id="special-msm-estimators-and-models">
 <h3>Special MSM estimators and models<a class="headerlink" href="#special-msm-estimators-and-models" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -338,23 +341,23 @@ potentially subselect) a count matrix and then use that for estimation.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.OOMReweightedMSM.html#deeptime.markov.msm.OOMReweightedMSM" title="deeptime.markov.msm.OOMReweightedMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.OOMReweightedMSM</span></code></a>(lagtime[, reversible, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.OOMReweightedMSM.html#deeptime.markov.msm.OOMReweightedMSM" title="deeptime.markov.msm.OOMReweightedMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.OOMReweightedMSM</span></code></a>(lagtime[, reversible, ...])</p></td>
 <td><p>OOM (observable operator model) MSM estimator for MSMs given discrete trajectory statistics.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.KoopmanReweightedMSM.html#deeptime.markov.msm.KoopmanReweightedMSM" title="deeptime.markov.msm.KoopmanReweightedMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.KoopmanReweightedMSM</span></code></a>(transition_matrix, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.KoopmanReweightedMSM.html#deeptime.markov.msm.KoopmanReweightedMSM" title="deeptime.markov.msm.KoopmanReweightedMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.KoopmanReweightedMSM</span></code></a>(transition_matrix)</p></td>
 <td><p>This class belongs to a markov state model which was estimated by Koopman reweighting.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.AugmentedMSMEstimator.html#deeptime.markov.msm.AugmentedMSMEstimator" title="deeptime.markov.msm.AugmentedMSMEstimator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.AugmentedMSMEstimator</span></code></a>(…[, eps, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.AugmentedMSMEstimator.html#deeptime.markov.msm.AugmentedMSMEstimator" title="deeptime.markov.msm.AugmentedMSMEstimator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.AugmentedMSMEstimator</span></code></a>(...[, eps, ...])</p></td>
 <td><p>Estimator for augmented Markov state models.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.AugmentedMSM.html#deeptime.markov.msm.AugmentedMSM" title="deeptime.markov.msm.AugmentedMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.AugmentedMSM</span></code></a>(transition_matrix[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.markov.msm.AugmentedMSM.html#deeptime.markov.msm.AugmentedMSM" title="deeptime.markov.msm.AugmentedMSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msm.AugmentedMSM</span></code></a>(transition_matrix[, ...])</p></td>
 <td><p>An augmented Markov state model.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
           </div>

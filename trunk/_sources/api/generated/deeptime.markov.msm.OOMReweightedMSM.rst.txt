@@ -29,6 +29,7 @@
    
       ~OOMReweightedMSM.fetch_model
       ~OOMReweightedMSM.fit
+      ~OOMReweightedMSM.fit_fetch
       ~OOMReweightedMSM.get_params
       ~OOMReweightedMSM.set_params
    

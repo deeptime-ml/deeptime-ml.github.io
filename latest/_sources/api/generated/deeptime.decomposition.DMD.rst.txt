@@ -30,6 +30,8 @@
    
       ~DMD.fetch_model
       ~DMD.fit
+      ~DMD.fit_fetch
+      ~DMD.fit_transform
       ~DMD.get_params
       ~DMD.set_params
       ~DMD.transform

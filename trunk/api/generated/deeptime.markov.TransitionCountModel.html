@@ -4,20 +4,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>class TransitionCountModel &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>class TransitionCountModel &#8212; deeptime 0.3.1+23.ga9f1138.dirty documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -25,10 +27,11 @@
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../../_static/d3.v5.min.js"></script>
     <script src="../../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
     <script src="../../_static/katex_autorenderer.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="class OOMReweightedMSM" href="deeptime.markov.msm.OOMReweightedMSM.html" />
@@ -60,7 +63,7 @@
 
 
 <!-- h3>Navigation</h3 -->
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
@@ -72,7 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API docs</span></p>
+<p class="caption" role="heading"><span class="caption-text">API docs</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
@@ -93,6 +96,7 @@
 <li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.compute_index_states.html"><em>function</em> compute_index_states</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.indices_by_sequence.html"><em>function</em> indices_by_sequence</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.indices_by_state.html"><em>function</em> indices_by_state</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.msm.TRAMDataset.html"><em>class</em> TRAMDataset</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index_markov.html#transition-counting">Transition counting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../index_markov.html#special-msm-estimators-and-models">Special MSM estimators and models</a></li>
 </ul>
@@ -107,7 +111,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
@@ -130,7 +134,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.2.7)</a>
+            (0.3.1)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -184,11 +188,11 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="class-transitioncountmodel">
+  <section id="class-transitioncountmodel">
 <h1><em>class</em> TransitionCountModel<a class="headerlink" href="#class-transitioncountmodel" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="deeptime.markov.TransitionCountModel">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.markov.</span></code><code class="sig-name descname"><span class="pre">TransitionCountModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counting_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lagtime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_histogram</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_symbols</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_matrix_full</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_histogram_full</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.markov.</span></span><span class="sig-name descname"><span class="pre">TransitionCountModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counting_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lagtime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_histogram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_symbols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_matrix_full</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_histogram_full</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Statistics, count matrices, and connectivity from discrete trajectories. These statistics can be used to, e.g.,
 construct MSMs. This model can create submodels (see <a class="reference internal" href="#deeptime.markov.TransitionCountModel.submodel" title="deeptime.markov.TransitionCountModel.submodel"><code class="xref py py-func docutils literal notranslate"><span class="pre">submodel()</span></code></a>)
 that are restricted to a certain selection of states. This subselection can be made by</p>
@@ -212,7 +216,7 @@ In order to do uncertainty calculations, use the effective count matrix, see
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">effective_count_matrix</span></code>, divide this count matrix by tau, or use ‘effective’ as estimation parameter.</p></li>
 <li><p><strong>lagtime</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=1</em>) – The time offset which was used to count transitions in state.</p></li>
 <li><p><strong>state_histogram</strong> (<em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Histogram over the visited states in discretized trajectories.</p></li>
-<li><p><strong>state_symbols</strong> (<em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Symbols of the original discrete trajectory that are represented in the counting model. If None, the
+<li><p><strong>state_symbols</strong> (<em>array_like</em><em> or </em><em>DiscreteStatesManager</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Symbols of the original discrete trajectory that are represented in the counting model. If None, the
 symbols are assumed to represent the data, i.e., a iota range over the number of states. Subselection
 of the model also subselects the symbols.</p></li>
 <li><p><strong>count_matrix_full</strong> (<em>array_like</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Count matrix for all state symbols. If None, the count matrix provided as first argument is assumed to
@@ -266,15 +270,18 @@ take that role.</p></li>
 <td><p>Histogram over all states in the trajectories.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.state_symbols" title="deeptime.markov.TransitionCountModel.state_symbols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_symbols</span></code></a></p></td>
-<td><p>Symbols (states) that are represented in this count model.</p></td>
+<td><p>Symbols for states that are represented in this count model.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.states" title="deeptime.markov.TransitionCountModel.states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">states</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.state_symbols_with_blank" title="deeptime.markov.TransitionCountModel.state_symbols_with_blank"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_symbols_with_blank</span></code></a></p></td>
+<td><p>Symbols for states that are represented in this count model plus a state <cite>-1</cite> for states which are not represented in this count model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.states" title="deeptime.markov.TransitionCountModel.states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">states</span></code></a></p></td>
 <td><p>The states in this model, i.e., a iota range from 0 (inclusive) to <a class="reference internal" href="#deeptime.markov.TransitionCountModel.n_states" title="deeptime.markov.TransitionCountModel.n_states"><code class="xref py py-meth docutils literal notranslate"><span class="pre">n_states()</span></code></a> (exclusive).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.total_count" title="deeptime.markov.TransitionCountModel.total_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">total_count</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.total_count" title="deeptime.markov.TransitionCountModel.total_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">total_count</span></code></a></p></td>
 <td><p>Total number of counts</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.visited_set" title="deeptime.markov.TransitionCountModel.visited_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">visited_set</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.visited_set" title="deeptime.markov.TransitionCountModel.visited_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">visited_set</span></code></a></p></td>
 <td><p>The set of visited states.</p></td>
 </tr>
 </tbody>
@@ -286,7 +293,7 @@ take that role.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.connected_sets" title="deeptime.markov.TransitionCountModel.connected_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connected_sets</span></code></a>([connectivity_threshold, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.connected_sets" title="deeptime.markov.TransitionCountModel.connected_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connected_sets</span></code></a>([connectivity_threshold, ...])</p></td>
 <td><p>Computes the connected sets of the counting matrix.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.copy" title="deeptime.markov.TransitionCountModel.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
@@ -298,31 +305,35 @@ take that role.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.get_params" title="deeptime.markov.TransitionCountModel.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
 <td><p>Get the parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.set_params" title="deeptime.markov.TransitionCountModel.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.is_connected" title="deeptime.markov.TransitionCountModel.is_connected"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_connected</span></code></a>([directed])</p></td>
+<td><p>Dispatches to <a class="reference internal" href="deeptime.markov.tools.analysis.is_connected.html#deeptime.markov.tools.analysis.is_connected" title="deeptime.markov.tools.analysis.is_connected"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tools.analysis.is_connected</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.set_params" title="deeptime.markov.TransitionCountModel.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
 <td><p>Set the parameters of this estimator.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.states_to_symbols" title="deeptime.markov.TransitionCountModel.states_to_symbols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">states_to_symbols</span></code></a>(states)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.states_to_symbols" title="deeptime.markov.TransitionCountModel.states_to_symbols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">states_to_symbols</span></code></a>(states)</p></td>
 <td><p>Converts a list of states to a list of symbols which can be related back to the original data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.submodel" title="deeptime.markov.TransitionCountModel.submodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel</span></code></a>(states)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.submodel" title="deeptime.markov.TransitionCountModel.submodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel</span></code></a>(states)</p></td>
 <td><p>This returns a count model that is restricted to a selection of states.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.submodel_largest" title="deeptime.markov.TransitionCountModel.submodel_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel_largest</span></code></a>([connectivity_threshold, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.submodel_largest" title="deeptime.markov.TransitionCountModel.submodel_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel_largest</span></code></a>([connectivity_threshold, ...])</p></td>
 <td><p>Restricts this model to the submodel corresponding to the largest connected set of states after eliminating states that fall below the specified connectivity threshold.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.symbols_to_states" title="deeptime.markov.TransitionCountModel.symbols_to_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">symbols_to_states</span></code></a>(symbols)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.symbols_to_states" title="deeptime.markov.TransitionCountModel.symbols_to_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">symbols_to_states</span></code></a>(symbols)</p></td>
 <td><p>Converts a set of symbols to state indices in this count model instance.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.transform_discrete_trajectories_to_submodel" title="deeptime.markov.TransitionCountModel.transform_discrete_trajectories_to_submodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_discrete_trajectories_to_submodel</span></code></a>(dtrajs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.transform_discrete_trajectories_to_submodel" title="deeptime.markov.TransitionCountModel.transform_discrete_trajectories_to_submodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_discrete_trajectories_to_submodel</span></code></a>(dtrajs)</p></td>
 <td><p>A list of integer arrays with the discrete trajectories mapped to the currently used set of symbols.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.connected_sets">
-<code class="sig-name descname"><span class="pre">connected_sets</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probability_constraint</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by_population</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.connected_sets" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.connected_sets">
+<span class="sig-name descname"><span class="pre">connected_sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probability_constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by_population</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.connected_sets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the connected sets of the counting matrix. A threshold can be set fixing a number of counts
-required to consider two states connected. In case of sliding window the number of counts is increased by a
+required to consider two states connected (states are always considered self-connected, regardless of the
+connectivity threshold). In case of sliding window the number of counts is increased by a
 factor of <cite>lagtime</cite>. In case of ‘sliding-effective’ counting, the number of sliding window counts were
 divided by the lagtime and can therefore also be in the open interval (0, 1). Same for ‘effective’ counting.</p>
 <dl class="field-list simple">
@@ -344,11 +355,15 @@ commonly used.</p></li>
 </p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.submodel_largest" title="deeptime.markov.TransitionCountModel.submodel_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel_largest</span></code></a>, <a class="reference internal" href="#deeptime.markov.TransitionCountModel.submodel" title="deeptime.markov.TransitionCountModel.submodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.copy">
-<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">deeptime.base.Model</span></a><a class="headerlink" href="#deeptime.markov.TransitionCountModel.copy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">deeptime.base.Model</span></a></span></span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes a deep copy of this model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -361,8 +376,8 @@ commonly used.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.count_matrix_histogram">
-<code class="sig-name descname"><span class="pre">count_matrix_histogram</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.count_matrix_histogram" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.count_matrix_histogram">
+<span class="sig-name descname"><span class="pre">count_matrix_histogram</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.count_matrix_histogram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes a histogram over states represented in the count matrix. The magnitude of the values returned values
 depend on the mode which was used for counting.</p>
 <dl class="field-list simple">
@@ -376,8 +391,8 @@ depend on the mode which was used for counting.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.get_params">
-<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.get_params" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -390,8 +405,14 @@ depend on the mode which was used for counting.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.set_params">
-<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.set_params" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.is_connected">
+<span class="sig-name descname"><span class="pre">is_connected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.is_connected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches to <a class="reference internal" href="deeptime.markov.tools.analysis.is_connected.html#deeptime.markov.tools.analysis.is_connected" title="deeptime.markov.tools.analysis.is_connected"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tools.analysis.is_connected</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The latter have parameters of the form
@@ -411,8 +432,8 @@ component of a nested object.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.states_to_symbols">
-<code class="sig-name descname"><span class="pre">states_to_symbols</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.states_to_symbols" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.states_to_symbols">
+<span class="sig-name descname"><span class="pre">states_to_symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.states_to_symbols" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts a list of states to a list of symbols which can be related back to the original data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -428,8 +449,8 @@ component of a nested object.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.submodel">
-<code class="sig-name descname"><span class="pre">submodel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.submodel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.submodel">
+<span class="sig-name descname"><span class="pre">submodel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.submodel" title="Permalink to this definition">¶</a></dt>
 <dd><p>This returns a count model that is restricted to a selection of states.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -442,13 +463,18 @@ component of a nested object.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel" title="deeptime.markov.TransitionCountModel">TransitionCountModel</a></p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.submodel_largest" title="deeptime.markov.TransitionCountModel.submodel_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel_largest</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.submodel_largest">
-<code class="sig-name descname"><span class="pre">submodel_largest</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probability_constraint</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by_population</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.submodel_largest" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.submodel_largest">
+<span class="sig-name descname"><span class="pre">submodel_largest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connectivity_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probability_constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by_population</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.submodel_largest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restricts this model to the submodel corresponding to the largest connected set of states after eliminating
-states that fall below the specified connectivity threshold.</p>
+states that fall below the specified connectivity threshold. Note that the connectivity threshold only applies
+to the implied graph weight between states, singleton sets are always considered connected.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -468,11 +494,15 @@ directed.</p></li>
 <dd class="field-odd"><p><a class="reference internal" href="#deeptime.markov.TransitionCountModel" title="deeptime.markov.TransitionCountModel">TransitionCountModel</a></p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#deeptime.markov.TransitionCountModel.connected_sets" title="deeptime.markov.TransitionCountModel.connected_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connected_sets</span></code></a>, <a class="reference internal" href="#deeptime.markov.TransitionCountModel.submodel" title="deeptime.markov.TransitionCountModel.submodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submodel</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.symbols_to_states">
-<code class="sig-name descname"><span class="pre">symbols_to_states</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbols</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.symbols_to_states" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.symbols_to_states">
+<span class="sig-name descname"><span class="pre">symbols_to_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbols</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.symbols_to_states" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts a set of symbols to state indices in this count model instance. The symbols which
 are no longer present in this model are discarded. It can happen that the order is
 changed or the result is smaller than the input length.</p>
@@ -490,8 +520,8 @@ changed or the result is smaller than the input length.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.transform_discrete_trajectories_to_submodel">
-<code class="sig-name descname"><span class="pre">transform_discrete_trajectories_to_submodel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.transform_discrete_trajectories_to_submodel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.transform_discrete_trajectories_to_submodel">
+<span class="sig-name descname"><span class="pre">transform_discrete_trajectories_to_submodel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.transform_discrete_trajectories_to_submodel" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of integer arrays with the discrete trajectories mapped to the currently used set of symbols.
 For example, if there has been a subselection of the model for connectivity=’largest’, the indices will be
 given within the connected set, frames that do not correspond to a considered symbol are set to -1.</p>
@@ -508,9 +538,9 @@ given within the connected set, frames that do not correspond to a considered sy
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.count_matrix">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">count_matrix</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.count_matrix" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.count_matrix">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">count_matrix</span></span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.count_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>The count matrix, possibly restricted to a subset of states.</p>
 <p>Attention: This count matrix could have been obtained by sliding a window of length tau across the data.
 It then contains a factor of tau more counts than are statistically uncorrelated. It’s fine to use this matrix
@@ -519,22 +549,22 @@ calculations. In order to do uncertainty calculations, use effective counting du
 or divide this count matrix by tau.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.count_matrix_full">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">count_matrix_full</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.count_matrix_full" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.count_matrix_full">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">count_matrix_full</span></span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.count_matrix_full" title="Permalink to this definition">¶</a></dt>
 <dd><p>The count matrix on full set of discrete states, irrespective as to whether they are selected or not.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.counting_mode">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">counting_mode</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.counting_mode" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.counting_mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">counting_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.counting_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The counting mode that was used to estimate the contained count matrix.
 One of ‘None’, ‘sliding’, ‘sample’, ‘effective’.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.is_full_model">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">is_full_model</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.is_full_model" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.is_full_model">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_full_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.is_full_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine whether this counting model refers to the full model that represents all states of the data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -546,76 +576,83 @@ One of ‘None’, ‘sliding’, ‘sample’, ‘effective’.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.lagtime">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">lagtime</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.lagtime" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.lagtime">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lagtime</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.lagtime" title="Permalink to this definition">¶</a></dt>
 <dd><p>The lag time at which the Markov model was estimated.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.n_states">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_states</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.n_states" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.n_states">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_states</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.n_states" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of states</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.n_states_full">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_states_full</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.n_states_full" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.n_states_full">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_states_full</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.n_states_full" title="Permalink to this definition">¶</a></dt>
 <dd><p>Full number of states represented in the underlying data.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.selected_count_fraction">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">selected_count_fraction</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.selected_count_fraction" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.selected_count_fraction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected_count_fraction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.selected_count_fraction" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fraction of counts represented in this count model.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.selected_state_fraction">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">selected_state_fraction</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.selected_state_fraction" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.selected_state_fraction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected_state_fraction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.selected_state_fraction" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fraction of states represented in this count model.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.state_histogram">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">state_histogram</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.state_histogram" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.state_histogram">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_histogram</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.state_histogram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Histogram of discrete state counts, can be None in case no statistics were provided</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.state_histogram_full">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">state_histogram_full</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.state_histogram_full" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.state_histogram_full">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_histogram_full</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.state_histogram_full" title="Permalink to this definition">¶</a></dt>
 <dd><p>Histogram over all states in the trajectories.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.state_symbols">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">state_symbols</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.state_symbols" title="Permalink to this definition">¶</a></dt>
-<dd><p>Symbols (states) that are represented in this count model.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.state_symbols">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_symbols</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.state_symbols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symbols for states that are represented in this count model.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.states">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">states</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.states" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.state_symbols_with_blank">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_symbols_with_blank</span></span><a class="headerlink" href="#deeptime.markov.TransitionCountModel.state_symbols_with_blank" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symbols for states that are represented in this count model plus a state <cite>-1</cite> for states which are
+not represented in this count model.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.states">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">states</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.states" title="Permalink to this definition">¶</a></dt>
 <dd><p>The states in this model, i.e., a iota range from 0 (inclusive) to <a class="reference internal" href="#deeptime.markov.TransitionCountModel.n_states" title="deeptime.markov.TransitionCountModel.n_states"><code class="xref py py-meth docutils literal notranslate"><span class="pre">n_states()</span></code></a> (exclusive).
 See also: <a class="reference internal" href="#deeptime.markov.TransitionCountModel.state_symbols" title="deeptime.markov.TransitionCountModel.state_symbols"><code class="xref py py-meth docutils literal notranslate"><span class="pre">state_symbols()</span></code></a>.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.total_count">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">total_count</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.total_count" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.total_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">total_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.total_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Total number of counts</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.markov.TransitionCountModel.visited_set">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">visited_set</span></code><a class="headerlink" href="#deeptime.markov.TransitionCountModel.visited_set" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.TransitionCountModel.visited_set">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">visited_set</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#deeptime.markov.TransitionCountModel.visited_set" title="Permalink to this definition">¶</a></dt>
 <dd><p>The set of visited states.</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
           </div>
