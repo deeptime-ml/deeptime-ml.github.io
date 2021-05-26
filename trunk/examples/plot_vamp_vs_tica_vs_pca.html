@@ -5,13 +5,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VAMP vs. TICA vs. PCA &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <title>VAMP vs. TICA vs. PCA &#8212; deeptime 0.2.7+5.gb22c33f0.dirty documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
@@ -25,10 +26,11 @@
     <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../_static/d3.v5.min.js"></script>
     <script src="../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
     <script src="../_static/katex_autorenderer.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Kernel CCA on the sqrt-Model to transform data" href="plot_kcca_projection.html" />
@@ -299,7 +301,7 @@ Since this data stems from an in-equilibrium distribution, TICA and VAMP should 
  <span class="n">ax_projections</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
  <span class="n">ax_projections</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 
- <span class="n">ax_projections</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pca_projection</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;PCA&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">5</span><span class="p">)</span>
+ <span class="n">ax_projections</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pca_projection</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;PCA&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
  <span class="n">ax_projections</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tica_projection</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;TICA&#39;</span><span class="p">)</span>
  <span class="n">ax_projections</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vamp_projection</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;VAMP&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
  <span class="n">ax_projections</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
@@ -309,7 +311,7 @@ Since this data stems from an in-equilibrium distribution, TICA and VAMP should 
  <span class="n">plot_dominant_component</span><span class="p">(</span><span class="n">ax_vamp</span><span class="p">,</span> <span class="n">dxy_vamp</span><span class="p">,</span> <span class="s1">&#39;Samples with dominant VAMP component&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.491 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.557 seconds)</p>
 <p><strong>Estimated memory usage:</strong>  10 MB</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-plot-vamp-vs-tica-vs-pca-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">

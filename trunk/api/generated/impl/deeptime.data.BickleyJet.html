@@ -5,13 +5,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>class BickleyJet &#8212; deeptime 0.2.7+0.g49e799a.dirty documentation</title>
+    <title>class BickleyJet &#8212; deeptime 0.2.7+5.gb22c33f0.dirty documentation</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/katex-math.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/gallery-binder.css" />
@@ -25,10 +26,11 @@
     <script src="../../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../../../_static/d3.v5.min.js"></script>
     <script src="../../../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
     <script src="../../../_static/katex_autorenderer.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="class BirthDeathChain" href="deeptime.data.BirthDeathChain.html" />
@@ -185,7 +187,7 @@
 <h1><em>class</em> BickleyJet<a class="headerlink" href="#class-bickleyjet" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="deeptime.data.BickleyJet">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.data.</span></code><code class="sig-name descname"><span class="pre">BickleyJet</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.data.BickleyJet" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.data.</span></code><code class="sig-name descname"><span class="pre">BickleyJet</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.data.BickleyJet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implementation of the Bickley jet. Based on <a class="footnote-reference brackets" href="#hadjighasem2016spectral" id="id1">1</a>.</p>
 <p>The parameters are set to</p>
 <div class="math">
@@ -197,6 +199,15 @@
     \mathrm{eps} &= (0.075, 0.15, 0.3)^\top,\\
     k &= (2,4,6)^\top \frac{1}{r_0}.
 \end{aligned}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>h</strong> (<em>float</em>) – Step size of the RK45 integrator.</p></li>
+<li><p><strong>n_steps</strong> (<em>int</em>) – Number of steps before recording it in the trajectory.</p></li>
+<li><p><strong>full_periodic</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – Whether the quasi-periodic boundary is already built into right-hand side evaluation.</p></li>
+</ul>
+</dd>
+</dl>
 <p class="rubric">References</p>
 <p><dl class="footnote brackets">
 <dt class="label" id="hadjighasem2016spectral"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
@@ -226,26 +237,35 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.eps" title="deeptime.data.BickleyJet.eps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eps</span></code></a></p></td>
 <td><p>Wave amplitudes <span class="math">\(\varepsilon = (0.075, 0.15, 0.3)^\top\)</span>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.h" title="deeptime.data.BickleyJet.h"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.f" title="deeptime.data.BickleyJet.f"><code class="xref py py-obj docutils literal notranslate"><span class="pre">f</span></code></a></p></td>
+<td><p>The right-hand side of the system as callable function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.h" title="deeptime.data.BickleyJet.h"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h</span></code></a></p></td>
 <td><p>The integration step size.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.has_potential_function" title="deeptime.data.BickleyJet.has_potential_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_potential_function</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.has_potential_function" title="deeptime.data.BickleyJet.has_potential_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_potential_function</span></code></a></p></td>
 <td><p>Whether the system defines a potential.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.integrator" title="deeptime.data.BickleyJet.integrator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">integrator</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.integrator" title="deeptime.data.BickleyJet.integrator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">integrator</span></code></a></p></td>
 <td><p>The type of integrator.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.k" title="deeptime.data.BickleyJet.k"><code class="xref py py-obj docutils literal notranslate"><span class="pre">k</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.k" title="deeptime.data.BickleyJet.k"><code class="xref py py-obj docutils literal notranslate"><span class="pre">k</span></code></a></p></td>
 <td><p>Wave numbers <span class="math">\(k = (2,4,6)^\top \frac{1}{r_0}\)</span>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.n_steps" title="deeptime.data.BickleyJet.n_steps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_steps</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.n_steps" title="deeptime.data.BickleyJet.n_steps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_steps</span></code></a></p></td>
 <td><p>The number of integration steps between each evaluation of the state.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.periodic_bc" title="deeptime.data.BickleyJet.periodic_bc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">periodic_bc</span></code></a></p></td>
+<td><p>Whether periodic boundary conditions are applied.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.r0" title="deeptime.data.BickleyJet.r0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">r0</span></code></a></p></td>
 <td><p>The mean radius of the earth <span class="math">\(r_0 = 6.371\)</span> in <span class="math">\(10^6\;\mathrm{m}\)</span>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.time_dependent" title="deeptime.data.BickleyJet.time_dependent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_dependent</span></code></a></p></td>
 <td><p>Whether the potential (if available) and the right-hand side depend on time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.vectorized_f" title="deeptime.data.BickleyJet.vectorized_f"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectorized_f</span></code></a></p></td>
+<td><p>Yields whether the right-hand side function is vectorized.</p></td>
 </tr>
 </tbody>
 </table>
@@ -256,17 +276,20 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.generate" title="deeptime.data.BickleyJet.generate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate</span></code></a>(n_particles[, n_jobs, seed])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.apply_periodic_boundary_conditions" title="deeptime.data.BickleyJet.apply_periodic_boundary_conditions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_periodic_boundary_conditions</span></code></a>(trajectory)</p></td>
+<td><p>Applies periodic boundary conditions for domain <span class="math">\(\Omega = [0, 20)\times [-3, 3)\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.generate" title="deeptime.data.BickleyJet.generate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate</span></code></a>(n_particles[, n_jobs, seed])</p></td>
 <td><p>Generates a trajectory with a fixed number of particles / test points for 401 evaluation steps, i.e., <cite>401 * self.n_steps * self.h</cite> integration steps.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.potential" title="deeptime.data.BickleyJet.potential"><code class="xref py py-obj docutils literal notranslate"><span class="pre">potential</span></code></a>(time, points)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.potential" title="deeptime.data.BickleyJet.potential"><code class="xref py py-obj docutils literal notranslate"><span class="pre">potential</span></code></a>(time, points)</p></td>
 <td><p>Evaluates the system’s potential function at given points in state space at a specified time.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.to_3d" title="deeptime.data.BickleyJet.to_3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_3d</span></code></a>(data[, radius])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.to_3d" title="deeptime.data.BickleyJet.to_3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_3d</span></code></a>(data[, radius])</p></td>
 <td><p>Maps a generated trajectory into 3d space by transforming it through</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.trajectory" title="deeptime.data.BickleyJet.trajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trajectory</span></code></a>(t0, x0, length[, seed, n_jobs])</p></td>
-<td><p>Simulates one or multiple trajectories depending on initial state and initial time.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.data.BickleyJet.trajectory" title="deeptime.data.BickleyJet.trajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trajectory</span></code></a>(t0, x0, length[, seed, n_jobs, …])</p></td>
+<td><p>Generates one or multiple trajectories for the Bickley jet.</p></td>
 </tr>
 </tbody>
 </table>
@@ -289,6 +312,29 @@ to be fixed to <cite>n_jobs=1</cite>.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.data.BickleyJet.apply_periodic_boundary_conditions">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">apply_periodic_boundary_conditions</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trajectory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.data.BickleyJet.apply_periodic_boundary_conditions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies periodic boundary conditions for domain <span class="math">\(\Omega = [0, 20)\times [-3, 3)\)</span>.</p>
+<p class="rubric">Notes</p>
+<p>This method operates not in-place by default, i.e., makes a copy of the trajectory. This behavior
+can be changed by setting <cite>inplace=True</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trajectory</strong> (<em>(</em><em>..</em><em>, </em><em>2</em><em>) </em><em>ndarray</em>) – Input trajectory, last axis must have length two for x and y, respectively.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – Whether to operate in-place.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Trajectory with applied boundary conditions.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>trajectory</p>
 </dd>
 </dl>
 </dd></dl>
@@ -368,8 +414,8 @@ periodic boundary conditions are directly encoded in the space.</p>
 
 <dl class="py method">
 <dt id="deeptime.data.BickleyJet.trajectory">
-<code class="sig-name descname"><span class="pre">trajectory</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.data.BickleyJet.trajectory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Simulates one or multiple trajectories depending on initial state and initial time.</p>
+<code class="sig-name descname"><span class="pre">trajectory</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.data.BickleyJet.trajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates one or multiple trajectories for the Bickley jet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -378,14 +424,8 @@ periodic boundary conditions are directly encoded in the space.</p>
 <li><p><strong>length</strong> (<em>int</em>) – The length of the trajectory that is to be generated.</p></li>
 <li><p><strong>seed</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=-1</em>) – The random seed. In case it is specified to be something else than <cite>-1</cite>, n_jobs must be set to <cite>n_jobs=1</cite>.</p></li>
 <li><p><strong>n_jobs</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Specify number of jobs according to <a class="reference internal" href="../deeptime.util.parallel.handle_n_jobs.html#deeptime.util.parallel.handle_n_jobs" title="deeptime.util.parallel.handle_n_jobs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">deeptime.util.parallel.handle_n_jobs()</span></code></a>.</p></li>
+<li><p><strong>return_time</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – Whether to return the evaluation times too.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>trajectory</strong> – The trajectory of shape (n_initial_conditions, n_evaluations, dimension).
-In case of just one initial condition the shape is squeezed to (n_evaluations, dimension).</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
 </dd></dl>
@@ -426,6 +466,22 @@ In case of just one initial condition the shape is squeezed to (n_evaluations, d
 </dd></dl>
 
 <dl class="py method">
+<dt id="deeptime.data.BickleyJet.f">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">f</span></code><a class="headerlink" href="#deeptime.data.BickleyJet.f" title="Permalink to this definition">¶</a></dt>
+<dd><p>The right-hand side of the system as callable function. In case of SDEs, this only evaluates the
+deterministic part of the function definition.</p>
+<p>Some of these definitions are vectorized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>right_hand_side</strong> – The right-hand side.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Callable[[float, ndarray], ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="deeptime.data.BickleyJet.h">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">h</span></code><a class="headerlink" href="#deeptime.data.BickleyJet.h" title="Permalink to this definition">¶</a></dt>
 <dd><p>The integration step size.</p>
@@ -462,6 +518,23 @@ This means that the deterministic part of the right-hand side is the negative gr
 </dd></dl>
 
 <dl class="py method">
+<dt id="deeptime.data.BickleyJet.periodic_bc">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">periodic_bc</span></code><a class="headerlink" href="#deeptime.data.BickleyJet.periodic_bc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether periodic boundary conditions are applied.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Yields the current value. True corresponds to periodic boundaries.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets a new value.</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="deeptime.data.BickleyJet.r0">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">r0</span></code><a class="headerlink" href="#deeptime.data.BickleyJet.r0" title="Permalink to this definition">¶</a></dt>
 <dd><p>The mean radius of the earth <span class="math">\(r_0 = 6.371\)</span> in <span class="math">\(10^6\;\mathrm{m}\)</span>.</p>
@@ -471,6 +544,17 @@ This means that the deterministic part of the right-hand side is the negative gr
 <dt id="deeptime.data.BickleyJet.time_dependent">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">time_dependent</span></code><a class="headerlink" href="#deeptime.data.BickleyJet.time_dependent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the potential (if available) and the right-hand side depend on time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deeptime.data.BickleyJet.vectorized_f">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">vectorized_f</span></code><a class="headerlink" href="#deeptime.data.BickleyJet.vectorized_f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields whether the right-hand side function is vectorized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>bool</p>
