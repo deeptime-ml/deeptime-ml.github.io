@@ -4,10 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>class TVAEEncoder &#8212; deeptime 0.2.7+5.gb22c33f0.dirty documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>class TVAEEncoder &#8212; deeptime 0.2.9 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
@@ -18,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -62,7 +63,7 @@
 
 
 <!-- h3>Navigation</h3 -->
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
@@ -74,7 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API docs</span></p>
+<p class="caption" role="heading"><span class="caption-text">API docs</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
@@ -109,7 +110,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
@@ -132,7 +133,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.2.7)</a>
+            (0.2.9)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -186,11 +187,11 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="class-tvaeencoder">
+  <section id="class-tvaeencoder">
 <h1><em>class</em> TVAEEncoder<a class="headerlink" href="#class-tvaeencoder" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="deeptime.decomposition.deep.TVAEEncoder">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.decomposition.deep.</span></code><code class="sig-name descname"><span class="pre">TVAEEncoder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">units:</span> <span class="pre">List[int],</span> <span class="pre">nonlinearity=&lt;class</span> <span class="pre">'torch.nn.modules.activation.ELU'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">deeptime.decomposition.deep.</span></span><span class="sig-name descname"><span class="pre">TVAEEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">units:</span> <span class="pre">List[int],</span> <span class="pre">nonlinearity=&lt;class</span> <span class="pre">'torch.nn.modules.activation.ELU'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder" title="Permalink to this definition">¶</a></dt>
 <dd><p>A kind of <code class="xref py py-class docutils literal notranslate"><span class="pre">MLP</span></code>, which maps the output through not one but two transformations so that it projects
 onto mean and log-variance.</p>
 <dl class="field-list simple">
@@ -209,7 +210,7 @@ onto mean and log-variance.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">T_destination</span></code></p></td>
-<td><p>alias of TypeVar(‘T_destination’)</p></td>
+<td><p>alias of TypeVar(‘T_destination’, bound=<code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code>])</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dump_patches</span></code></p></td>
 <td><p>This allows better BC support for <a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.load_state_dict" title="deeptime.decomposition.deep.TVAEEncoder.load_state_dict"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_state_dict()</span></code></a>.</p></td>
@@ -254,64 +255,76 @@ onto mean and log-variance.</p>
 <td><p>Set the extra representation of the module</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.float" title="deeptime.decomposition.deep.TVAEEncoder.float"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>()</p></td>
-<td><p>Casts all floating point parameters and buffers to float datatype.</p></td>
+<td><p>Casts all floating point parameters and buffers to <code class="docutils literal notranslate"><span class="pre">float</span></code> datatype.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.forward" title="deeptime.decomposition.deep.TVAEEncoder.forward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forward</span></code></a>(inputs)</p></td>
 <td><p>Defines the computation performed at every call.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.half" title="deeptime.decomposition.deep.TVAEEncoder.half"><code class="xref py py-obj docutils literal notranslate"><span class="pre">half</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.get_buffer" title="deeptime.decomposition.deep.TVAEEncoder.get_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_buffer</span></code></a>(target)</p></td>
+<td><p>Returns the buffer given by <code class="docutils literal notranslate"><span class="pre">target</span></code> if it exists, otherwise throws an error.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.get_parameter" title="deeptime.decomposition.deep.TVAEEncoder.get_parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_parameter</span></code></a>(target)</p></td>
+<td><p>Returns the parameter given by <code class="docutils literal notranslate"><span class="pre">target</span></code> if it exists, otherwise throws an error.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.get_submodule" title="deeptime.decomposition.deep.TVAEEncoder.get_submodule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_submodule</span></code></a>(target)</p></td>
+<td><p>Returns the submodule given by <code class="docutils literal notranslate"><span class="pre">target</span></code> if it exists, otherwise throws an error.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.half" title="deeptime.decomposition.deep.TVAEEncoder.half"><code class="xref py py-obj docutils literal notranslate"><span class="pre">half</span></code></a>()</p></td>
 <td><p>Casts all floating point parameters and buffers to <code class="docutils literal notranslate"><span class="pre">half</span></code> datatype.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.load_state_dict" title="deeptime.decomposition.deep.TVAEEncoder.load_state_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_state_dict</span></code></a>(state_dict[, strict])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.load_state_dict" title="deeptime.decomposition.deep.TVAEEncoder.load_state_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_state_dict</span></code></a>(state_dict[, strict])</p></td>
 <td><p>Copies parameters and buffers from <a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.state_dict" title="deeptime.decomposition.deep.TVAEEncoder.state_dict"><code class="xref py py-attr docutils literal notranslate"><span class="pre">state_dict</span></code></a> into this module and its descendants.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.modules" title="deeptime.decomposition.deep.TVAEEncoder.modules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">modules</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.modules" title="deeptime.decomposition.deep.TVAEEncoder.modules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">modules</span></code></a>()</p></td>
 <td><p>Returns an iterator over all modules in the network.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.named_buffers" title="deeptime.decomposition.deep.TVAEEncoder.named_buffers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">named_buffers</span></code></a>([prefix, recurse])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.named_buffers" title="deeptime.decomposition.deep.TVAEEncoder.named_buffers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">named_buffers</span></code></a>([prefix, recurse])</p></td>
 <td><p>Returns an iterator over module buffers, yielding both the name of the buffer as well as the buffer itself.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.named_children" title="deeptime.decomposition.deep.TVAEEncoder.named_children"><code class="xref py py-obj docutils literal notranslate"><span class="pre">named_children</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.named_children" title="deeptime.decomposition.deep.TVAEEncoder.named_children"><code class="xref py py-obj docutils literal notranslate"><span class="pre">named_children</span></code></a>()</p></td>
 <td><p>Returns an iterator over immediate children modules, yielding both the name of the module as well as the module itself.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.named_modules" title="deeptime.decomposition.deep.TVAEEncoder.named_modules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">named_modules</span></code></a>([memo, prefix])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.named_modules" title="deeptime.decomposition.deep.TVAEEncoder.named_modules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">named_modules</span></code></a>([memo, prefix, remove_duplicate])</p></td>
 <td><p>Returns an iterator over all modules in the network, yielding both the name of the module as well as the module itself.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.named_parameters" title="deeptime.decomposition.deep.TVAEEncoder.named_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">named_parameters</span></code></a>([prefix, recurse])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.named_parameters" title="deeptime.decomposition.deep.TVAEEncoder.named_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">named_parameters</span></code></a>([prefix, recurse])</p></td>
 <td><p>Returns an iterator over module parameters, yielding both the name of the parameter as well as the parameter itself.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.parameters" title="deeptime.decomposition.deep.TVAEEncoder.parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameters</span></code></a>([recurse])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.parameters" title="deeptime.decomposition.deep.TVAEEncoder.parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameters</span></code></a>([recurse])</p></td>
 <td><p>Returns an iterator over module parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_backward_hook" title="deeptime.decomposition.deep.TVAEEncoder.register_backward_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_backward_hook</span></code></a>(hook)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_backward_hook" title="deeptime.decomposition.deep.TVAEEncoder.register_backward_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_backward_hook</span></code></a>(hook)</p></td>
 <td><p>Registers a backward hook on the module.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_buffer" title="deeptime.decomposition.deep.TVAEEncoder.register_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_buffer</span></code></a>(name, tensor[, persistent])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_buffer" title="deeptime.decomposition.deep.TVAEEncoder.register_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_buffer</span></code></a>(name, tensor[, persistent])</p></td>
 <td><p>Adds a buffer to the module.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_forward_hook" title="deeptime.decomposition.deep.TVAEEncoder.register_forward_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_forward_hook</span></code></a>(hook)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_forward_hook" title="deeptime.decomposition.deep.TVAEEncoder.register_forward_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_forward_hook</span></code></a>(hook)</p></td>
 <td><p>Registers a forward hook on the module.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_forward_pre_hook" title="deeptime.decomposition.deep.TVAEEncoder.register_forward_pre_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_forward_pre_hook</span></code></a>(hook)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_forward_pre_hook" title="deeptime.decomposition.deep.TVAEEncoder.register_forward_pre_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_forward_pre_hook</span></code></a>(hook)</p></td>
 <td><p>Registers a forward pre-hook on the module.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_full_backward_hook" title="deeptime.decomposition.deep.TVAEEncoder.register_full_backward_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_full_backward_hook</span></code></a>(hook)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_full_backward_hook" title="deeptime.decomposition.deep.TVAEEncoder.register_full_backward_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_full_backward_hook</span></code></a>(hook)</p></td>
 <td><p>Registers a backward hook on the module.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_parameter" title="deeptime.decomposition.deep.TVAEEncoder.register_parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_parameter</span></code></a>(name, param)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.register_parameter" title="deeptime.decomposition.deep.TVAEEncoder.register_parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_parameter</span></code></a>(name, param)</p></td>
 <td><p>Adds a parameter to the module.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.requires_grad_" title="deeptime.decomposition.deep.TVAEEncoder.requires_grad_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">requires_grad_</span></code></a>([requires_grad])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.requires_grad_" title="deeptime.decomposition.deep.TVAEEncoder.requires_grad_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">requires_grad_</span></code></a>([requires_grad])</p></td>
 <td><p>Change if autograd should record operations on parameters in this module.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">share_memory</span></code>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.share_memory" title="deeptime.decomposition.deep.TVAEEncoder.share_memory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">share_memory</span></code></a>()</p></td>
+<td><p>See <code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.Tensor.share_memory_()</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.state_dict" title="deeptime.decomposition.deep.TVAEEncoder.state_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_dict</span></code></a>([destination, prefix, keep_vars])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.state_dict" title="deeptime.decomposition.deep.TVAEEncoder.state_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_dict</span></code></a>([destination, prefix, keep_vars])</p></td>
 <td><p>Returns a dictionary containing a whole state of the module.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#id3" title="deeptime.decomposition.deep.TVAEEncoder.to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id3" title="deeptime.decomposition.deep.TVAEEncoder.to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to</span></code></a>(*args, **kwargs)</p></td>
 <td><p>Moves and/or casts the parameters and buffers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.to_empty" title="deeptime.decomposition.deep.TVAEEncoder.to_empty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_empty</span></code></a>(*, device)</p></td>
+<td><p>Moves the parameters and buffers to the specified device without copying storage.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.train" title="deeptime.decomposition.deep.TVAEEncoder.train"><code class="xref py py-obj docutils literal notranslate"><span class="pre">train</span></code></a>([mode])</p></td>
 <td><p>Sets the module in training mode.</p></td>
@@ -328,8 +341,8 @@ onto mean and log-variance.</p>
 </tbody>
 </table>
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.add_module">
-<code class="sig-name descname"><span class="pre">add_module</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.add_module" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.add_module">
+<span class="sig-name descname"><span class="pre">add_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.add_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a child module to the current module.</p>
 <p>The module can be accessed as an attribute using the given name.</p>
 <dl class="field-list simple">
@@ -344,8 +357,8 @@ accessed from this module using the given name</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.apply">
-<code class="sig-name descname"><span class="pre">apply</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.apply" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.apply">
+<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Applies <code class="docutils literal notranslate"><span class="pre">fn</span></code> recursively to every submodule (as returned by <code class="docutils literal notranslate"><span class="pre">.children()</span></code>)
 as well as self. Typical use includes initializing the parameters of a model
 (see also <span class="xref std std-ref">nn-init-doc</span>).</p>
@@ -390,9 +403,13 @@ as well as self. Typical use includes initializing the parameters of a model
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.bfloat16">
-<code class="sig-name descname"><span class="pre">bfloat16</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.bfloat16" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.bfloat16">
+<span class="sig-name descname"><span class="pre">bfloat16</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.bfloat16" title="Permalink to this definition">¶</a></dt>
 <dd><p>Casts all floating point parameters and buffers to <code class="docutils literal notranslate"><span class="pre">bfloat16</span></code> datatype.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method modifies the module in-place.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>self</p>
@@ -404,8 +421,8 @@ as well as self. Typical use includes initializing the parameters of a model
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.buffers">
-<code class="sig-name descname"><span class="pre">buffers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.buffers" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.buffers">
+<span class="sig-name descname"><span class="pre">buffers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.buffers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator over module buffers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -427,8 +444,8 @@ are direct members of this module.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.children">
-<code class="sig-name descname"><span class="pre">children</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.children" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.children" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator over immediate children modules.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Yields</dt>
@@ -438,9 +455,13 @@ are direct members of this module.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.cpu">
-<code class="sig-name descname"><span class="pre">cpu</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.cpu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.cpu">
+<span class="sig-name descname"><span class="pre">cpu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.cpu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Moves all model parameters and buffers to the CPU.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method modifies the module in-place.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>self</p>
@@ -452,12 +473,16 @@ are direct members of this module.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.cuda">
-<code class="sig-name descname"><span class="pre">cuda</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.device</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.cuda" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.cuda">
+<span class="sig-name descname"><span class="pre">cuda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.device</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.cuda" title="Permalink to this definition">¶</a></dt>
 <dd><p>Moves all model parameters and buffers to the GPU.</p>
 <p>This also makes associated parameters and buffers different objects. So
 it should be called before constructing optimizer if the module will
 live on GPU while being optimized.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method modifies the module in-place.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>device</strong> (<em>int</em><em>, </em><em>optional</em>) – if specified, all parameters will be
@@ -473,9 +498,13 @@ copied to that device</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.double">
-<code class="sig-name descname"><span class="pre">double</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.double" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.double">
+<span class="sig-name descname"><span class="pre">double</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.double" title="Permalink to this definition">¶</a></dt>
 <dd><p>Casts all floating point parameters and buffers to <code class="docutils literal notranslate"><span class="pre">double</span></code> datatype.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method modifies the module in-place.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>self</p>
@@ -487,14 +516,16 @@ copied to that device</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.eval">
-<code class="sig-name descname"><span class="pre">eval</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.eval" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.eval">
+<span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.eval" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the module in evaluation mode.</p>
 <p>This has any effect only on certain modules. See documentations of
 particular modules for details of their behaviors in training/evaluation
 mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
 etc.</p>
 <p>This is equivalent with <code class="xref py py-meth docutils literal notranslate"><span class="pre">self.train(False)</span></code>.</p>
+<p>See <span class="xref std std-ref">locally-disable-grad-doc</span> for a comparison between
+<cite>.eval()</cite> and several similar mechanisms that may be confused with it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>self</p>
@@ -506,8 +537,8 @@ etc.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.extra_repr">
-<code class="sig-name descname"><span class="pre">extra_repr</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.extra_repr" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.extra_repr">
+<span class="sig-name descname"><span class="pre">extra_repr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.extra_repr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the extra representation of the module</p>
 <p>To print customized extra information, you should re-implement
 this method in your own modules. Both single-line and multi-line
@@ -515,9 +546,13 @@ strings are acceptable.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.float">
-<code class="sig-name descname"><span class="pre">float</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.float" title="Permalink to this definition">¶</a></dt>
-<dd><p>Casts all floating point parameters and buffers to float datatype.</p>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.float">
+<span class="sig-name descname"><span class="pre">float</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Casts all floating point parameters and buffers to <code class="docutils literal notranslate"><span class="pre">float</span></code> datatype.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method modifies the module in-place.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>self</p>
@@ -529,8 +564,8 @@ strings are acceptable.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.forward">
-<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.forward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -543,9 +578,109 @@ registered hooks while the latter silently ignores them.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.half">
-<code class="sig-name descname"><span class="pre">half</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.half" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.get_buffer">
+<span class="sig-name descname"><span class="pre">get_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.Tensor</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.get_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the buffer given by <code class="docutils literal notranslate"><span class="pre">target</span></code> if it exists,
+otherwise throws an error.</p>
+<p>See the docstring for <code class="docutils literal notranslate"><span class="pre">get_submodule</span></code> for a more detailed
+explanation of this method’s functionality as well as how to
+correctly specify <code class="docutils literal notranslate"><span class="pre">target</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – The fully-qualified string name of the buffer
+to look for. (See <code class="docutils literal notranslate"><span class="pre">get_submodule</span></code> for how to specify a
+fully-qualified string.)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The buffer referenced by <code class="docutils literal notranslate"><span class="pre">target</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AttributeError</strong> – If the target string references an invalid
+    path or resolves to something that is not a
+    buffer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.get_parameter">
+<span class="sig-name descname"><span class="pre">get_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.parameter.Parameter</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.get_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the parameter given by <code class="docutils literal notranslate"><span class="pre">target</span></code> if it exists,
+otherwise throws an error.</p>
+<p>See the docstring for <code class="docutils literal notranslate"><span class="pre">get_submodule</span></code> for a more detailed
+explanation of this method’s functionality as well as how to
+correctly specify <code class="docutils literal notranslate"><span class="pre">target</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – The fully-qualified string name of the Parameter
+to look for. (See <code class="docutils literal notranslate"><span class="pre">get_submodule</span></code> for how to specify a
+fully-qualified string.)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Parameter referenced by <code class="docutils literal notranslate"><span class="pre">target</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.nn.Parameter</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AttributeError</strong> – If the target string references an invalid
+    path or resolves to something that is not an
+    <code class="docutils literal notranslate"><span class="pre">nn.Parameter</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.get_submodule">
+<span class="sig-name descname"><span class="pre">get_submodule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.Module</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.get_submodule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the submodule given by <code class="docutils literal notranslate"><span class="pre">target</span></code> if it exists,
+otherwise throws an error.</p>
+<p>For example, let’s say you have an <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> <code class="docutils literal notranslate"><span class="pre">A</span></code> that
+looks like this:</p>
+<p>(The diagram shows an <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> <code class="docutils literal notranslate"><span class="pre">A</span></code>. <code class="docutils literal notranslate"><span class="pre">A</span></code> has a nested
+submodule <code class="docutils literal notranslate"><span class="pre">net_b</span></code>, which itself has two submodules <code class="docutils literal notranslate"><span class="pre">net_c</span></code>
+and <code class="docutils literal notranslate"><span class="pre">linear</span></code>. <code class="docutils literal notranslate"><span class="pre">net_c</span></code> then has a submodule <code class="docutils literal notranslate"><span class="pre">conv</span></code>.)</p>
+<p>To check whether or not we have the <code class="docutils literal notranslate"><span class="pre">linear</span></code> submodule, we
+would call <code class="docutils literal notranslate"><span class="pre">get_submodule(&quot;net_b.linear&quot;)</span></code>. To check whether
+we have the <code class="docutils literal notranslate"><span class="pre">conv</span></code> submodule, we would call
+<code class="docutils literal notranslate"><span class="pre">get_submodule(&quot;net_b.net_c.conv&quot;)</span></code>.</p>
+<p>The runtime of <code class="docutils literal notranslate"><span class="pre">get_submodule</span></code> is bounded by the degree
+of module nesting in <code class="docutils literal notranslate"><span class="pre">target</span></code>. A query against
+<code class="docutils literal notranslate"><span class="pre">named_modules</span></code> achieves the same result, but it is O(N) in
+the number of transitive modules. So, for a simple check to see
+if some submodule exists, <code class="docutils literal notranslate"><span class="pre">get_submodule</span></code> should always be
+used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – The fully-qualified string name of the submodule
+to look for. (See above example for how to specify a
+fully-qualified string.)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The submodule referenced by <code class="docutils literal notranslate"><span class="pre">target</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.nn.Module</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AttributeError</strong> – If the target string references an invalid
+    path or resolves to something that is not an
+    <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.half">
+<span class="sig-name descname"><span class="pre">half</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.half" title="Permalink to this definition">¶</a></dt>
 <dd><p>Casts all floating point parameters and buffers to <code class="docutils literal notranslate"><span class="pre">half</span></code> datatype.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method modifies the module in-place.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>self</p>
@@ -557,8 +692,8 @@ registered hooks while the latter silently ignores them.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.load_state_dict">
-<code class="sig-name descname"><span class="pre">load_state_dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">OrderedDict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.load_state_dict" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.load_state_dict">
+<span class="sig-name descname"><span class="pre">load_state_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">OrderedDict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.load_state_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies parameters and buffers from <a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.state_dict" title="deeptime.decomposition.deep.TVAEEncoder.state_dict"><code class="xref py py-attr docutils literal notranslate"><span class="pre">state_dict</span></code></a> into
 this module and its descendants. If <code class="xref py py-attr docutils literal notranslate"><span class="pre">strict</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then
 the keys of <a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.state_dict" title="deeptime.decomposition.deep.TVAEEncoder.state_dict"><code class="xref py py-attr docutils literal notranslate"><span class="pre">state_dict</span></code></a> must exactly match the keys returned
@@ -587,8 +722,8 @@ in <a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.modules">
-<code class="sig-name descname"><span class="pre">modules</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.modules" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.modules">
+<span class="sig-name descname"><span class="pre">modules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.modules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator over all modules in the network.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Yields</dt>
@@ -616,8 +751,8 @@ example, <code class="docutils literal notranslate"><span class="pre">l</span></
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.named_buffers">
-<code class="sig-name descname"><span class="pre">named_buffers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.named_buffers" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.named_buffers">
+<span class="sig-name descname"><span class="pre">named_buffers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.named_buffers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator over module buffers, yielding both the
 name of the buffer as well as the buffer itself.</p>
 <dl class="field-list simple">
@@ -642,8 +777,8 @@ are direct members of this module.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.named_children">
-<code class="sig-name descname"><span class="pre">named_children</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.named_children" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.named_children">
+<span class="sig-name descname"><span class="pre">named_children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.named_children" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator over immediate children modules, yielding both
 the name of the module as well as the module itself.</p>
 <dl class="field-list simple">
@@ -660,13 +795,21 @@ the name of the module as well as the module itself.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.named_modules">
-<code class="sig-name descname"><span class="pre">named_modules</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.named_modules" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.named_modules">
+<span class="sig-name descname"><span class="pre">named_modules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_duplicate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.named_modules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator over all modules in the network, yielding
 both the name of the module as well as the module itself.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Yields</dt>
-<dd class="field-odd"><p><em>(string, Module)</em> – Tuple of name and module</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>memo</strong> – a memo to store the set of modules already added to the result</p></li>
+<li><p><strong>prefix</strong> – a prefix that will be added to the name of the module</p></li>
+<li><p><strong>remove_duplicate</strong> – whether to remove the duplicated module instances in the result</p></li>
+<li><p><strong>not</strong> (<em>or</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p><em>(string, Module)</em> – Tuple of name and module</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -690,8 +833,8 @@ example, <code class="docutils literal notranslate"><span class="pre">l</span></
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.named_parameters">
-<code class="sig-name descname"><span class="pre">named_parameters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.nn.parameter.Parameter</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.named_parameters" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.named_parameters">
+<span class="sig-name descname"><span class="pre">named_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.nn.parameter.Parameter</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.named_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator over module parameters, yielding both the
 name of the parameter as well as the parameter itself.</p>
 <dl class="field-list simple">
@@ -716,8 +859,8 @@ are direct members of this module.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.parameters">
-<code class="sig-name descname"><span class="pre">parameters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.parameter.Parameter</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.parameters" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.parameter.Parameter</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator over module parameters.</p>
 <p>This is typically passed to an optimizer.</p>
 <dl class="field-list simple">
@@ -740,8 +883,8 @@ are direct members of this module.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.register_backward_hook">
-<code class="sig-name descname"><span class="pre">register_backward_hook</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">…</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">…</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">torch.utils.hooks.RemovableHandle</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_backward_hook" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.register_backward_hook">
+<span class="sig-name descname"><span class="pre">register_backward_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.utils.hooks.RemovableHandle</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_backward_hook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a backward hook on the module.</p>
 <p>This function is deprecated in favor of <code class="xref py py-meth docutils literal notranslate"><span class="pre">nn.Module.register_full_backward_hook()</span></code> and
 the behavior of this function will change in future versions.</p>
@@ -757,8 +900,8 @@ the behavior of this function will change in future versions.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.register_buffer">
-<code class="sig-name descname"><span class="pre">register_buffer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">persistent</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_buffer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.register_buffer">
+<span class="sig-name descname"><span class="pre">register_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">persistent</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_buffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a buffer to the module.</p>
 <p>This is typically used to register a buffer that should not to be
 considered a model parameter. For example, BatchNorm’s <code class="docutils literal notranslate"><span class="pre">running_mean</span></code>
@@ -787,8 +930,8 @@ from this module using the given name</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.register_forward_hook">
-<code class="sig-name descname"><span class="pre">register_forward_hook</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">…</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">torch.utils.hooks.RemovableHandle</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_forward_hook" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.register_forward_hook">
+<span class="sig-name descname"><span class="pre">register_forward_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.utils.hooks.RemovableHandle</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_forward_hook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a forward hook on the module.</p>
 <p>The hook will be called every time after <a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.forward" title="deeptime.decomposition.deep.TVAEEncoder.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a> has computed an output.
 It should have the following signature:</p>
@@ -812,8 +955,8 @@ it will not have effect on forward since this is called after
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.register_forward_pre_hook">
-<code class="sig-name descname"><span class="pre">register_forward_pre_hook</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">…</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">torch.utils.hooks.RemovableHandle</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_forward_pre_hook" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.register_forward_pre_hook">
+<span class="sig-name descname"><span class="pre">register_forward_pre_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.utils.hooks.RemovableHandle</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_forward_pre_hook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a forward pre-hook on the module.</p>
 <p>The hook will be called every time before <a class="reference internal" href="#deeptime.decomposition.deep.TVAEEncoder.forward" title="deeptime.decomposition.deep.TVAEEncoder.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a> is invoked.
 It should have the following signature:</p>
@@ -837,8 +980,8 @@ if a single value is returned(unless that value is already a tuple).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.register_full_backward_hook">
-<code class="sig-name descname"><span class="pre">register_full_backward_hook</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">…</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">…</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">torch.utils.hooks.RemovableHandle</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_full_backward_hook" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.register_full_backward_hook">
+<span class="sig-name descname"><span class="pre">register_full_backward_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.modules.module.Module</span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.utils.hooks.RemovableHandle</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_full_backward_hook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a backward hook on the module.</p>
 <p>The hook will be called every time the gradients with respect to module
 inputs are computed. The hook should have the following signature:</p>
@@ -870,8 +1013,8 @@ will raise an error.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.register_parameter">
-<code class="sig-name descname"><span class="pre">register_parameter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.parameter.Parameter</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_parameter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.register_parameter">
+<span class="sig-name descname"><span class="pre">register_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.nn.parameter.Parameter</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.register_parameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a parameter to the module.</p>
 <p>The parameter can be accessed as an attribute using given name.</p>
 <dl class="field-list simple">
@@ -886,14 +1029,16 @@ from this module using the given name</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.requires_grad_">
-<code class="sig-name descname"><span class="pre">requires_grad_</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">requires_grad</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.requires_grad_" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.requires_grad_">
+<span class="sig-name descname"><span class="pre">requires_grad_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">requires_grad</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.requires_grad_" title="Permalink to this definition">¶</a></dt>
 <dd><p>Change if autograd should record operations on parameters in this
 module.</p>
 <p>This method sets the parameters’ <code class="xref py py-attr docutils literal notranslate"><span class="pre">requires_grad</span></code> attributes
 in-place.</p>
 <p>This method is helpful for freezing part of the module for finetuning
 or training parts of a model individually (e.g., GAN training).</p>
+<p>See <span class="xref std std-ref">locally-disable-grad-doc</span> for a comparison between
+<cite>.requires_grad_()</cite> and several similar mechanisms that may be confused with it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>requires_grad</strong> (<em>bool</em>) – whether autograd should record operations on
@@ -909,8 +1054,14 @@ parameters in this module. Default: <code class="docutils literal notranslate"><
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.state_dict">
-<code class="sig-name descname"><span class="pre">state_dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.state_dict" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.share_memory">
+<span class="sig-name descname"><span class="pre">share_memory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.share_memory" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.Tensor.share_memory_()</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.state_dict">
+<span class="sig-name descname"><span class="pre">state_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.state_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a dictionary containing a whole state of the module.</p>
 <p>Both parameters and persistent buffers (e.g. running averages) are
 included. Keys are corresponding parameter and buffer names.</p>
@@ -930,28 +1081,28 @@ included. Keys are corresponding parameter and buffer names.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.to">
-<code class="sig-name descname"><span class="pre">to</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.to" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.to">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Moves and/or casts the parameters and buffers.</p>
 <p>This can be called as</p>
 <dl class="py function">
-<dt id="id0">
-<code class="sig-name descname"><span class="pre">to</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_blocking</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_blocking</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="id1">
-<code class="sig-name descname"><span class="pre">to</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_blocking</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_blocking</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="id2">
-<code class="sig-name descname"><span class="pre">to</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_blocking</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_blocking</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="id3">
-<code class="sig-name descname"><span class="pre">to</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memory_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.channels_last</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memory_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.channels_last</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Its signature is similar to <code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.Tensor.to()</span></code>, but only accepts
@@ -1029,8 +1180,26 @@ only argument)</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.train">
-<code class="sig-name descname"><span class="pre">train</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.train" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.to_empty">
+<span class="sig-name descname"><span class="pre">to_empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.device</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.to_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the parameters and buffers to the specified device without copying storage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>device</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">torch.device</span></code>) – The desired device of the parameters
+and buffers in this module.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Module</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.train" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the module in training mode.</p>
 <p>This has any effect only on certain modules. See documentations of
 particular modules for details of their behaviors in training/evaluation
@@ -1051,9 +1220,13 @@ mode (<code class="docutils literal notranslate"><span class="pre">False</span><
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.type">
-<code class="sig-name descname"><span class="pre">type</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dst_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.dtype</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.type" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.type">
+<span class="sig-name descname"><span class="pre">type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dst_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.dtype</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Casts all parameters and buffers to <code class="xref py py-attr docutils literal notranslate"><span class="pre">dst_type</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method modifies the module in-place.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>dst_type</strong> (<em>type</em><em> or </em><em>string</em>) – the desired type</p>
@@ -1068,12 +1241,16 @@ mode (<code class="docutils literal notranslate"><span class="pre">False</span><
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.xpu">
-<code class="sig-name descname"><span class="pre">xpu</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.device</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.xpu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.xpu">
+<span class="sig-name descname"><span class="pre">xpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.device</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.modules.module.T</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.xpu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Moves all model parameters and buffers to the XPU.</p>
 <p>This also makes associated parameters and buffers different objects. So
 it should be called before constructing optimizer if the module will
 live on XPU while being optimized.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method modifies the module in-place.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>device</strong> (<em>int</em><em>, </em><em>optional</em>) – if specified, all parameters will be
@@ -1089,8 +1266,8 @@ copied to that device</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.decomposition.deep.TVAEEncoder.zero_grad">
-<code class="sig-name descname"><span class="pre">zero_grad</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_to_none</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.zero_grad" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.decomposition.deep.TVAEEncoder.zero_grad">
+<span class="sig-name descname"><span class="pre">zero_grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_to_none</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#deeptime.decomposition.deep.TVAEEncoder.zero_grad" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets gradients of all model parameters to zero. See similar function
 under <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.optim.Optimizer</span></code> for more context.</p>
 <dl class="field-list simple">
@@ -1103,7 +1280,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 
 </dd></dl>
 
-</div>
+</section>
 
 
           </div>

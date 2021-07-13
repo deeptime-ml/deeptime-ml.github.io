@@ -27,6 +27,7 @@
    
       ~BoxDiscretization.fetch_model
       ~BoxDiscretization.fit
+      ~BoxDiscretization.fit_fetch
       ~BoxDiscretization.get_params
       ~BoxDiscretization.set_params
    

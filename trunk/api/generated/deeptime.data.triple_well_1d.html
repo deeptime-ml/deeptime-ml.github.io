@@ -4,10 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>function triple_well_1d &#8212; deeptime 0.2.7+5.gb22c33f0.dirty documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>function triple_well_1d &#8212; deeptime 0.2.9 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
@@ -18,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -62,7 +63,7 @@
 
 
 <!-- h3>Navigation</h3 -->
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
@@ -74,7 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API docs</span></p>
+<p class="caption" role="heading"><span class="caption-text">API docs</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
@@ -115,7 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
@@ -138,7 +139,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.2.7)</a>
+            (0.2.9)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -192,11 +193,11 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="function-triple-well-1d">
+  <section id="function-triple-well-1d">
 <h1><em>function</em> triple_well_1d<a class="headerlink" href="#function-triple-well-1d" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="deeptime.data.triple_well_1d">
-<code class="sig-prename descclassname"><span class="pre">deeptime.data.</span></code><code class="sig-name descname"><span class="pre">triple_well_1d</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.data.triple_well_1d" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.data.triple_well_1d">
+<span class="sig-prename descclassname"><span class="pre">deeptime.data.</span></span><span class="sig-name descname"><span class="pre">triple_well_1d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.data.triple_well_1d" title="Permalink to this definition">¶</a></dt>
 <dd><p>A simple one-dimensional triple-well potential landscape. It is given by the stochastic differential equation</p>
 <div class="math">
 \[\mathrm{d}X_t = \nabla V(X_t) \mathrm{d}t + \sigma(t, X_t)\mathrm{d}W_t\]</div>
@@ -204,9 +205,9 @@
 <div class="math">
 \[V(x) = 5 - 24.82 x + 41.4251 x^2 - 27.5344 x^3 + 8.53128 x^4 - 1.24006 x^5 + 0.0684 x^6.\]</div>
 <p>(<a class="reference external" href="../../datasets/plot_triple_well_1d.py">Source code</a>, <a class="reference external" href="../../datasets/plot_triple_well_1d.png">png</a>, <a class="reference external" href="../../datasets/plot_triple_well_1d.hires.png">hires.png</a>, <a class="reference external" href="../../datasets/plot_triple_well_1d.pdf">pdf</a>)</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/plot_triple_well_1d.png" class="plot-directive" src="../../_images/plot_triple_well_1d.png" />
-</div>
+</figure>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -223,7 +224,7 @@
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
           </div>

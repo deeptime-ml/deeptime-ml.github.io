@@ -32,6 +32,8 @@
       ~TransitionCountEstimator.count
       ~TransitionCountEstimator.fetch_model
       ~TransitionCountEstimator.fit
+      ~TransitionCountEstimator.fit_fetch
+      ~TransitionCountEstimator.fit_transform
       ~TransitionCountEstimator.get_params
       ~TransitionCountEstimator.set_params
       ~TransitionCountEstimator.transform

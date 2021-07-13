@@ -34,8 +34,10 @@
       ~TICA.covariance_estimator
       ~TICA.fetch_model
       ~TICA.fit
+      ~TICA.fit_fetch
       ~TICA.fit_from_covariances
       ~TICA.fit_from_timeseries
+      ~TICA.fit_transform
       ~TICA.get_params
       ~TICA.partial_fit
       ~TICA.set_params

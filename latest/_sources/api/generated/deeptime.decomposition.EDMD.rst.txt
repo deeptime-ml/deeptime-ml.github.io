@@ -28,7 +28,10 @@
    
       ~EDMD.fetch_model
       ~EDMD.fit
+      ~EDMD.fit_fetch
+      ~EDMD.fit_transform
       ~EDMD.get_params
       ~EDMD.set_params
+      ~EDMD.transform
    
    

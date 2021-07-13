@@ -34,6 +34,8 @@
       ~TAE.evaluate_loss
       ~TAE.fetch_model
       ~TAE.fit
+      ~TAE.fit_fetch
+      ~TAE.fit_transform
       ~TAE.get_params
       ~TAE.set_params
       ~TAE.setup_optimizer

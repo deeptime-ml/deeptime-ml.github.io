@@ -31,6 +31,7 @@
       ~BayesianMSM.chapman_kolmogorov_validator
       ~BayesianMSM.fetch_model
       ~BayesianMSM.fit
+      ~BayesianMSM.fit_fetch
       ~BayesianMSM.fit_from_msm
       ~BayesianMSM.get_params
       ~BayesianMSM.sample

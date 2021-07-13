@@ -13,7 +13,6 @@
 
    .. autosummary::
    
-      ~VAMPNetModel.instantaneous
       ~VAMPNetModel.lobe
       ~VAMPNetModel.lobe_timelagged
    

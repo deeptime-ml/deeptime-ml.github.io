@@ -15,6 +15,7 @@
    
       ~TVAEEncoder.T_destination
       ~TVAEEncoder.dump_patches
+      ~TVAEEncoder.training
    
    
 
@@ -37,6 +38,9 @@
       ~TVAEEncoder.extra_repr
       ~TVAEEncoder.float
       ~TVAEEncoder.forward
+      ~TVAEEncoder.get_buffer
+      ~TVAEEncoder.get_parameter
+      ~TVAEEncoder.get_submodule
       ~TVAEEncoder.half
       ~TVAEEncoder.load_state_dict
       ~TVAEEncoder.modules
@@ -55,6 +59,7 @@
       ~TVAEEncoder.share_memory
       ~TVAEEncoder.state_dict
       ~TVAEEncoder.to
+      ~TVAEEncoder.to_empty
       ~TVAEEncoder.train
       ~TVAEEncoder.type
       ~TVAEEncoder.xpu

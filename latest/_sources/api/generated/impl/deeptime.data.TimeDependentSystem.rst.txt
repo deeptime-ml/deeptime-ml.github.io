@@ -14,11 +14,13 @@
    .. autosummary::
    
       ~TimeDependentSystem.dimension
+      ~TimeDependentSystem.f
       ~TimeDependentSystem.h
       ~TimeDependentSystem.has_potential_function
       ~TimeDependentSystem.integrator
       ~TimeDependentSystem.n_steps
       ~TimeDependentSystem.time_dependent
+      ~TimeDependentSystem.vectorized_f
    
    
 

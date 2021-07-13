@@ -4,20 +4,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>class BoxDiscretization &#8212; deeptime 0.2.7 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>class BoxDiscretization &#8212; deeptime 0.2.9 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -25,8 +27,8 @@
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../../_static/d3.v5.min.js"></script>
     <script src="../../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
     <script src="../../_static/katex_autorenderer.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
@@ -61,7 +63,7 @@
 
 
 <!-- h3>Navigation</h3 -->
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
@@ -73,7 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API docs</span></p>
+<p class="caption" role="heading"><span class="caption-text">API docs</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a><ul class="current">
@@ -101,7 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
@@ -124,7 +126,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.2.7)</a>
+            (0.2.9)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -178,11 +180,11 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="class-boxdiscretization">
+  <section id="class-boxdiscretization">
 <h1><em>class</em> BoxDiscretization<a class="headerlink" href="#class-boxdiscretization" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="deeptime.clustering.BoxDiscretization">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deeptime.clustering.</span></code><code class="sig-name descname"><span class="pre">BoxDiscretization</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_boxes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.clustering.BoxDiscretization">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">deeptime.clustering.</span></span><span class="sig-name descname"><span class="pre">BoxDiscretization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_boxes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization" title="Permalink to this definition">¶</a></dt>
 <dd><p>An n-dimensional box discretization of Euclidean space.</p>
 <p>It spans an n-dimensional grid based on linspaces along each axis which is then used as cluster centers.
 The linspaces are bounded either by the user (attributes <code class="xref py py-attr docutils literal notranslate"><span class="pre">v0</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">v1</span></code>) or estimated from data.</p>
@@ -224,17 +226,20 @@ The linspaces are bounded either by the user (attributes <code class="xref py py
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.clustering.BoxDiscretization.fit" title="deeptime.clustering.BoxDiscretization.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(data, **kwargs)</p></td>
 <td><p>Fits data to the estimator’s internal <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code> and overwrites it.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.clustering.BoxDiscretization.get_params" title="deeptime.clustering.BoxDiscretization.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.clustering.BoxDiscretization.fit_fetch" title="deeptime.clustering.BoxDiscretization.fit_fetch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_fetch</span></code></a>(data, **kwargs)</p></td>
+<td><p>Fits the internal model on data and subsequently fetches it in one call.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.clustering.BoxDiscretization.get_params" title="deeptime.clustering.BoxDiscretization.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p></td>
 <td><p>Get the parameters.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.clustering.BoxDiscretization.set_params" title="deeptime.clustering.BoxDiscretization.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.clustering.BoxDiscretization.set_params" title="deeptime.clustering.BoxDiscretization.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
 <td><p>Set the parameters of this estimator.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
-<dt id="deeptime.clustering.BoxDiscretization.fetch_model">
-<code class="sig-name descname"><span class="pre">fetch_model</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">deeptime.clustering._box.BoxDiscretizationModel</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.fetch_model" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.clustering.BoxDiscretization.fetch_model">
+<span class="sig-name descname"><span class="pre">fetch_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="deeptime.clustering.BoxDiscretizationModel.html#deeptime.clustering.BoxDiscretizationModel" title="deeptime.clustering._box.BoxDiscretizationModel"><span class="pre">deeptime.clustering._box.BoxDiscretizationModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.fetch_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Yields the estimated model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -247,8 +252,8 @@ The linspaces are bounded either by the user (attributes <code class="xref py py
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.clustering.BoxDiscretization.fit">
-<code class="sig-name descname"><span class="pre">fit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.fit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.clustering.BoxDiscretization.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fits data to the estimator’s internal <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code> and overwrites it. This way, every call to
 <a class="reference internal" href="#deeptime.clustering.BoxDiscretization.fetch_model" title="deeptime.clustering.BoxDiscretization.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a> yields an autonomous model instance. Sometimes a <code class="code docutils literal notranslate"><span class="pre">partial_fit</span></code> method is available,
 in which case the model can get updated by the estimator.</p>
@@ -269,8 +274,28 @@ in which case the model can get updated by the estimator.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.clustering.BoxDiscretization.get_params">
-<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.get_params" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.clustering.BoxDiscretization.fit_fetch">
+<span class="sig-name descname"><span class="pre">fit_fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.fit_fetch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits the internal model on data and subsequently fetches it in one call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>array_like</em>) – Data that is used to fit the model.</p></li>
+<li><p><strong>**kwargs</strong> – Additional arguments to <a class="reference internal" href="#deeptime.clustering.BoxDiscretization.fit" title="deeptime.clustering.BoxDiscretization.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The estimated model.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.clustering.BoxDiscretization.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -283,8 +308,8 @@ in which case the model can get updated by the estimator.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="deeptime.clustering.BoxDiscretization.set_params">
-<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.set_params" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deeptime.clustering.BoxDiscretization.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The latter have parameters of the form
@@ -303,9 +328,9 @@ component of a nested object.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.clustering.BoxDiscretization.has_model">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">has_model</span></code><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.has_model" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.clustering.BoxDiscretization.has_model">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">has_model</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.has_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Property reporting whether this estimator contains an estimated model. This assumes that the model
 is initialized with <cite>None</cite> otherwise.</p>
 <dl class="field-list simple">
@@ -315,15 +340,15 @@ is initialized with <cite>None</cite> otherwise.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="deeptime.clustering.BoxDiscretization.model">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.model" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.clustering.BoxDiscretization.model">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#deeptime.clustering.BoxDiscretization.model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shortcut to <a class="reference internal" href="#deeptime.clustering.BoxDiscretization.fetch_model" title="deeptime.clustering.BoxDiscretization.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
           </div>

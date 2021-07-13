@@ -35,6 +35,8 @@
    
       ~MiniBatchKMeans.fetch_model
       ~MiniBatchKMeans.fit
+      ~MiniBatchKMeans.fit_fetch
+      ~MiniBatchKMeans.fit_transform
       ~MiniBatchKMeans.get_params
       ~MiniBatchKMeans.partial_fit
       ~MiniBatchKMeans.set_params

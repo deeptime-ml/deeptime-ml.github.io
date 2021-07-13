@@ -36,6 +36,7 @@
       ~BayesianHMM.default
       ~BayesianHMM.fetch_model
       ~BayesianHMM.fit
+      ~BayesianHMM.fit_fetch
       ~BayesianHMM.get_params
       ~BayesianHMM.set_params
    

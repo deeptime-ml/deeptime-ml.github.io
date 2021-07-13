@@ -38,6 +38,7 @@
    
       ~Covariance.fetch_model
       ~Covariance.fit
+      ~Covariance.fit_fetch
       ~Covariance.get_params
       ~Covariance.partial_fit
       ~Covariance.set_params

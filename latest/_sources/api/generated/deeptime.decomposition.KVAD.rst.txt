@@ -1,0 +1,39 @@
+﻿
+
+*class* KVAD
+============
+
+.. currentmodule:: deeptime.decomposition
+
+.. autoclass:: KVAD
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KVAD.dim
+      ~KVAD.epsilon
+      ~KVAD.has_model
+      ~KVAD.model
+      ~KVAD.observable_transform
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KVAD.fetch_model
+      ~KVAD.fit
+      ~KVAD.fit_fetch
+      ~KVAD.fit_transform
+      ~KVAD.get_params
+      ~KVAD.set_params
+      ~KVAD.transform
+   
+   

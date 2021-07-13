@@ -28,6 +28,8 @@
    
       ~KoopmanWeightingEstimator.fetch_model
       ~KoopmanWeightingEstimator.fit
+      ~KoopmanWeightingEstimator.fit_fetch
+      ~KoopmanWeightingEstimator.fit_transform
       ~KoopmanWeightingEstimator.get_params
       ~KoopmanWeightingEstimator.partial_fit
       ~KoopmanWeightingEstimator.set_params

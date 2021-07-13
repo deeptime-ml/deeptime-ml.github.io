@@ -37,6 +37,8 @@
    
       ~VAMPNet.fetch_model
       ~VAMPNet.fit
+      ~VAMPNet.fit_fetch
+      ~VAMPNet.fit_transform
       ~VAMPNet.get_params
       ~VAMPNet.partial_fit
       ~VAMPNet.set_params

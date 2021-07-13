@@ -4,10 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VAMP / time-lagged CCA &#8212; deeptime 0.2.7+5.gb22c33f0.dirty documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>VAMP / time-lagged CCA &#8212; deeptime 0.2.9 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
@@ -18,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -62,7 +63,7 @@
 
 
 <!-- h3>Navigation</h3 -->
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index_dimreduction.html">Dimension reduction</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="tica.html">TICA</a></li>
@@ -89,7 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../datasets/index.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_dev.html">For developers</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API docs</span></p>
+<p class="caption" role="heading"><span class="caption-text">API docs</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_base.html">deeptime.base</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_clustering.html">deeptime.clustering</a></li>
@@ -105,7 +106,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../api/index_numeric.html">deeptime.numeric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_util.html">deeptime.util</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imprint.html">Imprint</a></li>
@@ -128,7 +129,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../index.html">Latest release
-            (0.2.7)</a>
+            (0.2.9)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -430,7 +431,7 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="VAMP-/-time-lagged-CCA">
+<section id="VAMP-/-time-lagged-CCA">
 <h1>VAMP / time-lagged CCA<a class="headerlink" href="#VAMP-/-time-lagged-CCA" title="Permalink to this headline">¶</a></h1>
 <p>For users already familiar with the VAMP interface: The corresponding <a class="reference internal" href="../api/generated/deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP"><span class="std std-ref">API docs</span></a>.</p>
 <p>VAMP <a class="footnote-reference brackets" href="#wu2020variational" id="id1">1</a> is short for [V]ariational [A]pproach for [M]arkov [P]rocesses. It can be used as linear dimensionality reduction tool and extends <a class="reference internal" href="tica.html"><span class="doc">TICA</span></a> in the sense that it gives rise to a systematic way to select input features as well as handles off-equilibrium data consistently. The method is a form of canonical correlation analysis <a class="footnote-reference brackets" href="#hotelling1992relations" id="id2">2</a> (originally presented in 1935) in time, also called time-lagged canonical correlation
@@ -450,7 +451,7 @@ operator in a whitenend basis <span class="math">\(\bar K\)</span> yields the be
 <li><p><em>Reversible dynamics but non-stationary data</em>, i.e., the system possesses a stationary distribution with respect to which it obeys detailed balance, but the empirical of the available data did not converge to this stationary distribution.</p></li>
 </ol>
 <p>The third of the described cases is salvageable with TICA when a special reweighting procedure (<a class="reference internal" href="tica.html#Koopman-reweighting"><span class="std std-ref">Koopman reweighting</span></a>) is used.</p>
-<div class="section" id="Short-API-demonstration">
+<section id="Short-API-demonstration">
 <h2>Short API demonstration<a class="headerlink" href="#Short-API-demonstration" title="Permalink to this headline">¶</a></h2>
 <p>To create a <a class="reference internal" href="../api/generated/deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP"><span class="std std-ref">VAMP estimator</span></a>, it needs to be imported and instantiated.</p>
 <div class="nbinput nblast docutils container">
@@ -586,8 +587,8 @@ Projection shape: (1000, 1)
 <img alt="../_images/notebooks_vamp_13_1.png" src="../_images/notebooks_vamp_13_1.png" />
 </div>
 </div>
-</div>
-<div class="section" id="A-more-detailed-look-on-the-estimator">
+</section>
+<section id="A-more-detailed-look-on-the-estimator">
 <h2>A more detailed look on the estimator<a class="headerlink" href="#A-more-detailed-look-on-the-estimator" title="Permalink to this headline">¶</a></h2>
 <p>Here we follow the content presented in <a class="footnote-reference brackets" href="#wu2020variational" id="id6">1</a> to give some more insight into the estimator. For a complete derivation and background please consult the source itself.</p>
 <p>The VAMP estimator estimates a <em>linear</em> model of the form</p>
@@ -723,8 +724,8 @@ right singular vectors V: [[-0.40095045]
 <li><p><code class="docutils literal notranslate"><span class="pre">feature_trajectory[tau:,</span> <span class="pre">...]</span></code> for <code class="docutils literal notranslate"><span class="pre">g</span></code> (i.e., <code class="docutils literal notranslate"><span class="pre">right=True</span></code>)</p></li>
 </ul>
 <p>contain valid values, the remainder might be interpreted as extrapolation.</p>
-</div>
-<div class="section" id="Scoring">
+</section>
+<section id="Scoring">
 <h2>Scoring<a class="headerlink" href="#Scoring" title="Permalink to this headline">¶</a></h2>
 <p>While the estimator solves the problem of finding optimal transforms <span class="math">\(f\)</span>, <span class="math">\(g\)</span>, and <span class="math">\(K\)</span>, one of the advantages of using the variational approach is that the models can be scored with respect to the choice of the system’s featurization.</p>
 <p>This makes it possible to not only optimize for transforms given a basis but also for the basis itself. If -hyothetically- infinite data and computational power were avaiable, the best possible basis would be the one that can describe the full operator <span class="math">\(\mathcal{K}_\tau\)</span>. In practice however, often a balance between the modeling/discretization error of approximating <span class="math">\(\mathcal{K}_\tau\)</span> and the statistical error of fitting the parameters given finite data has to be struck.</p>
@@ -815,8 +816,8 @@ right singular vectors V: [[-0.40095045]
 <blockquote>
 <div><p>It is assumed that the model and the test_model stem from respective “training” and “testing” datasets. Estimation of the average cross-validation score and partitioning of data into test and training part is not performed by this method.</p>
 </div></blockquote>
-</div>
-<div class="section" id="Singular-vector-scaling">
+</section>
+<section id="Singular-vector-scaling">
 <h2>Singular vector scaling<a class="headerlink" href="#Singular-vector-scaling" title="Permalink to this headline">¶</a></h2>
 <p>Optionally the singular vectors can be scaled upon projection. Per default, <a class="reference internal" href="../api/generated/deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP.scaling"><span class="std std-ref">scaling</span></a> is set to <code class="docutils literal notranslate"><span class="pre">None</span></code> which means that no scaling is applied and the variance of all singular vectors (sometimes also called order parameters) is <span class="math">\(1\)</span>.</p>
 <div class="nbinput docutils container">
@@ -859,8 +860,8 @@ None
 <img alt="../_images/notebooks_vamp_35_0.png" src="../_images/notebooks_vamp_35_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="Example-with-position-based-fluids">
+</section>
+<section id="Example-with-position-based-fluids">
 <h2>Example with position based fluids<a class="headerlink" href="#Example-with-position-based-fluids" title="Permalink to this headline">¶</a></h2>
 <p>Here we demonstrate a toy dataset created by a position based fluids (PBF) simulator <a class="footnote-reference brackets" href="#macklin2013position" id="id13">8</a>. In a 2-dimensional simulation box we place particles which then relax to a resting density. We periodically disturb the equilibrium resting density by applying a force toward the left and right boundary of the simulation box alternatingly. For more details on the dataset, please refer to the example data’s
 <a class="reference internal" href="../api/generated/deeptime.data.position_based_fluids.html#deeptime.data.position_based_fluids"><span class="std std-ref">documentation</span></a>.</p>
@@ -32117,8 +32118,8 @@ AAAdZGF0YQAAAAEAAAAATGF2ZjU4LjQ1LjEwMA==
 </dd>
 </dl>
 </p>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
