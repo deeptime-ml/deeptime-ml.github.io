@@ -6,19 +6,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>class CovarianceKoopmanModel &#8212; deeptime 0.2.9 documentation</title>
+    <title>class CovarianceKoopmanModel &#8212; deeptime 0.2.9+5.g25baa5d2 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -321,10 +321,10 @@ define the effective output dimension.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.copy" title="deeptime.decomposition.CovarianceKoopmanModel.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
 <td><p>Makes a deep copy of this model.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.effective_output_dimension" title="deeptime.decomposition.CovarianceKoopmanModel.effective_output_dimension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">effective_output_dimension</span></code></a>(rank0, rankt, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.effective_output_dimension" title="deeptime.decomposition.CovarianceKoopmanModel.effective_output_dimension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">effective_output_dimension</span></code></a>(rank0, rankt, ...)</p></td>
 <td><p>Computes effective output dimension.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.expectation" title="deeptime.decomposition.CovarianceKoopmanModel.expectation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expectation</span></code></a>(observables, statistics[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.expectation" title="deeptime.decomposition.CovarianceKoopmanModel.expectation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expectation</span></code></a>(observables, statistics[, ...])</p></td>
 <td><p>Compute future expectation of observable or covariance using the approximated Koopman operator.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.forward" title="deeptime.decomposition.CovarianceKoopmanModel.forward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forward</span></code></a>(data[, propagate])</p></td>
@@ -527,23 +527,23 @@ to zero but the “components”th ones.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>r</strong> (<em>float</em><em> or </em><em>str</em>) – <p>The type of score to evaluate. Can by an floating point value greater or equal to 1 or ‘E’, yielding the
-VAMP-r score or the VAMP-E score, respectively. <a class="footnote-reference brackets" href="#wu2020variational" id="id1">1</a>
+VAMP-r score or the VAMP-E score, respectively. <a class="footnote-reference brackets" href="#footcite-wu2020variational" id="id1">1</a>
 Typical choices are:</p>
 <ul>
 <li><dl class="simple">
 <dt>’VAMP1’  Sum of singular values of the half-weighted Koopman matrix.</dt><dd><p>If the model is reversible, this is equal to the sum of
-Koopman matrix eigenvalues, also called Rayleigh quotient <a class="footnote-reference brackets" href="#wu2020variational" id="id2">1</a>.</p>
+Koopman matrix eigenvalues, also called Rayleigh quotient <a class="footnote-reference brackets" href="#footcite-wu2020variational" id="id2">1</a>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>’VAMP2’  Sum of squared singular values of the half-weighted Koopman</dt><dd><p>matrix <a class="footnote-reference brackets" href="#wu2020variational" id="id3">1</a>. If the model is reversible, this is
-equal to the kinetic variance <a class="footnote-reference brackets" href="#noe2015kinetic" id="id4">2</a>.</p>
+<dt>’VAMP2’  Sum of squared singular values of the half-weighted Koopman</dt><dd><p>matrix <a class="footnote-reference brackets" href="#footcite-wu2020variational" id="id3">1</a>. If the model is reversible, this is
+equal to the kinetic variance <a class="footnote-reference brackets" href="#footcite-noe2015kinetic" id="id4">2</a>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>’VAMPE’  Approximation error of the estimated Koopman operator with respect to</dt><dd><p>the true Koopman operator up to an additive constant <a class="footnote-reference brackets" href="#wu2020variational" id="id5">1</a> .</p>
+<dt>’VAMPE’  Approximation error of the estimated Koopman operator with respect to</dt><dd><p>the true Koopman operator up to an additive constant <a class="footnote-reference brackets" href="#footcite-wu2020variational" id="id5">1</a> .</p>
 </dd>
 </dl>
 </li>
@@ -571,14 +571,14 @@ self and <cite>test_model</cite>. Otherwise return the selected VAMP-score of se
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>The VAMP-<span class="math">\(r\)</span> and VAMP-E scores are computed according to <a class="footnote-reference brackets" href="#wu2020variational" id="id6">1</a>,
+<p>The VAMP-<span class="math">\(r\)</span> and VAMP-E scores are computed according to <a class="footnote-reference brackets" href="#footcite-wu2020variational" id="id6">1</a>,
 Equation (33) and Equation (30), respectively.</p>
 <p class="rubric">References</p>
-<p><dl class="footnote brackets">
-<dt class="label" id="wu2020variational"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>)</span></dt>
+<p id="id7"><dl class="footnote brackets">
+<dt class="label" id="footcite-wu2020variational"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>)</span></dt>
 <dd><p>Hao Wu and Frank Noé. Variational approach for learning markov processes from time series data. <em>Journal of Nonlinear Science</em>, 30(1):23–66, 2020.</p>
 </dd>
-<dt class="label" id="noe2015kinetic"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dt class="label" id="footcite-noe2015kinetic"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>Frank Noé and Cecilia Clementi. Kinetic distance and kinetic maps from molecular dynamics simulation. <em>Journal of chemical theory and computation</em>, 11(10):5002–5011, 2015.</p>
 </dd>
 </dl>
@@ -658,7 +658,7 @@ coefficients of the basis <span class="math">\(\chi_0\)</span>.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.CovarianceKoopmanModel.cov">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cov</span></span><em class="property"><span class="pre">:</span> <span class="pre">deeptime.covariance._covariance.CovarianceModel</span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.cov" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cov</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="deeptime.covariance.CovarianceModel.html#deeptime.covariance.CovarianceModel" title="deeptime.covariance._covariance.CovarianceModel"><span class="pre">deeptime.covariance._covariance.CovarianceModel</span></a></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.cov" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimated covariances.</p>
 </dd></dl>
 
@@ -688,7 +688,7 @@ coefficients of the basis <span class="math">\(\chi_0\)</span>.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.CovarianceKoopmanModel.dim">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dim</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[int]</span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.dim" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dim</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.dim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimension attribute. Can either be int or None. In case of</p>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">int</span></code> it evaluates it as the actual dimension, must be strictly greater 0,</p></li>
@@ -744,7 +744,7 @@ feature and a column for each component.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.CovarianceKoopmanModel.instantaneous_obs">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">instantaneous_obs</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable[[numpy.ndarray],</span> <span class="pre">numpy.ndarray]</span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.instantaneous_obs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">instantaneous_obs</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.instantaneous_obs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the current state <span class="math">\(x_t\)</span> to <span class="math">\(f(x_t)\)</span>. Defaults to <cite>f(x) = x</cite>.</p>
 </dd></dl>
 
@@ -788,7 +788,7 @@ Potentially pseudo-inverse instead of true inverse.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.CovarianceKoopmanModel.scaling">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">scaling</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[str]</span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.scaling" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">scaling</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.scaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scaling of projection. Can be <code class="code docutils literal notranslate"><span class="pre">None</span></code>, ‘kinetic map’, or ‘km’</p>
 </dd></dl>
 
@@ -820,13 +820,13 @@ to the space of right singular functions.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.CovarianceKoopmanModel.timelagged_obs">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">timelagged_obs</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable[[numpy.ndarray],</span> <span class="pre">numpy.ndarray]</span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.timelagged_obs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">timelagged_obs</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.timelagged_obs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the future state <span class="math">\(x_{t+\tau}\)</span> to <span class="math">\(g(x_{t+\tau})\)</span>. Defaults to <cite>f(x) = x</cite>.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.CovarianceKoopmanModel.var_cutoff">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">var_cutoff</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[float]</span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.var_cutoff" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">var_cutoff</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.CovarianceKoopmanModel.var_cutoff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Variance cutoff parameter. Can be set to include dimensions up to a certain threshold. Takes
 precedence over the <a class="reference internal" href="#deeptime.decomposition.CovarianceKoopmanModel.dim" title="deeptime.decomposition.CovarianceKoopmanModel.dim"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dim()</span></code></a> parameter.</p>
 <dl class="field-list simple">

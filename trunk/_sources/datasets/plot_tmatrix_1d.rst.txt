@@ -61,9 +61,9 @@ Example for :meth:`deeptime.data.tmatrix_metropolis1d`.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.776 seconds)
+   **Total running time of the script:** ( 0 minutes  0.886 seconds)
 
-**Estimated memory usage:**  9 MB
+**Estimated memory usage:**  10 MB
 
 
 .. _sphx_glr_download_datasets_plot_tmatrix_1d.py:
