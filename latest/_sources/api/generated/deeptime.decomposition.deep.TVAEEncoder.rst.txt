@@ -39,6 +39,7 @@
       ~TVAEEncoder.float
       ~TVAEEncoder.forward
       ~TVAEEncoder.get_buffer
+      ~TVAEEncoder.get_extra_state
       ~TVAEEncoder.get_parameter
       ~TVAEEncoder.get_submodule
       ~TVAEEncoder.half
@@ -56,6 +57,7 @@
       ~TVAEEncoder.register_full_backward_hook
       ~TVAEEncoder.register_parameter
       ~TVAEEncoder.requires_grad_
+      ~TVAEEncoder.set_extra_state
       ~TVAEEncoder.share_memory
       ~TVAEEncoder.state_dict
       ~TVAEEncoder.to
