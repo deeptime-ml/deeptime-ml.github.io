@@ -30,9 +30,10 @@ clustering.
 
 
 
-.. image:: /examples/images/sphx_glr_plot_kcca_projection_001.png
-    :alt: Discrete states vs. estimated discrete states, 0.990% correctly assigned, Observed test data colored by estimated state assignment, Test data, colored by ground truth, Transformation of test data, colored by ground truth
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/images/sphx_glr_plot_kcca_projection_001.png
+   :alt: Discrete states vs. estimated discrete states, 0.995% correctly assigned, Observed test data colored by estimated state assignment, Test data, colored by ground truth, Transformation of test data, colored by ground truth
+   :srcset: /examples/images/sphx_glr_plot_kcca_projection_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -119,9 +120,9 @@ clustering.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.410 seconds)
+   **Total running time of the script:** ( 0 minutes  3.787 seconds)
 
-**Estimated memory usage:**  161 MB
+**Estimated memory usage:**  183 MB
 
 
 .. _sphx_glr_download_examples_plot_kcca_projection.py:

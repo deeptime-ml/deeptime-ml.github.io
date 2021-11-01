@@ -28,9 +28,10 @@ using the :meth:`deeptime.data.drunkards_walk`.
 
 
 
-.. image:: /examples/images/sphx_glr_plot_tpt_gross_net_flux_001.png
-    :alt: Gross flux, Net flux
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/images/sphx_glr_plot_tpt_gross_net_flux_001.png
+   :alt: Gross flux, Net flux
+   :srcset: /examples/images/sphx_glr_plot_tpt_gross_net_flux_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -90,7 +91,7 @@ using the :meth:`deeptime.data.drunkards_walk`.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.077 seconds)
+   **Total running time of the script:** ( 0 minutes  3.490 seconds)
 
 **Estimated memory usage:**  15 MB
 

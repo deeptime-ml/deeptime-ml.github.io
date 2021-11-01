@@ -29,9 +29,10 @@ Since this data stems from an in-equilibrium distribution, TICA and VAMP should 
 
 
 
-.. image:: /examples/images/sphx_glr_plot_vamp_vs_tica_vs_pca_001.png
-    :alt: Projections of two-dimensional trajectory, Samples with dominant TICA component, Samples with dominant VAMP component, Samples with dominant PCA component
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/images/sphx_glr_plot_vamp_vs_tica_vs_pca_001.png
+   :alt: Projections of two-dimensional trajectory, Samples with dominant TICA component, Samples with dominant VAMP component, Samples with dominant PCA component
+   :srcset: /examples/images/sphx_glr_plot_vamp_vs_tica_vs_pca_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -104,7 +105,7 @@ Since this data stems from an in-equilibrium distribution, TICA and VAMP should 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.567 seconds)
+   **Total running time of the script:** ( 0 minutes  0.603 seconds)
 
 **Estimated memory usage:**  10 MB
 

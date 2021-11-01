@@ -27,9 +27,10 @@ Showcase use of the :meth:`deeptime.data.double_well_discrete` dataset.
 
 
 
-.. image:: /datasets/images/sphx_glr_plot_double_well_discrete_001.png
-    :alt: Discrete double well with good discretization of transition region
-    :class: sphx-glr-single-img
+.. image-sg:: /datasets/images/sphx_glr_plot_double_well_discrete_001.png
+   :alt: Discrete double well with good discretization of transition region
+   :srcset: /datasets/images/sphx_glr_plot_double_well_discrete_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -60,9 +61,9 @@ Showcase use of the :meth:`deeptime.data.double_well_discrete` dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.384 seconds)
+   **Total running time of the script:** ( 0 minutes  0.445 seconds)
 
-**Estimated memory usage:**  10 MB
+**Estimated memory usage:**  9 MB
 
 
 .. _sphx_glr_download_datasets_plot_double_well_discrete.py:

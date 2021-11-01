@@ -27,9 +27,10 @@ Example for the :meth:`deeptime.data.triple_well_1d` dataset.
 
 
 
-.. image:: /datasets/images/sphx_glr_plot_triple_well_1d_001.png
-    :alt: Potential landscape, Histogram of trajectory
-    :class: sphx-glr-single-img
+.. image-sg:: /datasets/images/sphx_glr_plot_triple_well_1d_001.png
+   :alt: Potential landscape, Histogram of trajectory
+   :srcset: /datasets/images/sphx_glr_plot_triple_well_1d_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -64,9 +65,9 @@ Example for the :meth:`deeptime.data.triple_well_1d` dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.613 seconds)
+   **Total running time of the script:** ( 0 minutes  1.756 seconds)
 
-**Estimated memory usage:**  10 MB
+**Estimated memory usage:**  9 MB
 
 
 .. _sphx_glr_download_datasets_plot_triple_well_1d.py:

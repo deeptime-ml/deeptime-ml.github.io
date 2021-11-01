@@ -27,9 +27,10 @@ Example for the :meth:`deeptime.data.triple_well_2d` dataset.
 
 
 
-.. image:: /datasets/images/sphx_glr_plot_triple_well_2d_001.png
-    :alt: Example of a trajectory in the potential landscape
-    :class: sphx-glr-single-img
+.. image-sg:: /datasets/images/sphx_glr_plot_triple_well_2d_001.png
+   :alt: Example of a trajectory in the potential landscape
+   :srcset: /datasets/images/sphx_glr_plot_triple_well_2d_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -76,9 +77,9 @@ Example for the :meth:`deeptime.data.triple_well_2d` dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.882 seconds)
+   **Total running time of the script:** ( 0 minutes  0.805 seconds)
 
-**Estimated memory usage:**  30 MB
+**Estimated memory usage:**  29 MB
 
 
 .. _sphx_glr_download_datasets_plot_triple_well_2d.py:
