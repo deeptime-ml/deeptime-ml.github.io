@@ -5,22 +5,22 @@
 
 Computation times
 =================
-**00:34.449** total execution time for **examples** files:
+**00:32.055** total execution time for **examples** files:
 
 +------------------------------------------------------------------------------------------------+-----------+----------+
-| :ref:`sphx_glr_examples_plot_vamp_pbf_projection.py` (``plot_vamp_pbf_projection.py``)         | 00:10.321 | 50.3 MB  |
+| :ref:`sphx_glr_examples_plot_vamp_pbf_projection.py` (``plot_vamp_pbf_projection.py``)         | 00:09.639 | 51.0 MB  |
 +------------------------------------------------------------------------------------------------+-----------+----------+
-| :ref:`sphx_glr_examples_plot_clustering_comparison.py` (``plot_clustering_comparison.py``)     | 00:09.423 | 13.4 MB  |
+| :ref:`sphx_glr_examples_plot_clustering_comparison.py` (``plot_clustering_comparison.py``)     | 00:06.655 | 13.7 MB  |
 +------------------------------------------------------------------------------------------------+-----------+----------+
-| :ref:`sphx_glr_examples_plot_kcca_projection.py` (``plot_kcca_projection.py``)                 | 00:03.787 | 183.2 MB |
+| :ref:`sphx_glr_examples_plot_kcca_projection.py` (``plot_kcca_projection.py``)                 | 00:05.708 | 172.4 MB |
 +------------------------------------------------------------------------------------------------+-----------+----------+
-| :ref:`sphx_glr_examples_plot_kcca_bickley.py` (``plot_kcca_bickley.py``)                       | 00:03.645 | 120.7 MB |
+| :ref:`sphx_glr_examples_plot_kcca_bickley.py` (``plot_kcca_bickley.py``)                       | 00:03.159 | 97.3 MB  |
 +------------------------------------------------------------------------------------------------+-----------+----------+
-| :ref:`sphx_glr_examples_plot_tpt_gross_net_flux.py` (``plot_tpt_gross_net_flux.py``)           | 00:03.490 | 15.1 MB  |
+| :ref:`sphx_glr_examples_plot_tpt_gross_net_flux.py` (``plot_tpt_gross_net_flux.py``)           | 00:02.420 | 14.8 MB  |
 +------------------------------------------------------------------------------------------------+-----------+----------+
-| :ref:`sphx_glr_examples_plot_pcca_drunkard.py` (``plot_pcca_drunkard.py``)                     | 00:01.849 | 24.6 MB  |
+| :ref:`sphx_glr_examples_plot_pcca_drunkard.py` (``plot_pcca_drunkard.py``)                     | 00:02.221 | 24.2 MB  |
 +------------------------------------------------------------------------------------------------+-----------+----------+
-| :ref:`sphx_glr_examples_plot_sindy_rossler_attractor.py` (``plot_sindy_rossler_attractor.py``) | 00:01.330 | 10.7 MB  |
+| :ref:`sphx_glr_examples_plot_sindy_rossler_attractor.py` (``plot_sindy_rossler_attractor.py``) | 00:01.469 | 10.0 MB  |
 +------------------------------------------------------------------------------------------------+-----------+----------+
-| :ref:`sphx_glr_examples_plot_vamp_vs_tica_vs_pca.py` (``plot_vamp_vs_tica_vs_pca.py``)         | 00:00.603 | 10.0 MB  |
+| :ref:`sphx_glr_examples_plot_vamp_vs_tica_vs_pca.py` (``plot_vamp_vs_tica_vs_pca.py``)         | 00:00.783 | 9.5 MB   |
 +------------------------------------------------------------------------------------------------+-----------+----------+
