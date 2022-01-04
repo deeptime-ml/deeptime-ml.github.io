@@ -1,0 +1,41 @@
+﻿
+
+*class* TRAM
+============
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: TRAM
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TRAM.connectivity_options
+      ~TRAM.has_model
+      ~TRAM.log_likelihood
+      ~TRAM.markov_state_energies
+      ~TRAM.model
+      ~TRAM.reversible
+      ~TRAM.sparse
+      ~TRAM.therm_state_energies
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TRAM.compute_sample_weights
+      ~TRAM.fetch_model
+      ~TRAM.fit
+      ~TRAM.fit_fetch
+      ~TRAM.get_params
+      ~TRAM.set_params
+   
+   

@@ -76,7 +76,7 @@ Example for the :meth:`deeptime.data.quadruple_well` dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.726 seconds)
+   **Total running time of the script:** ( 0 minutes  0.686 seconds)
 
 **Estimated memory usage:**  28 MB
 

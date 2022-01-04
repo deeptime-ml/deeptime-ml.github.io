@@ -98,7 +98,7 @@ This example demonstrates the implemented clustering methods on one example data
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.655 seconds)
+   **Total running time of the script:** ( 0 minutes  6.442 seconds)
 
 **Estimated memory usage:**  14 MB
 
