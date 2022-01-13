@@ -1,0 +1,113 @@
+================
+Release protocol
+================
+
+This is the release protocol for releasing the latest version of deeptime. All shell commands are assumed to be executed
+inside the deeptime project folder unless stated otherwise.
+
+Preliminaries
+-------------
+
+Ensure the deeptime repository is up to date with origin/main. Ensure that the documentation is up to date, and the
+origin/main branch of deeptime contains the latest version of the notebooks by executing
+
+.. code-block:: console
+
+    git submodule update --init
+
+
+1. Create a tag
+---------------
+
+See the current tags by executing
+
+.. code-block:: console
+
+    git tag
+
+In this release protocol we will pretend to release v0.1.0 as an example. Choose your version id
+according to pep440 semantics: https://www.python.org/dev/peps/pep-0440.
+Create a new tag:
+
+.. code-block:: console
+
+    git tag -a 'v0.1.0'
+    git push --tags
+
+Ensure that this only pushes one tag, namely, the one you just added.
+
+2. Draft a new release on github
+--------------------------------
+
+On the right-hand side of the deeptime github page, there is a link to the `releases` page. Navigate to this page and
+click on `draft new release`.
+Pick the tag you just pushed. Auto-generate the release notes and make any changes you see fit. Then, publish the
+release by clicking `publish release`.
+
+3. Make a pipy release
+----------------------
+
+Make the `.tar` file by executing
+
+.. code-block:: console
+
+    python setup.py sdist
+
+:code:`ls dist` should now show a `.tar` file containing the release. Do a twine upload of the `.tar` file:
+
+.. code-block:: console
+
+    twine upload dist/deeptime-0.1.0.tar.gz
+
+Go to https://pipy.org/project/deeptime to verify that the new release was correctly uploaded.
+Now check that the pipy release works by creating a temporary conda environment and downloading deeptime with pip:
+
+.. code-block:: console
+
+    pip install deeptime -v
+
+This should show the correct version number. As one final check to ensure the correct version was installed and works
+as intended, run the following command:
+
+.. code-block:: console
+
+    python -c "import deeptime; print(deeptime.__version__)"
+
+
+4. Make a Conda release
+-----------------------
+
+go to https://github.com/conda-forge/deeptime-feedstock
+Make the following changes in :code:`recipe/meta.yaml`:
+* change the version number in line 2.
+* change the SHA256 hash. Get a new sha hash by executing:
+
+.. code-block:: console
+
+    curl -sL https://github.com/deeptime-ml/deeptime/archive/refs/tags/v0.4.1.tar.gz | openssl sha256
+
+Make a pull request with the aforementioned changes in deeptime-feedstock. Go through the checklist given in the pull
+request description. Make sure you add the following comment: :code:`@conda-forge-admin, please rerender`.
+
+Pray to the Azure gods for a happy CI pipeline. Merge once the CI is happy.
+
+
+5. Update the docs
+------------------
+
+First build the docs (make sure the notebooks are up-to-date! - see above).
+
+.. code-block:: console
+
+    nox -s make_docs -- clean
+
+Clone the documentation repository (https://github.com/deeptime-ml/deeptime-ml.github.io) into a separate location. Copy
+the newly built documentation (i.e. the content of :code:`deeptime/docs/build/html`) to location of the cloned
+documentation repo. Since this is a release, the new docs are copied into both the trunk/ and release/ folders.
+
+Open `index.html` to check that the correct version number shows up at the bottom of the page, and in the site title.
+(The version number should be: 0.1.0, without extra characters, e.g. NOT 0.1.0+1.g34879).
+If the version number in the site title is wrong, temporarily set the correct number hardcoded in
+:code:`deeptime/docs/source/conf.py` and rebuild the docs.
+
+Once you are satisfied with the documentation, push to https://github.com/deeptime-ml/deeptime-ml.github.io

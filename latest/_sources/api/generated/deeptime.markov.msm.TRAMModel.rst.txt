@@ -32,7 +32,7 @@
       ~TRAMModel.compute_PMF
       ~TRAMModel.compute_log_likelihood
       ~TRAMModel.compute_observable
-      ~TRAMModel.compute_sample_weights
+      ~TRAMModel.compute_sample_weights_log
       ~TRAMModel.copy
       ~TRAMModel.get_params
       ~TRAMModel.set_params

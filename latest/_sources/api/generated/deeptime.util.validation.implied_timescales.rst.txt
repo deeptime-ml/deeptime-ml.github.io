@@ -1,0 +1,17 @@
+﻿
+
+*function* implied\_timescales
+==============================
+
+.. currentmodule:: deeptime.util.validation
+
+.. autofunction:: implied_timescales
+
+   
+   
+   
+
+   
+
+   
+   

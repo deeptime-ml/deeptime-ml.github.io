@@ -1,0 +1,17 @@
+﻿
+
+*function* plot\_ck\_test
+=========================
+
+.. currentmodule:: deeptime.plots
+
+.. autofunction:: plot_ck_test
+
+   
+   
+   
+
+   
+
+   
+   

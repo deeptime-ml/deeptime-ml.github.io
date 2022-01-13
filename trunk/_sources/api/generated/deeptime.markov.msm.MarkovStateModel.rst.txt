@@ -16,6 +16,7 @@
       ~MarkovStateModel.count_model
       ~MarkovStateModel.empirical_koopman_model
       ~MarkovStateModel.has_count_model
+      ~MarkovStateModel.is_real
       ~MarkovStateModel.koopman_model
       ~MarkovStateModel.lagtime
       ~MarkovStateModel.n_eigenvalues

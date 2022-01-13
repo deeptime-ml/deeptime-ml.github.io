@@ -1,0 +1,17 @@
+﻿
+
+*function* plot\_implied\_timescales
+====================================
+
+.. currentmodule:: deeptime.plots
+
+.. autofunction:: plot_implied_timescales
+
+   
+   
+   
+
+   
+
+   
+   

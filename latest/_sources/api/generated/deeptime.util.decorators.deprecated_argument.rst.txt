@@ -1,0 +1,17 @@
+﻿
+
+*function* deprecated\_argument
+===============================
+
+.. currentmodule:: deeptime.util.decorators
+
+.. autofunction:: deprecated_argument
+
+   
+   
+   
+
+   
+
+   
+   

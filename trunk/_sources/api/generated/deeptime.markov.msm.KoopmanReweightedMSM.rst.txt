@@ -16,6 +16,7 @@
       ~KoopmanReweightedMSM.count_model
       ~KoopmanReweightedMSM.empirical_koopman_model
       ~KoopmanReweightedMSM.has_count_model
+      ~KoopmanReweightedMSM.is_real
       ~KoopmanReweightedMSM.koopman_model
       ~KoopmanReweightedMSM.lagtime
       ~KoopmanReweightedMSM.n_eigenvalues

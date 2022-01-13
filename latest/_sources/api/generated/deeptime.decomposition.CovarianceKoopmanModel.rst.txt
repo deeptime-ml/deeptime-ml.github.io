@@ -24,6 +24,7 @@
       ~CovarianceKoopmanModel.instantaneous_coefficients
       ~CovarianceKoopmanModel.instantaneous_obs
       ~CovarianceKoopmanModel.koopman_matrix
+      ~CovarianceKoopmanModel.lagtime
       ~CovarianceKoopmanModel.mean_0
       ~CovarianceKoopmanModel.mean_t
       ~CovarianceKoopmanModel.operator
@@ -49,6 +50,7 @@
    .. autosummary::
    
       ~CovarianceKoopmanModel.backward
+      ~CovarianceKoopmanModel.ck_test
       ~CovarianceKoopmanModel.copy
       ~CovarianceKoopmanModel.effective_output_dimension
       ~CovarianceKoopmanModel.expectation

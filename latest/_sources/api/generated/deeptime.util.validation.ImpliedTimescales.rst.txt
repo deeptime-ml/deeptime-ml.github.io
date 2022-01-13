@@ -1,0 +1,36 @@
+﻿
+
+*class* ImpliedTimescales
+=========================
+
+.. currentmodule:: deeptime.util.validation
+
+.. autoclass:: ImpliedTimescales
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ImpliedTimescales.has_samples
+      ~ImpliedTimescales.lagtimes
+      ~ImpliedTimescales.max_n_processes
+      ~ImpliedTimescales.max_n_samples
+      ~ImpliedTimescales.n_lagtimes
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ImpliedTimescales.n_samples
+      ~ImpliedTimescales.plot
+      ~ImpliedTimescales.samples_for_process
+      ~ImpliedTimescales.timescales_for_process
+   
+   

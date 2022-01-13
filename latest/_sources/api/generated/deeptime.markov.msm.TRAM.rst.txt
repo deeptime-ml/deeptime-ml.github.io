@@ -14,6 +14,7 @@
    .. autosummary::
    
       ~TRAM.has_model
+      ~TRAM.init_strategy_options
       ~TRAM.model
       ~TRAM.reversible
       ~TRAM.sparse
