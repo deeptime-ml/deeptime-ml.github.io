@@ -32,6 +32,5 @@
       ~TRAMDataset.check_against_model
       ~TRAMDataset.restrict_to_largest_connected_set
       ~TRAMDataset.restrict_to_submodel
-      ~TRAMDataset.setflags
    
    

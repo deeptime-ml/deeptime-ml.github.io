@@ -105,7 +105,7 @@ Since this data stems from an in-equilibrium distribution, TICA and VAMP should 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  12.327 seconds)
+   **Total running time of the script:** ( 0 minutes  10.149 seconds)
 
 **Estimated memory usage:**  12 MB
 

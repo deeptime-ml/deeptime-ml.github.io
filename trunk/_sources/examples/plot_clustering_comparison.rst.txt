@@ -98,9 +98,9 @@ This example demonstrates the implemented clustering methods on one example data
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.717 seconds)
+   **Total running time of the script:** ( 0 minutes  6.182 seconds)
 
-**Estimated memory usage:**  21 MB
+**Estimated memory usage:**  20 MB
 
 
 .. _sphx_glr_download_examples_plot_clustering_comparison.py:
