@@ -90,9 +90,9 @@ Example for the :meth:`deeptime.data.quadruple_well_asymmetric` dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.793 seconds)
+   **Total running time of the script:** ( 0 minutes  0.826 seconds)
 
-**Estimated memory usage:**  27 MB
+**Estimated memory usage:**  28 MB
 
 
 .. _sphx_glr_download_datasets_plot_quadruple_well_asymmetric.py:

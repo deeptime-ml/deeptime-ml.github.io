@@ -1,0 +1,17 @@
+﻿
+
+*function* handle\_progress\_bar
+================================
+
+.. currentmodule:: deeptime.util.platform
+
+.. autofunction:: handle_progress_bar
+
+   
+   
+   
+
+   
+
+   
+   

@@ -25,6 +25,7 @@
       ~TransitionCountModel.state_histogram
       ~TransitionCountModel.state_histogram_full
       ~TransitionCountModel.state_symbols
+      ~TransitionCountModel.state_symbols_with_blank
       ~TransitionCountModel.states
       ~TransitionCountModel.total_count
       ~TransitionCountModel.visited_set

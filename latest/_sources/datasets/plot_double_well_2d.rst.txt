@@ -78,9 +78,9 @@ Example for the :meth:`deeptime.data.double_well_2d` dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.749 seconds)
+   **Total running time of the script:** ( 0 minutes  0.811 seconds)
 
-**Estimated memory usage:**  28 MB
+**Estimated memory usage:**  32 MB
 
 
 .. _sphx_glr_download_datasets_plot_double_well_2d.py:

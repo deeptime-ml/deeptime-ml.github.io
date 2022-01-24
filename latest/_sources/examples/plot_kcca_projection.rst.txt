@@ -31,7 +31,7 @@ clustering.
 
 
 .. image-sg:: /examples/images/sphx_glr_plot_kcca_projection_001.png
-   :alt: Discrete states vs. estimated discrete states, 0.995% correctly assigned, Observed test data colored by estimated state assignment, Test data, colored by ground truth, Transformation of test data, colored by ground truth
+   :alt: Discrete states vs. estimated discrete states, 0.996% correctly assigned, Observed test data colored by estimated state assignment, Test data, colored by ground truth, Transformation of test data, colored by ground truth
    :srcset: /examples/images/sphx_glr_plot_kcca_projection_001.png
    :class: sphx-glr-single-img
 
@@ -42,7 +42,7 @@ clustering.
 
  .. code-block:: none
 
-    /home/mho/miniconda3/envs/deeptime/lib/python3.9/site-packages/matplotlib/collections.py:206: ComplexWarning: Casting complex values to real discards the imaginary part
+    /home/mho/Development/deeptime/.nox/make_docs/lib/python3.9/site-packages/matplotlib/collections.py:200: ComplexWarning: Casting complex values to real discards the imaginary part
       offsets = np.asanyarray(offsets, float)
 
 
@@ -120,9 +120,9 @@ clustering.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.787 seconds)
+   **Total running time of the script:** ( 0 minutes  21.393 seconds)
 
-**Estimated memory usage:**  183 MB
+**Estimated memory usage:**  198 MB
 
 
 .. _sphx_glr_download_examples_plot_kcca_projection.py:

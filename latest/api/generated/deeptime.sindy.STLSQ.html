@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>class STLSQ &#8212; deeptime 0.3.0 documentation</title>
+    <title>class STLSQ &#8212; deeptime 0.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -122,7 +122,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.3.0)</a>
+            (0.4.0)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -180,7 +180,7 @@
 <h1><em>class</em> STLSQ<a class="headerlink" href="#class-stlsq" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="deeptime.sindy.STLSQ">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">deeptime.sindy.</span></span><span class="sig-name descname"><span class="pre">STLSQ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ridge_kw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_intercept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy_X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.STLSQ" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.sindy.</span></span><span class="sig-name descname"><span class="pre">STLSQ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ridge_kw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_intercept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy_X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.STLSQ" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sequentially thresholded least squares algorithm.</p>
 <p>Attempts to minimize the objective function
 <span class="math">\(\|y - Xw\|^2_2 + \alpha \|w\|^2_2\)</span>
@@ -229,7 +229,7 @@ the mean and dividing by the l2-norm.</p></li>
 <td><p>Predict using the linear model.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#deeptime.sindy.STLSQ.score" title="deeptime.sindy.STLSQ.score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score</span></code></a>(X, y[, sample_weight])</p></td>
-<td><p>Return the coefficient of determination <span class="math">\(R^2\)</span> of the prediction.</p></td>
+<td><p>Return the coefficient of determination of the prediction.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.sindy.STLSQ.set_params" title="deeptime.sindy.STLSQ.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</p></td>
 <td><p>Set the parameters of this estimator.</p></td>
@@ -294,16 +294,15 @@ contained subobjects that are estimators.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.STLSQ.score">
 <span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.STLSQ.score" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the coefficient of determination <span class="math">\(R^2\)</span> of the
-prediction.</p>
-<p>The coefficient <span class="math">\(R^2\)</span> is defined as <span class="math">\((1 - \frac{u}{v})\)</span>,
-where <span class="math">\(u\)</span> is the residual sum of squares <code class="docutils literal notranslate"><span class="pre">((y_true</span> <span class="pre">-</span> <span class="pre">y_pred)</span>
-<span class="pre">**</span> <span class="pre">2).sum()</span></code> and <span class="math">\(v\)</span> is the total sum of squares <code class="docutils literal notranslate"><span class="pre">((y_true</span> <span class="pre">-</span>
-<span class="pre">y_true.mean())</span> <span class="pre">**</span> <span class="pre">2).sum()</span></code>. The best possible score is 1.0 and it
-can be negative (because the model can be arbitrarily worse). A
-constant model that always predicts the expected value of <cite>y</cite>,
-disregarding the input features, would get a <span class="math">\(R^2\)</span> score of
-0.0.</p>
+<dd><p>Return the coefficient of determination of the prediction.</p>
+<p>The coefficient of determination <span class="math">\(R^2\)</span> is defined as
+<span class="math">\((1 - \frac{u}{v})\)</span>, where <span class="math">\(u\)</span> is the residual
+sum of squares <code class="docutils literal notranslate"><span class="pre">((y_true</span> <span class="pre">-</span> <span class="pre">y_pred)**</span> <span class="pre">2).sum()</span></code> and <span class="math">\(v\)</span>
+is the total sum of squares <code class="docutils literal notranslate"><span class="pre">((y_true</span> <span class="pre">-</span> <span class="pre">y_true.mean())</span> <span class="pre">**</span> <span class="pre">2).sum()</span></code>.
+The best possible score is 1.0 and it can be negative (because the
+model can be arbitrarily worse). A constant model that always predicts
+the expected value of <cite>y</cite>, disregarding the input features, would get
+a <span class="math">\(R^2\)</span> score of 0.0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
