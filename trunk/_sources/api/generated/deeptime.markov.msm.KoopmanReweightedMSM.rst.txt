@@ -44,6 +44,7 @@
 
    .. autosummary::
    
+      ~KoopmanReweightedMSM.ck_test
       ~KoopmanReweightedMSM.committor_backward
       ~KoopmanReweightedMSM.committor_forward
       ~KoopmanReweightedMSM.compute_state_indices

@@ -1,0 +1,38 @@
+﻿
+
+*class* BayesianMSMPosterior
+============================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: BayesianMSMPosterior
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BayesianMSMPosterior.lagtime
+      ~BayesianMSMPosterior.prior
+      ~BayesianMSMPosterior.samples
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BayesianMSMPosterior.ck_test
+      ~BayesianMSMPosterior.copy
+      ~BayesianMSMPosterior.evaluate_samples
+      ~BayesianMSMPosterior.gather_stats
+      ~BayesianMSMPosterior.get_params
+      ~BayesianMSMPosterior.set_params
+      ~BayesianMSMPosterior.submodel
+      ~BayesianMSMPosterior.timescales
+   
+   

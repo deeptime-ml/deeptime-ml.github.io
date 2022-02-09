@@ -1,0 +1,17 @@
+﻿
+
+*function* ck\_test
+===================
+
+.. currentmodule:: deeptime.util.validation
+
+.. autofunction:: ck_test
+
+   
+   
+   
+
+   
+
+   
+   

@@ -37,6 +37,7 @@
 
    .. autosummary::
    
+      ~MarkovStateModel.ck_test
       ~MarkovStateModel.committor_backward
       ~MarkovStateModel.committor_forward
       ~MarkovStateModel.compute_state_indices

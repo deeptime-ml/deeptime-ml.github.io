@@ -14,6 +14,7 @@
    .. autosummary::
    
       ~BayesianHMMPosterior.hidden_state_trajectories_samples
+      ~BayesianHMMPosterior.lagtime
       ~BayesianHMMPosterior.prior
       ~BayesianHMMPosterior.samples
    
@@ -26,6 +27,7 @@
 
    .. autosummary::
    
+      ~BayesianHMMPosterior.ck_test
       ~BayesianHMMPosterior.copy
       ~BayesianHMMPosterior.evaluate_samples
       ~BayesianHMMPosterior.gather_stats
@@ -34,5 +36,6 @@
       ~BayesianHMMPosterior.submodel
       ~BayesianHMMPosterior.submodel_largest
       ~BayesianHMMPosterior.submodel_populous
+      ~BayesianHMMPosterior.timescales
    
    

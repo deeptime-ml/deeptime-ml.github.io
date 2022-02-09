@@ -38,6 +38,7 @@
 
    .. autosummary::
    
+      ~AugmentedMSM.ck_test
       ~AugmentedMSM.committor_backward
       ~AugmentedMSM.committor_forward
       ~AugmentedMSM.compute_state_indices

@@ -43,7 +43,7 @@ its respective `TRAM tutorial <../notebooks/tram.ipynb>`__.
 
  .. code-block:: none
 
-    0it [00:00, ?it/s]    Running TRAM estimate: : 0it [00:00, ?it/s]    Running TRAM estimate:   7%|7         | 7/100 [00:00<00:01, 65.94it/s]    Running TRAM estimate:  11%|#1        | 11/100 [00:00<00:01, 66.91it/s]
+      0%|          | 0/100 [00:00<?, ?it/s]    Running TRAM estimate:   0%|          | 0/100 [00:00<?, ?it/s]    Running TRAM estimate:   5%|5         | 5/100 [00:00<00:01, 48.01it/s]    Running TRAM estimate:  12%|#2        | 12/100 [00:00<00:01, 59.90it/s]    Running TRAM estimate: 100%|##########| 14/14 [00:00<00:00, 57.41it/s] 
 
 
 
@@ -135,9 +135,9 @@ its respective `TRAM tutorial <../notebooks/tram.ipynb>`__.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.527 seconds)
+   **Total running time of the script:** ( 0 minutes  0.591 seconds)
 
-**Estimated memory usage:**  18 MB
+**Estimated memory usage:**  10 MB
 
 
 .. _sphx_glr_download_examples_plot_tram.py:
