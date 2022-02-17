@@ -1,0 +1,30 @@
+﻿
+
+*class* ChapmanKolmogorovTest
+=============================
+
+.. currentmodule:: deeptime.util.validation
+
+.. autoclass:: ChapmanKolmogorovTest
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ChapmanKolmogorovTest.err_est
+      ~ChapmanKolmogorovTest.estimates
+      ~ChapmanKolmogorovTest.estimates_samples
+      ~ChapmanKolmogorovTest.has_errors
+      ~ChapmanKolmogorovTest.lagtimes
+      ~ChapmanKolmogorovTest.n_components
+      ~ChapmanKolmogorovTest.predictions
+      ~ChapmanKolmogorovTest.predictions_samples
+   
+   
+
+   
+
+   
+   

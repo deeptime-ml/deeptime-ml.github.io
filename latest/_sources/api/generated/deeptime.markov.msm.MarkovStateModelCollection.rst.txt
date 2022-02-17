@@ -19,6 +19,7 @@
       ~MarkovStateModelCollection.current_model
       ~MarkovStateModelCollection.empirical_koopman_model
       ~MarkovStateModelCollection.has_count_model
+      ~MarkovStateModelCollection.is_real
       ~MarkovStateModelCollection.koopman_model
       ~MarkovStateModelCollection.lagtime
       ~MarkovStateModelCollection.n_connected_msms
@@ -43,6 +44,7 @@
 
    .. autosummary::
    
+      ~MarkovStateModelCollection.ck_test
       ~MarkovStateModelCollection.committor_backward
       ~MarkovStateModelCollection.committor_forward
       ~MarkovStateModelCollection.compute_state_indices

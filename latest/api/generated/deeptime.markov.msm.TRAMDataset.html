@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>class TRAMDataset &#8212; deeptime 0.4.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="../../_static/d3.v5.min.js"></script>
+    <script src="../../_static/d3-legend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+    <script src="../../_static/katex_autorenderer.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="class TransitionCountEstimator" href="deeptime.markov.TransitionCountEstimator.html" />
+    <link rel="prev" title="function indices_by_state" href="deeptime.markov.sample.indices_by_state.html" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../_static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../_static/favicon-16x16.png">
+<link rel="manifest" href="../../_static/site.webmanifest">
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo/deeptime_romand_white.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<!-- h3>Navigation</h3 -->
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dimreduction.html">Dimension reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_deepdimreduction.html">Deep dim reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/sindy.html">SINDy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_msm.html">Markov state models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_base.html">deeptime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_clustering.html">deeptime.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_sindy.html">deeptime.sindy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_covariance.html">deeptime.covariance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_decomposition.html">deeptime.decomposition</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_markov.html">deeptime.markov</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_markov.html#estimators">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov.html#models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_markov.html#analysis-tools">Analysis tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_markov.html#utilities-and-alternatives">Utilities and alternatives</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.number_of_states.html"><em>function</em> number_of_states</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.count_states.html"><em>function</em> count_states</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.compute_connected_sets.html"><em>function</em> compute_connected_sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.compute_dtrajs_effective.html"><em>function</em> compute_dtrajs_effective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.compute_effective_stride.html"><em>function</em> compute_effective_stride</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.indices_by_distribution.html"><em>function</em> indices_by_distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.compute_index_states.html"><em>function</em> compute_index_states</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.indices_by_sequence.html"><em>function</em> indices_by_sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deeptime.markov.sample.indices_by_state.html"><em>function</em> indices_by_state</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>class</em> TRAMDataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov.html#transition-counting">Transition counting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_markov.html#special-msm-estimators-and-models">Special MSM estimators and models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_hmm.html">deeptime.markov.hmm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_markov_tools.html">deeptime.markov.tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_basis.html">deeptime.basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_kernels.html">deeptime.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_plots.html">deeptime.plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_numeric.html">deeptime.numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_util.html">deeptime.util</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
+</ul>
+
+
+
+
+
+<!--
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=deeptime-ml&repo=deeptime&type=star&count=true&size=large&v=2"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+--><p class="caption">
+    <span class="caption-text">Version</span>
+</p>
+<ul>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-latest"
+           href="../latest/../../index.html">Latest release
+            (0.4.1)</a>
+    </li>
+    <li class="toctree-l1">
+        <a class="reference internal" id="version-trunk"
+           href="../trunk/../../index.html">Trunk version</a>
+    </li>
+</ul>
+<script>
+    if (window.location.href.indexOf("latest") > -1) {
+        document.getElementById("version-latest").className = "reference internal current";
+        document.getElementById("version-trunk").className = "reference internal";
+    } else {
+        document.getElementById("version-latest").className = "reference internal";
+        document.getElementById("version-trunk").className = "reference internal current";
+    }
+</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../contents.html">Documentation overview</a><ul>
+  <li><a href="../index_markov.html">deeptime.markov</a><ul>
+      <li>Previous: <a href="deeptime.markov.sample.indices_by_state.html" title="previous chapter"><em>function</em> indices_by_state</a></li>
+      <li>Next: <a href="deeptime.markov.TransitionCountEstimator.html" title="next chapter"><em>class</em> TransitionCountEstimator</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" placeholder="Quick search" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="github-wrapper">
+    <a href="https://github.com/deeptime-ml/deeptime"
+       style="width: 16rem; height:100%; position:absolute; top:0; left:0;">
+        <img class="side-logo logo-github" src="../../_static/GitHub-Mark-Light-32px.png" alt="gh"/>
+        <div style="display: table; height: 100%; overflow: hidden;">
+            <div style="display: table-cell; vertical-align: middle;">
+                <div>deeptime &#64; GitHub
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="class-tramdataset">
+<h1><em>class</em> TRAMDataset<a class="headerlink" href="#class-tramdataset" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.markov.msm.</span></span><span class="sig-name descname"><span class="pre">TRAMDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias_matrices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ttrajs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_therm_states</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_markov_states</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lagtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sliding'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dataset for organizing data and obtaining properties from data that are needed for TRAM.
+The minimum required parameters for constructing a TRAMDataset are the <cite>dtrajs</cite> and <cite>bias_matrices</cite>. In this case,
+<cite>ttrajs</cite> are inferred from the shape of the <cite>dtrajs</cite>, by assuming each trajectory in <cite>dtrajs</cite> corresponds to a
+unique thermodynamic state, with the index corresponding to the index of occurrence in <cite>dtrajs</cite>.</p>
+<p>The values at identical indices in <cite>dtrajs</cite>, <cite>ttrajs</cite> and <cite>bias_matrices</cite> correspond to the sample. For example, at
+indices <cite>(i, n)</cite> we find information about the <span class="math">\(n\)</span>-th sample in trajectory <span class="math">\(i\)</span>. <cite>dtrajs[i][n]</cite> gives us
+the index of the Markov state the sample falls into. <cite>ttrajs[i][n]</cite> gives us the thermodynamic state the sample was
+sampled at (which may be different from other samples in the trajectory due to a replica exchange swap occurring at
+index <span class="math">\(n\)</span>). Finally, <cite>bias_matrices[i][n]</cite> gives us for each thermodynamic state, the energy of the sample
+evaluated at that thermodynamic state. In other words: <cite>bias_matrices[i][n][k]</cite> gives us <span class="math">\(b^k(x_i^n)\)</span>, i.e.
+the bias energy as if the sample were observed in thermodynamic state <span class="math">\(k\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dtrajs</strong> (<em>array-like</em><em>(</em><em>ndarray</em><em>(</em><em>n</em><em>)</em><em>)</em><em>, </em><em>int</em>) – The discrete trajectories in the form of a list or array of numpy arrays. <cite>dtrajs[i]</cite> contains one trajectory.
+<cite>dtrajs[i][n]</cite> contains the Markov state index that the <span class="math">\(n\)</span>-th sample from the <span class="math">\(i\)</span>-th trajectory was
+binned into. Each of the dtrajs can be of variable length.</p></li>
+<li><p><strong>bias_matrices</strong> (<em>array-like</em><em>(</em><em>ndarray</em><em>(</em><em>n</em><em>,</em><em>m</em><em>)</em><em>)</em><em>, </em><em>float</em>) – The bias energy matrices. <cite>bias_matrices[i][n, k]</cite> contains the bias energy of the <span class="math">\(n\)</span>-th sample from the
+<span class="math">\(i\)</span>-th trajectory, evaluated at thermodynamic state <span class="math">\(k\)</span>, i.e. <span class="math">\(b^k(x_{i,n})\)</span>. The bias energy
+matrices should have the same size as <cite>dtrajs</cite> in both the first and second dimension. The third dimension is of
+size <cite>n_therm_state</cite>, i.e. for each sample, the bias energy in every thermodynamic state is calculated and
+stored in the <cite>bias_matrices</cite>.</p></li>
+<li><p><strong>ttrajs</strong> (<em>array-like</em><em>(</em><em>ndarray</em><em>(</em><em>n</em><em>)</em><em>)</em><em>, </em><em>int</em><em>, </em><em>optional</em>) – <cite>ttrajs[i]</cite> contains for each sample in the <span class="math">\(i\)</span>-th trajectory the index of the thermodynamic state that
+sample was sampled at. If <cite>ttrajs = None</cite>, we assume no replica exchange was done. In this case we assume each
+trajectory  corresponds to a unique thermodynamic state, and <cite>n_therm_states</cite> equals the size of <cite>dtrajs</cite>.</p></li>
+<li><p><strong>n_therm_states</strong> (<em>int</em><em>, </em><em>optional</em>) – if <cite>n_therm_states</cite> is given, the indices in <cite>ttrajs</cite> are checked to lie within <cite>n_therm_states</cite> bound.
+Otherwise, <cite>n_therm_states</cite> are inferred from the highest occurring index in <cite>ttrajs</cite>.</p></li>
+<li><p><strong>n_markov_states</strong> (<em>int</em><em>, </em><em>optional</em>) – if <cite>n_markov_states</cite> is given, the indices in <cite>dtrajs</cite> are checked to lie within <cite>n_markov_states</cite> bound.
+Otherwise, <cite>n_markov_states</cite> are inferred from the highest occurring index in <cite>dtrajs</cite>.</p></li>
+<li><p><strong>lagtime</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=1</em>) – Integer lag time at which transitions are counted.</p></li>
+<li><p><strong>count_mode</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default='sliding'</em>) – <p>One of “sample”, “sliding”, “sliding-effective”, and “effective”.</p>
+<ul>
+<li><p>”sample” strides the trajectory with lagtime <span class="math">\(\tau\)</span> and uses the strided counts as transitions.</p></li>
+<li><p>”sliding” uses a sliding window approach, yielding counts that are statistically correlated and too
+large by a factor of <span class="math">\(\tau\)</span>; in uncertainty estimation this yields wrong uncertainties.</p></li>
+<li><p>”sliding-effective” takes “sliding” and divides it by <span class="math">\(\tau\)</span>, which can be shown to provide a
+likelihood that is the geometrical average over shifted subsamples of the trajectory,
+<span class="math">\((s_1,\:s_{tau+1},\:...),\:(s_2,\:t_{tau+2},\:...),\)</span> etc. This geometrical average converges to
+the correct likelihood in the statistical limit <a class="footnote-reference brackets" href="#footcite-trendelkamp2015estimation" id="id1">1</a>.</p></li>
+<li><p>”effective” uses an estimate of the transition counts that are statistically uncorrelated.
+Recommended when estimating Bayesian MSMs.</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="deeptime.markov.TransitionCountEstimator.html#deeptime.markov.TransitionCountEstimator" title="deeptime.markov.TransitionCountEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransitionCountEstimator</span></code></a>,
+<a class="reference internal" href="deeptime.markov.msm.TRAM.html#deeptime.markov.msm.TRAM" title="deeptime.markov.msm.TRAM"><code class="xref py py-class docutils literal notranslate"><span class="pre">TRAM</span></code></a>, <a class="reference internal" href="deeptime.markov.msm.TRAMModel.html#deeptime.markov.msm.TRAMModel" title="deeptime.markov.msm.TRAMModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TRAMModel</span></code></a></p>
+</div>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.connectivity_options" title="deeptime.markov.msm.TRAMDataset.connectivity_options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connectivity_options</span></code></a></p></td>
+<td><p>All possible connectivity modes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.n_markov_states" title="deeptime.markov.msm.TRAMDataset.n_markov_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_markov_states</span></code></a></p></td>
+<td><p>The number of Markov states.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.n_therm_states" title="deeptime.markov.msm.TRAMDataset.n_therm_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_therm_states</span></code></a></p></td>
+<td><p>The number of thermodynamic states.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.state_counts" title="deeptime.markov.msm.TRAMDataset.state_counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_counts</span></code></a></p></td>
+<td><p>ndarray(n, m) The state counts histogram.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.tram_input" title="deeptime.markov.msm.TRAMDataset.tram_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tram_input</span></code></a></p></td>
+<td><p>The TRAMInput object containing the data needed for estimation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.transition_counts" title="deeptime.markov.msm.TRAMDataset.transition_counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transition_counts</span></code></a></p></td>
+<td><p>The transition counts matrices.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.check_against_model" title="deeptime.markov.msm.TRAMDataset.check_against_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_against_model</span></code></a>(model)</p></td>
+<td><p>Check the number of thermodynamic states of the model against that of the dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.restrict_to_largest_connected_set" title="deeptime.markov.msm.TRAMDataset.restrict_to_largest_connected_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restrict_to_largest_connected_set</span></code></a>([...])</p></td>
+<td><p>Find the largest connected set of Markov states based on the connectivity settings and the input data, and restrict the input data to this connected set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.restrict_to_submodel" title="deeptime.markov.msm.TRAMDataset.restrict_to_submodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restrict_to_submodel</span></code></a>(submodel)</p></td>
+<td><p>Restrict the count matrices and <cite>dtrajs</cite> to the given submodel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAMDataset.setflags" title="deeptime.markov.msm.TRAMDataset.setflags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setflags</span></code></a>([write])</p></td>
+<td><p>Set writeable flags for contained arrays.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.check_against_model">
+<span class="sig-name descname"><span class="pre">check_against_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.check_against_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the number of thermodynamic states of the model against that of the dataset. The number of
+thermodynamic states in the dataset have to be smaller than or equal to those of the model, otherwise the
+<cite>ttrajs</cite> and/or <cite>dtrajs</cite> would be out of bounds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> (<a class="reference internal" href="deeptime.markov.msm.TRAMModel.html#deeptime.markov.msm.TRAMModel" title="deeptime.markov.msm.TRAMModel"><em>TRAMModel</em></a>) – The model to check the data against.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data encompasses more Markov and/or thermodynamic states than the model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.restrict_to_largest_connected_set">
+<span class="sig-name descname"><span class="pre">restrict_to_largest_connected_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connectivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'post_hoc_RE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.restrict_to_largest_connected_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the largest connected set of Markov states based on the connectivity settings and the input data, and
+restrict the input data to this connected set.
+The largest connected set is computed based on the data, and self.connectivity and self.connectivity_factor.
+The data is then restricted to the largest connected set and count models are recomputed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>connectivity</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default=&quot;post_hoc_RE&quot;</em>) – <p>One of None, “post_hoc_RE”, “BAR_variance”, or “summed_count_matrix”.
+Defines what should be considered a connected set in the joint (product) space of conformations and
+thermodynamic ensembles. If connectivity=None, the data is not restricted.</p>
+<ul>
+<li><p>”post_hoc_RE” : It is required that every state in the connected set can be reached by following a
+pathway of reversible transitions or jumping between overlapping thermodynamic states while staying in
+the same Markov state. A reversible transition between two Markov states (within the same thermodynamic
+state <span class="math">\(k\)</span>) is a pair of Markov states that belong to the same strongly connected component of the
+count matrix (from thermodynamic state <span class="math">\(k\)</span>). Two thermodynamic states <span class="math">\(k\)</span> and <span class="math">\(l\)</span> are
+defined to overlap at Markov state <span class="math">\(i\)</span> if a replica exchange simulation
+<a class="footnote-reference brackets" href="#footcite-hukushima1996exchange" id="id2">2</a> restricted to state <span class="math">\(i\)</span> would show at least one transition from
+<span class="math">\(k\)</span> to <span class="math">\(l\)</span> or one transition from from <span class="math">\(l\)</span> to <span class="math">\(k\)</span>. The expected number of replica
+exchanges is estimated from the simulation data. The minimal number required of replica exchanges per
+Markov state can be increased by decreasing <cite>connectivity_factor</cite>.</p></li>
+<li><p>”BAR_variance” : like ‘post_hoc_RE’ but with a different condition to define the thermodynamic overlap
+based on the variance of the BAR estimator <a class="footnote-reference brackets" href="#footcite-shirts2008statistically" id="id3">3</a>.
+Two thermodynamic states <span class="math">\(k\)</span> and <span class="math">\(l\)</span> are defined to overlap at Markov state <span class="math">\(i\)</span> if the
+variance of the free energy difference <span class="math">\(\Delta f_{kl}\)</span> computed with BAR
+(and restricted to conformations form Markov state <span class="math">\(i\)</span>) is less or equal than one. The minimally
+required variance can be controlled with <cite>connectivity_factor</cite>.</p></li>
+<li><p>”summed_count_matrix” : all thermodynamic states are assumed to overlap. The connected set is then
+computed by summing the count matrices over all thermodynamic states and taking its largest strongly
+connected set. Not recommended!</p></li>
+</ul>
+</p></li>
+<li><p><strong>connectivity_factor</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default=1.0</em>) – Only needed if connectivity=”post_hoc_RE” or “BAR_variance”. Values greater than 1.0 weaken the connectivity
+conditions. For ‘post_hoc_RE’ this multiplies the number of hypothetically observed transitions. For
+‘BAR_variance’ this scales the threshold for the minimal allowed variance of free energy differences.</p></li>
+<li><p><strong>progress</strong> (<em>object</em>) – Progress bar object that <cite>TRAMDataset</cite> will call to indicate progress to the user.
+Tested for a tqdm progress bar. The interface is checked
+via <a class="reference internal" href="deeptime.util.callbacks.supports_progress_interface.html#deeptime.util.callbacks.supports_progress_interface" title="deeptime.util.callbacks.supports_progress_interface"><code class="xref py py-meth docutils literal notranslate"><span class="pre">supports_progress_interface</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the connectivity type is unknown.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.restrict_to_submodel">
+<span class="sig-name descname"><span class="pre">restrict_to_submodel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submodel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.restrict_to_submodel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restrict the count matrices and <cite>dtrajs</cite> to the given submodel. The submodel is either given in form of a
+list of Markov state indices, or as a TransitionCountModel. All <cite>dtrajs</cite> sample indices that do not occur in the
+submodel will be set to -1. The count_models are recomputed after restricting the <cite>dtrajs</cite> to the submodel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>submodel</strong> (<a class="reference internal" href="deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel" title="deeptime.markov.TransitionCountModel"><em>TransitionCountModel</em></a><em> or </em><em>list</em><em>(</em><em>int</em><em>) or </em><em>ndarray</em><em>(</em><em>int</em><em>)</em>) – The TransitionCountModel, or the Markov states indices that the dataset needs to be restricted to, .</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.setflags">
+<span class="sig-name descname"><span class="pre">setflags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.setflags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set writeable flags for contained arrays.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.connectivity_options">
+<span class="sig-name descname"><span class="pre">connectivity_options</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['post_hoc_RE',</span> <span class="pre">'BAR_variance',</span> <span class="pre">'summed_count_matrix',</span> <span class="pre">None]</span></em><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.connectivity_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>All possible connectivity modes</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.n_markov_states">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_markov_states</span></span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.n_markov_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of Markov states.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.n_therm_states">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_therm_states</span></span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.n_therm_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of thermodynamic states.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.state_counts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_counts</span></span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.state_counts" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray(n, m)
+The state counts histogram. <cite>state_counts[k]</cite> contains the state histogram for thermodynamic state <span class="math">\(k\)</span>,
+based on the TransitionCountModel of state <span class="math">\(k\)</span>. <cite>state_counts[k][i]`</cite>  equals the number of samples that
+fall into Markov state <span class="math">\(i\)</span>, sampled at thermodynamic state <span class="math">\(k\)</span>.</p>
+<p>The state counts for every thermodynamic state are shaped to contain all possible markov states, even the ones
+without counts in that thermodynamic state. This is done so that the underlying c++ estimator receives count
+matrices that are all the same shape, which is easier to handle (matrices are padded with zeros for all empty
+states that got dropped by the TransitionCountModels).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.tram_input">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tram_input</span></span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.tram_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>The TRAMInput object containing the data needed for estimation.
+For estimation purposes, it does not matter which thermodynamic state each sample was sampled at. The dtrajs and
+bias_matrices are therefore flattened along the first dimension, to speed up estimation.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="deeptime.markov.msm.TRAMDataset.transition_counts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transition_counts</span></span><a class="headerlink" href="#deeptime.markov.msm.TRAMDataset.transition_counts" title="Permalink to this definition">¶</a></dt>
+<dd><p>The transition counts matrices. <cite>transition_counts[k]</cite> contains the transition counts for thermodynamic state
+<span class="math">\(k\)</span>, based on the TransitionCountModel of state <span class="math">\(k\)</span>. <cite>transition_counts[k][i][j]</cite> equals the number
+of observed transitions from Markov state <span class="math">\(i\)</span> to Markov state <span class="math">\(j\)</span>, in thermodynamic state <span class="math">\(k\)</span>.</p>
+<p>The transition counts for every thermodynamic state are shaped to contain all possible markov states, even the
+ones without counts in that thermodynamic state. This is done so that the underlying c++ estimator receives
+count matrices that are all the same shape, which is easier to handle (matrices are padded with zeros for all
+empty states that got  dropped by the TransitionCountModels).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>the transition counts</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>ndarray(n, m, m)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<script src="../../_static/scrollbar.js"></script>
+
+  </body>
+</html>

@@ -16,6 +16,7 @@
       ~AugmentedMSM.count_model
       ~AugmentedMSM.empirical_koopman_model
       ~AugmentedMSM.has_count_model
+      ~AugmentedMSM.is_real
       ~AugmentedMSM.koopman_model
       ~AugmentedMSM.lagtime
       ~AugmentedMSM.n_eigenvalues
@@ -38,6 +39,7 @@
 
    .. autosummary::
    
+      ~AugmentedMSM.ck_test
       ~AugmentedMSM.committor_backward
       ~AugmentedMSM.committor_forward
       ~AugmentedMSM.compute_state_indices

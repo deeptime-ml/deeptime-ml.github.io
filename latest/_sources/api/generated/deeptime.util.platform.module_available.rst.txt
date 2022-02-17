@@ -1,0 +1,17 @@
+﻿
+
+*function* module\_available
+============================
+
+.. currentmodule:: deeptime.util.platform
+
+.. autofunction:: module_available
+
+   
+   
+   
+
+   
+
+   
+   

@@ -19,6 +19,7 @@
    .. autosummary::
    
       ~Monomials.get_feature_names
+      ~Monomials.get_feature_names_out
       ~Monomials.transform
    
    

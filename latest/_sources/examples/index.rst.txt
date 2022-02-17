@@ -15,6 +15,48 @@ Short examples for some of the methods.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Tests the Chapman-Kolmogorov equality, see deeptime.util.validation.ck_test.">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_ck_test_thumb.png
+     :alt: Chapman-Kolmogorov test
+
+     :ref:`sphx_glr_examples_plot_ck_test.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_ck_test
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to obtain an implied timescales (ITS) plot for a Bayesian Markov ...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_implied_timescales_thumb.png
+     :alt: Implied timescales
+
+     :ref:`sphx_glr_examples_plot_implied_timescales.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_implied_timescales
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This example shows a decomposition into metastable sets (see deeptime.markov.pcca) of states in...">
 
 .. only:: html
@@ -180,6 +222,27 @@ Short examples for some of the methods.
    :hidden:
 
    /examples/plot_kcca_projection
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use the transition-based reweighting analysis method (TRAM) to estima...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_tram_thumb.png
+     :alt: TRAM on a 1D double well
+
+     :ref:`sphx_glr_examples_plot_tram.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_tram
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>

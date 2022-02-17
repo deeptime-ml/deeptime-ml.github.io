@@ -1,0 +1,40 @@
+﻿
+
+*class* TRAMModel
+=================
+
+.. currentmodule:: deeptime.markov.msm
+
+.. autoclass:: TRAMModel
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TRAMModel.biased_conf_energies
+      ~TRAMModel.lagrangian_mult_log
+      ~TRAMModel.markov_state_energies
+      ~TRAMModel.modified_state_counts_log
+      ~TRAMModel.msm_collection
+      ~TRAMModel.therm_state_energies
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TRAMModel.compute_PMF
+      ~TRAMModel.compute_log_likelihood
+      ~TRAMModel.compute_observable
+      ~TRAMModel.compute_sample_weights_log
+      ~TRAMModel.copy
+      ~TRAMModel.get_params
+      ~TRAMModel.set_params
+   
+   

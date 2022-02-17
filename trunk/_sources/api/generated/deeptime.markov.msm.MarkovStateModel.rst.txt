@@ -16,6 +16,7 @@
       ~MarkovStateModel.count_model
       ~MarkovStateModel.empirical_koopman_model
       ~MarkovStateModel.has_count_model
+      ~MarkovStateModel.is_real
       ~MarkovStateModel.koopman_model
       ~MarkovStateModel.lagtime
       ~MarkovStateModel.n_eigenvalues
@@ -37,6 +38,7 @@
 
    .. autosummary::
    
+      ~MarkovStateModel.ck_test
       ~MarkovStateModel.committor_backward
       ~MarkovStateModel.committor_forward
       ~MarkovStateModel.compute_state_indices

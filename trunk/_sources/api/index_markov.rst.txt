@@ -16,7 +16,7 @@ Estimators
 
     msm.MaximumLikelihoodMSM
     msm.BayesianMSM
-    msm.tram.TRAM
+    msm.TRAM
 
 
 Models
@@ -27,8 +27,8 @@ Models
 
     msm.MarkovStateModel
     msm.MarkovStateModelCollection
-    msm.BayesianPosterior
-    msm.tram.TRAMModel
+    msm.BayesianMSMPosterior
+    msm.TRAMModel
 
 
 Analysis tools
@@ -39,8 +39,6 @@ Analysis tools
 
     pcca
     reactive_flux
-    MembershipsChapmanKolmogorovValidator
-
 
 
 With output models
@@ -72,7 +70,7 @@ Utilities and alternatives
     sample.indices_by_sequence
     sample.indices_by_state
 
-    msm.tram.TRAMDataset
+    msm.TRAMDataset
 
 Transition counting
 -------------------

@@ -1,0 +1,17 @@
+﻿
+
+*function* supports\_progress\_interface
+========================================
+
+.. currentmodule:: deeptime.util.callbacks
+
+.. autofunction:: supports_progress_interface
+
+   
+   
+   
+
+   
+
+   
+   

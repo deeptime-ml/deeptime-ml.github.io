@@ -32,6 +32,7 @@
       ~DiscreteOutputModel.fit
       ~DiscreteOutputModel.generate_observation_trajectory
       ~DiscreteOutputModel.get_params
+      ~DiscreteOutputModel.map_observations_to_submodel
       ~DiscreteOutputModel.normalize
       ~DiscreteOutputModel.sample
       ~DiscreteOutputModel.set_params

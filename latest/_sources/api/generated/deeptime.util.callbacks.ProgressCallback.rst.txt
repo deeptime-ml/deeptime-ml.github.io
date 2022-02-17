@@ -1,0 +1,17 @@
+﻿
+
+*class* ProgressCallback
+========================
+
+.. currentmodule:: deeptime.util.callbacks
+
+.. autoclass:: ProgressCallback
+
+   
+   
+   
+
+   
+
+   
+   

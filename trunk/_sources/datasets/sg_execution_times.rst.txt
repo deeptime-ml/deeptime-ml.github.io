@@ -5,46 +5,46 @@
 
 Computation times
 =================
-**05:55.606** total execution time for **datasets** files:
+**05:37.091** total execution time for **datasets** files:
 
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_time_quintuple_well.py` (``plot_time_quintuple_well.py``)             | 01:16.934 | 65.5 MB |
+| :ref:`sphx_glr_datasets_plot_time_quintuple_well.py` (``plot_time_quintuple_well.py``)             | 01:13.520 | 65.1 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_pbf.py` (``plot_pbf.py``)                                             | 00:50.690 | 14.9 MB |
+| :ref:`sphx_glr_datasets_plot_pbf.py` (``plot_pbf.py``)                                             | 00:49.754 | 16.2 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_swissroll_model.py` (``plot_swissroll_model.py``)                     | 00:36.861 | 11.9 MB |
+| :ref:`sphx_glr_datasets_plot_swissroll_model.py` (``plot_swissroll_model.py``)                     | 00:36.717 | 11.9 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_abc_flow.py` (``plot_abc_flow.py``)                                   | 00:21.953 | 24.3 MB |
+| :ref:`sphx_glr_datasets_plot_abc_flow.py` (``plot_abc_flow.py``)                                   | 00:22.692 | 24.3 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_bickley_jet.py` (``plot_bickley_jet.py``)                             | 00:20.244 | 13.4 MB |
+| :ref:`sphx_glr_datasets_plot_bickley_jet.py` (``plot_bickley_jet.py``)                             | 00:20.264 | 13.5 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_ornstein_uhlenbeck.py` (``plot_ornstein_uhlenbeck.py``)               | 00:13.646 | 11.9 MB |
+| :ref:`sphx_glr_datasets_plot_double_well_discrete.py` (``plot_double_well_discrete.py``)           | 00:13.571 | 12.3 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_double_well_discrete.py` (``plot_double_well_discrete.py``)           | 00:13.323 | 12.4 MB |
+| :ref:`sphx_glr_datasets_plot_custom_ode.py` (``plot_custom_ode.py``)                               | 00:11.694 | 11.9 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_custom_ode.py` (``plot_custom_ode.py``)                               | 00:13.165 | 11.9 MB |
+| :ref:`sphx_glr_datasets_plot_birth_death_chain.py` (``plot_birth_death_chain.py``)                 | 00:11.542 | 11.9 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_birth_death_chain.py` (``plot_birth_death_chain.py``)                 | 00:13.118 | 12.1 MB |
+| :ref:`sphx_glr_datasets_plot_ornstein_uhlenbeck.py` (``plot_ornstein_uhlenbeck.py``)               | 00:10.883 | 11.9 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_tmatrix_1d.py` (``plot_tmatrix_1d.py``)                               | 00:10.316 | 24.4 MB |
+| :ref:`sphx_glr_datasets_plot_sqrt_model.py` (``plot_sqrt_model.py``)                               | 00:10.237 | 12.0 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_sqrt_model.py` (``plot_sqrt_model.py``)                               | 00:10.074 | 12.0 MB |
+| :ref:`sphx_glr_datasets_plot_tmatrix_1d.py` (``plot_tmatrix_1d.py``)                               | 00:09.535 | 24.5 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_triple_well_1d.py` (``plot_triple_well_1d.py``)                       | 00:09.612 | 12.2 MB |
+| :ref:`sphx_glr_datasets_plot_triple_well_1d.py` (``plot_triple_well_1d.py``)                       | 00:08.582 | 12.0 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_double_well_2d.py` (``plot_double_well_2d.py``)                       | 00:08.576 | 43.5 MB |
+| :ref:`sphx_glr_datasets_plot_quadruple_well_asymmetric.py` (``plot_quadruple_well_asymmetric.py``) | 00:07.914 | 35.8 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_custom_sde.py` (``plot_custom_sde.py``)                               | 00:08.512 | 12.2 MB |
+| :ref:`sphx_glr_datasets_plot_custom_sde.py` (``plot_custom_sde.py``)                               | 00:07.715 | 12.0 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_triple_well_2d.py` (``plot_triple_well_2d.py``)                       | 00:08.238 | 34.9 MB |
+| :ref:`sphx_glr_datasets_plot_triple_well_2d.py` (``plot_triple_well_2d.py``)                       | 00:07.564 | 36.2 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_quadruple_well_asymmetric.py` (``plot_quadruple_well_asymmetric.py``) | 00:08.180 | 35.7 MB |
+| :ref:`sphx_glr_datasets_plot_drunkards_walk.py` (``plot_drunkards_walk.py``)                       | 00:07.182 | 33.3 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_prinz.py` (``plot_prinz.py``)                                         | 00:08.162 | 11.9 MB |
+| :ref:`sphx_glr_datasets_plot_quadruple_well.py` (``plot_quadruple_well.py``)                       | 00:07.072 | 36.8 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_quadruple_well.py` (``plot_quadruple_well.py``)                       | 00:08.156 | 36.3 MB |
+| :ref:`sphx_glr_datasets_plot_ellipsoids.py` (``plot_ellipsoids.py``)                               | 00:07.012 | 80.6 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_ellipsoids.py` (``plot_ellipsoids.py``)                               | 00:07.930 | 62.7 MB |
+| :ref:`sphx_glr_datasets_plot_double_well_2d.py` (``plot_double_well_2d.py``)                       | 00:07.001 | 42.0 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_datasets_plot_drunkards_walk.py` (``plot_drunkards_walk.py``)                       | 00:07.915 | 33.5 MB |
+| :ref:`sphx_glr_datasets_plot_prinz.py` (``plot_prinz.py``)                                         | 00:06.639 | 12.0 MB |
 +----------------------------------------------------------------------------------------------------+-----------+---------+

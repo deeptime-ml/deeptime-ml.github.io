@@ -48,6 +48,7 @@
 
    .. autosummary::
    
+      ~HiddenMarkovModel.ck_test
       ~HiddenMarkovModel.collect_observations_in_state
       ~HiddenMarkovModel.compute_observation_likelihood
       ~HiddenMarkovModel.compute_viterbi_paths
@@ -69,6 +70,7 @@
       ~HiddenMarkovModel.submodel_disconnect
       ~HiddenMarkovModel.submodel_largest
       ~HiddenMarkovModel.submodel_populous
+      ~HiddenMarkovModel.timescales
       ~HiddenMarkovModel.transform_discrete_trajectories_to_observed_symbols
       ~HiddenMarkovModel.transition_matrix_obs
    
