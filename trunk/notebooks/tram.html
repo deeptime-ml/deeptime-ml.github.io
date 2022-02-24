@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>TRAM &#8212; deeptime 0.3.1+23.ga9f1138.dirty documentation</title>
+    <title>TRAM &#8212; deeptime 0.4.1+2.g7179c1b3.dirty documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
@@ -75,7 +75,8 @@
 <li class="toctree-l2"><a class="reference internal" href="tpt.html">Transition path theory</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">TRAM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Introduction">Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#TRAM-applied-to-a-simple-double-well">TRAM applied to a simple double well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Application-to-a-double-well">Application to a double well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Recovering-the-PMF">Recovering the PMF</a></li>
 </ul>
 </li>
 </ul>
@@ -99,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../api/index_basis.html">deeptime.basis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_kernels.html">deeptime.kernels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_data.html">deeptime.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index_plots.html">deeptime.plots</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_numeric.html">deeptime.numeric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index_util.html">deeptime.util</a></li>
 </ul>
@@ -125,7 +127,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../index.html">Latest release
-            (0.3.1)</a>
+            (0.4.1)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -438,11 +440,11 @@ div.rendered_html tbody tr:hover {
 <p>For each thermodynamic state, samples are <em>not</em> assumed to be taken from the global equilibrium distribution of that state, i.e. from <span class="math">\(\mu^k(x)\)</span>. In stead, each thermodynamic state <span class="math">\(k\)</span> is governed by a Markov State Model (MSM) consisting of <span class="math">\(M\)</span> states. Samples are assumed to be taken from the <em>local equilibrium</em> that governs each markov state <span class="math">\(S_i\)</span>, <span class="math">\(i \in \{1, ... M\}\)</span>, given by <span class="math">\(\mu^k_i = e^{f^k_i - b^k(x)} \mu(x)\)</span>.</p>
 <p>TRAM is thus a combination of a thermodynamic reweighting estimator, that combines data from multiple thermodynamic states, and a MSM, allowing use of time-lagged data. It produces a maximum-likelihood estimate for the underlying Multi Ensemble Markov Model of the biased thermodynamic states.</p>
 </section>
-<section id="TRAM-applied-to-a-simple-double-well">
-<h2>TRAM applied to a simple double well<a class="headerlink" href="#TRAM-applied-to-a-simple-double-well" title="Permalink to this headline">¶</a></h2>
+<section id="Application-to-a-double-well">
+<h2>Application to a double well<a class="headerlink" href="#Application-to-a-double-well" title="Permalink to this headline">¶</a></h2>
 <p>To apply TRAM to a double well we use the deeptime MarkovStateModel for sampling, and KMeans for clustering the data into the <span class="math">\(M\)</span> Markov states. We will then use TRAM to estimate the TRAM model, which holds the transition matrices and free energies from the data. Finally, we use the model to re-obtain the PMF.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -456,11 +458,11 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>Define the potential we will be sampling from. This is a simple double well.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potential</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">-</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">x</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">4</span>
 
 <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># We will sample 100 discrete bins</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">potential</span><span class="p">(</span><span class="n">xs</span><span class="p">));</span>
@@ -476,7 +478,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>We will use umbrella sampling to sample the potential. Define a sampling axis and the umbrella centers. These umbrella centers define our thermodynamic states.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bias_centers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="c1"># 20 umbrella&#39;s</span>
@@ -489,7 +491,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>For each of the bias centers, contruct the bias potential as a sum of the original potential and the harmonic bias.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">biased_potentials</span> <span class="o">=</span> <span class="p">[]</span>
@@ -501,15 +503,15 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>Now we will sample a discrete trajectory for each of the thermodynamic states. We use a deeptime MSM to perform the sampling.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_samples</span> <span class="o">=</span> <span class="mi">10000</span> <span class="c1"># trajectory length</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_samples</span> <span class="o">=</span> <span class="mi">10000</span>  <span class="c1"># trajectory length</span>
 
 <span class="n">trajectories</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">bias_centers</span><span class="p">),</span> <span class="n">n_samples</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">U</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">biased_potentials</span><span class="p">):</span>
-    <span class="n">biased_energies</span> <span class="o">=</span> <span class="n">U</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># get the potential at each of the bins</span>
+    <span class="n">biased_energies</span> <span class="o">=</span> <span class="n">U</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>  <span class="c1"># get the potential at each of the bins</span>
 
     <span class="n">transition_matrix</span> <span class="o">=</span> <span class="n">tmatrix_metropolis1d</span><span class="p">(</span><span class="n">biased_energies</span><span class="p">)</span>
 
@@ -520,10 +522,11 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>Plot the sampled trajectories and biased potentials:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">xs</span><span class="p">[</span><span class="n">trajectories</span><span class="o">.</span><span class="n">flatten</span><span class="p">()],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Histogram over visited states&#39;</span><span class="p">);</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">xs</span><span class="p">[</span><span class="n">trajectories</span><span class="o">.</span><span class="n">flatten</span><span class="p">()],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span>
+         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Histogram over visited states&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -536,7 +539,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>Now use the deeptime KMeans module to cluster the data into 2 states (using the knowledge that we are working with a double-well potential). For each sample, the Markov state that sample was in is stored in <code class="docutils literal notranslate"><span class="pre">dtrajs</span></code>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estimator</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span>
@@ -560,8 +563,8 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[[75.5382763 ]
- [23.47984135]]
+[[23.82456604]
+ [76.19136811]]
 </pre></div></div>
 </div>
 <p>The final piece of input we need are the bias matrices, <span class="math">\(K\)</span> matrices, one for each thermodynamic state.</p>
@@ -569,71 +572,90 @@ div.rendered_html tbody tr:hover {
 <p>In symbols, when <span class="math">\(x_i^k\)</span> is the <span class="math">\(i\)</span>’th sample taken at thermodynamic state <span class="math">\(k\)</span>, <code class="docutils literal notranslate"><span class="pre">bias_matrices[k,</span> <span class="pre">i,</span> <span class="pre">l]</span></code> <span class="math">\(= b^l(x_i^k)\)</span>.</p>
 <p>This means that for each sample taken <strong>at any given state</strong>, the bias potentials of that sample <strong>in all states</strong> need to be stored!</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># move the range of the trajectories back to the range of xs: (-1.5, 1.5)</span>
 <span class="n">trajectories_shifted</span> <span class="o">=</span> <span class="n">trajectories</span> <span class="o">/</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">-</span> <span class="mf">1.5</span>
 
 <span class="n">bias_matrices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">bias_centers</span><span class="p">),</span> <span class="n">n_samples</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">bias_centers</span><span class="p">)))</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">traj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">trajectories_shifted</span><span class="p">):</span> <span class="c1"># enumerate the states (=trajectories)</span>
-    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">bias_function</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">biased_potentials</span><span class="p">):</span> <span class="c1"># for each term. state...</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">traj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">trajectories_shifted</span><span class="p">):</span>  <span class="c1"># enumerate the states (=trajectories)</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">bias_function</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">biased_potentials</span><span class="p">):</span>  <span class="c1"># for each term. state...</span>
         <span class="c1"># ... store the bias potential of all samples as if they were sampled at that thermodynamic state</span>
         <span class="n">bias_matrices</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">bias_function</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span> <span class="o">-</span> <span class="n">potential</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <p>Construct a <code class="docutils literal notranslate"><span class="pre">TRAMDataset</span></code> object from the discrete trajectories and the bias matrices. This object will construct the state and transition count matrices.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">TRAMDataset</span><span class="p">(</span><span class="n">dtrajs</span><span class="o">=</span><span class="n">dtrajs</span><span class="p">,</span> <span class="n">bias_matrices</span><span class="o">=</span><span class="n">bias_matrices</span><span class="p">)</span>
+<span class="n">bias_matrices</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">dtrajs</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(20, 10000)
+</pre></div></div>
 </div>
 <p>We can use the dataset to reduce our data to a chosen submodel, or to the largest connected set according to chosen criteria. One could also choose to reduce the data to a chosen submodel, for example if one wants to compute the connected set by a different method than the ones available in the TRAM module. In this case, we want to reduce our dataset to the largest connected set by the BAR variance connectivity criterium. This may take a while, so we pass a progress bar to show the progress.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tqdm</span>
-<span class="n">progress</span> <span class="o">=</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="n">leave</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">restrict_to_largest_connected_set</span><span class="p">(</span><span class="n">connectivity</span><span class="o">=</span><span class="s1">&#39;BAR_variance&#39;</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">restrict_to_largest_connected_set</span><span class="p">(</span><span class="n">connectivity</span><span class="o">=</span><span class="s1">&#39;BAR_variance&#39;</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">tqdm</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-Finding connected sets: 100%|█████████████████████████████████████████████| 40/40 [00:00&lt;00:00, 161.31it/s]
-</pre></div></div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1fa67e5139b24baf9b8165200e52b4af", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p>Now we have gathered all our input, we can run a TRAM estimate. Because we set maxiter to 100, this might give us a warning that TRAM did not converge (100 iterations is enough for demonstration purposes). The model we obtain contains the data from the connected set.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tram</span> <span class="o">=</span> <span class="n">TRAM</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tram</span> <span class="o">=</span> <span class="n">TRAM</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">tqdm</span><span class="p">,</span> <span class="n">callback_interval</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">init_strategy</span><span class="o">=</span><span class="s2">&quot;MBAR&quot;</span><span class="p">)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">tram</span><span class="o">.</span><span class="n">fit_fetch</span><span class="p">((</span><span class="n">dtrajs</span><span class="p">,</span> <span class="n">bias_matrices</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "985ca6cd703c46ee8ebd46a2de8c7665", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "9b397a4787934d90b0fe1f1421b7e34e", "version_major": 2, "version_minor": 0}</script></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Running TRAM estimate: 100%|█████████████████████████████████████████████| 100/100 [00:15&lt;00:00,  6.64it/s]d:\users\maaike\documents\phd\deeptime\deeptime\deeptime\markov\msm\tram\_tram.py:221: ConvergenceWarning: TRAM did not converge after 100 iteration. Last increment: 7.706660598155723e-05
+d:\users\maaike\documents\phd\deeptime\deeptime\deeptime\markov\msm\tram\_tram.py:256: ConvergenceWarning: TRAM did not converge after 100 iteration(s). Last increment: 0.0005462764459391867
   warnings.warn(
-Running TRAM estimate: 100%|█████████████████████████████████████████████| 100/100 [00:15&lt;00:00,  6.61it/s]
 </pre></div></div>
 </div>
 <p>We can plot the <code class="docutils literal notranslate"><span class="pre">biased_conf_energies</span></code> in a contour plot to see what they look like.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
@@ -649,19 +671,24 @@ Running TRAM estimate: 100%|█████████████████�
 <img alt="../_images/notebooks_tram_23_0.png" src="../_images/notebooks_tram_23_0.png" />
 </div>
 </div>
+</section>
+<section id="Recovering-the-PMF">
+<h2>Recovering the PMF<a class="headerlink" href="#Recovering-the-PMF" title="Permalink to this headline">¶</a></h2>
 <p>Now we want to recover the potential function (PMF). To do this, we define a number of bins (in this case 25) that we want to calculate the unbiased PMF over. We discretize all samples into these 25 bins, and use the model to calculate the PMF over the bins.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_bins</span> <span class="o">=</span> <span class="mi">25</span>
 <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">n_bins</span><span class="p">)</span>
 
 <span class="c1"># the bin number for each sample. Samples are binned into 25 bins</span>
-<span class="n">bin_numbers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">trajectories</span><span class="o">/</span><span class="p">(</span><span class="mi">100</span><span class="o">/</span><span class="n">n_bins</span><span class="p">)),</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">bin_numbers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">trajectories</span><span class="o">/</span><span class="p">(</span><span class="mi">100</span><span class="o">/</span><span class="n">n_bins</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
 
 <span class="c1"># pass samples to the model with their corresponding bin numbers</span>
 <span class="n">pmf</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">compute_PMF</span><span class="p">(</span><span class="n">dtrajs</span><span class="p">,</span> <span class="n">bias_matrices</span><span class="p">,</span> <span class="n">bin_numbers</span><span class="p">)</span>
+<span class="n">pmf</span> <span class="o">-=</span> <span class="n">pmf</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="n">pmf</span><span class="p">)</span>
 
 <span class="c1"># compare with the original distribution, shifted so that the minimum lies at zero.</span>

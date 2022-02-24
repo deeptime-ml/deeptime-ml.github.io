@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 from deeptime.data import tmatrix_metropolis1d
 from deeptime.markov.msm import MarkovStateModel, TRAM
-from deeptime.clustering import KMeansModel
+from deeptime.clustering import ClusterModel
 
 xs = np.linspace(-1.5, 1.5, num=100)
 n_samples = 10000
@@ -71,12 +71,12 @@ if __name__ == "__main__":
             bias_matrices[i, :, j] = bias_function(traj)
 
     # discretize the trajectories into two Markov states (centered around the two wells)
-    clustering = KMeansModel(cluster_centers=np.asarray([-0.75, 0.75]), metric='euclidean')
+    clustering = ClusterModel(cluster_centers=np.asarray([-0.75, 0.75]), metric='euclidean')
 
-    dtrajs = clustering.transform(trajectories.flatten()).reshape(
-        (len(bias_matrices), n_samples))
+    dtrajs = clustering.transform(trajectories.flatten()).reshape((len(bias_matrices), n_samples))
 
-    tram = TRAM(lagtime=1, maxiter=100)
+    from tqdm import tqdm
+    tram = TRAM(lagtime=1, maxiter=1000, maxerr=1e-3, progress=tqdm, init_strategy="MBAR")
 
     # For every simulation frame seen in trajectory i and time step t, btrajs[i][t,k] is the
     # bias energy of that frame evaluated in the k'th thermodynamic state (i.e. at the k'th
