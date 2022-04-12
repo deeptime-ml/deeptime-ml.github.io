@@ -15,6 +15,27 @@ Short examples for some of the methods.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="We show how to plot a two-dimensional energy surface based on deeptime.util.energy2d and deepti...">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_energy_surface_thumb.png
+     :alt: Energy surface
+
+     :ref:`sphx_glr_examples_plot_energy_surface.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_energy_surface
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Tests the Chapman-Kolmogorov equality, see deeptime.util.validation.ck_test.">
 
 .. only:: html

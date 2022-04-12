@@ -1,0 +1,17 @@
+﻿
+
+*function* plot\_energy2d
+=========================
+
+.. currentmodule:: deeptime.plots
+
+.. autofunction:: plot_energy2d
+
+   
+   
+   
+
+   
+
+   
+   
