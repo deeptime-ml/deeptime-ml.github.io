@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>VAMPNets on Alanine Dipeptide &#8212; deeptime 0.4.1 documentation</title>
+    <title>VAMPNets on Alanine Dipeptide &#8212; deeptime 0.4.2 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -31,7 +31,6 @@
     <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
     <script src="../../_static/katex_autorenderer.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="MSM on Prinz potential" href="msm-prinz.html" />
@@ -104,8 +103,6 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../protocols.html">Release protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../imprint.html">Imprint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license.html">Software License</a></li>
 </ul>
@@ -126,7 +123,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.4.1)</a>
+            (0.4.2)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -448,7 +445,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <p>First, we set up the device. If available, we use CUDA.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -458,8 +455,18 @@ div.rendered_html tbody tr:hover {
 <span class="k">else</span><span class="p">:</span>
     <span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
 <span class="n">torch</span><span class="o">.</span><span class="n">set_num_threads</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using device </span><span class="si">{</span><span class="n">device</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Using device cuda
+</pre></div></div>
 </div>
 <p>Obtain the data via mdshare:</p>
 <div class="nbinput nblast docutils container">
@@ -505,9 +512,9 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deeptime.data</span> <span class="kn">import</span> <span class="n">TimeLaggedDataset</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deeptime.util.data</span> <span class="kn">import</span> <span class="n">TrajectoryDataset</span><span class="p">,</span> <span class="n">TrajectoriesDataset</span>
 
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">TimeLaggedDataset</span><span class="o">.</span><span class="n">from_trajectories</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">TrajectoriesDataset</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -516,7 +523,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="o">*</span><span class="mf">.3</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="o">*</span><span class="mf">.1</span><span class="p">)</span>
 <span class="n">train_data</span><span class="p">,</span> <span class="n">val_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">random_split</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span> <span class="o">-</span> <span class="n">n_val</span><span class="p">,</span> <span class="n">n_val</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -528,20 +535,15 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lobe</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
     <span class="n">nn</span><span class="o">.</span><span class="n">BatchNorm1d</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">30</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">20</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">(),</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
     <span class="n">nn</span><span class="o">.</span><span class="n">Softmax</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># obtain fuzzy probability distribution over output states</span>
 <span class="p">)</span>
 
-<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
-<span class="n">lobe_timelagged</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">lobe</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
 <span class="n">lobe</span> <span class="o">=</span> <span class="n">lobe</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lobe</span><span class="p">)</span>
 </pre></div>
@@ -554,24 +556,18 @@ div.rendered_html tbody tr:hover {
 <div class="highlight"><pre>
 Sequential(
   (0): BatchNorm1d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-  (1): Linear(in_features=30, out_features=30, bias=True)
+  (1): Linear(in_features=30, out_features=20, bias=True)
   (2): ELU(alpha=1.0)
-  (3): Linear(in_features=30, out_features=100, bias=True)
+  (3): Linear(in_features=20, out_features=20, bias=True)
   (4): ELU(alpha=1.0)
-  (5): Linear(in_features=100, out_features=100, bias=True)
+  (5): Linear(in_features=20, out_features=20, bias=True)
   (6): ELU(alpha=1.0)
-  (7): Linear(in_features=100, out_features=100, bias=True)
+  (7): Linear(in_features=20, out_features=20, bias=True)
   (8): ELU(alpha=1.0)
-  (9): Linear(in_features=100, out_features=100, bias=True)
+  (9): Linear(in_features=20, out_features=20, bias=True)
   (10): ELU(alpha=1.0)
-  (11): Linear(in_features=100, out_features=100, bias=True)
-  (12): ELU(alpha=1.0)
-  (13): Linear(in_features=100, out_features=100, bias=True)
-  (14): ELU(alpha=1.0)
-  (15): Linear(in_features=100, out_features=30, bias=True)
-  (16): ELU(alpha=1.0)
-  (17): Linear(in_features=30, out_features=6, bias=True)
-  (18): Softmax(dim=1)
+  (11): Linear(in_features=20, out_features=6, bias=True)
+  (12): Softmax(dim=1)
 )
 </pre></div></div>
 </div>
@@ -582,7 +578,7 @@ Sequential(
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deeptime.decomposition.deep</span> <span class="kn">import</span> <span class="n">VAMPNet</span>
 
-<span class="n">vampnet</span> <span class="o">=</span> <span class="n">VAMPNet</span><span class="p">(</span><span class="n">lobe</span><span class="o">=</span><span class="n">lobe</span><span class="p">,</span> <span class="n">lobe_timelagged</span><span class="o">=</span><span class="n">lobe_timelagged</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">5e-4</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+<span class="n">vampnet</span> <span class="o">=</span> <span class="n">VAMPNet</span><span class="p">(</span><span class="n">lobe</span><span class="o">=</span><span class="n">lobe</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -672,12 +668,12 @@ Sequential(
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-State 1: [0.001029172562994063, 0.8926658034324646]
-State 2: [0.00010609981836751103, 0.9587453007698059]
-State 3: [6.741553806932643e-05, 0.93643718957901]
-State 4: [0.0006092489929869771, 0.7956085205078125]
-State 5: [0.0004982955870218575, 0.8470690846443176]
-State 6: [0.0029817831236869097, 0.5844284892082214]
+State 1: [6.8025465225218795e-06, 0.6695964336395264]
+State 2: [3.1106631013244623e-06, 0.7277129888534546]
+State 3: [5.470411451824475e-06, 0.8271698355674744]
+State 4: [1.245184012077516e-05, 0.9025066494941711]
+State 5: [6.952666444703937e-05, 0.8756899833679199]
+State 6: [8.31223042041529e-06, 0.9684250354766846]
 </pre></div></div>
 </div>
 <p>as well as cluster in the transformed space and assign each frame to its cluster center by taking the crisp assignment. Note that this step could also be performed by clustering with a potentially larger number of clusters.</p>
@@ -724,17 +720,16 @@ VAMP-2 score under lag 10: s = 3.28
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lagtimes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">201</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-<span class="n">timescales</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">lag</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">lagtimes</span><span class="p">):</span>
-    <span class="n">ts</span> <span class="o">=</span> <span class="n">VAMP</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="n">lag</span><span class="p">,</span> <span class="n">observable_transform</span><span class="o">=</span><span class="n">model</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fetch_model</span><span class="p">()</span><span class="o">.</span><span class="n">timescales</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">timescales</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deeptime.util.validation</span> <span class="kn">import</span> <span class="n">implied_timescales</span><span class="p">,</span> <span class="n">ck_test</span>
+<span class="kn">from</span> <span class="nn">deeptime.plots</span> <span class="kn">import</span> <span class="n">plot_implied_timescales</span><span class="p">,</span> <span class="n">plot_ck_test</span>
 
-<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">lagtimes</span><span class="p">,</span> <span class="n">timescales</span><span class="p">)</span>
+<span class="n">lagtimes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">vamp_models</span> <span class="o">=</span> <span class="p">[</span><span class="n">VAMP</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="n">lag</span><span class="p">,</span> <span class="n">observable_transform</span><span class="o">=</span><span class="n">model</span><span class="p">)</span><span class="o">.</span><span class="n">fit_fetch</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="k">for</span> <span class="n">lag</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">lagtimes</span><span class="p">)]</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plot_implied_timescales</span><span class="p">(</span><span class="n">implied_timescales</span><span class="p">(</span><span class="n">vamp_models</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;lagtime&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;timescale / step&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">lagtimes</span><span class="p">,</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lagtimes</span><span class="p">)),</span> <span class="n">lagtimes</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;timescale&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -742,30 +737,47 @@ VAMP-2 score under lag 10: s = 3.28
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "74f573fdc12b4fae99889c7dc8867560", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b0c375dd565d46afaa05c9ef4177af94", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Text(0, 0.5, &#39;timescale&#39;)
+</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_examples_ala2-example_31_1.png" src="../../_images/notebooks_examples_ala2-example_31_1.png" />
+<img alt="../../_images/notebooks_examples_ala2-example_31_2.png" src="../../_images/notebooks_examples_ala2-example_31_2.png" />
 </div>
 </div>
 <p>We may also perform a Chapman-Kolmogorov test. It is a relaxation experiment which, starting from each individual major process, checks how it evolves with respect to lagtime vs. estimating a new model at higher lagtime. If they show good agreement, this further validates that the data behaves Markovian at the chosen lagtime.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">validator</span> <span class="o">=</span> <span class="n">vamp_estimator</span><span class="o">.</span><span class="n">chapman_kolmogorov_validator</span><span class="p">(</span><span class="n">mlags</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_ck_test</span><span class="p">(</span><span class="n">vamp_models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ck_test</span><span class="p">(</span><span class="n">vamp_models</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
-<p>It is important to choose <code class="docutils literal notranslate"><span class="pre">n_jobs=1</span></code> in case of VAMPNets to avoid serialization issues between otherwise spawned threads and trained PyTorch lobes.</p>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_examples_ala2-example_33_0.png" src="../../_images/notebooks_examples_ala2-example_33_0.png" />
+</div>
+</div>
+<p>Based on these observations we pick a VAMP model with lagtime 2.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cktest</span> <span class="o">=</span> <span class="n">validator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">tqdm</span><span class="p">)</span><span class="o">.</span><span class="n">fetch_model</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vamp</span> <span class="o">=</span> <span class="n">vamp_models</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vamp</span><span class="o">.</span><span class="n">lagtime</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -773,71 +785,26 @@ VAMP-2 score under lag 10: s = 3.28
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "", "version_major": 2, "version_minor": 0}</script></div>
+<div class="highlight"><pre>
+2
+</pre></div></div>
 </div>
-<p>Let us visualize the CKTest based on the Koopman model.</p>
+<p>We may also estimate a Bayesian MSM as part of the ‘usual’ pipeline:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_states</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vamp</span><span class="o">.</span><span class="n">singular_values</span><span class="p">)</span>
-
-<span class="n">tau</span> <span class="o">=</span> <span class="n">cktest</span><span class="o">.</span><span class="n">lagtimes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">steps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cktest</span><span class="o">.</span><span class="n">lagtimes</span><span class="p">)</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">n_states</span><span class="p">,</span> <span class="n">n_states</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_states</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_states</span><span class="p">):</span>
-        <span class="n">pred</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cktest</span><span class="o">.</span><span class="n">lagtimes</span><span class="p">,</span> <span class="n">cktest</span><span class="o">.</span><span class="n">predictions</span><span class="p">[:,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-        <span class="n">est</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cktest</span><span class="o">.</span><span class="n">lagtimes</span><span class="p">,</span> <span class="n">cktest</span><span class="o">.</span><span class="n">estimates</span><span class="p">[:,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span> <span class="s1">&#39;-&gt;&#39;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span>
-                                       <span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.1</span><span class="p">));</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">steps</span><span class="o">*</span><span class="n">tau</span><span class="p">));</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">steps</span><span class="o">*</span><span class="n">tau</span><span class="p">,</span> <span class="mi">3</span><span class="p">)));</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="n">pred</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">est</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s2">&quot;Predictions&quot;</span><span class="p">,</span> <span class="s2">&quot;Estimates&quot;</span><span class="p">],</span> <span class="s1">&#39;lower center&#39;</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-           <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">));</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/notebooks_examples_ala2-example_37_0.png" src="../../_images/notebooks_examples_ala2-example_37_0.png" />
-</div>
-</div>
-<p>We may also estimate a Bayesian MSM from the crisp assignments and perform a CKTest:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deeptime.markov</span> <span class="kn">import</span> <span class="n">TransitionCountEstimator</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deeptime.clustering</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">deeptime.markov</span> <span class="kn">import</span> <span class="n">TransitionCountEstimator</span>
 <span class="kn">from</span> <span class="nn">deeptime.markov.msm</span> <span class="kn">import</span> <span class="n">BayesianMSM</span>
 
-<span class="n">counts</span> <span class="o">=</span> <span class="n">TransitionCountEstimator</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">count_mode</span><span class="o">=</span><span class="s1">&#39;effective&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">assignments</span><span class="p">)</span><span class="o">.</span><span class="n">fetch_model</span><span class="p">()</span>
-<span class="n">bmsm</span> <span class="o">=</span> <span class="n">BayesianMSM</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+<span class="n">projections</span> <span class="o">=</span> <span class="p">[</span><span class="n">vamp</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span> <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">tqdm</span><span class="p">)</span><span class="o">.</span><span class="n">fit_fetch</span><span class="p">(</span><span class="n">projections</span><span class="p">)</span>
+<span class="n">dtrajs</span> <span class="o">=</span> <span class="p">[</span><span class="n">cluster</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">projections</span><span class="p">]</span>
 
-<span class="n">validator</span> <span class="o">=</span> <span class="n">bmsm</span><span class="o">.</span><span class="n">chapman_kolmogorov_validator</span><span class="p">(</span><span class="n">n_metastable_sets</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">mlags</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">cktest</span> <span class="o">=</span> <span class="n">validator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">assignments</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">tqdm</span><span class="p">)</span><span class="o">.</span><span class="n">fetch_model</span><span class="p">()</span>
-
-<span class="n">n_states</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vamp</span><span class="o">.</span><span class="n">singular_values</span><span class="p">)</span>
-
-<span class="n">tau</span> <span class="o">=</span> <span class="n">cktest</span><span class="o">.</span><span class="n">lagtimes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">steps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cktest</span><span class="o">.</span><span class="n">lagtimes</span><span class="p">)</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">n_states</span><span class="p">,</span> <span class="n">n_states</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_states</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_states</span><span class="p">):</span>
-        <span class="n">pred</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cktest</span><span class="o">.</span><span class="n">lagtimes</span><span class="p">,</span> <span class="n">cktest</span><span class="o">.</span><span class="n">predictions</span><span class="p">[:,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-        <span class="n">est</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cktest</span><span class="o">.</span><span class="n">lagtimes</span><span class="p">,</span> <span class="n">cktest</span><span class="o">.</span><span class="n">estimates</span><span class="p">[:,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span> <span class="s1">&#39;-&gt;&#39;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span>
-                                       <span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">cktest</span><span class="o">.</span><span class="n">lagtimes</span><span class="p">,</span> <span class="n">cktest</span><span class="o">.</span><span class="n">predictions_conf</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span>
-                              <span class="n">cktest</span><span class="o">.</span><span class="n">predictions_conf</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.1</span><span class="p">));</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">steps</span><span class="o">*</span><span class="n">tau</span><span class="p">));</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">steps</span><span class="o">*</span><span class="n">tau</span><span class="p">,</span> <span class="mi">3</span><span class="p">)));</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="n">pred</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">est</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="s2">&quot;Predictions&quot;</span><span class="p">,</span> <span class="s2">&quot;Estimates&quot;</span><span class="p">],</span> <span class="s1">&#39;lower center&#39;</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-           <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">));</span>
+<span class="n">bmsms</span> <span class="o">=</span> <span class="p">[</span><span class="n">BayesianMSM</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="n">lag</span><span class="p">)</span><span class="o">.</span><span class="n">fit_fetch</span><span class="p">(</span><span class="n">dtrajs</span><span class="p">)</span> <span class="k">for</span> <span class="n">lag</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">])]</span>
+<span class="n">ck_test</span> <span class="o">=</span> <span class="n">bmsms</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ck_test</span><span class="p">(</span><span class="n">bmsms</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">plot_ck_test</span><span class="p">(</span><span class="n">ck_test</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -845,7 +812,43 @@ VAMP-2 score under lag 10: s = 3.28
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d662a493407641beb8b580550e1323a2", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "16fb92a2d9b04cefada7987be7268278", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e2d4f054113b48e7ad48dd1d30a95cd9", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_examples_ala2-example_37_3.png" src="../../_images/notebooks_examples_ala2-example_37_3.png" />
+</div>
+</div>
+<p>Or work with crisp assignments directly:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bmsms</span> <span class="o">=</span> <span class="p">[</span><span class="n">BayesianMSM</span><span class="p">(</span><span class="n">lagtime</span><span class="o">=</span><span class="n">lag</span><span class="p">)</span><span class="o">.</span><span class="n">fit_fetch</span><span class="p">(</span><span class="n">assignments</span><span class="p">)</span> <span class="k">for</span> <span class="n">lag</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">])]</span>
+<span class="n">ck_test</span> <span class="o">=</span> <span class="n">bmsms</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ck_test</span><span class="p">(</span><span class="n">bmsms</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">plot_ck_test</span><span class="p">(</span><span class="n">ck_test</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e1ebb7f630ea439d951d53f5df6c8f6d", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">

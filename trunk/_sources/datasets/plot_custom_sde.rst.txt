@@ -87,9 +87,9 @@ for :math:`X_t\in\mathbb{R}^d`, :math:`d\in\{1,2,3,4,5\}`.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.793 seconds)
+   **Total running time of the script:** ( 0 minutes  0.690 seconds)
 
-**Estimated memory usage:**  10 MB
+**Estimated memory usage:**  8 MB
 
 
 .. _sphx_glr_download_datasets_plot_custom_sde.py:

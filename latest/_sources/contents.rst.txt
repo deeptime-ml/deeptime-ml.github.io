@@ -42,7 +42,5 @@ Table Of Contents
    :caption: Other
    :maxdepth: 1
 
-   changelog
-   protocols
    imprint
    license

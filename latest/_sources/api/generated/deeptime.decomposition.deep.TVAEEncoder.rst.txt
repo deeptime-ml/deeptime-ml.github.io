@@ -55,6 +55,7 @@
       ~TVAEEncoder.register_forward_hook
       ~TVAEEncoder.register_forward_pre_hook
       ~TVAEEncoder.register_full_backward_hook
+      ~TVAEEncoder.register_module
       ~TVAEEncoder.register_parameter
       ~TVAEEncoder.requires_grad_
       ~TVAEEncoder.set_extra_state
