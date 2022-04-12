@@ -57,14 +57,14 @@ and :meth:`plots.plot_energy2d <deeptime.plots.plot_energy2d>`.
 
     energies = energy2d(*traj_concat.T, bins=(80, 20), kbt=1, weights=weights, shift_energy=True)
     plot = plot_energy2d(energies, contourf_kws=dict(cmap='nipy_spectral'))
-    plot.colorbar.set_label('energy / kJ')
+    plot.colorbar.set_label('energy / kT')
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.647 seconds)
+   **Total running time of the script:** ( 0 minutes  0.706 seconds)
 
-**Estimated memory usage:**  12 MB
+**Estimated memory usage:**  13 MB
 
 
 .. _sphx_glr_download_examples_plot_energy_surface.py:

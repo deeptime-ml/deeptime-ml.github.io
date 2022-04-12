@@ -5,10 +5,10 @@
 
 Computation times
 =================
-**00:00.647** total execution time for **examples** files:
+**00:00.706** total execution time for **examples** files:
 
 +------------------------------------------------------------------------------------------------+-----------+---------+
-| :ref:`sphx_glr_examples_plot_energy_surface.py` (``plot_energy_surface.py``)                   | 00:00.647 | 12.4 MB |
+| :ref:`sphx_glr_examples_plot_energy_surface.py` (``plot_energy_surface.py``)                   | 00:00.706 | 12.9 MB |
 +------------------------------------------------------------------------------------------------+-----------+---------+
 | :ref:`sphx_glr_examples_plot_ck_test.py` (``plot_ck_test.py``)                                 | 00:00.000 | 0.0 MB  |
 +------------------------------------------------------------------------------------------------+-----------+---------+
