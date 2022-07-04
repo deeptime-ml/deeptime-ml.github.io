@@ -162,6 +162,27 @@ Short examples for some of the methods.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="We demonstrate different kinds of network plots based on deeptime.plots.Network. In particular:">
+
+.. only:: html
+
+ .. figure:: /examples/images/thumb/sphx_glr_plot_network_thumb.png
+     :alt: Network plots
+
+     :ref:`sphx_glr_examples_plot_network.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/plot_network
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use SINDy to discover the chaotic Rossler system from measurement dat...">
 
 .. only:: html

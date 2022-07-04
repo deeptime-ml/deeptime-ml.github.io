@@ -1,0 +1,42 @@
+﻿
+
+*class* Network
+===============
+
+.. currentmodule:: deeptime.plots
+
+.. autoclass:: Network
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Network.adjacency_matrix
+      ~Network.bounds
+      ~Network.cmap
+      ~Network.d_x
+      ~Network.d_y
+      ~Network.edge_base_scale
+      ~Network.edge_labels
+      ~Network.n_nodes
+      ~Network.node_sizes
+      ~Network.pos
+      ~Network.state_colors
+      ~Network.state_labels
+      ~Network.state_sizes
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Network.edge_label
+      ~Network.plot
+   
+   

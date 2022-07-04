@@ -43,6 +43,7 @@
       ~TVAEEncoder.get_parameter
       ~TVAEEncoder.get_submodule
       ~TVAEEncoder.half
+      ~TVAEEncoder.ipu
       ~TVAEEncoder.load_state_dict
       ~TVAEEncoder.modules
       ~TVAEEncoder.named_buffers
@@ -55,6 +56,7 @@
       ~TVAEEncoder.register_forward_hook
       ~TVAEEncoder.register_forward_pre_hook
       ~TVAEEncoder.register_full_backward_hook
+      ~TVAEEncoder.register_load_state_dict_post_hook
       ~TVAEEncoder.register_module
       ~TVAEEncoder.register_parameter
       ~TVAEEncoder.requires_grad_

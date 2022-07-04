@@ -14,4 +14,10 @@
    
 
    
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~EnergyLandscape2d.plot
+   
    

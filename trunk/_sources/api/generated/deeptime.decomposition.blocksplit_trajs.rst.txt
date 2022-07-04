@@ -1,0 +1,17 @@
+﻿
+
+*function* blocksplit\_trajs
+============================
+
+.. currentmodule:: deeptime.decomposition
+
+.. autofunction:: blocksplit_trajs
+
+   
+   
+   
+
+   
+
+   
+   

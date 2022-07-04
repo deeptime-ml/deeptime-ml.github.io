@@ -1,0 +1,17 @@
+﻿
+
+*function* plot\_adjacency
+==========================
+
+.. currentmodule:: deeptime.plots
+
+.. autofunction:: plot_adjacency
+
+   
+   
+   
+
+   
+
+   
+   

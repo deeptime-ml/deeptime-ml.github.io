@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>class TRAM &#8212; deeptime 0.4.2+4.g6433bb7e documentation</title>
+    <title>class TRAM &#8212; deeptime 0.4.2+10.ged8cfa3d.dirty documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -22,6 +22,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
@@ -179,12 +180,12 @@
           <div class="body" role="main">
             
   <section id="class-tram">
-<h1><em>class</em> TRAM<a class="headerlink" href="#class-tram" title="Permalink to this headline">¶</a></h1>
+<h1><em>class</em> TRAM<a class="headerlink" href="#class-tram" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="deeptime.markov.msm.TRAM">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.markov.msm.</span></span><span class="sig-name descname"><span class="pre">TRAM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lagtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sliding'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxerr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MBAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_maxerr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">track_log_likelihoods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.TRAM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transition(-based) Reweighting Analysis Method.</p>
-<p>TRAM is described in <a class="footnote-reference brackets" href="#footcite-wu2016multiensemble" id="id1">1</a>. The parameters in this code correspond to variables in the
+<p>TRAM is described in <a class="footnote-reference brackets" href="#footcite-wu2016multiensemble" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. The parameters in this code correspond to variables in the
 TRAM paper in the following way:</p>
 <ul class="simple">
 <li><p><cite>biased_conf_energies[k][i]</cite> corresponds to <span class="math">\(f_i^k\)</span>, the free energy for  Markov state i in
@@ -195,7 +196,7 @@ Markov state i in thermodynamic state k.</p></li>
 state counts for Markov state i in thermodynamic state k.</p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>lagtime</strong> (<em>int</em><em>, </em><em>default=1</em>) – Integer lag time at which transitions are counted.</p></li>
 <li><p><strong>count_mode</strong> (<em>str</em><em>, </em><em>default=&quot;sliding&quot;</em>) – <p>One of “sample”, “sliding”, “sliding-effective”, and “effective”.</p>
@@ -206,7 +207,7 @@ large by a factor of <span class="math">\(\tau\)</span>; in uncertainty estimati
 <li><p>”sliding-effective” takes “sliding” and divides it by <span class="math">\(\tau\)</span>, which can be shown to provide a
 likelihood that is the geometrical average over shifted subsamples of the trajectory,
 <span class="math">\((s_1,\:s_{tau+1},\:...),\:(s_2,\:t_{tau+2},\:...),\)</span> etc. This geometrical average converges to
-the correct likelihood in the statistical limit <a class="footnote-reference brackets" href="#footcite-trendelkamp2015estimation" id="id2">2</a>.</p></li>
+the correct likelihood in the statistical limit <a class="footnote-reference brackets" href="#footcite-trendelkamp2015estimation" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p></li>
 <li><p>”effective” uses an estimate of the transition counts that are statistically uncorrelated.
 Recommended when estimating Bayesian MSMs.</p></li>
 </ul>
@@ -218,7 +219,7 @@ iteration step.</p></li>
 “MBAR” or None.</p>
 <blockquote>
 <div><ul>
-<li><p>”MBAR” : Initialize free energies using MBAR <a class="footnote-reference brackets" href="#footcite-shirts2008statistically" id="id3">3</a>. MBAR iterations are
+<li><p>”MBAR” : Initialize free energies using MBAR <a class="footnote-reference brackets" href="#footcite-shirts2008statistically" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. MBAR iterations are
 executed before TRAM, to initialize the free energies with the MBAR estimate, which is a good initial
 estimate for the TRAM free energies and will significantly speed up the convergence of TRAM. Lagrangian
 multipliers are initialized to <span class="math">\(v_i^k = log( 1/2 * \sum_j (c_ij^k + c_ji^k))\)</span> and modified state counts
@@ -250,24 +251,21 @@ via <a class="reference internal" href="deeptime.util.callbacks.supports_progres
 </div>
 <p class="rubric">References</p>
 <div class="docutils container" id="id4">
-<dl class="footnote brackets">
-<dt class="label" id="footcite-wu2016multiensemble"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Hao Wu, Fabian Paul, Christoph Wehmeyer, and Frank Noé. Multiensemble markov models of molecular thermodynamics and kinetics. <em>Proceedings of the National Academy of Sciences</em>, 113(23):E3221–E3230, 2016.</p>
-</dd>
-<dt class="label" id="footcite-trendelkamp2015estimation"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Benjamin Trendelkamp-Schroer, Hao Wu, Fabian Paul, and Frank Noé. Estimation and uncertainty of reversible markov models. <em>The Journal of chemical physics</em>, 143(17):11B601_1, 2015.</p>
-</dd>
-<dt class="label" id="footcite-shirts2008statistically"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Michael R Shirts and John D Chodera. Statistically optimal analysis of samples from multiple equilibrium states. <em>The Journal of chemical physics</em>, 129(12):124105, 2008.</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="footcite-wu2016multiensemble" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Hao Wu, Fabian Paul, Christoph Wehmeyer, and Frank Noé. Multiensemble markov models of molecular thermodynamics and kinetics. <em>Proceedings of the National Academy of Sciences</em>, 113(23):E3221–E3230, 2016.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-trendelkamp2015estimation" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Benjamin Trendelkamp-Schroer, Hao Wu, Fabian Paul, and Frank Noé. Estimation and uncertainty of reversible markov models. <em>The Journal of chemical physics</em>, 143(17):11B601_1, 2015.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-shirts2008statistically" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Michael R Shirts and John D Chodera. Statistically optimal analysis of samples from multiple equilibrium states. <em>The Journal of chemical physics</em>, 129(12):124105, 2008.</p>
+</aside>
 </div>
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAM.has_model" title="deeptime.markov.msm.TRAM.has_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_model</span></code></a></p></td>
 <td><p>Property reporting whether this estimator contains an estimated model.</p></td>
@@ -288,10 +286,6 @@ via <a class="reference internal" href="deeptime.util.callbacks.supports_progres
 </table>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.markov.msm.TRAM.fetch_model" title="deeptime.markov.msm.TRAM.fetch_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_model</span></code></a>()</p></td>
 <td><p>Yields the most recent <a class="reference internal" href="deeptime.markov.msm.MarkovStateModelCollection.html#deeptime.markov.msm.MarkovStateModelCollection" title="deeptime.markov.msm.MarkovStateModelCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">MarkovStateModelCollection</span></code></a> that was estimated.</p></td>
@@ -312,14 +306,14 @@ via <a class="reference internal" href="deeptime.util.callbacks.supports_progres
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.TRAM.fetch_model">
-<span class="sig-name descname"><span class="pre">fetch_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="deeptime.markov.msm.TRAMModel.html#deeptime.markov.msm.TRAMModel" title="deeptime.markov.msm.tram._tram_model.TRAMModel"><span class="pre">deeptime.markov.msm.tram._tram_model.TRAMModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.markov.msm.TRAM.fetch_model" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fetch_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="deeptime.markov.msm.TRAMModel.html#deeptime.markov.msm.TRAMModel" title="deeptime.markov.msm.tram._tram_model.TRAMModel"><span class="pre">TRAMModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.markov.msm.TRAM.fetch_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Yields the most recent <a class="reference internal" href="deeptime.markov.msm.MarkovStateModelCollection.html#deeptime.markov.msm.MarkovStateModelCollection" title="deeptime.markov.msm.MarkovStateModelCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">MarkovStateModelCollection</span></code></a> that was estimated.
 Can be None if fit was not called.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>model</strong> – The most recent markov state model or None.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="deeptime.markov.msm.MarkovStateModelCollection.html#deeptime.markov.msm.MarkovStateModelCollection" title="deeptime.markov.msm.MarkovStateModelCollection">MarkovStateModelCollection</a> or None</p>
 </dd>
 </dl>
@@ -332,7 +326,7 @@ Can be None if fit was not called.</p>
 For each thermodynamic state, there is one Markov Model in the collection at the respective thermodynamic state
 index.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<a class="reference internal" href="deeptime.markov.msm.TRAMDataset.html#deeptime.markov.msm.TRAMDataset" title="deeptime.markov.msm.TRAMDataset"><em>TRAMDataset</em></a><em> or </em><em>tuple</em>) – <p>If data is supplied in form of a data tuple, a TRAMDataset is constructed from the data tuple inside
 <cite>fit()</cite>. The data tuple is of shape <cite>(dtrajs, bias_matrices)</cite> or <cite>(dtrajs, bias_matrices, ttrajs)</cite>, with the
@@ -386,16 +380,16 @@ state counts. The lagrangian multipliers are initialized with values
 <span class="sig-name descname"><span class="pre">fit_fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.TRAM.fit_fetch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fits the internal model on data and subsequently fetches it in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>array_like</em>) – Data that is used to fit the model.</p></li>
 <li><p><strong>**kwargs</strong> – Additional arguments to <a class="reference internal" href="#deeptime.markov.msm.TRAM.fit" title="deeptime.markov.msm.TRAM.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The estimated model.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>model</p>
 </dd>
 </dl>
@@ -406,10 +400,10 @@ state counts. The lagrangian multipliers are initialized with values
 <span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.TRAM.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the parameters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>mapping of string to any</p>
 </dd>
 </dl>
@@ -424,13 +418,13 @@ state counts. The lagrangian multipliers are initialized with values
 <code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
 component of a nested object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>object</p>
 </dd>
 </dl>
@@ -442,7 +436,7 @@ component of a nested object.</p>
 <dd><p>Property reporting whether this estimator contains an estimated model. This assumes that the model
 is initialized with <cite>None</cite> otherwise.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>

@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>class KVADModel &#8212; deeptime 0.4.2+4.g6433bb7e documentation</title>
+    <title>class KVADModel &#8212; deeptime 0.4.2+10.ged8cfa3d.dirty documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -22,6 +22,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
@@ -186,13 +187,13 @@
           <div class="body" role="main">
             
   <section id="class-kvadmodel">
-<h1><em>class</em> KVADModel<a class="headerlink" href="#class-kvadmodel" title="Permalink to this headline">¶</a></h1>
+<h1><em>class</em> KVADModel<a class="headerlink" href="#class-kvadmodel" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.decomposition.</span></span><span class="sig-name descname"><span class="pre">KVADModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kernel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">koopman_matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observable_transform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">covariances</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singular_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singular_vectors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.KVADModel" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.decomposition.</span></span><span class="sig-name descname"><span class="pre">KVADModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kernel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">koopman_matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observable_transform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">covariances</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singular_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singular_vectors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.KVADModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>The model produced by the <a class="reference internal" href="deeptime.decomposition.KVAD.html#deeptime.decomposition.KVAD" title="deeptime.decomposition.KVAD"><code class="xref py py-class docutils literal notranslate"><span class="pre">KVAD</span></code></a> estimator.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kernel</strong> (<a class="reference internal" href="deeptime.kernels.Kernel.html#deeptime.kernels.Kernel" title="deeptime.kernels.Kernel"><em>Kernel</em></a>) – The kernel that was used for estimation and embedding.</p></li>
 <li><p><strong>koopman_matrix</strong> (<em>ndarray</em>) – The estimated Koopman matrix.</p></li>
@@ -206,10 +207,6 @@
 </dl>
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.KVADModel.instantaneous_obs" title="deeptime.decomposition.KVADModel.instantaneous_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instantaneous_obs</span></code></a></p></td>
 <td><p>Transforms the current state <span class="math">\(x_t\)</span> to <span class="math">\(f(x_t)\)</span>.</p></td>
@@ -233,10 +230,6 @@
 </table>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deeptime.decomposition.KVADModel.backward" title="deeptime.decomposition.KVADModel.backward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">backward</span></code></a>(data[, propagate])</p></td>
 <td><p>Maps data backward in time.</p></td>
@@ -266,19 +259,19 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel.backward">
-<span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.KVADModel.backward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.KVADModel.backward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maps data backward in time.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>(</em><em>T</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – Input data</p></li>
 <li><p><strong>propagate</strong> (<em>bool</em><em>, </em><em>default=True</em>) – Whether to apply the Koopman operator to the featurized data.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>mapped_data</strong> – Mapped data.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(T, m) ndarray</p>
 </dd>
 </dl>
@@ -286,13 +279,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel.copy">
-<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">deeptime.base.Model</span></a></span></span><a class="headerlink" href="#deeptime.decomposition.KVADModel.copy" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">Model</span></a></span></span><a class="headerlink" href="#deeptime.decomposition.KVADModel.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes a deep copy of this model.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A new copy of this model.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>copy</p>
 </dd>
 </dl>
@@ -300,19 +293,19 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.KVADModel.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.KVADModel.forward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maps data forward in time.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>(</em><em>T</em><em>, </em><em>n</em><em>) </em><em>ndarray</em>) – Input data</p></li>
 <li><p><strong>propagate</strong> (<em>bool</em><em>, </em><em>default=True</em>) – Whether to apply the Koopman operator to the featurized data.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>mapped_data</strong> – Mapped data.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(T, m) ndarray</p>
 </dd>
 </dl>
@@ -323,10 +316,10 @@
 <span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.KVADModel.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the parameters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>params</strong> – Parameter names mapped to their values.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>mapping of string to any</p>
 </dd>
 </dl>
@@ -341,13 +334,13 @@
 <code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
 component of a nested object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>object</p>
 </dd>
 </dl>
@@ -355,16 +348,16 @@ component of a nested object.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel.transform">
-<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.KVADModel.transform" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.decomposition.KVADModel.transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms data by applying the observables to it and then mapping them onto the modes of <span class="math">\(K\)</span>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>data</strong> (<em>(</em><em>T</em><em>,</em><em>n</em><em>) </em><em>ndarray</em>) – Input data.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>transformed_data</strong> – The transformed data.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(T,m) ndarray</p>
 </dd>
 </dl>
@@ -372,26 +365,26 @@ component of a nested object.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel.instantaneous_obs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instantaneous_obs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.instantaneous_obs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instantaneous_obs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.instantaneous_obs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the current state <span class="math">\(x_t\)</span> to <span class="math">\(f(x_t)\)</span>. Defaults to <cite>f(x) = x</cite>.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel.koopman_matrix">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">koopman_matrix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.koopman_matrix" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">koopman_matrix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.koopman_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Same as <a class="reference internal" href="#deeptime.decomposition.KVADModel.operator" title="deeptime.decomposition.KVADModel.operator"><code class="xref py py-attr docutils literal notranslate"><span class="pre">operator</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel.operator">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operator</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.operator" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operator</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.operator" title="Permalink to this definition">¶</a></dt>
 <dd><p>The operator <span class="math">\(K\)</span> so that <span class="math">\(\mathbb{E}[g(x_{t+\tau})] = K^\top \mathbb{E}[f(x_t)]\)</span> in transformed
 bases.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel.operator_inverse">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operator_inverse</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.operator_inverse" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operator_inverse</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.operator_inverse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inverse of the operator <span class="math">\(K\)</span>, i.e., <span class="math">\(K^{-1}\)</span>.
 Potentially pseudo-inverse instead of true inverse.</p>
 </dd></dl>
@@ -404,7 +397,7 @@ Potentially pseudo-inverse instead of true inverse.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.decomposition.KVADModel.timelagged_obs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timelagged_obs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.timelagged_obs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timelagged_obs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.decomposition.KVADModel.timelagged_obs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the future state <span class="math">\(x_{t+\tau}\)</span> to <span class="math">\(g(x_{t+\tau})\)</span>. Defaults to <cite>f(x) = x</cite>.</p>
 </dd></dl>
 
