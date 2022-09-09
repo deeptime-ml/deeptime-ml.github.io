@@ -59,9 +59,9 @@ Example for the :meth:`deeptime.data.prinz_potential` dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.509 seconds)
+   **Total running time of the script:** ( 0 minutes  0.550 seconds)
 
-**Estimated memory usage:**  8 MB
+**Estimated memory usage:**  9 MB
 
 
 .. _sphx_glr_download_datasets_plot_prinz.py:

@@ -29,7 +29,7 @@ also simulate forward in time from novel initial conditions.
 Note that for this example we pass in the exact derivatives. In practice one can
 also pass in a numerical approximation in their place.
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-83
+.. GENERATED FROM PYTHON SOURCE LINES 13-69
 
 
 
@@ -120,34 +120,20 @@ also pass in a numerical approximation in their place.
     # Plot test data
     fig = plt.figure(figsize=(8, 6))
     ax = fig.add_subplot(111, projection="3d")
-    ax.plot(
-        x_test[:, 0],
-        x_test[:, 1],
-        x_test[:, 2],
-        label="True solution",
-        color="firebrick",
-        alpha=0.7,
-    )
+    ax.plot(x_test[:, 0], x_test[:, 1], x_test[:, 2], label="True solution", color="firebrick", alpha=0.7)
     ax.set(xlabel="x", ylabel="y", zlabel="z", title="Testing data (Rossler system)")
 
     # Simulate data with SINDy model and plot
     x_sim = model.simulate(x0_test, t_test)
-    ax.plot(
-        x_sim[:, 0],
-        x_sim[:, 1],
-        x_sim[:, 2],
-        label="Model simulation",
-        color="royalblue",
-        linestyle="dashed",
-    )
+    ax.plot(x_sim[:, 0], x_sim[:, 1], x_sim[:, 2], label="Model simulation", color="royalblue", linestyle="dashed")
     ax.legend()
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.139 seconds)
+   **Total running time of the script:** ( 0 minutes  1.300 seconds)
 
-**Estimated memory usage:**  12 MB
+**Estimated memory usage:**  16 MB
 
 
 .. _sphx_glr_download_examples_plot_sindy_rossler_attractor.py:

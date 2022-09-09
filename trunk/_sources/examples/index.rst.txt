@@ -1,9 +1,5 @@
 :orphan:
 
-
-
-.. _sphx_glr_examples:
-
 .. _method_examples:
 
 General examples
@@ -15,14 +11,263 @@ Short examples for some of the methods.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="We show how to plot a two-dimensional energy surface based on deeptime.util.energy2d and deepti...">
 
 .. only:: html
 
- .. figure:: /examples/images/thumb/sphx_glr_plot_energy_surface_thumb.png
-     :alt: Energy surface
+  .. image:: /examples/images/thumb/sphx_glr_plot_energy_surface_thumb.png
+    :alt: Energy surface
 
-     :ref:`sphx_glr_examples_plot_energy_surface.py`
+  :ref:`sphx_glr_examples_plot_energy_surface.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Energy surface</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to plot unordered xy data - in this case, particle positions (xy)...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_density_thumb.png
+    :alt: Plotting two-dimensional densities from xy
+
+  :ref:`sphx_glr_examples_plot_density.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plotting two-dimensional densities from xy</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to plot unordered xyz data - in this case, particle positions (xy...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_contour2d_from_xyz_thumb.png
+    :alt: Plotting two-dimensional contours from xyz
+
+  :ref:`sphx_glr_examples_plot_contour2d_from_xyz.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plotting two-dimensional contours from xyz</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Tests the Chapman-Kolmogorov equality, see deeptime.util.validation.ck_test.">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_ck_test_thumb.png
+    :alt: Chapman-Kolmogorov test
+
+  :ref:`sphx_glr_examples_plot_ck_test.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Chapman-Kolmogorov test</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to obtain an implied timescales (ITS) plot for a Bayesian Markov ...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_implied_timescales_thumb.png
+    :alt: Implied timescales
+
+  :ref:`sphx_glr_examples_plot_implied_timescales.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Implied timescales</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows a decomposition into metastable sets (see deeptime.markov.pcca) of states in...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_pcca_drunkard_thumb.png
+    :alt: PCCA+ on the Drunkard's walk example
+
+  :ref:`sphx_glr_examples_plot_pcca_drunkard.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">PCCA+ on the Drunkard's walk example</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Projection of position based fluids simulation timeseries on dominant component. For more detai...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_vamp_pbf_projection_thumb.png
+    :alt: VAMP on Position Based Fluids
+
+  :ref:`sphx_glr_examples_plot_vamp_pbf_projection.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">VAMP on Position Based Fluids</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows an application of deeptime.decomposition.KernelCCA on the bickley jet &lt;deept...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_kcca_bickley_thumb.png
+    :alt: Kernel CCA on the Bickley jet to find coherent sets
+
+  :ref:`sphx_glr_examples_plot_kcca_bickley.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Kernel CCA on the Bickley jet to find coherent sets</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to compute and visualize gross and net reactive flux (see deeptime.marko...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_tpt_gross_net_flux_thumb.png
+    :alt: Gross and net flux on the Drunkard's walk example
+
+  :ref:`sphx_glr_examples_plot_tpt_gross_net_flux.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Gross and net flux on the Drunkard's walk example</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="We demonstrate different kinds of network plots based on deeptime.plots.Network. In particular:">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_network_thumb.png
+    :alt: Network plots
+
+  :ref:`sphx_glr_examples_plot_network.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Network plots</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use SINDy to discover the chaotic Rossler system from measurement dat...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_sindy_rossler_attractor_thumb.png
+    :alt: Identification of the Rossler system with SINDy
+
+  :ref:`sphx_glr_examples_plot_sindy_rossler_attractor.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Identification of the Rossler system with SINDy</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the implemented clustering methods on one example dataset for a direc...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_clustering_comparison_thumb.png
+    :alt: Clustering methods comparison
+
+  :ref:`sphx_glr_examples_plot_clustering_comparison.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Clustering methods comparison</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example directly reflects the example used in the `TICA documentation &lt;../notebooks/tica.i...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_vamp_vs_tica_vs_pca_thumb.png
+    :alt: VAMP vs. TICA vs. PCA
+
+  :ref:`sphx_glr_examples_plot_vamp_vs_tica_vs_pca.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">VAMP vs. TICA vs. PCA</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows an application of deeptime.decomposition.KernelCCA on the sqrt model &lt;deepti...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_kcca_projection_thumb.png
+    :alt: Kernel CCA on the sqrt-Model to transform data
+
+  :ref:`sphx_glr_examples_plot_kcca_projection.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Kernel CCA on the sqrt-Model to transform data</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use the transition-based reweighting analysis method (TRAM) to estima...">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_tram_thumb.png
+    :alt: TRAM on a 1D double well
+
+  :ref:`sphx_glr_examples_plot_tram.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">TRAM on a 1D double well</div>
+    </div>
+
 
 .. raw:: html
 
@@ -33,259 +278,18 @@ Short examples for some of the methods.
    :hidden:
 
    /examples/plot_energy_surface
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Tests the Chapman-Kolmogorov equality, see deeptime.util.validation.ck_test.">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_ck_test_thumb.png
-     :alt: Chapman-Kolmogorov test
-
-     :ref:`sphx_glr_examples_plot_ck_test.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
+   /examples/plot_density
+   /examples/plot_contour2d_from_xyz
    /examples/plot_ck_test
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to obtain an implied timescales (ITS) plot for a Bayesian Markov ...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_implied_timescales_thumb.png
-     :alt: Implied timescales
-
-     :ref:`sphx_glr_examples_plot_implied_timescales.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_implied_timescales
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows a decomposition into metastable sets (see deeptime.markov.pcca) of states in...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_pcca_drunkard_thumb.png
-     :alt: PCCA+ on the Drunkard's walk example
-
-     :ref:`sphx_glr_examples_plot_pcca_drunkard.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_pcca_drunkard
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Projection of position based fluids simulation timeseries on dominant component. For more detai...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_vamp_pbf_projection_thumb.png
-     :alt: VAMP on Position Based Fluids
-
-     :ref:`sphx_glr_examples_plot_vamp_pbf_projection.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_vamp_pbf_projection
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows an application of deeptime.decomposition.KernelCCA on the bickley jet &lt;deept...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_kcca_bickley_thumb.png
-     :alt: Kernel CCA on the Bickley jet to find coherent sets
-
-     :ref:`sphx_glr_examples_plot_kcca_bickley.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_kcca_bickley
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to compute and visualize gross and net reactive flux (see deeptime.marko...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_tpt_gross_net_flux_thumb.png
-     :alt: Gross and net flux on the Drunkard's walk example
-
-     :ref:`sphx_glr_examples_plot_tpt_gross_net_flux.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_tpt_gross_net_flux
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="We demonstrate different kinds of network plots based on deeptime.plots.Network. In particular:">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_network_thumb.png
-     :alt: Network plots
-
-     :ref:`sphx_glr_examples_plot_network.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_network
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use SINDy to discover the chaotic Rossler system from measurement dat...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_sindy_rossler_attractor_thumb.png
-     :alt: Identification of the Rossler system with SINDy
-
-     :ref:`sphx_glr_examples_plot_sindy_rossler_attractor.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_sindy_rossler_attractor
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the implemented clustering methods on one example dataset for a direc...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_clustering_comparison_thumb.png
-     :alt: Clustering methods comparison
-
-     :ref:`sphx_glr_examples_plot_clustering_comparison.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_clustering_comparison
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example directly reflects the example used in the `TICA documentation &lt;../notebooks/tica.i...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_vamp_vs_tica_vs_pca_thumb.png
-     :alt: VAMP vs. TICA vs. PCA
-
-     :ref:`sphx_glr_examples_plot_vamp_vs_tica_vs_pca.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_vamp_vs_tica_vs_pca
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows an application of deeptime.decomposition.KernelCCA on the sqrt model &lt;deepti...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_kcca_projection_thumb.png
-     :alt: Kernel CCA on the sqrt-Model to transform data
-
-     :ref:`sphx_glr_examples_plot_kcca_projection.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_kcca_projection
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use the transition-based reweighting analysis method (TRAM) to estima...">
-
-.. only:: html
-
- .. figure:: /examples/images/thumb/sphx_glr_plot_tram_thumb.png
-     :alt: TRAM on a 1D double well
-
-     :ref:`sphx_glr_examples_plot_tram.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
    /examples/plot_tram
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
 

@@ -1,0 +1,17 @@
+﻿
+
+*function* plot\_density
+========================
+
+.. currentmodule:: deeptime.plots
+
+.. autofunction:: plot_density
+
+   
+   
+   
+
+   
+
+   
+   

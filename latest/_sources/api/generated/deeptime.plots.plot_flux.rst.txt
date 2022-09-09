@@ -1,0 +1,17 @@
+﻿
+
+*function* plot\_flux
+=====================
+
+.. currentmodule:: deeptime.plots
+
+.. autofunction:: plot_flux
+
+   
+   
+   
+
+   
+
+   
+   

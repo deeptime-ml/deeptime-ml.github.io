@@ -1,0 +1,17 @@
+﻿
+
+*function* plot\_contour2d\_from\_xyz
+=====================================
+
+.. currentmodule:: deeptime.plots
+
+.. autofunction:: plot_contour2d_from_xyz
+
+   
+   
+   
+
+   
+
+   
+   

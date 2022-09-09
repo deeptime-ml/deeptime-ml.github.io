@@ -1,0 +1,17 @@
+﻿
+
+*function* plot\_markov\_model
+==============================
+
+.. currentmodule:: deeptime.plots
+
+.. autofunction:: plot_markov_model
+
+   
+   
+   
+
+   
+
+   
+   

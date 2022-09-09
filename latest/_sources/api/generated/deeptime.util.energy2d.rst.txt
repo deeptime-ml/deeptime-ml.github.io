@@ -1,0 +1,17 @@
+﻿
+
+*function* energy2d
+===================
+
+.. currentmodule:: deeptime.util
+
+.. autofunction:: energy2d
+
+   
+   
+   
+
+   
+
+   
+   

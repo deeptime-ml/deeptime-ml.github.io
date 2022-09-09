@@ -1,0 +1,17 @@
+﻿
+
+*class* Energy2dPlot
+====================
+
+.. currentmodule:: deeptime.plots
+
+.. autoclass:: Energy2dPlot
+
+   
+   
+   
+
+   
+
+   
+   

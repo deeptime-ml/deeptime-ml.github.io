@@ -1,0 +1,23 @@
+﻿
+
+*class* EnergyLandscape2d
+=========================
+
+.. currentmodule:: deeptime.util
+
+.. autoclass:: EnergyLandscape2d
+
+   
+   
+   
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~EnergyLandscape2d.plot
+   
+   
