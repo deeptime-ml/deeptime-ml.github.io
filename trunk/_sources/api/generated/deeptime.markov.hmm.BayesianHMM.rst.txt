@@ -32,7 +32,6 @@
 
    .. autosummary::
    
-      ~BayesianHMM.chapman_kolmogorov_validator
       ~BayesianHMM.default
       ~BayesianHMM.fetch_model
       ~BayesianHMM.fit

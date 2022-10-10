@@ -1,0 +1,17 @@
+﻿
+
+*function* tv\_derivative
+=========================
+
+.. currentmodule:: deeptime.util.diff
+
+.. autofunction:: tv_derivative
+
+   
+   
+   
+
+   
+
+   
+   

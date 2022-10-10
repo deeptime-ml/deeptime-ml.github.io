@@ -1,0 +1,17 @@
+﻿
+
+*function* finite\_difference\_coefficients
+===========================================
+
+.. currentmodule:: deeptime.util.diff
+
+.. autofunction:: finite_difference_coefficients
+
+   
+   
+   
+
+   
+
+   
+   

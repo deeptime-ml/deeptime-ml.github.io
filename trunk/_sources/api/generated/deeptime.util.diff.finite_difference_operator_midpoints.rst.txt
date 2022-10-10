@@ -1,0 +1,17 @@
+﻿
+
+*function* finite\_difference\_operator\_midpoints
+==================================================
+
+.. currentmodule:: deeptime.util.diff
+
+.. autofunction:: finite_difference_operator_midpoints
+
+   
+   
+   
+
+   
+
+   
+   

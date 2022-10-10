@@ -30,7 +30,6 @@
 
    .. autosummary::
    
-      ~TICA.chapman_kolmogorov_validator
       ~TICA.covariance_estimator
       ~TICA.fetch_model
       ~TICA.fit

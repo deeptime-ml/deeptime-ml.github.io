@@ -16,6 +16,23 @@ Short examples for some of the methods.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Total-variation regularized derivative on a noisy function.">
+
+.. only:: html
+
+  .. image:: /examples/images/thumb/sphx_glr_plot_tv_derivative_thumb.png
+    :alt: TV Derivative
+
+  :ref:`sphx_glr_examples_plot_tv_derivative.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">TV Derivative</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="We show how to plot a two-dimensional energy surface based on deeptime.util.energy2d and deepti...">
 
 .. only:: html
@@ -38,13 +55,13 @@ Short examples for some of the methods.
 .. only:: html
 
   .. image:: /examples/images/thumb/sphx_glr_plot_density_thumb.png
-    :alt: Plotting two-dimensional densities from xy
+    :alt: 2D densities from xy
 
   :ref:`sphx_glr_examples_plot_density.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Plotting two-dimensional densities from xy</div>
+      <div class="sphx-glr-thumbnail-title">2D densities from xy</div>
     </div>
 
 
@@ -55,13 +72,13 @@ Short examples for some of the methods.
 .. only:: html
 
   .. image:: /examples/images/thumb/sphx_glr_plot_contour2d_from_xyz_thumb.png
-    :alt: Plotting two-dimensional contours from xyz
+    :alt: 2D contours from xyz
 
   :ref:`sphx_glr_examples_plot_contour2d_from_xyz.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Plotting two-dimensional contours from xyz</div>
+      <div class="sphx-glr-thumbnail-title">2D contours from xyz</div>
     </div>
 
 
@@ -106,13 +123,13 @@ Short examples for some of the methods.
 .. only:: html
 
   .. image:: /examples/images/thumb/sphx_glr_plot_pcca_drunkard_thumb.png
-    :alt: PCCA+ on the Drunkard's walk example
+    :alt: PCCA+ on the Drunkard's walk
 
   :ref:`sphx_glr_examples_plot_pcca_drunkard.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">PCCA+ on the Drunkard's walk example</div>
+      <div class="sphx-glr-thumbnail-title">PCCA+ on the Drunkard's walk</div>
     </div>
 
 
@@ -140,13 +157,13 @@ Short examples for some of the methods.
 .. only:: html
 
   .. image:: /examples/images/thumb/sphx_glr_plot_kcca_bickley_thumb.png
-    :alt: Kernel CCA on the Bickley jet to find coherent sets
+    :alt: Coherent sets: Kernel CCA on the Bickley jet
 
   :ref:`sphx_glr_examples_plot_kcca_bickley.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Kernel CCA on the Bickley jet to find coherent sets</div>
+      <div class="sphx-glr-thumbnail-title">Coherent sets: Kernel CCA on the Bickley jet</div>
     </div>
 
 
@@ -157,13 +174,13 @@ Short examples for some of the methods.
 .. only:: html
 
   .. image:: /examples/images/thumb/sphx_glr_plot_tpt_gross_net_flux_thumb.png
-    :alt: Gross and net flux on the Drunkard's walk example
+    :alt: Gross and net flux on the Drunkard's walk
 
   :ref:`sphx_glr_examples_plot_tpt_gross_net_flux.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Gross and net flux on the Drunkard's walk example</div>
+      <div class="sphx-glr-thumbnail-title">Gross and net flux on the Drunkard's walk</div>
     </div>
 
 
@@ -191,13 +208,13 @@ Short examples for some of the methods.
 .. only:: html
 
   .. image:: /examples/images/thumb/sphx_glr_plot_sindy_rossler_attractor_thumb.png
-    :alt: Identification of the Rossler system with SINDy
+    :alt: SINDy: Identification of the Rössler system
 
   :ref:`sphx_glr_examples_plot_sindy_rossler_attractor.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Identification of the Rossler system with SINDy</div>
+      <div class="sphx-glr-thumbnail-title">SINDy: Identification of the Rössler system</div>
     </div>
 
 
@@ -277,6 +294,7 @@ Short examples for some of the methods.
 .. toctree::
    :hidden:
 
+   /examples/plot_tv_derivative
    /examples/plot_energy_surface
    /examples/plot_density
    /examples/plot_contour2d_from_xyz

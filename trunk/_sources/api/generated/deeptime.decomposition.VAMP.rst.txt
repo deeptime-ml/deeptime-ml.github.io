@@ -30,7 +30,6 @@
 
    .. autosummary::
    
-      ~VAMP.chapman_kolmogorov_validator
       ~VAMP.covariance_estimator
       ~VAMP.fetch_model
       ~VAMP.fit
