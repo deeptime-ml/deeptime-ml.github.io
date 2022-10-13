@@ -1,0 +1,17 @@
+﻿
+
+*function* lorenz\_system
+=========================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: lorenz_system
+
+   
+   
+   
+
+   
+
+   
+   

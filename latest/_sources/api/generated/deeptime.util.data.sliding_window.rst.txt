@@ -1,0 +1,17 @@
+﻿
+
+*function* sliding\_window
+==========================
+
+.. currentmodule:: deeptime.util.data
+
+.. autofunction:: sliding_window
+
+   
+   
+   
+
+   
+
+   
+   

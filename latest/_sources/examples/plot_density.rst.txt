@@ -18,8 +18,8 @@
 .. _sphx_glr_examples_plot_density.py:
 
 
-Plotting two-dimensional densities from xy
-==========================================
+2D densities from xy
+====================
 
 This example demonstrates how to plot unordered xy data - in this case, particle positions (xy) - as contour of their
 density in both linear and log scale. See :meth:`deeptime.plots.plot_density`.
@@ -67,9 +67,9 @@ density in both linear and log scale. See :meth:`deeptime.plots.plot_density`.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.666 seconds)
+   **Total running time of the script:** ( 0 minutes  0.655 seconds)
 
-**Estimated memory usage:**  24 MB
+**Estimated memory usage:**  9 MB
 
 
 .. _sphx_glr_download_examples_plot_density.py:

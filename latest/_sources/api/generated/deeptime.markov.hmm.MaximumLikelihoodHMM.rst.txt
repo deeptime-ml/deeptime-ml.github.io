@@ -36,7 +36,6 @@
 
    .. autosummary::
    
-      ~MaximumLikelihoodHMM.chapman_kolmogorov_validator
       ~MaximumLikelihoodHMM.fetch_model
       ~MaximumLikelihoodHMM.fit
       ~MaximumLikelihoodHMM.fit_fetch

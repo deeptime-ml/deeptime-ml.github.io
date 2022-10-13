@@ -1,0 +1,239 @@
+:orphan:
+
+.. _datasets_sdes:
+
+SDEs
+----
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.quadruple_well_asymmetric dataset.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_quadruple_well_asymmetric_thumb.png
+    :alt: Asymmetric Quadruple-well
+
+  :ref:`sphx_glr_datasets_sdes_plot_quadruple_well_asymmetric.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Asymmetric Quadruple-well</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.birth_death_chain model.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_birth_death_chain_thumb.png
+    :alt: Birth-death chain model
+
+  :ref:`sphx_glr_datasets_sdes_plot_birth_death_chain.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Birth-death chain model</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Demonstrating usage of deeptime.data.custom_sde.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_custom_sde_thumb.png
+    :alt: Custom SDEs
+
+  :ref:`sphx_glr_datasets_sdes_plot_custom_sde.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Custom SDEs</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.double_well_2d dataset.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_double_well_2d_thumb.png
+    :alt: Double-well 2D
+
+  :ref:`sphx_glr_datasets_sdes_plot_double_well_2d.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Double-well 2D</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Showcase use of the deeptime.data.double_well_discrete dataset.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_double_well_discrete_thumb.png
+    :alt: Double-well discrete
+
+  :ref:`sphx_glr_datasets_sdes_plot_double_well_discrete.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Double-well discrete</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for deeptime.data.tmatrix_metropolis1d.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_tmatrix_1d_thumb.png
+    :alt: Metropolis chain in 1D energy landscape
+
+  :ref:`sphx_glr_datasets_sdes_plot_tmatrix_1d.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Metropolis chain in 1D energy landscape</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.ornstein_uhlenbeck dataset.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_ornstein_uhlenbeck_thumb.png
+    :alt: One-dimensional Ornstein-Uhlenbeck process
+
+  :ref:`sphx_glr_datasets_sdes_plot_ornstein_uhlenbeck.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">One-dimensional Ornstein-Uhlenbeck process</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.prinz_potential dataset.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_prinz_thumb.png
+    :alt: One-dimensional Prinz potential
+
+  :ref:`sphx_glr_datasets_sdes_plot_prinz.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">One-dimensional Prinz potential</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.quadruple_well dataset.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_quadruple_well_thumb.png
+    :alt: Quadruple-well
+
+  :ref:`sphx_glr_datasets_sdes_plot_quadruple_well.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Quadruple-well</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Demonstrates deeptime.data.time_dependent_quintuple_well. The potential wells slowly oscillate ...">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_time_quintuple_well_thumb.gif
+    :alt: Time-dependent quintuple well
+
+  :ref:`sphx_glr_datasets_sdes_plot_time_quintuple_well.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Time-dependent quintuple well</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.triple_well_1d dataset.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_triple_well_1d_thumb.png
+    :alt: Triple-well 1D
+
+  :ref:`sphx_glr_datasets_sdes_plot_triple_well_1d.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Triple-well 1D</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.triple_well_2d dataset.">
+
+.. only:: html
+
+  .. image:: /datasets/sdes/images/thumb/sphx_glr_plot_triple_well_2d_thumb.png
+    :alt: Triple-well 2D
+
+  :ref:`sphx_glr_datasets_sdes_plot_triple_well_2d.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Triple-well 2D</div>
+    </div>
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /datasets/sdes/plot_quadruple_well_asymmetric
+   /datasets/sdes/plot_birth_death_chain
+   /datasets/sdes/plot_custom_sde
+   /datasets/sdes/plot_double_well_2d
+   /datasets/sdes/plot_double_well_discrete
+   /datasets/sdes/plot_tmatrix_1d
+   /datasets/sdes/plot_ornstein_uhlenbeck
+   /datasets/sdes/plot_prinz
+   /datasets/sdes/plot_quadruple_well
+   /datasets/sdes/plot_time_quintuple_well
+   /datasets/sdes/plot_triple_well_1d
+   /datasets/sdes/plot_triple_well_2d
+

@@ -28,7 +28,6 @@
 
    .. autosummary::
    
-      ~BayesianMSM.chapman_kolmogorov_validator
       ~BayesianMSM.fetch_model
       ~BayesianMSM.fit
       ~BayesianMSM.fit_fetch

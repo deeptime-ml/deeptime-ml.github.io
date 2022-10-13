@@ -18,8 +18,8 @@
 .. _sphx_glr_examples_plot_contour2d_from_xyz.py:
 
 
-Plotting two-dimensional contours from xyz
-==========================================
+2D contours from xyz
+====================
 
 This example demonstrates how to plot unordered xyz data - in this case, particle positions (xy) and their energy (z) -
 as contour as well as a state map on the right-hand side depicting a decomposition into three coarse metastable states.
@@ -73,9 +73,9 @@ See :meth:`deeptime.plots.plot_contour2d_from_xyz`.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.408 seconds)
+   **Total running time of the script:** ( 0 minutes  0.860 seconds)
 
-**Estimated memory usage:**  21 MB
+**Estimated memory usage:**  22 MB
 
 
 .. _sphx_glr_download_examples_plot_contour2d_from_xyz.py:

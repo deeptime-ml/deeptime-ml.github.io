@@ -29,7 +29,6 @@
 
    .. autosummary::
    
-      ~MaximumLikelihoodMSM.chapman_kolmogorov_validator
       ~MaximumLikelihoodMSM.fetch_model
       ~MaximumLikelihoodMSM.fit
       ~MaximumLikelihoodMSM.fit_fetch

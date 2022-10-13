@@ -1,0 +1,113 @@
+:orphan:
+
+.. _datasets_other:
+
+Other
+-----
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The deeptime.data.drunkards_walk model, a markov state model on a 2-dimensional grid.">
+
+.. only:: html
+
+  .. image:: /datasets/other/images/thumb/sphx_glr_plot_drunkards_walk_thumb.png
+    :alt: Drunkard's walk
+
+  :ref:`sphx_glr_datasets_other_plot_drunkards_walk.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Drunkard's walk</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The deeptime.data.ellipsoids dataset.">
+
+.. only:: html
+
+  .. image:: /datasets/other/images/thumb/sphx_glr_plot_ellipsoids_thumb.png
+    :alt: Ellipsoids dataset
+
+  :ref:`sphx_glr_datasets_other_plot_ellipsoids.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Ellipsoids dataset</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example of the deeptime.data.position_based_fluids simulation engine.">
+
+.. only:: html
+
+  .. image:: /datasets/other/images/thumb/sphx_glr_plot_pbf_thumb.gif
+    :alt: Position-based fluids
+
+  :ref:`sphx_glr_datasets_other_plot_pbf.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Position-based fluids</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Sample a hidden state and an sqrt-transformed emission trajectory. Demonstrates deeptime.data.s...">
+
+.. only:: html
+
+  .. image:: /datasets/other/images/thumb/sphx_glr_plot_sqrt_model_thumb.png
+    :alt: Sqrt model
+
+  :ref:`sphx_glr_datasets_other_plot_sqrt_model.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Sqrt model</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Sample a hidden state and an swissroll-transformed emission trajectory. Demonstrates deeptime.d...">
+
+.. only:: html
+
+  .. image:: /datasets/other/images/thumb/sphx_glr_plot_swissroll_model_thumb.gif
+    :alt: Swissroll model
+
+  :ref:`sphx_glr_datasets_other_plot_swissroll_model.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Swissroll model</div>
+    </div>
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /datasets/other/plot_drunkards_walk
+   /datasets/other/plot_ellipsoids
+   /datasets/other/plot_pbf
+   /datasets/other/plot_sqrt_model
+   /datasets/other/plot_swissroll_model
+
