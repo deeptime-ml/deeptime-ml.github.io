@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>class DiscreteOutputModel &#8212; deeptime 0.4.3+6.ga6241630.dirty documentation</title>
+    <title>class DiscreteOutputModel &#8212; deeptime 0.4.3+15.g83e6071d documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -24,6 +24,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../../_static/d3.v5.min.js"></script>
@@ -73,7 +74,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_datasets.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API docs</span></p>
@@ -191,7 +192,7 @@ classically used in the literature.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>output_probabilities</strong> (<em>(</em><em>(</em><em>N</em><em>, </em><em>M</em><em>) </em><em>dtype=float32</em><em> or </em><em>float64</em><em>) </em><em>ndarray</em>) – Row-stochastic output probability matrix for <code class="code docutils literal notranslate"><span class="pre">N</span></code> hidden states and <code class="code docutils literal notranslate"><span class="pre">M</span></code> observable symbols.</p></li>
-<li><p><strong>prior</strong> (<em>None</em><em> or </em><em>type and shape of output_probabilities</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – <p>Prior for the initial distribution of the HMM. Currently implements the Dirichlet prior that is
+<li><p><strong>prior</strong> (<em>None</em><em> or </em><em>type and shape</em><em> of </em><em>output_probabilities</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – <p>Prior for the initial distribution of the HMM. Currently implements the Dirichlet prior that is
 conjugate to the Dirichlet distribution of <span class="math">\(b_i\)</span>, which is sampled from</p>
 <p>where <span class="math">\(n_{ij}\)</span> are the number of times symbol <span class="math">\(j\)</span> has been observed when the hidden trajectory
 was in state <span class="math">\(i\)</span> and <span class="math">\(a_{ij}\)</span> is the prior count. The default prior=None corresponds
@@ -278,8 +279,8 @@ to <span class="math">\(a_{ij} = 0\)</span>. This option ensures coincidence bet
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>observations</strong> (<em>list of ndarray</em>) – A list of K observation trajectories</p></li>
-<li><p><strong>weights</strong> (<em>list of ndarray</em>) – A list of K weight matrices, each having length T_k of their corresponding observation trajectory.
+<li><p><strong>observations</strong> (<em>list</em><em> of </em><em>ndarray</em>) – A list of K observation trajectories</p></li>
+<li><p><strong>weights</strong> (<em>list</em><em> of </em><em>ndarray</em>) – A list of K weight matrices, each having length T_k of their corresponding observation trajectory.
 Evaluating weights[k][t,n] should yield the weight assignment from observations[k][t] to state index n.</p></li>
 </ul>
 </dd>

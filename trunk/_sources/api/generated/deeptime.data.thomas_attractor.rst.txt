@@ -1,0 +1,17 @@
+﻿
+
+*function* thomas\_attractor
+============================
+
+.. currentmodule:: deeptime.data
+
+.. autofunction:: thomas_attractor
+
+   
+   
+   
+
+   
+
+   
+   

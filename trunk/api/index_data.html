@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>deeptime.data &#8212; deeptime 0.4.3+6.ga6241630.dirty documentation</title>
+    <title>deeptime.data &#8212; deeptime 0.4.3+15.g83e6071d documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
@@ -24,6 +24,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
     <script src="../_static/d3.v5.min.js"></script>
@@ -35,7 +36,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="function double_well_discrete" href="generated/deeptime.data.double_well_discrete.html" />
+    <link rel="next" title="function abc_flow" href="generated/deeptime.data.abc_flow.html" />
     <link rel="prev" title="function is_torch_kernel" href="generated/deeptime.kernels.is_torch_kernel.html" />
 <link rel="apple-touch-icon" sizes="180x180" href="../_static/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../_static/favicon-32x32.png">
@@ -73,7 +74,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/hmm.html">Hidden Markov Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/clustering.html">Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_datasets.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_dev.html">For developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API docs</span></p>
@@ -89,25 +90,30 @@
 <li class="toctree-l1"><a class="reference internal" href="index_basis.html">deeptime.basis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_kernels.html">deeptime.kernels</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">deeptime.data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#api">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#deterministic-datasets">Deterministic datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.abc_flow.html"><em>function</em> abc_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.bickley_jet.html"><em>function</em> bickley_jet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.lorenz_system.html"><em>function</em> lorenz_system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.thomas_attractor.html"><em>function</em> thomas_attractor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.position_based_fluids.html"><em>function</em> position_based_fluids</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#stochastic-datasets">Stochastic datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.tmatrix_metropolis1d.html"><em>function</em> tmatrix_metropolis1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.birth_death_chain.html"><em>function</em> birth_death_chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.ornstein_uhlenbeck.html"><em>function</em> ornstein_uhlenbeck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.double_well_2d.html"><em>function</em> double_well_2d</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.double_well_discrete.html"><em>function</em> double_well_discrete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.triple_well_1d.html"><em>function</em> triple_well_1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.triple_well_2d.html"><em>function</em> triple_well_2d</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.quadruple_well.html"><em>function</em> quadruple_well</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.quadruple_well_asymmetric.html"><em>function</em> quadruple_well_asymmetric</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.triple_well_2d.html"><em>function</em> triple_well_2d</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.triple_well_1d.html"><em>function</em> triple_well_1d</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.double_well_2d.html"><em>function</em> double_well_2d</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.time_dependent_quintuple_well.html"><em>function</em> time_dependent_quintuple_well</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.abc_flow.html"><em>function</em> abc_flow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.ornstein_uhlenbeck.html"><em>function</em> ornstein_uhlenbeck</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.prinz_potential.html"><em>function</em> prinz_potential</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.ellipsoids.html"><em>function</em> ellipsoids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.sqrt_model.html"><em>function</em> sqrt_model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.swissroll_model.html"><em>function</em> swissroll_model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.position_based_fluids.html"><em>function</em> position_based_fluids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.drunkards_walk.html"><em>function</em> drunkards_walk</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.bickley_jet.html"><em>function</em> bickley_jet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.birth_death_chain.html"><em>function</em> birth_death_chain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/deeptime.data.tmatrix_metropolis1d.html"><em>function</em> tmatrix_metropolis1d</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#custom-systems">Custom systems</a><ul>
@@ -175,7 +181,7 @@
 <ul>
   <li><a href="../contents.html">Documentation overview</a><ul>
       <li>Previous: <a href="generated/deeptime.kernels.is_torch_kernel.html" title="previous chapter"><em>function</em> is_torch_kernel</a></li>
-      <li>Next: <a href="generated/deeptime.data.double_well_discrete.html" title="next chapter"><em>function</em> double_well_discrete</a></li>
+      <li>Next: <a href="generated/deeptime.data.abc_flow.html" title="next chapter"><em>function</em> abc_flow</a></li>
   </ul></li>
 </ul>
 </div>
@@ -210,12 +216,52 @@
   <section id="deeptime-data">
 <span id="ref-data"></span><h1>deeptime.data<a class="headerlink" href="#deeptime-data" title="Permalink to this heading">¶</a></h1>
 <p>The <em>data</em> package contains example systems.</p>
-<span class="target" id="module-deeptime.data"></span><section id="api">
-<h2>API<a class="headerlink" href="#api" title="Permalink to this heading">¶</a></h2>
+<span class="target" id="module-deeptime.data"></span><section id="deterministic-datasets">
+<h2>Deterministic datasets<a class="headerlink" href="#deterministic-datasets" title="Permalink to this heading">¶</a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.abc_flow.html#deeptime.data.abc_flow" title="deeptime.data.abc_flow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">abc_flow</span></code></a>([h, n_steps])</p></td>
+<td><p>The Arnold-Beltrami-Childress flow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.bickley_jet.html#deeptime.data.bickley_jet" title="deeptime.data.bickley_jet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bickley_jet</span></code></a>(n_particles[, n_jobs, seed])</p></td>
+<td><p>Simulates the Bickley jet for a number of particles.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.lorenz_system.html#deeptime.data.lorenz_system" title="deeptime.data.lorenz_system"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lorenz_system</span></code></a>([h, n_steps])</p></td>
+<td><p>The Lorenz system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.thomas_attractor.html#deeptime.data.thomas_attractor" title="deeptime.data.thomas_attractor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thomas_attractor</span></code></a>([b, h, n_steps])</p></td>
+<td><p>The Thomas attractor.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.position_based_fluids.html#deeptime.data.position_based_fluids" title="deeptime.data.position_based_fluids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">position_based_fluids</span></code></a>([n_burn_in, ...])</p></td>
+<td><p>Creates a position based fluids (PBF) simulator.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="stochastic-datasets">
+<h2>Stochastic datasets<a class="headerlink" href="#stochastic-datasets" title="Permalink to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.tmatrix_metropolis1d.html#deeptime.data.tmatrix_metropolis1d" title="deeptime.data.tmatrix_metropolis1d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tmatrix_metropolis1d</span></code></a>(energies[, d])</p></td>
+<td><p>Transition matrix describing the Metropolis chain jumping between neighbors in a discrete 1D energy landscape.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.birth_death_chain.html#deeptime.data.birth_death_chain" title="deeptime.data.birth_death_chain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">birth_death_chain</span></code></a>(q, p[, sparse])</p></td>
+<td><p>Generates a birth and death chain simulator from annihilation and creation probabilities <cite>q</cite> and <cite>p</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.ornstein_uhlenbeck.html#deeptime.data.ornstein_uhlenbeck" title="deeptime.data.ornstein_uhlenbeck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ornstein_uhlenbeck</span></code></a>([h, n_steps])</p></td>
+<td><p>The one-dimensional Ornstein-Uhlenbeck process.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.double_well_2d.html#deeptime.data.double_well_2d" title="deeptime.data.double_well_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">double_well_2d</span></code></a>([h, n_steps, ...])</p></td>
+<td><p>This dataset generates trajectories of a two-dimensional particle living in a double-well potential landscape.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.double_well_discrete.html#deeptime.data.double_well_discrete" title="deeptime.data.double_well_discrete"><code class="xref py py-obj docutils literal notranslate"><span class="pre">double_well_discrete</span></code></a>()</p></td>
 <td><p>MCMC process in a symmetric double well potential, spatially discretized to 100 bins.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.triple_well_1d.html#deeptime.data.triple_well_1d" title="deeptime.data.triple_well_1d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triple_well_1d</span></code></a>([h, n_steps])</p></td>
+<td><p>A simple one-dimensional triple-well potential landscape.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.triple_well_2d.html#deeptime.data.triple_well_2d" title="deeptime.data.triple_well_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triple_well_2d</span></code></a>([h, n_steps])</p></td>
+<td><p>This dataset generates trajectories of a two-dimensional particle living in a triple-well potential landscape.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.quadruple_well.html#deeptime.data.quadruple_well" title="deeptime.data.quadruple_well"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quadruple_well</span></code></a>([h, n_steps])</p></td>
 <td><p>This dataset generates trajectories of a two-dimensional particle living in a quadruple-well potential landscape.</p></td>
@@ -223,50 +269,23 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.quadruple_well_asymmetric.html#deeptime.data.quadruple_well_asymmetric" title="deeptime.data.quadruple_well_asymmetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quadruple_well_asymmetric</span></code></a>([h, n_steps])</p></td>
 <td><p>This dataset generates trajectories of a two-dimensional particle living in an asymmetric quadruple-well potential landscape.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.triple_well_2d.html#deeptime.data.triple_well_2d" title="deeptime.data.triple_well_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triple_well_2d</span></code></a>([h, n_steps])</p></td>
-<td><p>This dataset generates trajectories of a two-dimensional particle living in a triple-well potential landscape.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.triple_well_1d.html#deeptime.data.triple_well_1d" title="deeptime.data.triple_well_1d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triple_well_1d</span></code></a>([h, n_steps])</p></td>
-<td><p>A simple one-dimensional triple-well potential landscape.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.double_well_2d.html#deeptime.data.double_well_2d" title="deeptime.data.double_well_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">double_well_2d</span></code></a>([h, n_steps, ...])</p></td>
-<td><p>This dataset generates trajectories of a two-dimensional particle living in a double-well potential landscape.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.time_dependent_quintuple_well.html#deeptime.data.time_dependent_quintuple_well" title="deeptime.data.time_dependent_quintuple_well"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_dependent_quintuple_well</span></code></a>([h, n_steps, beta])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.time_dependent_quintuple_well.html#deeptime.data.time_dependent_quintuple_well" title="deeptime.data.time_dependent_quintuple_well"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_dependent_quintuple_well</span></code></a>([h, n_steps, beta])</p></td>
 <td><p>This dataset generates trajectories of a two-dimensional particle living in a time-dependent quintuple-well potential landscape.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.abc_flow.html#deeptime.data.abc_flow" title="deeptime.data.abc_flow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">abc_flow</span></code></a>([h, n_steps])</p></td>
-<td><p>The Arnold-Beltrami-Childress flow.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.ornstein_uhlenbeck.html#deeptime.data.ornstein_uhlenbeck" title="deeptime.data.ornstein_uhlenbeck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ornstein_uhlenbeck</span></code></a>([h, n_steps])</p></td>
-<td><p>The one-dimensional Ornstein-Uhlenbeck process.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.prinz_potential.html#deeptime.data.prinz_potential" title="deeptime.data.prinz_potential"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prinz_potential</span></code></a>([h, n_steps, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.prinz_potential.html#deeptime.data.prinz_potential" title="deeptime.data.prinz_potential"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prinz_potential</span></code></a>([h, n_steps, ...])</p></td>
 <td><p>Particle diffusing in a one-dimensional quadruple well potential landscape.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.ellipsoids.html#deeptime.data.ellipsoids" title="deeptime.data.ellipsoids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ellipsoids</span></code></a>([laziness, seed])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.ellipsoids.html#deeptime.data.ellipsoids" title="deeptime.data.ellipsoids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ellipsoids</span></code></a>([laziness, seed])</p></td>
 <td><p>Example data of a two-state markov chain which can be featurized into two parallel ellipsoids and optionally rotated into higher-dimensional space.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.sqrt_model.html#deeptime.data.sqrt_model" title="deeptime.data.sqrt_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sqrt_model</span></code></a>(n_samples[, seed])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.sqrt_model.html#deeptime.data.sqrt_model" title="deeptime.data.sqrt_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sqrt_model</span></code></a>(n_samples[, seed])</p></td>
 <td><p>Sample a hidden state and an sqrt-transformed emission trajectory.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.swissroll_model.html#deeptime.data.swissroll_model" title="deeptime.data.swissroll_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">swissroll_model</span></code></a>(n_samples[, seed])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.swissroll_model.html#deeptime.data.swissroll_model" title="deeptime.data.swissroll_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">swissroll_model</span></code></a>(n_samples[, seed])</p></td>
 <td><p>Sample a hidden state and an swissroll-transformed emission trajectory, so that the states are not linearly separable.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.position_based_fluids.html#deeptime.data.position_based_fluids" title="deeptime.data.position_based_fluids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">position_based_fluids</span></code></a>([n_burn_in, ...])</p></td>
-<td><p>Creates a position based fluids (PBF) simulator.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.drunkards_walk.html#deeptime.data.drunkards_walk" title="deeptime.data.drunkards_walk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drunkards_walk</span></code></a>([grid_size, bar_location, ...])</p></td>
 <td><p>This example dataset simulates the steps a drunkard living in a two-dimensional plane takes finding either the bar or the home as two absorbing states.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.bickley_jet.html#deeptime.data.bickley_jet" title="deeptime.data.bickley_jet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bickley_jet</span></code></a>(n_particles[, n_jobs, seed])</p></td>
-<td><p>Simulates the Bickley jet for a number of particles.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/deeptime.data.birth_death_chain.html#deeptime.data.birth_death_chain" title="deeptime.data.birth_death_chain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">birth_death_chain</span></code></a>(q, p[, sparse])</p></td>
-<td><p>Generates a birth and death chain simulator from annihilation and creation probabilities <cite>q</cite> and <cite>p</cite>.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/deeptime.data.tmatrix_metropolis1d.html#deeptime.data.tmatrix_metropolis1d" title="deeptime.data.tmatrix_metropolis1d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tmatrix_metropolis1d</span></code></a>(energies[, d])</p></td>
-<td><p>Transition matrix describing the Metropolis chain jumping between neighbors in a discrete 1D energy landscape.</p></td>
 </tr>
 </tbody>
 </table>
