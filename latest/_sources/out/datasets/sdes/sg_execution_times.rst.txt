@@ -1,0 +1,70 @@
+
+:orphan:
+
+.. _sphx_glr_out_datasets_sdes_sg_execution_times:
+
+
+Computation times
+=================
+**00:18.572** total execution time for 12 files **from out/datasets/sdes**:
+
+.. container::
+
+  .. raw:: html
+
+    <style scoped>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('table.sg-datatable').DataTable({order: [[1, 'desc']]});
+    } );
+    </script>
+
+  .. list-table::
+   :header-rows: 1
+   :class: table table-striped sg-datatable
+
+   * - Example
+     - Time
+     - Mem (MB)
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_time_quintuple_well.py` (``plot_time_quintuple_well.py``)
+     - 00:15.581
+     - 618.3
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_triple_well_1d.py` (``plot_triple_well_1d.py``)
+     - 00:00.547
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_double_well_2d.py` (``plot_double_well_2d.py``)
+     - 00:00.328
+     - 582.0
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_triple_well_2d.py` (``plot_triple_well_2d.py``)
+     - 00:00.328
+     - 580.7
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_quadruple_well_asymmetric.py` (``plot_quadruple_well_asymmetric.py``)
+     - 00:00.326
+     - 583.5
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_tmatrix_1d.py` (``plot_tmatrix_1d.py``)
+     - 00:00.309
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_quadruple_well.py` (``plot_quadruple_well.py``)
+     - 00:00.298
+     - 582.0
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_custom_sde.py` (``plot_custom_sde.py``)
+     - 00:00.246
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_prinz.py` (``plot_prinz.py``)
+     - 00:00.203
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_birth_death_chain.py` (``plot_birth_death_chain.py``)
+     - 00:00.139
+     - 580.5
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_double_well_discrete.py` (``plot_double_well_discrete.py``)
+     - 00:00.138
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_ornstein_uhlenbeck.py` (``plot_ornstein_uhlenbeck.py``)
+     - 00:00.128
+     - 580.2

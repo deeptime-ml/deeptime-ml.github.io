@@ -1,0 +1,6 @@
+﻿deeptime.markov.tools.estimation.girsanov\_reweighted\_count\_matrix
+====================================================================
+
+.. currentmodule:: deeptime.markov.tools.estimation
+
+.. autofunction:: girsanov_reweighted_count_matrix

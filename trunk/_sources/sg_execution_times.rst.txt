@@ -1,0 +1,148 @@
+
+:orphan:
+
+.. _sphx_glr_sg_execution_times:
+
+
+Computation times
+=================
+**01:10.087** total execution time for 38 files **from all galleries**:
+
+.. container::
+
+  .. raw:: html
+
+    <style scoped>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('table.sg-datatable').DataTable({order: [[1, 'desc']]});
+    } );
+    </script>
+
+  .. list-table::
+   :header-rows: 1
+   :class: table table-striped sg-datatable
+
+   * - Example
+     - Time
+     - Mem (MB)
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_time_quintuple_well.py` (``../../examples/datasets/sdes/plot_time_quintuple_well.py``)
+     - 00:15.581
+     - 618.3
+   * - :ref:`sphx_glr_out_datasets_other_plot_pbf.py` (``../../examples/datasets/other/plot_pbf.py``)
+     - 00:10.465
+     - 581.2
+   * - :ref:`sphx_glr_out_datasets_other_plot_swissroll_model.py` (``../../examples/datasets/other/plot_swissroll_model.py``)
+     - 00:08.725
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_odes_plot_abc_flow.py` (``../../examples/datasets/odes/plot_abc_flow.py``)
+     - 00:05.694
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_odes_plot_bickley_jet.py` (``../../examples/datasets/odes/plot_bickley_jet.py``)
+     - 00:04.723
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_implied_timescales.py` (``../../examples/methods/plot_implied_timescales.py``)
+     - 00:04.497
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_kcca_bickley.py` (``../../examples/methods/plot_kcca_bickley.py``)
+     - 00:03.777
+     - 797.1
+   * - :ref:`sphx_glr_out_datasets_odes_plot_thomas_attractor.py` (``../../examples/datasets/odes/plot_thomas_attractor.py``)
+     - 00:02.361
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_vamp_pbf_projection.py` (``../../examples/methods/plot_vamp_pbf_projection.py``)
+     - 00:02.226
+     - 617.6
+   * - :ref:`sphx_glr_out_examples_plot_clustering_comparison.py` (``../../examples/methods/plot_clustering_comparison.py``)
+     - 00:02.032
+     - 586.5
+   * - :ref:`sphx_glr_out_examples_plot_kcca_projection.py` (``../../examples/methods/plot_kcca_projection.py``)
+     - 00:01.323
+     - 782.7
+   * - :ref:`sphx_glr_out_datasets_other_plot_sqrt_model.py` (``../../examples/datasets/other/plot_sqrt_model.py``)
+     - 00:00.923
+     - 580.5
+   * - :ref:`sphx_glr_out_examples_plot_tpt_gross_net_flux.py` (``../../examples/methods/plot_tpt_gross_net_flux.py``)
+     - 00:00.753
+     - 590.2
+   * - :ref:`sphx_glr_out_examples_plot_sindy_rossler_attractor.py` (``../../examples/methods/plot_sindy_rossler_attractor.py``)
+     - 00:00.570
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_triple_well_1d.py` (``../../examples/datasets/sdes/plot_triple_well_1d.py``)
+     - 00:00.547
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_pcca_drunkard.py` (``../../examples/methods/plot_pcca_drunkard.py``)
+     - 00:00.501
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_other_plot_drunkards_walk.py` (``../../examples/datasets/other/plot_drunkards_walk.py``)
+     - 00:00.343
+     - 581.2
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_double_well_2d.py` (``../../examples/datasets/sdes/plot_double_well_2d.py``)
+     - 00:00.328
+     - 582.0
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_triple_well_2d.py` (``../../examples/datasets/sdes/plot_triple_well_2d.py``)
+     - 00:00.328
+     - 580.7
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_quadruple_well_asymmetric.py` (``../../examples/datasets/sdes/plot_quadruple_well_asymmetric.py``)
+     - 00:00.326
+     - 583.5
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_tmatrix_1d.py` (``../../examples/datasets/sdes/plot_tmatrix_1d.py``)
+     - 00:00.309
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_network.py` (``../../examples/methods/plot_network.py``)
+     - 00:00.305
+     - 580.5
+   * - :ref:`sphx_glr_out_examples_plot_contour2d_from_xyz.py` (``../../examples/methods/plot_contour2d_from_xyz.py``)
+     - 00:00.301
+     - 586.5
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_quadruple_well.py` (``../../examples/datasets/sdes/plot_quadruple_well.py``)
+     - 00:00.298
+     - 582.0
+   * - :ref:`sphx_glr_out_examples_plot_energy_surface.py` (``../../examples/methods/plot_energy_surface.py``)
+     - 00:00.286
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_tram.py` (``../../examples/methods/plot_tram.py``)
+     - 00:00.275
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_ck_test.py` (``../../examples/methods/plot_ck_test.py``)
+     - 00:00.265
+     - 584.8
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_custom_sde.py` (``../../examples/datasets/sdes/plot_custom_sde.py``)
+     - 00:00.246
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_other_plot_ellipsoids.py` (``../../examples/datasets/other/plot_ellipsoids.py``)
+     - 00:00.235
+     - 592.2
+   * - :ref:`sphx_glr_out_examples_plot_vamp_vs_tica_vs_pca.py` (``../../examples/methods/plot_vamp_vs_tica_vs_pca.py``)
+     - 00:00.222
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_density.py` (``../../examples/methods/plot_density.py``)
+     - 00:00.215
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_prinz.py` (``../../examples/datasets/sdes/plot_prinz.py``)
+     - 00:00.203
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_odes_plot_lorenz_system.py` (``../../examples/datasets/odes/plot_lorenz_system.py``)
+     - 00:00.203
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_tv_derivative.py` (``../../examples/methods/plot_tv_derivative.py``)
+     - 00:00.177
+     - 580.5
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_birth_death_chain.py` (``../../examples/datasets/sdes/plot_birth_death_chain.py``)
+     - 00:00.139
+     - 580.5
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_double_well_discrete.py` (``../../examples/datasets/sdes/plot_double_well_discrete.py``)
+     - 00:00.138
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_sdes_plot_ornstein_uhlenbeck.py` (``../../examples/datasets/sdes/plot_ornstein_uhlenbeck.py``)
+     - 00:00.128
+     - 580.2
+   * - :ref:`sphx_glr_out_datasets_odes_plot_custom_ode.py` (``../../examples/datasets/odes/plot_custom_ode.py``)
+     - 00:00.117
+     - 580.2

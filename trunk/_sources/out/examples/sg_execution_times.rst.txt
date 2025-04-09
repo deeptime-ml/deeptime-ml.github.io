@@ -1,0 +1,82 @@
+
+:orphan:
+
+.. _sphx_glr_out_examples_sg_execution_times:
+
+
+Computation times
+=================
+**00:17.724** total execution time for 16 files **from out/examples**:
+
+.. container::
+
+  .. raw:: html
+
+    <style scoped>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('table.sg-datatable').DataTable({order: [[1, 'desc']]});
+    } );
+    </script>
+
+  .. list-table::
+   :header-rows: 1
+   :class: table table-striped sg-datatable
+
+   * - Example
+     - Time
+     - Mem (MB)
+   * - :ref:`sphx_glr_out_examples_plot_implied_timescales.py` (``plot_implied_timescales.py``)
+     - 00:04.497
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_kcca_bickley.py` (``plot_kcca_bickley.py``)
+     - 00:03.777
+     - 797.1
+   * - :ref:`sphx_glr_out_examples_plot_vamp_pbf_projection.py` (``plot_vamp_pbf_projection.py``)
+     - 00:02.226
+     - 617.6
+   * - :ref:`sphx_glr_out_examples_plot_clustering_comparison.py` (``plot_clustering_comparison.py``)
+     - 00:02.032
+     - 586.5
+   * - :ref:`sphx_glr_out_examples_plot_kcca_projection.py` (``plot_kcca_projection.py``)
+     - 00:01.323
+     - 782.7
+   * - :ref:`sphx_glr_out_examples_plot_tpt_gross_net_flux.py` (``plot_tpt_gross_net_flux.py``)
+     - 00:00.753
+     - 590.2
+   * - :ref:`sphx_glr_out_examples_plot_sindy_rossler_attractor.py` (``plot_sindy_rossler_attractor.py``)
+     - 00:00.570
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_pcca_drunkard.py` (``plot_pcca_drunkard.py``)
+     - 00:00.501
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_network.py` (``plot_network.py``)
+     - 00:00.305
+     - 580.5
+   * - :ref:`sphx_glr_out_examples_plot_contour2d_from_xyz.py` (``plot_contour2d_from_xyz.py``)
+     - 00:00.301
+     - 586.5
+   * - :ref:`sphx_glr_out_examples_plot_energy_surface.py` (``plot_energy_surface.py``)
+     - 00:00.286
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_tram.py` (``plot_tram.py``)
+     - 00:00.275
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_ck_test.py` (``plot_ck_test.py``)
+     - 00:00.265
+     - 584.8
+   * - :ref:`sphx_glr_out_examples_plot_vamp_vs_tica_vs_pca.py` (``plot_vamp_vs_tica_vs_pca.py``)
+     - 00:00.222
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_density.py` (``plot_density.py``)
+     - 00:00.215
+     - 580.2
+   * - :ref:`sphx_glr_out_examples_plot_tv_derivative.py` (``plot_tv_derivative.py``)
+     - 00:00.177
+     - 580.5

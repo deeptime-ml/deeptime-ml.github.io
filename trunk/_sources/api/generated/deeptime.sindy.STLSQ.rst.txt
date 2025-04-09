@@ -19,9 +19,12 @@
    .. autosummary::
    
       ~STLSQ.fit
+      ~STLSQ.get_metadata_routing
       ~STLSQ.get_params
       ~STLSQ.predict
       ~STLSQ.score
+      ~STLSQ.set_fit_request
       ~STLSQ.set_params
+      ~STLSQ.set_score_request
    
    

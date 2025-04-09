@@ -1,37 +1,33 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>VAMP / time-lagged CCA &#8212; deeptime 0.4.3+15.g83e6071d documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <title>VAMP / time-lagged CCA &#8212; deeptime 0.4.5 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=822347c1" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=1e544560" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
-    <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
-    <script src="../_static/d3.v5.min.js"></script>
-    <script src="../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
-    <script src="../_static/katex_autorenderer.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=8ffeb421" />
+    <link rel="stylesheet" type="text/css" href="../_static/perfect-scrollbar/css/perfect-scrollbar.css?v=9f1a41f4" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <script src="../_static/documentation_options.js?v=340bb9e5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/perfect-scrollbar/js/perfect-scrollbar.min.js?v=a8314474"></script>
+    <script src="../_static/d3.v5.min.js?v=5b739c40"></script>
+    <script src="../_static/d3-legend.min.js?v=5895a191"></script>
+    <script src="../_static/katex.min.js?v=be8ff15f"></script>
+    <script src="../_static/auto-render.min.js?v=ad136472"></script>
+    <script src="../_static/katex_autorenderer.js?v=bebc588a"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -46,7 +42,7 @@
   </head><body>
   <div class="document">
     
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <p class="logo">
   <a href="../index.html">
@@ -89,6 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="hmm.html">Hidden Markov Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="clustering.html">Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_nbexamples.html">Notebook examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_datasets.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index_dev.html">For developers</a></li>
 </ul>
@@ -131,7 +128,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../index.html">Latest release
-            (0.4.3)</a>
+            (0.4.5)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -185,264 +182,8 @@
 
           <div class="body" role="main">
             
-  
-<style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container div.prompt *,
-div.nboutput.container div.prompt *,
-div.nbinput.container div.input_area pre,
-div.nboutput.container div.output_area pre,
-div.nbinput.container div.input_area .highlight,
-div.nboutput.container div.output_area .highlight {
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-div.nbinput.container > div[class*=highlight],
-div.nboutput.container > div[class*=highlight] {
-    margin: 0;
-}
-
-div.nbinput.container div.prompt *,
-div.nboutput.container div.prompt * {
-    background: none;
-}
-
-div.nboutput.container div.output_area .highlight,
-div.nboutput.container div.output_area pre {
-    background: unset;
-}
-
-div.nboutput.container div.output_area div.highlight {
-    color: unset;  /* override Pygments text color */
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    /*background: #f5f5f5;*/
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-
-
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-    margin: 0;
-}
-
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt .copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-.jp-RenderedHTMLCommon table,
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-.jp-RenderedHTMLCommon thead,
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-.jp-RenderedHTMLCommon tr,
-.jp-RenderedHTMLCommon th,
-.jp-RenderedHTMLCommon td,
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-.jp-RenderedHTMLCommon th,
-div.rendered_html th {
-  font-weight: bold;
-}
-.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-.jp-RenderedHTMLCommon tbody tr:hover,
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-</style>
-<section id="VAMP-/-time-lagged-CCA">
-<h1>VAMP / time-lagged CCA<a class="headerlink" href="#VAMP-/-time-lagged-CCA" title="Permalink to this heading">¶</a></h1>
+  <section id="VAMP-/-time-lagged-CCA">
+<h1>VAMP / time-lagged CCA<a class="headerlink" href="#VAMP-/-time-lagged-CCA" title="Link to this heading">¶</a></h1>
 <p>For users already familiar with the VAMP interface: The corresponding <a class="reference internal" href="../api/generated/deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP"><span class="std std-ref">API docs</span></a>.</p>
 <p>VAMP <a class="footnote-reference brackets" href="#footcite-wu2020variational" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is short for [V]ariational [A]pproach for [M]arkov [P]rocesses. It can be used as linear dimensionality reduction tool and extends <a class="reference internal" href="tica.html"><span class="doc">TICA</span></a> in the sense that it gives rise to a systematic way to select input features as well as handles off-equilibrium data consistently. The method is a form of canonical correlation analysis <a class="footnote-reference brackets" href="#footcite-hotelling1992relations" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> (originally presented in 1935) in time, also called time-lagged canonical correlation
 analysis (TCCA).</p>
@@ -462,13 +203,13 @@ operator in a whitenend basis <span class="math">\(\bar K\)</span> yields the be
 </ol>
 <p>The third of the described cases is salvageable with TICA when a special reweighting procedure (<a class="reference internal" href="tica.html#Koopman-reweighting"><span class="std std-ref">Koopman reweighting</span></a>) is used.</p>
 <section id="Short-API-demonstration">
-<h2>Short API demonstration<a class="headerlink" href="#Short-API-demonstration" title="Permalink to this heading">¶</a></h2>
+<h2>Short API demonstration<a class="headerlink" href="#Short-API-demonstration" title="Link to this heading">¶</a></h2>
 <p>To create a <a class="reference internal" href="../api/generated/deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP"><span class="std std-ref">VAMP estimator</span></a>, it needs to be imported and instantiated.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deeptime.decomposition</span> <span class="kn">import</span> <span class="n">VAMP</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deeptime.decomposition</span><span class="w"> </span><span class="kn">import</span> <span class="n">VAMP</span>
 
 <span class="n">vamp_estimator</span> <span class="o">=</span> <span class="n">VAMP</span><span class="p">(</span>
     <span class="n">dim</span><span class="o">=</span><span class="mi">1</span>  <span class="c1"># projection dimension</span>
@@ -490,7 +231,7 @@ operator in a whitenend basis <span class="math">\(\bar K\)</span> yields the be
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deeptime.data</span> <span class="kn">import</span> <span class="n">ellipsoids</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deeptime.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">ellipsoids</span>
 
 <span class="c1"># create dataset instance with fixed seed for reproducibility</span>
 <span class="n">ellipsoids</span> <span class="o">=</span> <span class="n">ellipsoids</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
@@ -570,7 +311,7 @@ operator in a whitenend basis <span class="math">\(\bar K\)</span> yields the be
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Projection shape: </span><span class="si">{</span><span class="n">projection</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># plot projection</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">projection</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -593,7 +334,7 @@ Projection shape: (1000, 1)
 </div>
 </section>
 <section id="A-more-detailed-look-on-the-estimator">
-<h2>A more detailed look on the estimator<a class="headerlink" href="#A-more-detailed-look-on-the-estimator" title="Permalink to this heading">¶</a></h2>
+<h2>A more detailed look on the estimator<a class="headerlink" href="#A-more-detailed-look-on-the-estimator" title="Link to this heading">¶</a></h2>
 <p>Here we follow the content presented in <a class="footnote-reference brackets" href="#footcite-wu2020variational" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> to give some more insight into the estimator. For a complete derivation and background please consult the source itself.</p>
 <p>The VAMP estimator estimates a <em>linear</em> model of the form</p>
 <div class="math">
@@ -601,7 +342,7 @@ Projection shape: (1000, 1)
 
 \]</div>
 <p>where <span class="math">\(\tau &gt; 0\)</span> is the lagtime, <span class="math">\(f(x) = (f_1(x),\ldots)^\top\)</span> and <span class="math">\(g(x) = (g_1(x),\ldots)^\top\)</span> are feature transformations of the system’s state <span class="math">\(x\)</span> at a point in time <span class="math">\(t\)</span> so that the dynamics are approximately linear.</p>
-<p>While the matrix <span class="math">\(K\)</span> can in principle also be estimated using standard regression tools, the regression error gives no information about the choice of feature trasformations <span class="math">\(f\)</span> and <span class="math">\(g\)</span>. When estimating <span class="math">\(K\)</span> using VAMP, a meaningful scoring and thus cross-validation is available. For details on the available scores, see the <a class="reference external" href="#Scoring">Scoring</a> section.</p>
+<p>While the matrix <span class="math">\(K\)</span> can in principle also be estimated using standard regression tools, the regression error gives no information about the choice of feature trasformations <span class="math">\(f\)</span> and <span class="math">\(g\)</span>. When estimating <span class="math">\(K\)</span> using VAMP, a meaningful scoring and thus cross-validation is available. For details on the available scores, see the <a class="reference internal" href="#Scoring"><span class="std std-ref">Scoring</span></a> section.</p>
 <p>This matrix is actually a finite-dimensional approximation of the Koopman operator</p>
 <div class="math">
 \[\mathcal{K}_\tau f(x) = \mathbb{E}[f(x_{t+\tau} | x_t = x) ],
@@ -727,7 +468,7 @@ right singular vectors V: [[-0.40095045]
 <p>contain valid values, the remainder might be interpreted as extrapolation.</p>
 </section>
 <section id="Scoring">
-<h2>Scoring<a class="headerlink" href="#Scoring" title="Permalink to this heading">¶</a></h2>
+<h2>Scoring<a class="headerlink" href="#Scoring" title="Link to this heading">¶</a></h2>
 <p>While the estimator solves the problem of finding optimal transforms <span class="math">\(f\)</span>, <span class="math">\(g\)</span>, and <span class="math">\(K\)</span>, one of the advantages of using the variational approach is that the models can be scored with respect to the choice of the system’s featurization.</p>
 <p>This makes it possible to not only optimize for transforms given a basis but also for the basis itself. If -hyothetically- infinite data and computational power were avaiable, the best possible basis would be the one that can describe the full operator <span class="math">\(\mathcal{K}_\tau\)</span>. In practice however, often a balance between the modeling/discretization error of approximating <span class="math">\(\mathcal{K}_\tau\)</span> and the statistical error of fitting the parameters given finite data has to be struck.</p>
 <p>There are three different typical scores implemented in deeptime:</p>
@@ -815,7 +556,7 @@ right singular vectors V: [[-0.40095045]
 </div></blockquote>
 </section>
 <section id="Singular-vector-scaling">
-<h2>Singular vector scaling<a class="headerlink" href="#Singular-vector-scaling" title="Permalink to this heading">¶</a></h2>
+<h2>Singular vector scaling<a class="headerlink" href="#Singular-vector-scaling" title="Link to this heading">¶</a></h2>
 <p>Optionally the singular vectors can be scaled upon projection. Per default, <a class="reference internal" href="../api/generated/deeptime.decomposition.VAMP.html#deeptime.decomposition.VAMP.scaling"><span class="std std-ref">scaling</span></a> is set to <code class="docutils literal notranslate"><span class="pre">None</span></code> which means that no scaling is applied and the variance of all singular vectors (sometimes also called order parameters) is <span class="math">\(1\)</span>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -857,7 +598,7 @@ None
 </div>
 </section>
 <section id="Example-with-position-based-fluids">
-<h2>Example with position based fluids<a class="headerlink" href="#Example-with-position-based-fluids" title="Permalink to this heading">¶</a></h2>
+<h2>Example with position based fluids<a class="headerlink" href="#Example-with-position-based-fluids" title="Link to this heading">¶</a></h2>
 <p>Here we demonstrate a toy dataset created by a position based fluids (PBF) simulator <a class="footnote-reference brackets" href="#footcite-macklin2013position" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>. In a 2-dimensional simulation box we place particles which then relax to a resting density. We periodically disturb the equilibrium resting density by applying a force toward the left and right boundary of the simulation box alternatingly. For more details on the dataset, please refer to the example data’s
 <a class="reference internal" href="../api/generated/deeptime.data.position_based_fluids.html#deeptime.data.position_based_fluids"><span class="std std-ref">documentation</span></a>.</p>
 <p>Here, we create a new PBF simulator with a predefined simulation box and set of initial positions:</p>
@@ -865,7 +606,7 @@ None
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deeptime.data</span> <span class="kn">import</span> <span class="n">position_based_fluids</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deeptime.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">position_based_fluids</span>
 
 <span class="n">pbf_simulator</span> <span class="o">=</span> <span class="n">position_based_fluids</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 </pre></div>
@@ -905,7 +646,7 @@ None
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">animation</span> <span class="o">=</span> <span class="n">pbf_simulator</span><span class="o">.</span><span class="n">make_animation</span><span class="p">(</span><span class="n">trajectory</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span>
 <span class="n">HTML</span><span class="p">(</span><span class="n">animation</span><span class="o">.</span><span class="n">to_html5_video</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -16896,7 +16637,7 @@ ACWpdG9vAAAAHWRhdGEAAAABAAAAAExhdmY1OC43Ni4xMDA=
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">tau</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">cov</span><span class="o">.</span><span class="n">lagtime</span>
 <span class="n">n_sing</span> <span class="o">=</span> <span class="mi">3</span>
@@ -31847,36 +31588,37 @@ cGwAAAAAAAAAAAAAAAAtaWxzdAAAACWpdG9vAAAAHWRhdGEAAAABAAAAAExhdmY1OC43Ni4xMDA=
 </div>
 <p class="rubric">References</p>
 <div class="docutils container" id="id14">
-<aside class="footnote brackets" id="footcite-wu2020variational" role="note">
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="footcite-wu2020variational" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id4">2</a>,<a role="doc-backlink" href="#id6">3</a>,<a role="doc-backlink" href="#id7">4</a>,<a role="doc-backlink" href="#id11">5</a>,<a role="doc-backlink" href="#id12">6</a>)</span>
 <p>Hao Wu and Frank Noé. Variational approach for learning markov processes from time series data. <em>Journal of Nonlinear Science</em>, 30(1):23–66, 2020.</p>
 </aside>
-<aside class="footnote brackets" id="footcite-hotelling1992relations" role="note">
+<aside class="footnote brackets" id="footcite-hotelling1992relations" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>Harold Hotelling. Relations between two sets of variates. In <em>Breakthroughs in statistics</em>, pages 162–190. Springer, 1992.</p>
 </aside>
-<aside class="footnote brackets" id="footcite-scherer2019variational" role="note">
+<aside class="footnote brackets" id="footcite-scherer2019variational" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p>Martin K Scherer, Brooke E Husic, Moritz Hoffmann, Fabian Paul, Hao Wu, and Frank Noé. Variational selection of features for molecular kinetics. <em>The Journal of chemical physics</em>, 150(19):194108, 2019.</p>
 </aside>
-<aside class="footnote brackets" id="footcite-koltai2018optimal" role="note">
+<aside class="footnote brackets" id="footcite-koltai2018optimal" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
 <p>Péter Koltai, Hao Wu, Frank Noé, and Christof Schütte. Optimal data-driven estimation of generalized markov state models for non-equilibrium dynamics. <em>Computation</em>, 6(1):22, 2018.</p>
 </aside>
-<aside class="footnote brackets" id="footcite-noe2013variational" role="note">
+<aside class="footnote brackets" id="footcite-noe2013variational" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">5</a><span class="fn-bracket">]</span></span>
 <p>Frank Noé and Feliks Nüske. A variational approach to modeling slow processes in stochastic dynamical systems. <em>Multiscale Modeling &amp; Simulation</em>, 11(2):635–655, 2013.</p>
 </aside>
-<aside class="footnote brackets" id="footcite-mcgibbon2015variational" role="note">
+<aside class="footnote brackets" id="footcite-mcgibbon2015variational" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">6</a><span class="fn-bracket">]</span></span>
 <p>Robert T McGibbon and Vijay S Pande. Variational cross-validation of slow dynamical modes in molecular kinetics. <em>The Journal of chemical physics</em>, 142(12):03B621_1, 2015.</p>
 </aside>
-<aside class="footnote brackets" id="footcite-noe2015kinetic" role="note">
+<aside class="footnote brackets" id="footcite-noe2015kinetic" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">7</a><span class="fn-bracket">]</span></span>
 <p>Frank Noé and Cecilia Clementi. Kinetic distance and kinetic maps from molecular dynamics simulation. <em>Journal of chemical theory and computation</em>, 11(10):5002–5011, 2015.</p>
 </aside>
-<aside class="footnote brackets" id="footcite-macklin2013position" role="note">
+<aside class="footnote brackets" id="footcite-macklin2013position" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">8</a><span class="fn-bracket">]</span></span>
 <p>Miles Macklin and Matthias Müller. Position based fluids. <em>ACM Transactions on Graphics (TOG)</em>, 32(4):1–12, 2013.</p>
 </aside>

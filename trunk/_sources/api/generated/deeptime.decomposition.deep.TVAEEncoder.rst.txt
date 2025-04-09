@@ -14,6 +14,7 @@
    .. autosummary::
    
       ~TVAEEncoder.T_destination
+      ~TVAEEncoder.call_super_init
       ~TVAEEncoder.dump_patches
       ~TVAEEncoder.training
    
@@ -31,6 +32,7 @@
       ~TVAEEncoder.bfloat16
       ~TVAEEncoder.buffers
       ~TVAEEncoder.children
+      ~TVAEEncoder.compile
       ~TVAEEncoder.cpu
       ~TVAEEncoder.cuda
       ~TVAEEncoder.double
@@ -46,6 +48,7 @@
       ~TVAEEncoder.ipu
       ~TVAEEncoder.load_state_dict
       ~TVAEEncoder.modules
+      ~TVAEEncoder.mtia
       ~TVAEEncoder.named_buffers
       ~TVAEEncoder.named_children
       ~TVAEEncoder.named_modules
@@ -56,11 +59,16 @@
       ~TVAEEncoder.register_forward_hook
       ~TVAEEncoder.register_forward_pre_hook
       ~TVAEEncoder.register_full_backward_hook
+      ~TVAEEncoder.register_full_backward_pre_hook
       ~TVAEEncoder.register_load_state_dict_post_hook
+      ~TVAEEncoder.register_load_state_dict_pre_hook
       ~TVAEEncoder.register_module
       ~TVAEEncoder.register_parameter
+      ~TVAEEncoder.register_state_dict_post_hook
+      ~TVAEEncoder.register_state_dict_pre_hook
       ~TVAEEncoder.requires_grad_
       ~TVAEEncoder.set_extra_state
+      ~TVAEEncoder.set_submodule
       ~TVAEEncoder.share_memory
       ~TVAEEncoder.state_dict
       ~TVAEEncoder.to

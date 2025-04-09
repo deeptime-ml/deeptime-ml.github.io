@@ -1,37 +1,32 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class SINDyModel &#8212; deeptime 0.4.3+15.g83e6071d documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <title>class SINDyModel &#8212; deeptime 0.4.4+24.g9347b6b.dirty documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=822347c1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=1e544560" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
-    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
-    <script src="../../_static/d3.v5.min.js"></script>
-    <script src="../../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
-    <script src="../../_static/katex_autorenderer.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=8ffeb421" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css?v=9f1a41f4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css?v=91adb8b6" />
+    <script src="../../_static/documentation_options.js?v=ea547b4d"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js?v=a8314474"></script>
+    <script src="../../_static/d3.v5.min.js?v=5b739c40"></script>
+    <script src="../../_static/d3-legend.min.js?v=5895a191"></script>
+    <script src="../../_static/katex.min.js?v=be8ff15f"></script>
+    <script src="../../_static/auto-render.min.js?v=ad136472"></script>
+    <script src="../../_static/katex_autorenderer.js?v=bebc588a"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -46,7 +41,7 @@
   </head><body>
   <div class="document">
     
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <p class="logo">
   <a href="../../index.html">
@@ -74,6 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_nbexamples.html">Notebook examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_datasets.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
 </ul>
@@ -124,7 +120,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.4.3)</a>
+            (0.4.4)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -179,10 +175,10 @@
           <div class="body" role="main">
             
   <section id="class-sindymodel">
-<h1><em>class</em> SINDyModel<a class="headerlink" href="#class-sindymodel" title="Permalink to this heading">¶</a></h1>
+<h1><em>class</em> SINDyModel<a class="headerlink" href="#class-sindymodel" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.sindy.</span></span><span class="sig-name descname"><span class="pre">SINDyModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">library</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coefficients</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intercept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.sindy.</span></span><span class="sig-name descname"><span class="pre">SINDyModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">library</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coefficients</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intercept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel" title="Link to this definition">¶</a></dt>
 <dd><p>The SINDy model. Stores the parameters learned by a <a class="reference internal" href="deeptime.sindy.SINDy.html#deeptime.sindy.SINDy" title="deeptime.sindy.SINDy"><code class="xref py py-class docutils literal notranslate"><span class="pre">SINDy</span></code></a> estimator
 to encode a first order differential equation model for the measurement data.
 It can be used to make derivative predictions, simulate forward in time from
@@ -259,7 +255,7 @@ need for an intercept term.</p></li>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.copy">
-<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">Model</span></a></span></span><a class="headerlink" href="#deeptime.sindy.SINDyModel.copy" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">Model</span></a></span></span><a class="headerlink" href="#deeptime.sindy.SINDyModel.copy" title="Link to this definition">¶</a></dt>
 <dd><p>Makes a deep copy of this model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -273,7 +269,7 @@ need for an intercept term.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.equations">
-<span class="sig-name descname"><span class="pre">equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.equations" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.equations" title="Link to this definition">¶</a></dt>
 <dd><p>Get the right-hand sides of the learned equations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -290,7 +286,7 @@ need for an intercept term.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.get_params">
-<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.get_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.get_params" title="Link to this definition">¶</a></dt>
 <dd><p>Get the parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -304,7 +300,7 @@ need for an intercept term.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.predict" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.predict" title="Link to this definition">¶</a></dt>
 <dd><p>Predict the derivative of <code class="code docutils literal notranslate"><span class="pre">x</span></code> using the learned model,
 i.e. predict <span class="math">\(\dot{X}\)</span> via <span class="math">\(\dot{X} \approx \Theta(X)\Xi\)</span>.</p>
 <dl class="field-list simple">
@@ -322,7 +318,7 @@ i.e. predict <span class="math">\(\dot{X}\)</span> via <span class="math">\(\dot
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.print">
-<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lhs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.print" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lhs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.print" title="Link to this definition">¶</a></dt>
 <dd><p>Print the learned equations in a human-readable way.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -337,7 +333,7 @@ By default <code class="code docutils literal notranslate"><span class="pre">sel
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.score">
-<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring=&lt;function</span> <span class="pre">r2_score&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**scoring_kws</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.score" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring=&lt;function</span> <span class="pre">r2_score&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**scoring_kws</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.score" title="Link to this definition">¶</a></dt>
 <dd><p>Compute a score for the time derivative prediction produced by the model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -366,7 +362,7 @@ for more options.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.set_params">
-<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.set_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.set_params" title="Link to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The latter have parameters of the form
@@ -387,7 +383,7 @@ component of a nested object.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.simulate">
-<span class="sig-name descname"><span class="pre">simulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrator=&lt;function</span> <span class="pre">odeint&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrator_kws=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.simulate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">simulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrator=&lt;function</span> <span class="pre">odeint&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrator_kws=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.simulate" title="Link to this definition">¶</a></dt>
 <dd><p>Simulate the SINDy model forward in time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -412,7 +408,7 @@ Default is <code class="code docutils literal notranslate"><span class="pre">sci
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.transform">
-<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.transform" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.sindy.SINDyModel.transform" title="Link to this definition">¶</a></dt>
 <dd><p>Apply the functions of the feature library.</p>
 <p>This method computes <span class="math">\(\Theta(X)\)</span>.</p>
 <dl class="field-list simple">
@@ -431,7 +427,7 @@ i.e. <span class="math">\(\Theta(X)\)</span>.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.coefficients">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coefficients</span></span><a class="headerlink" href="#deeptime.sindy.SINDyModel.coefficients" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coefficients</span></span><a class="headerlink" href="#deeptime.sindy.SINDyModel.coefficients" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the learned model coefficients, i.e. <span class="math">\(\Xi^\top\)</span></p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -445,7 +441,7 @@ i.e. <span class="math">\(\Theta(X)\)</span>.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.sindy.SINDyModel.intercept">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intercept</span></span><a class="headerlink" href="#deeptime.sindy.SINDyModel.intercept" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intercept</span></span><a class="headerlink" href="#deeptime.sindy.SINDyModel.intercept" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the intercept (bias) for the learned model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>

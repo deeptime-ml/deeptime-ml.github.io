@@ -1,37 +1,32 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class MarkovStateModelCollection &#8212; deeptime 0.4.3+15.g83e6071d documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <title>class MarkovStateModelCollection &#8212; deeptime 0.4.5 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=822347c1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=1e544560" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
-    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
-    <script src="../../_static/d3.v5.min.js"></script>
-    <script src="../../_static/d3-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
-    <script src="../../_static/katex_autorenderer.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=8ffeb421" />
+    <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css?v=9f1a41f4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css?v=91adb8b6" />
+    <script src="../../_static/documentation_options.js?v=340bb9e5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js?v=a8314474"></script>
+    <script src="../../_static/d3.v5.min.js?v=5b739c40"></script>
+    <script src="../../_static/d3-legend.min.js?v=5895a191"></script>
+    <script src="../../_static/katex.min.js?v=be8ff15f"></script>
+    <script src="../../_static/auto-render.min.js?v=ad136472"></script>
+    <script src="../../_static/katex_autorenderer.js?v=bebc588a"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -46,7 +41,7 @@
   </head><body>
   <div class="document">
     
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <p class="logo">
   <a href="../../index.html">
@@ -74,6 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/hmm.html">Hidden Markov Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/clustering.html">Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_nbexamples.html">Notebook examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_datasets.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../index_dev.html">For developers</a></li>
 </ul>
@@ -128,7 +124,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.4.3)</a>
+            (0.4.5)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -183,10 +179,10 @@
           <div class="body" role="main">
             
   <section id="class-markovstatemodelcollection">
-<h1><em>class</em> MarkovStateModelCollection<a class="headerlink" href="#class-markovstatemodelcollection" title="Permalink to this heading">¶</a></h1>
+<h1><em>class</em> MarkovStateModelCollection<a class="headerlink" href="#class-markovstatemodelcollection" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.markov.msm.</span></span><span class="sig-name descname"><span class="pre">MarkovStateModelCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transition_matrices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stationary_distributions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reversible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_models</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel" title="deeptime.markov._transition_counting.TransitionCountModel"><span class="pre">TransitionCountModel</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transition_matrix_tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.markov.msm.</span></span><span class="sig-name descname"><span class="pre">MarkovStateModelCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transition_matrices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stationary_distributions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reversible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_models</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel" title="deeptime.markov._transition_counting.TransitionCountModel"><span class="pre">TransitionCountModel</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transition_matrix_tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection" title="Link to this definition">¶</a></dt>
 <dd><p>A collection of Markov state models. An instance of this itself behaves like a
 <a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#deeptime.markov.msm.MarkovStateModel" title="deeptime.markov.msm.MarkovStateModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MSM</span></code></a>, defaulting to the first (transition matrix, stationary distribution,
 count model) triplet provided. The model can be switched by a call to <a class="reference internal" href="#deeptime.markov.msm.MarkovStateModelCollection.select" title="deeptime.markov.msm.MarkovStateModelCollection.select"><code class="xref py py-meth docutils literal notranslate"><span class="pre">select()</span></code></a>.</p>
@@ -372,7 +368,7 @@ If None, this is determined from the transition matrix.</p></li>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.ck_test">
-<span class="sig-name descname"><span class="pre">ck_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_metastable_sets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_lag0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_est</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.ck_test" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ck_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_metastable_sets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_lag0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_est</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.ck_test" title="Link to this definition">¶</a></dt>
 <dd><p>Validates a model estimated at lag time tau by testing its predictions for longer lag times.
 This is known as the Chapman-Kolmogorov test as it is based on the Chapman-Kolmogorov equation.
 The test is performed on metastable sets of states rather than the micro-states themselves.</p>
@@ -401,7 +397,7 @@ The test is performed on metastable sets of states rather than the micro-states 
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.committor_backward">
-<span class="sig-name descname"><span class="pre">committor_backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.committor_backward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">committor_backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.committor_backward" title="Link to this definition">¶</a></dt>
 <dd><p>Backward committor from set A to set B</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -415,7 +411,7 @@ The test is performed on metastable sets of states rather than the micro-states 
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.committor_forward">
-<span class="sig-name descname"><span class="pre">committor_forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.committor_forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">committor_forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.committor_forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward committor (also known as p_fold or splitting probability) from set A to set B.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -429,7 +425,7 @@ The test is performed on metastable sets of states rather than the micro-states 
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.compute_state_indices">
-<span class="sig-name descname"><span class="pre">compute_state_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.compute_state_indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_state_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.compute_state_indices" title="Link to this definition">¶</a></dt>
 <dd><p>Generates a trajectory/time indices for the given list of states. If a count model is provided in this
 MSM and it does not represent the full state space, the discrete trajectories are first mapped to the
 active state space, inactive states are mapped to -1.</p>
@@ -448,7 +444,7 @@ active state space, inactive states are mapped to -1.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.compute_trajectory_weights">
-<span class="sig-name descname"><span class="pre">compute_trajectory_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.compute_trajectory_weights" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_trajectory_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.compute_trajectory_weights" title="Link to this definition">¶</a></dt>
 <dd><p>Uses the MarkovStateModel to assign a probability weight to each trajectory frame.</p>
 <p>This is a powerful function for the calculation of arbitrary observables in the trajectories one has
 started the analysis with. The stationary probability of the MarkovStateModel will be used to reweigh all
@@ -485,7 +481,7 @@ returns the corresponding weights:</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.copy">
-<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">Model</span></a></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.copy" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.base.Model.html#deeptime.base.Model" title="deeptime.base.Model"><span class="pre">Model</span></a></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.copy" title="Link to this definition">¶</a></dt>
 <dd><p>Makes a deep copy of this model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -499,7 +495,7 @@ returns the corresponding weights:</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.correlation">
-<span class="sig-name descname"><span class="pre">correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.correlation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.correlation" title="Link to this definition">¶</a></dt>
 <dd><p>Time-correlation for equilibrium experiment.</p>
 <p>In order to simulate a time-correlation experiment (e.g. fluorescence
 correlation spectroscopy <span id="id3">[<a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#id31" title="Frank Noé, Sören Doose, Isabella Daidone, Marc Löllmann, Markus Sauer, John D Chodera, and Jeremy C Smith. Dynamical fingerprints for probing individual relaxation processes in biomolecular dynamics with simulations and kinetic experiments. Proceedings of the National Academy of Sciences, 108(12):4822–4827, 2011.">3</a>]</span>, dynamical neutron
@@ -571,15 +567,15 @@ the correlation has been computed</p></li>
 <p class="rubric">Examples</p>
 <p>This example computes the autocorrelation function of a simple observable
 on a three-state Markov model and plots the result using matplotlib:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">deeptime.markov.msm</span> <span class="k">as</span> <span class="nn">msm</span>
-<span class="go">&gt;&gt;&gt;</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">deeptime.markov.msm</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">msm</span>
+<span class="gp">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">M</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">MarkovStateModel</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">times</span><span class="p">,</span> <span class="n">acf</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">correlation</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="go">&gt;&gt;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pylab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span> 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="n">acf</span><span class="p">)</span>  
 </pre></div>
 </div>
@@ -587,7 +583,7 @@ on a three-state Markov model and plots the result using matplotlib:</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.eigenvalues">
-<span class="sig-name descname"><span class="pre">eigenvalues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.eigenvalues" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">eigenvalues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.eigenvalues" title="Link to this definition">¶</a></dt>
 <dd><p>Compute or fetch the transition matrix eigenvalues.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -606,7 +602,7 @@ sorted by descending norm.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.eigenvectors_left">
-<span class="sig-name descname"><span class="pre">eigenvectors_left</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.eigenvectors_left" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">eigenvectors_left</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.eigenvectors_left" title="Link to this definition">¶</a></dt>
 <dd><p>Compute the left transition matrix eigenvectors</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -624,7 +620,7 @@ the i’th left eigenvector</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.eigenvectors_right">
-<span class="sig-name descname"><span class="pre">eigenvectors_right</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.eigenvectors_right" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">eigenvectors_right</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.eigenvectors_right" title="Link to this definition">¶</a></dt>
 <dd><p>Compute the right transition matrix eigenvectors</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -642,7 +638,7 @@ of the j’th right eigenvector</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.expectation">
-<span class="sig-name descname"><span class="pre">expectation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.expectation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">expectation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.expectation" title="Link to this definition">¶</a></dt>
 <dd><p>Equilibrium expectation value of a given observable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -664,7 +660,7 @@ of the j’th right eigenvector</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.fingerprint_correlation">
-<span class="sig-name descname"><span class="pre">fingerprint_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.fingerprint_correlation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fingerprint_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.fingerprint_correlation" title="Link to this definition">¶</a></dt>
 <dd><p>Dynamical fingerprint for equilibrium time-correlation experiment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -697,7 +693,7 @@ it is recommended that ncv &gt; 2*k</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.fingerprint_relaxation">
-<span class="sig-name descname"><span class="pre">fingerprint_relaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.fingerprint_relaxation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fingerprint_relaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.fingerprint_relaxation" title="Link to this definition">¶</a></dt>
 <dd><p>Dynamical fingerprint for perturbation/relaxation experiment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -724,7 +720,7 @@ it is recommended that ncv &gt; 2*k</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.get_params">
-<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.get_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.get_params" title="Link to this definition">¶</a></dt>
 <dd><p>Get the parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -738,7 +734,7 @@ it is recommended that ncv &gt; 2*k</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.hmm">
-<span class="sig-name descname"><span class="pre">hmm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nhidden</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.hmm" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">hmm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nhidden</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.hmm" title="Link to this definition">¶</a></dt>
 <dd><p>Estimates a hidden Markov state model as described in <span id="id7">[<a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#id25" title="Frank Noé, Hao Wu, Jan-Hendrik Prinz, and Nuria Plattner. Projected and hidden markov models for calculating kinetics and metastable states of complex molecules. The Journal of chemical physics, 139(18):11B609_1, 2013.">1</a>]</span>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -760,7 +756,7 @@ if True both the Estimator and the Model is returned.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.mfpt">
-<span class="sig-name descname"><span class="pre">mfpt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.mfpt" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">mfpt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.mfpt" title="Link to this definition">¶</a></dt>
 <dd><p>Mean first passage times from set A to set B, in units of the input trajectory time step.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -774,7 +770,7 @@ if True both the Estimator and the Model is returned.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.pcca">
-<span class="sig-name descname"><span class="pre">pcca</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_metastable_sets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.markov.PCCAModel.html#deeptime.markov.PCCAModel" title="deeptime.markov._pcca.PCCAModel"><span class="pre">PCCAModel</span></a></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.pcca" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pcca</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_metastable_sets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.markov.PCCAModel.html#deeptime.markov.PCCAModel" title="deeptime.markov._pcca.PCCAModel"><span class="pre">PCCAModel</span></a></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.pcca" title="Link to this definition">¶</a></dt>
 <dd><p>Runs PCCA+ <span id="id8">[<a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#id24" title="Susanna Röblitz and Marcus Weber. Fuzzy spectral clustering by pcca+: application to markov state models and data classification. Advances in Data Analysis and Classification, 7(2):147–179, 2013.">2</a>]</span> to compute a metastable decomposition of
 MarkovStateModel states.</p>
 <p>After calling this method you can access <code class="xref py py-func docutils literal notranslate"><span class="pre">metastable_memberships()</span></code>,
@@ -798,7 +794,7 @@ might not be preserved.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.propagate">
-<span class="sig-name descname"><span class="pre">propagate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.propagate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">propagate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.propagate" title="Link to this definition">¶</a></dt>
 <dd><p>Propagates the initial distribution p0 k times</p>
 <p>Computes the product</p>
 <div class="math">
@@ -823,7 +819,7 @@ will provide the probability distribution at time <span class="math">\(k \tau\)<
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.reactive_flux">
-<span class="sig-name descname"><span class="pre">reactive_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_states</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.markov.ReactiveFlux.html#deeptime.markov.ReactiveFlux" title="deeptime.markov._reactive_flux.ReactiveFlux"><span class="pre">ReactiveFlux</span></a></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.reactive_flux" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reactive_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_states</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="deeptime.markov.ReactiveFlux.html#deeptime.markov.ReactiveFlux" title="deeptime.markov._reactive_flux.ReactiveFlux"><span class="pre">ReactiveFlux</span></a></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.reactive_flux" title="Link to this definition">¶</a></dt>
 <dd><p>A-&gt;B reactive flux from transition path theory (TPT)</p>
 <p>The returned object can be used to extract various quantities of the flux, as well as to
 compute A -&gt; B transition pathways, their weights, and to coarse-grain
@@ -855,7 +851,7 @@ committors and set definitions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.relaxation">
-<span class="sig-name descname"><span class="pre">relaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.relaxation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">relaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.relaxation" title="Link to this definition">¶</a></dt>
 <dd><p>Simulates a perturbation-relaxation experiment.</p>
 <p>In perturbation-relaxation experiments such as temperature-jump, pH-jump, pressure jump or rapid mixing
 experiments, an ensemble of molecules is initially prepared in an off-equilibrium distribution and the
@@ -913,7 +909,7 @@ The number of Lanczos vectors generated, <cite>ncv</cite> must be greater than k
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.score">
-<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.score" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtrajs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.score" title="Link to this definition">¶</a></dt>
 <dd><p>Scores the MSM using the dtrajs using the variational approach for Markov processes.</p>
 <p>Implemented according to <span id="id9">[<a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#id17" title="Frank Noé and Feliks Nüske. A variational approach to modeling slow processes in stochastic dynamical systems. Multiscale Modeling &amp; Simulation, 11(2):635–655, 2013.">5</a>]</span> and <span id="id10">[<a class="reference internal" href="deeptime.markov.msm.MarkovStateModel.html#id15" title="Hao Wu and Frank Noé. Variational approach for learning markov processes from time series data. Journal of Nonlinear Science, 30(1):23–66, 2020.">6</a>]</span>.</p>
 <p>Currently only implemented using dense matrices - will be slow for large state spaces.</p>
@@ -945,7 +941,7 @@ score. If set to None, all available eigenvalues will be used.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.select">
-<span class="sig-name descname"><span class="pre">select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.select" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.select" title="Link to this definition">¶</a></dt>
 <dd><p>Selects a different model in the collection. Changes the behavior of the collection to mimic a MSM
 associated to respective transition matrix, stationary distribution, and count model.</p>
 <dl class="field-list simple">
@@ -960,7 +956,7 @@ associated to respective transition matrix, stationary distribution, and count m
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.set_params">
-<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.set_params" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.set_params" title="Link to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The latter have parameters of the form
@@ -981,7 +977,7 @@ component of a nested object.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.simulate">
-<span class="sig-name descname"><span class="pre">simulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.simulate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">simulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.simulate" title="Link to this definition">¶</a></dt>
 <dd><p>Generates a realization of the Markov Model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1014,7 +1010,7 @@ results are reproducible.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.state_symbols">
-<span class="sig-name descname"><span class="pre">state_symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.state_symbols" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">state_symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.state_symbols" title="Link to this definition">¶</a></dt>
 <dd><p>Yields the state symbols of a particular model in this collection. Can only be called if the corresponding
 model has a count model.</p>
 <dl class="field-list simple">
@@ -1033,7 +1029,7 @@ current model.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.submodel">
-<span class="sig-name descname"><span class="pre">submodel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">states</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.submodel" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">submodel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">states</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.submodel" title="Link to this definition">¶</a></dt>
 <dd><p>Restricts this markov state model to a subset of states by taking a submatrix of the transition matrix
 and re-normalizing it, as well as restricting the stationary distribution and count model if given.</p>
 <dl class="field-list simple">
@@ -1051,7 +1047,7 @@ and re-normalizing it, as well as restricting the stationary distribution and co
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.timescales">
-<span class="sig-name descname"><span class="pre">timescales</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.timescales" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">timescales</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.timescales" title="Link to this definition">¶</a></dt>
 <dd><p>Relaxation timescales corresponding to the eigenvalues.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1070,7 +1066,7 @@ defined by <span class="math">\(-\tau / \mathrm{ln} | \lambda_i |, i = 2,...,k+1
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.to_koopman_model">
-<span class="sig-name descname"><span class="pre">to_koopman_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">empirical</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.to_koopman_model" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">to_koopman_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">empirical</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.to_koopman_model" title="Link to this definition">¶</a></dt>
 <dd><p>Computes the SVD of the symmetrized Koopman operator in the analytical or empirical distribution,
 returns as Koopman model.</p>
 <dl class="field-list simple">
@@ -1092,25 +1088,25 @@ or the empirical distributions based on the count matrix.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.update_stationary_distribution">
-<span class="sig-name descname"><span class="pre">update_stationary_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.update_stationary_distribution" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_stationary_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.update_stationary_distribution" title="Link to this definition">¶</a></dt>
 <dd><p>Explicitly sets the stationary distribution, re-normalizes</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.update_transition_matrix">
-<span class="sig-name descname"><span class="pre">update_transition_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.update_transition_matrix" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_transition_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.update_transition_matrix" title="Link to this definition">¶</a></dt>
 <dd><p>Sets the transition matrix and invalidates all cached and derived properties.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.count_fraction">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">count_fraction</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.count_fraction" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">count_fraction</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.count_fraction" title="Link to this definition">¶</a></dt>
 <dd><p>The fraction of counts represented in the selected model.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.count_fractions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">count_fractions</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.count_fractions" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">count_fractions</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.count_fractions" title="Link to this definition">¶</a></dt>
 <dd><p>Yields the fraction of counts represented in each of the models in this collection. Calling this method
 assumes that the MSMs in the collection stem from actual data with state statistics embedded in the count
 models.</p>
@@ -1118,7 +1114,7 @@ models.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.count_model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">count_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel" title="deeptime.markov._transition_counting.TransitionCountModel"><span class="pre">TransitionCountModel</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.count_model" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">count_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="deeptime.markov.TransitionCountModel.html#deeptime.markov.TransitionCountModel" title="deeptime.markov._transition_counting.TransitionCountModel"><span class="pre">TransitionCountModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.count_model" title="Link to this definition">¶</a></dt>
 <dd><p>Returns a transition count model, can be None. The transition count model statistics about data that was used
 for transition counting as well as a count matrix.</p>
 <dl class="field-list simple">
@@ -1133,7 +1129,7 @@ for transition counting as well as a count matrix.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.current_model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.current_model" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.current_model" title="Link to this definition">¶</a></dt>
 <dd><p>The currently selected model index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -1144,7 +1140,7 @@ for transition counting as well as a count matrix.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.empirical_koopman_model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empirical_koopman_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition._koopman.CovarianceKoopmanModel"><span class="pre">CovarianceKoopmanModel</span></a></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.empirical_koopman_model" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empirical_koopman_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition._koopman.CovarianceKoopmanModel"><span class="pre">CovarianceKoopmanModel</span></a></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.empirical_koopman_model" title="Link to this definition">¶</a></dt>
 <dd><p>Yields a <code class="xref py py-class docutils literal notranslate"><span class="pre">CovarianceKoopmanModel</span></code> based on the count matrix of this Markov state model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1173,7 +1169,7 @@ Based on these we define the Koopman operator <span class="math">\(K = C_{00}^{-
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.has_count_model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_count_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.has_count_model" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_count_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.has_count_model" title="Link to this definition">¶</a></dt>
 <dd><p>Yields whether this Markov state model has a count model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -1184,13 +1180,13 @@ Based on these we define the Koopman operator <span class="math">\(K = C_{00}^{-
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.is_real">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_real</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.is_real" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_real</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.is_real" title="Link to this definition">¶</a></dt>
 <dd><p>Checks if all eigenvalues as well as eigenvectors/functions are real.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.koopman_model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">koopman_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition._koopman.CovarianceKoopmanModel"><span class="pre">CovarianceKoopmanModel</span></a></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.koopman_model" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">koopman_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="deeptime.decomposition.CovarianceKoopmanModel.html#deeptime.decomposition.CovarianceKoopmanModel" title="deeptime.decomposition._koopman.CovarianceKoopmanModel"><span class="pre">CovarianceKoopmanModel</span></a></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.koopman_model" title="Link to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Yields a <code class="xref py py-class docutils literal notranslate"><span class="pre">CovarianceKoopmanModel</span></code> based on the transition matrix and stationary</dt><dd><p>distribution of this Markov state model.</p>
 </dd>
@@ -1222,7 +1218,7 @@ C_{01} &= C_{00}P
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.lagtime">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lagtime</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.lagtime" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lagtime</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.lagtime" title="Link to this definition">¶</a></dt>
 <dd><p>The lagtime this model was estimated at. In case no count model was provided, this property defaults
 to the lagtime set in the constructor or a lagtime of <span class="math">\(\tau = 1\)</span> if it was left <cite>None</cite>.</p>
 <dl class="field-list simple">
@@ -1237,7 +1233,7 @@ to the lagtime set in the constructor or a lagtime of <span class="math">\(\tau 
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.n_connected_msms">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_connected_msms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.n_connected_msms" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_connected_msms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.n_connected_msms" title="Link to this definition">¶</a></dt>
 <dd><p>Number of markov state models in this collection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -1248,68 +1244,68 @@ to the lagtime set in the constructor or a lagtime of <span class="math">\(\tau 
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.n_eigenvalues">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_eigenvalues</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.n_eigenvalues" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_eigenvalues</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.n_eigenvalues" title="Link to this definition">¶</a></dt>
 <dd><p>number of eigenvalues to compute.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.n_states">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_states</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.n_states" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_states</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.n_states" title="Link to this definition">¶</a></dt>
 <dd><p>Number of active states on which all computations and estimations are done</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.ncv">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ncv</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.ncv" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ncv</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.ncv" title="Link to this definition">¶</a></dt>
 <dd><p>Number of Lanczos vectors used when computing the partial eigenvalue decomposition</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.reversible">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reversible</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.reversible" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reversible</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.reversible" title="Link to this definition">¶</a></dt>
 <dd><p>Returns whether the MarkovStateModel is reversible</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.sparse">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sparse</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.sparse" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sparse</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.sparse" title="Link to this definition">¶</a></dt>
 <dd><p>Returns whether the MarkovStateModel is sparse</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.state_fraction">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_fraction</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.state_fraction" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_fraction</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.state_fraction" title="Link to this definition">¶</a></dt>
 <dd><p>The fraction of states represented in the selected model.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.state_fractions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_fractions</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.state_fractions" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_fractions</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.state_fractions" title="Link to this definition">¶</a></dt>
 <dd><p>Yields the fractions of states represented in each of the models in this collection.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.stationary">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stationary</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.stationary" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stationary</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.stationary" title="Link to this definition">¶</a></dt>
 <dd><p>Whether the MSM is stationary, i.e. whether the initial distribution is the stationary distribution
 of the hidden transition matrix.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.stationary_distribution">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stationary_distribution</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.stationary_distribution" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stationary_distribution</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.stationary_distribution" title="Link to this definition">¶</a></dt>
 <dd><p>The stationary distribution on the MarkovStateModel states</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.transition_matrix">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transition_matrix</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.transition_matrix" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transition_matrix</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.transition_matrix" title="Link to this definition">¶</a></dt>
 <dd><p>The transition matrix on the active set.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.markov.msm.MarkovStateModelCollection.transition_matrix_tolerance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transition_matrix_tolerance</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.transition_matrix_tolerance" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transition_matrix_tolerance</span></span><a class="headerlink" href="#deeptime.markov.msm.MarkovStateModelCollection.transition_matrix_tolerance" title="Link to this definition">¶</a></dt>
 <dd><p>The tolerance under which a matrix is considered a transition matrix. This means that all elements
 must be non-negative and the row sums must be 1.</p>
 </dd></dl>

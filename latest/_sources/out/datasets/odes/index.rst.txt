@@ -1,0 +1,116 @@
+:orphan:
+
+.. _datasets_odes:
+
+ODEs
+----
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example for the deeptime.data.abc_flow dataset.">
+
+.. only:: html
+
+  .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_abc_flow_thumb.gif
+    :alt:
+
+  :ref:`sphx_glr_out_datasets_odes_plot_abc_flow.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Arnold-Beltrami-Childress flow</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The deeptime.data.bickley_jet dataset.">
+
+.. only:: html
+
+  .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_bickley_jet_thumb.gif
+    :alt:
+
+  :ref:`sphx_glr_out_datasets_odes_plot_bickley_jet.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Bickley Jet</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Demonstrating usage of deeptime.data.custom_ode.">
+
+.. only:: html
+
+  .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_custom_ode_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_out_datasets_odes_plot_custom_ode.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Custom ODEs</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The Lorenz system. See deeptime.data.lorenz_system.">
+
+.. only:: html
+
+  .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_lorenz_system_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_out_datasets_odes_plot_lorenz_system.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Lorenz system</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The Thomas attractor. See deeptime.data.thomas_attractor.">
+
+.. only:: html
+
+  .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_thomas_attractor_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_out_datasets_odes_plot_thomas_attractor.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Thomas attractor</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /out/datasets/odes/plot_abc_flow
+   /out/datasets/odes/plot_bickley_jet
+   /out/datasets/odes/plot_custom_ode
+   /out/datasets/odes/plot_lorenz_system
+   /out/datasets/odes/plot_thomas_attractor
+
