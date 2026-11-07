@@ -1,0 +1,39 @@
+name: Deploy documentation to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; never cancel a deployment that is already syncing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          # The repository root is the site; .git and .github are excluded by the action.
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v5
+        with:
+          # The site is about 600 MB. GitHub's automatic Pages workflow uses this action with its
+          # default 10 minute timeout, which the v0.5.0 deployment exceeded while syncing files.
+          timeout: 2700000
