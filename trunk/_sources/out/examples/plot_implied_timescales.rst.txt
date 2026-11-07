@@ -73,9 +73,9 @@ This example demonstrates how to obtain an implied timescales (ITS) plot for a B
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 4.497 seconds)
+   **Total running time of the script:** (0 minutes 4.210 seconds)
 
-**Estimated memory usage:**  580 MB
+**Estimated memory usage:**  730 MB
 
 
 .. _sphx_glr_download_out_examples_plot_implied_timescales.py:

@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:20.692** total execution time for 5 files **from out/datasets/other**:
+**00:20.652** total execution time for 5 files **from out/datasets/other**:
 
 .. container::
 
@@ -33,17 +33,17 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_out_datasets_other_plot_pbf.py` (``plot_pbf.py``)
-     - 00:10.465
-     - 581.2
+     - 00:11.144
+     - 730.1
    * - :ref:`sphx_glr_out_datasets_other_plot_swissroll_model.py` (``plot_swissroll_model.py``)
-     - 00:08.725
-     - 580.2
+     - 00:08.031
+     - 730.1
    * - :ref:`sphx_glr_out_datasets_other_plot_sqrt_model.py` (``plot_sqrt_model.py``)
-     - 00:00.923
-     - 580.5
+     - 00:00.897
+     - 730.5
    * - :ref:`sphx_glr_out_datasets_other_plot_drunkards_walk.py` (``plot_drunkards_walk.py``)
-     - 00:00.343
-     - 581.2
+     - 00:00.337
+     - 730.1
    * - :ref:`sphx_glr_out_datasets_other_plot_ellipsoids.py` (``plot_ellipsoids.py``)
-     - 00:00.235
-     - 592.2
+     - 00:00.243
+     - 804.2

@@ -1,10 +1,12 @@
 :orphan:
 
-.. _datasets_odes:
-
 ODEs
 ----
 
+
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
 
 
 .. raw:: html
@@ -22,7 +24,7 @@ ODEs
   .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_abc_flow_thumb.gif
     :alt:
 
-  :ref:`sphx_glr_out_datasets_odes_plot_abc_flow.py`
+  :doc:`/out/datasets/odes/plot_abc_flow`
 
 .. raw:: html
 
@@ -39,7 +41,7 @@ ODEs
   .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_bickley_jet_thumb.gif
     :alt:
 
-  :ref:`sphx_glr_out_datasets_odes_plot_bickley_jet.py`
+  :doc:`/out/datasets/odes/plot_bickley_jet`
 
 .. raw:: html
 
@@ -56,7 +58,7 @@ ODEs
   .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_custom_ode_thumb.png
     :alt:
 
-  :ref:`sphx_glr_out_datasets_odes_plot_custom_ode.py`
+  :doc:`/out/datasets/odes/plot_custom_ode`
 
 .. raw:: html
 
@@ -73,7 +75,7 @@ ODEs
   .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_lorenz_system_thumb.png
     :alt:
 
-  :ref:`sphx_glr_out_datasets_odes_plot_lorenz_system.py`
+  :doc:`/out/datasets/odes/plot_lorenz_system`
 
 .. raw:: html
 
@@ -90,7 +92,7 @@ ODEs
   .. image:: /out/datasets/odes/images/thumb/sphx_glr_plot_thomas_attractor_thumb.png
     :alt:
 
-  :ref:`sphx_glr_out_datasets_odes_plot_thomas_attractor.py`
+  :doc:`/out/datasets/odes/plot_thomas_attractor`
 
 .. raw:: html
 

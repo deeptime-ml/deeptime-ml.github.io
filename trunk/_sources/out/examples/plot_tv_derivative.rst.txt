@@ -61,9 +61,9 @@ Total-variation regularized derivative on a noisy function.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.177 seconds)
+   **Total running time of the script:** (0 minutes 0.345 seconds)
 
-**Estimated memory usage:**  581 MB
+**Estimated memory usage:**  731 MB
 
 
 .. _sphx_glr_download_out_examples_plot_tv_derivative.py:

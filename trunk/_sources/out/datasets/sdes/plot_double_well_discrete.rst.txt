@@ -61,9 +61,9 @@ Showcase use of the :meth:`deeptime.data.double_well_discrete` dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.138 seconds)
+   **Total running time of the script:** (0 minutes 0.171 seconds)
 
-**Estimated memory usage:**  580 MB
+**Estimated memory usage:**  730 MB
 
 
 .. _sphx_glr_download_out_datasets_sdes_plot_double_well_discrete.py:

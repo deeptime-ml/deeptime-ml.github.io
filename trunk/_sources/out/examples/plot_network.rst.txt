@@ -39,19 +39,8 @@ In particular:
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/mho/dev/deeptime/examples/methods/plot_network.py:41: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
-      cmap = mpl.cm.get_cmap('coolwarm')
 
 
-
-
-
-
-|
 
 .. code-block:: Python
    :lineno-start: 13
@@ -84,7 +73,7 @@ In particular:
     ax.set_title('Plotting the gross flux')
     flux = MarkovStateModel(P).reactive_flux(source_states=[2], target_states=[3])
     positions = nx.planar_layout(nx.from_numpy_array(flux.gross_flux))
-    cmap = mpl.cm.get_cmap('coolwarm')
+    cmap = mpl.colormaps['coolwarm']
     network = Network(flux.gross_flux, positions, edge_curvature=2.,
                       state_colors=flux.forward_committor, cmap=cmap)
     network.plot(ax=ax)
@@ -103,9 +92,9 @@ In particular:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.305 seconds)
+   **Total running time of the script:** (0 minutes 0.313 seconds)
 
-**Estimated memory usage:**  581 MB
+**Estimated memory usage:**  730 MB
 
 
 .. _sphx_glr_download_out_examples_plot_network.py:

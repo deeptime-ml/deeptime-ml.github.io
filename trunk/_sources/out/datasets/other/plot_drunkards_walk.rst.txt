@@ -83,9 +83,9 @@ The :meth:`deeptime.data.drunkards_walk` model, a markov state model on a 2-dime
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.343 seconds)
+   **Total running time of the script:** (0 minutes 0.337 seconds)
 
-**Estimated memory usage:**  581 MB
+**Estimated memory usage:**  730 MB
 
 
 .. _sphx_glr_download_out_datasets_other_plot_drunkards_walk.py:

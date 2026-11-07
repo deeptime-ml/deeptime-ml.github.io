@@ -5,27 +5,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>class KoopmanWeightingEstimator &#8212; deeptime 0.4.5 documentation</title>
+    <title>class KoopmanWeightingEstimator &#8212; deeptime 0.5.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=822347c1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=3f530b75" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=1e544560" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=8ffeb421" />
     <link rel="stylesheet" type="text/css" href="../../_static/perfect-scrollbar/css/perfect-scrollbar.css?v=9f1a41f4" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css?v=91adb8b6" />
-    <script src="../../_static/documentation_options.js?v=340bb9e5"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css?v=05624691" />
+    <script src="../../_static/documentation_options.js?v=1dd76d02"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
     <script src="../../_static/perfect-scrollbar/js/perfect-scrollbar.min.js?v=a8314474"></script>
     <script src="../../_static/d3.v5.min.js?v=5b739c40"></script>
     <script src="../../_static/d3-legend.min.js?v=5895a191"></script>
-    <script src="../../_static/katex.min.js?v=be8ff15f"></script>
-    <script src="../../_static/auto-render.min.js?v=ad136472"></script>
+    <script src="../../_static/katex.min.js?v=5cc8ed51"></script>
+    <script src="../../_static/auto-render.min.js?v=af98beb9"></script>
     <script src="../../_static/katex_autorenderer.js?v=bebc588a"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
@@ -121,7 +122,7 @@
     <li class="toctree-l1">
         <a class="reference internal" id="version-latest"
            href="../latest/../../index.html">Latest release
-            (0.4.5)</a>
+            (0.5.0)</a>
     </li>
     <li class="toctree-l1">
         <a class="reference internal" id="version-trunk"
@@ -179,15 +180,15 @@
 <h1><em>class</em> KoopmanWeightingEstimator<a class="headerlink" href="#class-koopmanweightingestimator" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="deeptime.covariance.KoopmanWeightingEstimator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deeptime.covariance.</span></span><span class="sig-name descname"><span class="pre">KoopmanWeightingEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lagtime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncov</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inf'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingEstimator" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">deeptime.covariance.</span></span><span class="sig-name descname"><span class="pre">KoopmanWeightingEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lagtime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncov</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inf'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingEstimator" title="Link to this definition">¶</a></dt>
 <dd><p>Computes Koopman operator and weights that can be plugged into the <a class="reference internal" href="deeptime.covariance.Covariance.html#deeptime.covariance.Covariance" title="deeptime.covariance.Covariance"><code class="xref py py-class docutils literal notranslate"><span class="pre">Covariance</span></code></a> estimator.
 The weights are determined by the procedure described in <a class="footnote-reference brackets" href="#footcite-wu2017variational" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>lagtime</strong> (<em>int</em>) – The lag time at which the operator is estimated.</p></li>
-<li><p><strong>epsilon</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default=1e-6</em>) – Truncation parameter. Eigenvalues with norms smaller than this cutoff will be removed.</p></li>
-<li><p><strong>ncov</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>optional</em><em>, </em><em>default=infinity</em>) – Depth of moment storage. Per default no moments are collapsed while estimating covariances, perform
+<li><p><strong>lagtime</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a>) – The lag time at which the operator is estimated.</p></li>
+<li><p><strong>epsilon</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><em>float</em></a><em>, </em><em>optional</em><em>, </em><em>default=1e-6</em>) – Truncation parameter. Eigenvalues with norms smaller than this cutoff will be removed.</p></li>
+<li><p><strong>ncov</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><em>str</em></a><em>, </em><em>optional</em><em>, </em><em>default=infinity</em>) – Depth of moment storage. Per default no moments are collapsed while estimating covariances, perform
 aggregation only at the very end after all data has been processed.</p></li>
 </ul>
 </dd>
@@ -272,7 +273,7 @@ aggregation only at the very end after all data has been processed.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>(</em><em>T</em><em>, </em><em>d</em><em>) </em><em>ndarray</em>) – The input data.</p></li>
-<li><p><strong>lagtime</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Optional override for estimator’s <a class="reference internal" href="#deeptime.covariance.KoopmanWeightingEstimator.lagtime" title="deeptime.covariance.KoopmanWeightingEstimator.lagtime"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lagtime</span></code></a>.</p></li>
+<li><p><strong>lagtime</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><em>int</em></a><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Optional override for estimator’s <a class="reference internal" href="#deeptime.covariance.KoopmanWeightingEstimator.lagtime" title="deeptime.covariance.KoopmanWeightingEstimator.lagtime"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lagtime</span></code></a>.</p></li>
 <li><p><strong>**kw</strong> – Ignored keyword args for scikit-learn compatibility.</p></li>
 </ul>
 </dd>
@@ -300,7 +301,7 @@ aggregation only at the very end after all data has been processed.</p></li>
 <dd class="field-even"><p>The estimated model.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>model</p>
+<dd class="field-odd"><p><a class="reference internal" href="#deeptime.covariance.KoopmanWeightingEstimator.model" title="deeptime.covariance.KoopmanWeightingEstimator.model">model</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -314,8 +315,8 @@ the input data. The estimated model can be accessed by calling <a class="referen
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>array_like</em>) – The input data.</p></li>
-<li><p><strong>fit_options</strong> (<em>dict</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Optional keyword arguments passed on to the fit method.</p></li>
-<li><p><strong>transform_options</strong> (<em>dict</em><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Optional keyword arguments passed on to the transform method.</p></li>
+<li><p><strong>fit_options</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="(in Python v3.15)"><em>dict</em></a><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Optional keyword arguments passed on to the fit method.</p></li>
+<li><p><strong>transform_options</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="(in Python v3.15)"><em>dict</em></a><em>, </em><em>optional</em><em>, </em><em>default=None</em>) – Optional keyword arguments passed on to the transform method.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -368,13 +369,13 @@ the input data. The estimated model can be accessed by calling <a class="referen
 component of a nested object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>**params</strong> (<em>dict</em>) – Estimator parameters.</p>
+<dd class="field-odd"><p><strong>**params</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="(in Python v3.15)"><em>dict</em></a>) – Estimator parameters.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>self</strong> – Estimator instance.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>object</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#object" title="(in Python v3.15)">object</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -401,19 +402,19 @@ component of a nested object.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.covariance.KoopmanWeightingEstimator.has_model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingEstimator.has_model" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">has_model</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)"><span class="pre">bool</span></a></span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingEstimator.has_model" title="Link to this definition">¶</a></dt>
 <dd><p>Property reporting whether this estimator contains an estimated model. This assumes that the model
 is initialized with <cite>None</cite> otherwise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bool</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#bool" title="(in Python v3.15)">bool</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.covariance.KoopmanWeightingEstimator.lagtime">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lagtime</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingEstimator.lagtime" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">lagtime</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><span class="pre">int</span></a></span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingEstimator.lagtime" title="Link to this definition">¶</a></dt>
 <dd><p>The lagtime at which the Koopman operator is estimated.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Getter<span class="colon">:</span></dt>
@@ -423,14 +424,14 @@ is initialized with <cite>None</cite> otherwise.</p>
 <dd class="field-even"><p>Sets a new lagtime, must be &gt;= 0.</p>
 </dd>
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)">int</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="deeptime.covariance.KoopmanWeightingEstimator.model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingEstimator.model" title="Link to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#deeptime.covariance.KoopmanWeightingEstimator.model" title="Link to this definition">¶</a></dt>
 <dd><p>Shortcut to <a class="reference internal" href="#deeptime.covariance.KoopmanWeightingEstimator.fetch_model" title="deeptime.covariance.KoopmanWeightingEstimator.fetch_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_model()</span></code></a>.</p>
 </dd></dl>
 

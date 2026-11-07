@@ -39,7 +39,7 @@ We demonstrate how to re-use the view grid to overlay two CK tests.
 
  .. code-block:: none
 
-    /home/mho/dev/solidity/.venv/lib/python3.13/site-packages/deeptime/plots/chapman_kolmogorov.py:174: ComplexWarning: Your CKtest contains imaginary components which are ignored during plotting.
+    /tmp/claude-1000/-home-mho-dev-gh-deeptime/98292411-8749-4f62-8c3f-3cfd662a6278/scratchpad/venv/lib/python3.12/site-packages/deeptime/plots/chapman_kolmogorov.py:174: ComplexWarning: Your CKtest contains imaginary components which are ignored during plotting.
       warnings.warn("Your CKtest contains imaginary components which are ignored during plotting.",
 
 
@@ -81,9 +81,9 @@ We demonstrate how to re-use the view grid to overlay two CK tests.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.265 seconds)
+   **Total running time of the script:** (0 minutes 0.282 seconds)
 
-**Estimated memory usage:**  585 MB
+**Estimated memory usage:**  735 MB
 
 
 .. _sphx_glr_download_out_examples_plot_ck_test.py:

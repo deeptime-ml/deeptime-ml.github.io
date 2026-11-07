@@ -31,7 +31,7 @@ clustering.
 
 
 .. image-sg:: /out/examples/images/sphx_glr_plot_kcca_projection_001.png
-   :alt: Discrete states vs. estimated discrete states, 0.984% correctly assigned, Observed test data colored by estimated state assignment, Test data, colored by ground truth, Transformation of test data, colored by ground truth
+   :alt: Discrete states vs. estimated discrete states, 0.983% correctly assigned, Observed test data colored by estimated state assignment, Test data, colored by ground truth, Transformation of test data, colored by ground truth
    :srcset: /out/examples/images/sphx_glr_plot_kcca_projection_001.png
    :class: sphx-glr-single-img
 
@@ -40,13 +40,9 @@ clustering.
 
  .. code-block:: none
 
-    /home/mho/dev/deeptime/examples/methods/plot_kcca_projection.py:56: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
-      scatter1 = ax.scatter(*observations[mask].T, cmap=mpl.cm.get_cmap('Greens'), c=obs_ref[mask][:, 1])
-    /home/mho/dev/deeptime/examples/methods/plot_kcca_projection.py:57: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
-      scatter2 = ax.scatter(*observations[~mask].T, cmap=mpl.cm.get_cmap('Blues'), c=obs_ref[~mask][:, 1])
-    /home/mho/dev/solidity/.venv/lib/python3.13/site-packages/matplotlib/cbook.py:1719: ComplexWarning: Casting complex values to real discards the imaginary part
+    /tmp/claude-1000/-home-mho-dev-gh-deeptime/98292411-8749-4f62-8c3f-3cfd662a6278/scratchpad/venv/lib/python3.12/site-packages/matplotlib/cbook.py:1811: ComplexWarning: Casting complex values to real discards the imaginary part
       return math.isfinite(val)
-    /home/mho/dev/solidity/.venv/lib/python3.13/site-packages/matplotlib/collections.py:200: ComplexWarning: Casting complex values to real discards the imaginary part
+    /tmp/claude-1000/-home-mho-dev-gh-deeptime/98292411-8749-4f62-8c3f-3cfd662a6278/scratchpad/venv/lib/python3.12/site-packages/matplotlib/collections.py:205: ComplexWarning: Casting complex values to real discards the imaginary part
       offsets = np.asanyarray(offsets, float)
 
 
@@ -105,8 +101,8 @@ clustering.
             ax.scatter(*observations[~mask].T, color='blue', label='State 2')
             ax.legend()
         else:
-            scatter1 = ax.scatter(*observations[mask].T, cmap=mpl.cm.get_cmap('Greens'), c=obs_ref[mask][:, 1])
-            scatter2 = ax.scatter(*observations[~mask].T, cmap=mpl.cm.get_cmap('Blues'), c=obs_ref[~mask][:, 1])
+            scatter1 = ax.scatter(*observations[mask].T, cmap=mpl.colormaps['Greens'], c=obs_ref[mask][:, 1])
+            scatter2 = ax.scatter(*observations[~mask].T, cmap=mpl.colormaps['Blues'], c=obs_ref[~mask][:, 1])
             h1, l1 = scatter1.legend_elements(num=1)
             h2, l2 = scatter2.legend_elements(num=1)
             ax.add_artist(ax.legend(handles=h1 + h2, labels=["State 1", "State 2"]))
@@ -124,9 +120,9 @@ clustering.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.323 seconds)
+   **Total running time of the script:** (0 minutes 1.380 seconds)
 
-**Estimated memory usage:**  783 MB
+**Estimated memory usage:**  917 MB
 
 
 .. _sphx_glr_download_out_examples_plot_kcca_projection.py:

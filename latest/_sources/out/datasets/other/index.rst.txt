@@ -1,10 +1,12 @@
 :orphan:
 
-.. _datasets_other:
-
 Other
 -----
 
+
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
 
 
 .. raw:: html
@@ -22,7 +24,7 @@ Other
   .. image:: /out/datasets/other/images/thumb/sphx_glr_plot_drunkards_walk_thumb.png
     :alt:
 
-  :ref:`sphx_glr_out_datasets_other_plot_drunkards_walk.py`
+  :doc:`/out/datasets/other/plot_drunkards_walk`
 
 .. raw:: html
 
@@ -39,7 +41,7 @@ Other
   .. image:: /out/datasets/other/images/thumb/sphx_glr_plot_ellipsoids_thumb.png
     :alt:
 
-  :ref:`sphx_glr_out_datasets_other_plot_ellipsoids.py`
+  :doc:`/out/datasets/other/plot_ellipsoids`
 
 .. raw:: html
 
@@ -56,7 +58,7 @@ Other
   .. image:: /out/datasets/other/images/thumb/sphx_glr_plot_pbf_thumb.gif
     :alt:
 
-  :ref:`sphx_glr_out_datasets_other_plot_pbf.py`
+  :doc:`/out/datasets/other/plot_pbf`
 
 .. raw:: html
 
@@ -73,7 +75,7 @@ Other
   .. image:: /out/datasets/other/images/thumb/sphx_glr_plot_sqrt_model_thumb.png
     :alt:
 
-  :ref:`sphx_glr_out_datasets_other_plot_sqrt_model.py`
+  :doc:`/out/datasets/other/plot_sqrt_model`
 
 .. raw:: html
 
@@ -90,7 +92,7 @@ Other
   .. image:: /out/datasets/other/images/thumb/sphx_glr_plot_swissroll_model_thumb.gif
     :alt:
 
-  :ref:`sphx_glr_out_datasets_other_plot_swissroll_model.py`
+  :doc:`/out/datasets/other/plot_swissroll_model`
 
 .. raw:: html
 

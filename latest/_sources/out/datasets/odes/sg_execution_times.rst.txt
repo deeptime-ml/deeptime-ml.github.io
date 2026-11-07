@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:13.098** total execution time for 5 files **from out/datasets/odes**:
+**00:13.505** total execution time for 5 files **from out/datasets/odes**:
 
 .. container::
 
@@ -33,17 +33,17 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_out_datasets_odes_plot_abc_flow.py` (``plot_abc_flow.py``)
-     - 00:05.694
-     - 580.2
+     - 00:05.945
+     - 730.1
    * - :ref:`sphx_glr_out_datasets_odes_plot_bickley_jet.py` (``plot_bickley_jet.py``)
-     - 00:04.723
-     - 580.2
+     - 00:05.249
+     - 730.1
    * - :ref:`sphx_glr_out_datasets_odes_plot_thomas_attractor.py` (``plot_thomas_attractor.py``)
-     - 00:02.361
-     - 580.2
+     - 00:01.985
+     - 730.1
    * - :ref:`sphx_glr_out_datasets_odes_plot_lorenz_system.py` (``plot_lorenz_system.py``)
-     - 00:00.203
-     - 580.2
+     - 00:00.177
+     - 730.1
    * - :ref:`sphx_glr_out_datasets_odes_plot_custom_ode.py` (``plot_custom_ode.py``)
-     - 00:00.117
-     - 580.2
+     - 00:00.150
+     - 730.1
